@@ -1,0 +1,157 @@
+.form-join-class {
+  font-family: "acumin-pro", Helvetica, Arial, sans-serif;
+}
+
+input[type=text],
+label[type=text],
+input[type=email],
+label[type=email],
+label[type=submit] {
+  width: 100%;
+}
+
+label,
+.label {
+  display: block;
+  @include font-size(1.125);
+  height: #{$leading-desktop + "px"};
+  @include margin-bottom(0.5);
+}
+
+input[type=text],
+input[type=email] {
+  padding: 0 15px;
+  @include font-size(1);
+  height: #{2 * $leading-desktop + "px"};
+  background-color: #F3F3F3;
+  border-radius: 2px;
+  border: none;
+  margin-bottom: 0;
+}
+
+.button {
+  background-color: $bwt-red;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  height: #{2.5 * $leading-desktop + "px"};
+  text-transform: uppercase;
+  font-family: $custom-font-headings;
+  @include font-size(1.8);
+  letter-spacing: 0.05em;
+  -webkit-appearance: none;
+  transition: all 0.3s;
+  // height: 65px;
+  width: 100%;
+  padding: 10px 0 16px;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+    // background-color: lighten($bwt-red, 5%);
+    -webkit-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+    box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+    }
+
+  &:active {
+    background-color: darken($bwt-red, 10%);
+    -webkit-box-shadow: 0px 2px 26px 0px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 2px 26px 0px rgba(0,0,0,0.23);
+    box-shadow: 0px 2px 26px 0px rgba(0,0,0,0.23);
+  }
+}
+
+a.button {
+  padding-top: 18px;
+  min-width: 250px;
+  max-width: 300px;
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    padding-top: 16px;
+  }
+}
+
+  .subscribe form {
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      max-width: 500px;
+    }
+    margin: 0 auto;
+  }
+
+  .form-name,
+  .form-surname {
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      display: inline-block;
+    }
+  }
+
+  .form-name {
+    width: 100%;
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      width: 48%;
+      margin-right: 2%;
+    }
+  }
+
+  .form-surname {
+    width: 100%;
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      width: 48%;
+      float: right;
+    }
+  }
+
+  .form-wrapper {
+    width: 100%;
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      max-width: 600px;
+    }
+    margin: 0 auto;
+  }
+
+// Form Validation
+.table {
+  display: table;
+}
+
+.fullScreen {
+  height: 100%;
+  width: 100%;
+}
+
+.curtain {
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 9;
+  margin-bottom: 0;
+}
+
+.msgContainer {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#msgContent {
+  max-width: 90%;
+  margin: 0 auto;
+  z-index: 10;
+  text-align: center;
+  padding: 10% 5% 5%;
+
+  .button {
+    margin: 0 auto;
+    @include margin-top(2);
+  }
+
+  p a:before {
+    white-space: pre;
+    content: '\A';
+  }
+}

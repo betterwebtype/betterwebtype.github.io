@@ -1,0 +1,31 @@
+footer {
+  display: block;
+  font-family: "acumin-pro", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+
+  a {
+    color: $color-font-body;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  strong a {
+    text-decoration: underline;
+
+    &:visited {
+      color: $color-font-body;
+    }
+  }
+
+  body > & {
+    margin: 0 auto;
+
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      width: 80%;
+    }
+  }
+
+}

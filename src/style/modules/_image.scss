@@ -1,0 +1,78 @@
+// Remove border when inside `a` element in IE 8/9/10.
+img {
+  border: 0;
+  max-width: 100%;
+  display: block;
+  margin: inherit auto;
+}
+
+// Correct overflow not hidden in IE 9/10/11.
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.how-it-works .step {
+  width: 100%;
+  max-height: 144px;
+  max-width: 144px;
+  float: right;
+}
+
+.bwt-logo {
+  max-width: 60px;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    max-width: 82px;
+  }
+}
+
+.arrows {
+  @media screen and (max-width: #{ $max-width + 5 + 'em'}) {
+    display: none;
+  }
+  max-width: 192px;
+  position: absolute;
+}
+
+.arrow-one {
+  @extend .arrows;
+  top: 40%;
+  right: -40%;
+}
+
+.arrow-two {
+  @extend .arrows;
+  top: -13%;
+  right: -50%;
+}
+
+.lesson-example {
+  max-width: 100%;
+  margin: auto;
+  @include margin-top(4);
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    max-width: 717px;
+  }
+}
+
+.author-img {
+  max-width: 82px;
+  @include margin-bottom(0.5);
+}
+
+.meetup {
+  width: 45%;
+  margin-left: 30px;
+}
+
+.featured {
+  width: 100%;
+  margin: 0;
+  @media screen and (min-width: 550px) {
+    max-width: 557px;
+  }
+}
+
+.skills-img {
+  max-width: 260px;
+}

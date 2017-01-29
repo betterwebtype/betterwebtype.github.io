@@ -1,0 +1,246 @@
+br {
+  margin-bottom: 0;
+}
+
+// Enable small caps if available & fix letter spacing
+abbr {
+  letter-spacing: 0.1em;
+}
+
+// Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+// Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+b,
+strong {
+  font-weight: bold;
+}
+
+// Address styling not present in Safari and Chrome.
+dfn {
+  font-style: italic;
+}
+
+// Prevent `em` and `i` affecting `line-height` in all browsers.
+em,
+i {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+// Address styling not present in IE 8/9.
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+.allsmallcaps {
+  font-feature-settings: "c2sc", "smcp";
+}
+
+small {
+  @include line-height(.5);
+
+  font-size: 70%;
+
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+
+    @import '../mixins/line-height';
+
+    @include line-height(.5);
+  }
+
+}
+
+// Prevent `sub` and `sup` affecting `line-height` in all browsers.
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Paragraph
+   ========================================================================== */
+
+@if $paragraph-indent == true {
+
+  p + p {
+    @include margin-top(-1);
+    text-indent: #{ $leading + 'px'};
+    text-indent: #{ $leading-rem + 'rem'};
+
+    .floatLeft + p,
+    .floatRight + p {
+
+      @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+        $leading: $leading-desktop;
+        $leading-rem: $leading-rem-desktop;
+
+        text-indent: #{ $leading + 'px'};
+        text-indent: #{ $leading-rem + 'rem'};
+      }
+
+    }
+
+  }
+
+  .attention-grabber + p {
+    margin-top: 0;
+    text-indent: 0;
+  }
+}
+
+// Attention grabber
+.attention-grabber {
+  @include font-size(1.2);
+}
+
+@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  $leading: $leading-desktop;
+  $leading-rem: $leading-rem-desktop;
+
+  @import '../mixins/margin';
+
+  @if $paragraph-indent == true {
+
+    p + p,
+    .floatLeft + p,
+    .floatRight + p {
+      @include margin-top(-1);
+    }
+
+  }
+
+  p {
+    max-width: #{$max-width + 'em'}
+  }
+
+}
+
+// Text Alignment
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.narrow {
+  max-width: 300px;
+}
+
+// Fix letter spacing for uppercase
+.uppercase {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.big-number {
+  color: $bwt-red;
+  @include font-size(2.1);
+  @include line-height(1);
+  font-family: $custom-font-headings;
+  // margin-right: 10px;
+  margin-top: -0.06em;
+  width: 45px;
+  font-weight: normal;
+  font-variant-numeric: tabular-nums;
+  -moz-font-feature-settings: "tnum";
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
+}
+
+.how-it-works {
+  font-size: 1.1em; /* fix for desktop only */
+
+  h4 {
+    font-size: 24px; /* fix for desktop only */
+    @include margin-bottom(0.25);
+  }
+}
+
+.chapter {
+  padding-left: 10px;
+  font-family: $custom-font-headings;
+  text-transform: uppercase;
+  @include font-size(2.1);
+  font-weight: 600;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-family: $custom-font-headings;
+  font-weight: normal;
+  color: $bwt-red;
+  @include font-size(4);
+  @include line-height(1.5);
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    @include font-size(8);
+    @include line-height(2.5);
+  }
+
+  span {
+    @include font-size(1.5);
+    @include line-height(1);
+    text-transform: uppercase;
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      @include font-size(3);
+      @include line-height(2.5);
+    }
+  }
+}
+
+#countdown {
+  max-width: 700px;
+  margin: auto;
+
+  div {
+    float: left;
+    text-align: center;
+    width: 25%;
+  }
+}
+
+.dropcap {
+  font-family: $custom-font-headings;
+  height: 65px!important;
+  font-size: 100px!important;
+  margin-right: 5px!important;
+  margin-bottom: 0;
+  margin-top: -12px!important;
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    height: 78px!important;
+    font-size: 100px!important;
+    margin-right: 5px!important;
+    margin-top: -19px!important;
+  }
+}
+
+.intro {
+  @include margin-top(2);
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    @include margin-top(3);
+  }
+}

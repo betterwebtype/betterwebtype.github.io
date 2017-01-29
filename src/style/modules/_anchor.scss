@@ -1,0 +1,34 @@
+/* Links
+   ========================================================================== */
+
+$color-link-normal: #5182BE;
+$color-link-hover: $color-link-normal;
+$color-link-active: $bwt-red;
+$color-link-visited: $color-link-normal;
+
+a {
+  background: transparent;
+  color: $color-link-normal;
+  transition: all .3s;
+
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+
+  &:hover {
+    color: $color-link-hover;
+  }
+
+  &:visited {
+    color: $color-link-visited;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+
+  &:active {
+    color: $color-link-active;
+  }
+}
