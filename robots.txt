@@ -1,2 +1,7 @@
 User-agent: *
 Disallow: /stats
+Disallow: /almost-finished.html
+Disallow: /thank-you.html
+Disallow: /terms.html
+Disallow: /contact.html
+Disallow: /privacy-policy.html
