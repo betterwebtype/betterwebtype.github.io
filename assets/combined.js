@@ -87,7 +87,7 @@
                 $('#msgContent').empty().append('<h3 class="heading">Oh no, something went wrong.</h3><p class="floatCenter">' + msgReadable + '<p/><a href="javascript:void(0)" id="btnClose" class="button">OK, got it</a>').removeClass().addClass('animated zoomIn');
                 $('.curtain').scrollTop(0);
               } else {
-                window.location.href = "almost-finished.html";
+                window.location.href = "almost-finished";
               }
               $('#btnClose').on('click', function(){
                 $('#msg').fadeOut(300);
