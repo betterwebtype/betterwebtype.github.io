@@ -129,7 +129,7 @@
 
   $('#icon-close').on('click', function(){
     $('#msg').fadeOut(300);
-    $('#msgContent').removeClass().addClass('animated zoomOut');
+    $('#msgContent').removeClass().addClass('animated zoomOut').empty();
     $('body').removeClass('no-scroll');
   });
 
