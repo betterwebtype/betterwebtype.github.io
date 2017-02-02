@@ -73,7 +73,8 @@
       contentType: "application/json; charset=utf-8",
       error: function(err) {
             $('#msg').fadeIn(300);
-            $('#msgContent').empty().append('<h3 class="heading">Something is not working.</h3><p>Try again later.</p><a href="javascript:void(0)" id="btnClose" class="button">OK, got it</a>').removeClass().addClass('animated zoomIn');
+            $('#msgContent').empty().append('<h3 class="heading">Something is not working.</h3><p class="floatCenter alignCenter">Try again later.</p><a href="javascript:void(0)" id="btnClose" class="button">OK, got it</a>').removeClass().addClass('animated zoomIn');
+            console.log(msgReadable);
             $('#btnClose').on('click', function(){
               $('#msg').fadeOut(300);
               $('#msgContent').removeClass().addClass('animated zoomOut');
