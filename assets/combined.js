@@ -67,7 +67,7 @@
     var $this = $(this);
     $.ajax({
       type: "GET",
-      url: 'http://betterwebtype.us2.list-manage2.com/subscribe/post-json?c=?',
+      url: 'https://betterwebtype.us2.list-manage.com/subscribe/post-json?c=?',
       data: $this.serialize(),
       dataType: 'json',
       contentType: "application/json; charset=utf-8",
