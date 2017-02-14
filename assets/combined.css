@@ -1946,6 +1946,23 @@ a:active {
   color: #F15D64;
 }
 
+a.btn-tweet {
+  background: #2baadf;
+  padding: 12px 30px;
+  color: #fff;
+  border-radius: 2px;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
+  display: block;
+  max-width: 200px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+a.btn-tweet:hover {
+  color: #fff;
+}
+
 article {
   display: block;
   margin: 0 auto;
