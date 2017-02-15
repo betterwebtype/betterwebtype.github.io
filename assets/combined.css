@@ -1884,6 +1884,20 @@ body {
   }
 }
 
+@media screen and (min-width: 38em) {
+  .slack {
+    max-width: 33;
+  }
+}
+.slack footer {
+  margin-top: 100px;
+  margin-top: 6.25rem;
+}
+.slack .button {
+  margin-top: 25px;
+  margin-top: 1.5625rem;
+}
+
 footer {
   display: block;
   font-family: "acumin-pro", Helvetica, Arial, sans-serif;
