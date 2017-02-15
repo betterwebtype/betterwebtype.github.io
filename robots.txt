@@ -5,3 +5,4 @@ Disallow: /thank-you.html
 Disallow: /terms.html
 Disallow: /contact.html
 Disallow: /privacy-policy.html
+Disallow: /slack
