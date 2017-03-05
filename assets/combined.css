@@ -2096,6 +2096,17 @@ figure {
   }
 }
 
+.feedback img {
+  margin-bottom: 12.5px;
+  margin-bottom: 0.78125rem;
+}
+@media screen and (min-width: 38em) {
+  .feedback img {
+    margin-bottom: 12.5px;
+    margin-bottom: 0.78125rem;
+  }
+}
+
 .form-join-class {
   font-family: "acumin-pro", Helvetica, Arial, sans-serif;
 }
