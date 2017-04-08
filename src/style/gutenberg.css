@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Gutenberg: Web Typography Starter Kit
 Website ....... http://matejlatin.github.io/Gutenberg/
@@ -31,6 +30,10 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
 
 .floatRight {
   float: right;
+}
+
+.align-center {
+  text-align: center;
 }
 
 /* Grid
@@ -1784,6 +1787,33 @@ body {
   }
 }
 
+article.reviews {
+  max-width: 33em;
+}
+
+.review {
+  margin: auto;
+  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
+}
+.review img {
+  margin: 0;
+  margin-bottom: 12.5px;
+  margin-bottom: 0.78125rem;
+}
+.review p {
+  margin-bottom: 12.5px;
+  margin-bottom: 0.78125rem;
+}
+.review h4 span {
+  font-weight: normal;
+}
+
+.overall-rating {
+  margin: 50px 50px;
+  margin: 3.125rem 3.125rem;
+}
+
 footer {
   display: block;
   font-family: "acumin-pro", Helvetica, Arial, sans-serif;
@@ -2417,26 +2447,27 @@ hgroup {
 }
 
 hr {
-  margin-top: 50px;
-  margin-top: 3.125rem;
-  margin-bottom: 50px;
-  margin-bottom: 3.125rem;
+  margin-top: 25px;
+  margin-top: 1.5625rem;
+  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
   box-sizing: content-box;
   border: 0;
   color: #222;
   display: block;
   height: 25px;
   height: 1.5625rem;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
+  background-size: 100% 25px;
+  background-size: 100% 1.5625rem;
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 10.5px, #222 10.5px, #222 14.5px, transparent 14.5px, transparent 25px);
+  width: 40px;
 }
 @media screen and (min-width: 38em) {
   hr {
-    margin-top: 52px;
-    margin-top: 2.888888888888889rem;
-    margin-bottom: 52px;
-    margin-bottom: 2.888888888888889rem;
+    margin-top: 26px;
+    margin-top: 1.444444444444445rem;
+    margin-bottom: 26px;
+    margin-bottom: 1.444444444444445rem;
     height: 26px;
     height: 1.444444444444445rem;
   }
@@ -2447,9 +2478,12 @@ hr {
   }
 }
 
-hr:before {
-  content: "•••";
-  letter-spacing: 0.2em;
+@media screen and (min-width: 38em) {
+  hr {
+    background-size: 100% 26px;
+    background-size: 100% 1.444444444444445rem;
+    background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, #222 11px, #222 15px, transparent 15px, transparent 26px);
+  }
 }
 
 img {
