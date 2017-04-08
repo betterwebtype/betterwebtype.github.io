@@ -89,7 +89,7 @@
           review += '<small><span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><span itemprop="ratingValue">' + rating + '</span> / <span itemprop="bestRating">5</span></span>&thinsp;&mdash;&thinsp;<time datetime="' + timestamp +'">' + newDate + '</time></small><meta itemprop="datePublished" content="' + timestamp +'">';
           avgRating += parseInt(rating);
 
-          $('.reviews').append('<section class="review" itemscope itemtype="http://schema.org/Review"><meta itemprop="worstRating" content="1">' + review + '</section><hr>');
+          $('.reviews').append('<section class="review" itemscope itemtype="http://schema.org/Review"><span itemprop="itemReviewed" itemscope itemtype="http://schema.org/Product"><span itemprop="name" class="hide">Better Web Type</span></span>' + review + '</section><hr>');
           $('#avgRating').html(Number((avgRating / data.length).toFixed(1)));
           $('#overall-rating').html('<img alt="' + Number((avgRating / data.length).toFixed(0)) + ' stars" src="assets/images/' + Number((avgRating / data.length).toFixed(0)) + '.jpg" width="240">');
         }
