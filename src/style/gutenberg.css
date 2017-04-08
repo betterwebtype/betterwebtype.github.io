@@ -1876,6 +1876,11 @@ a:active {
   color: #F15D64;
 }
 
+.block-link {
+  background: #f7f7f5;
+  padding: 15px 40px;
+}
+
 article {
   display: block;
   margin: 0 auto;
