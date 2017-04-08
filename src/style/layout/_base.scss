@@ -262,3 +262,29 @@ body {
     right: 5%;
   }
 }
+
+article.reviews {
+  max-width: #{$max-width + 'em'};
+}
+
+.review {
+  margin: auto;
+  @include margin-bottom(1);
+
+  img {
+    margin: 0;
+    @include margin-bottom(0.5);
+  }
+
+  p {
+   @include margin-bottom(0.5);
+  }
+
+  h4 span {
+    font-weight: normal;
+  }
+}
+
+.overall-rating {
+  @include margin(2, 2);
+}
