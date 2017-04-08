@@ -1905,7 +1905,7 @@ article.reviews {
   margin-bottom: 12.5px;
   margin-bottom: 0.78125rem;
 }
-.review h4 span {
+.review h4 span.twitter {
   font-weight: normal;
 }
 

@@ -76,20 +76,20 @@
           var rating = data[i].gsx$howwouldyouratethebetterwebtypecourse.$t;
 
           review += '<img alt="' + rating + ' stars" src="/assets/images/' + rating + '.jpg" width="120">';
-          review += '<h4>' + data[i].gsx$whatisyourfullname.$t;
+          review += '<h4><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">' + data[i].gsx$whatisyourfullname.$t;
           if(twitterHandle){
-            review += ' <span>(<a href="https://twitter.com/' + twitterHandle +'">' + twitterHandle + '</a>)</span></h4>';
+            review += ' <span class="twitter">(<a href="https://twitter.com/' + twitterHandle +'">' + twitterHandle + '</a>)</span></span></span></h4>';
           } else {
-            review += '</h4>';
+            review += '</span></span></h4>';
           }
           if(role !== null && role !== 'Other'){
             review += '<em>' + role + '</em>';
           }
-          review += '<p>' + feedback + '</p>';
-          review += '<small><time datetime="' + timestamp +'">' + newDate + '</time></small>';
+          review += '<p><span itemprop="reviewBody">' + feedback + '</span></p>';
+          review += '<small><span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><span itemprop="ratingValue">' + rating + '</span> / <span itemprop="bestRating">5</span></span>&thinsp;&mdash;&thinsp;<time datetime="' + timestamp +'">' + newDate + '</time></small><meta itemprop="datePublished" content="' + timestamp +'">';
           avgRating += parseInt(rating);
 
-          $('.reviews').append('<section class="review">' + review + '</section><hr>');
+          $('.reviews').append('<section class="review" itemscope itemtype="http://schema.org/Review"><meta itemprop="worstRating" content="1">' + review + '</section><hr>');
           $('#avgRating').html(Number((avgRating / data.length).toFixed(1)));
           $('#overall-rating').html('<img alt="' + Number((avgRating / data.length).toFixed(0)) + ' stars" src="assets/images/' + Number((avgRating / data.length).toFixed(0)) + '.jpg" width="240">');
         }
