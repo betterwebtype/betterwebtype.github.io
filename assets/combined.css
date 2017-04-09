@@ -1914,6 +1914,29 @@ article.reviews {
   margin: 3.125rem 3.125rem;
 }
 
+.tweets {
+  display: box;
+  display: -webkit-box;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 50px 0px 0px;
+  padding: 3.125rem 0rem 0rem;
+  margin-left: -12%;
+  margin-right: -12%;
+}
+@media screen and (min-width: 38em) {
+  .tweets {
+    margin-left: -2.5%;
+    margin-right: -2.5%;
+  }
+}
+
+.tweet {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+}
+
 footer {
   display: block;
   font-family: "acumin-pro", Helvetica, Arial, sans-serif;
