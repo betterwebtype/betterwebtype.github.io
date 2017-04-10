@@ -290,14 +290,13 @@ article.reviews {
 }
 
 .tweets {
-  display: box;
-  display: -webkit-box;
-  overflow-x: auto;
-  white-space: nowrap;
-  @include padding(2, 0, 0);
-  margin-left: -12%;
-  margin-right: -12%;
+  display: none;
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    display: box;
+    overflow-x: auto;
+    white-space: nowrap;
+    @include padding(2, 0, 0);
+    display: -webkit-box;
     margin-left: -2.5%;
     margin-right: -2.5%;
   }
