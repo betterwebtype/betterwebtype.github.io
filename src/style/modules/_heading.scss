@@ -173,3 +173,9 @@ hgroup {
 #msgContent .heading {
   margin-top: 0;
 }
+
+.triangle {
+  hr + h2, img + h2 {
+    @include margin-top(1);
+  }
+}

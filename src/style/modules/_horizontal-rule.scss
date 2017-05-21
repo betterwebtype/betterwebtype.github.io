@@ -5,10 +5,11 @@ $hr-type-char-spacing: .2em; // [ .2em ]
 $hr-margin: 1;
 $hr-margin-desktop: $hr-margin;
 $hr-color: $color-font-body;
-$hr-width: 40; // [ 100 ] — In pixels, only for line style
-$hr-height: 4; // [ 2 ] — In pixels, only for line style
+$hr-width: 60; // [ 100 ] — In pixels, only for line style
+$hr-height: 3; // [ 2 ] — In pixels, only for line style
 
 hr {
+  margin: 0 auto;
   @include margin-top($hr-margin);
   @include margin-bottom($hr-margin);
 
