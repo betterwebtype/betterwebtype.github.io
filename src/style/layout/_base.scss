@@ -1,3 +1,28 @@
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.03, 1.03, 1.03);
+    -webkit-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+    box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+}
+
+.pulse:hover {
+  animation-name: none;
+}
+
 /* Defaults
    ========================================================================== */
 .group:after {
@@ -106,11 +131,21 @@ body {
   padding: 0 10%;
   margin: 0 -12.5%;
   width: 125%;
+
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     padding: 0;
     margin: 0 -2.5%;
     width: 105%;
   }
+}
+
+.block-full-width-dark {
+  @extend .block-full-width;
+  background: #111F2E;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  @include margin-top(3);
 }
 
 .countdown {
@@ -306,4 +341,111 @@ article.reviews {
   display: inline-block;
   vertical-align: top;
   margin: 0 20px;
+}
+
+.book-giveaway {
+  @include padding(2,0);
+  @include margin-bottom(0);
+
+  h2 {
+    span {
+      color: $bwt-red;
+    }
+  }
+
+  p, em {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media screen and (min-width: 50em) {
+    max-width: 50em;
+    @include padding(0,0);
+    @include margin-bottom(1);
+
+    img {
+      float: left;
+      margin-right: 3em;
+      @include margin-top(-1);
+      @include margin-bottom(-2);
+    }
+
+    p {
+      max-width: 100%;
+    }
+
+    h2 {
+      padding-top: 1em!important;
+      @include margin-bottom(1);
+      max-width: 45rem;
+    }
+  }
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.triangle-intro {
+  background: url(images/Triangle.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 9rem;
+  min-height: 380px;
+
+  h1 {
+    @include font-size(4.3);
+    @include line-height(2);
+    @include margin-top(0.5);
+    @include margin-bottom(0.5);
+  }
+
+  h3 {
+    @include margin-top(1);
+  }
+
+  @media screen and (min-width: 660px) {
+    padding-top: 9rem;
+    min-height: 450px;
+
+    h1 {
+      @include font-size(6.1);
+      @include line-height(2.5);
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+      min-height: 540px;
+      padding-top: 10.5rem;
+
+      h1 {
+        @include font-size(7.34);
+        @include line-height(3.75);
+      }
+
+      h3 {
+        @include margin-top(1.5);
+      }
+    }
+
+  .tagline {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      font-size: 36px;
+    }
+  }
+
+  h3 {
+    color: $bwt-red;
+    letter-spacing: 0.05em;
+
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      font-size: 48px;
+    }
+  }
 }

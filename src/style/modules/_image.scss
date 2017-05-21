@@ -76,3 +76,15 @@ svg:not(:root) {
 .skills-img {
   max-width: 260px;
 }
+
+.triangle-examples {
+  width: 100%;
+  max-width: 580px;
+}
+
+.book-cover {
+  max-width: 150px;
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    max-width: 268px;
+  }
+}
