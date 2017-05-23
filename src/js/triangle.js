@@ -688,8 +688,8 @@ if (level < numOfLevels - 1){
     if (score > userTopScore){
       userTopScore = score;
     }
-    $('#MERGE4').val(attempt);
-    $('#MERGE5').val(userTopScore);
+    $('#ATTEMPT').val(attempt);
+    $('#TOPSCORE').val(userTopScore);
     console.log("Top score: " + userTopScore);
   }
 }
