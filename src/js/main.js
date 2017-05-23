@@ -29,7 +29,6 @@
 
   // document.getElementById('btnToggleGrid').onclick = toggleGrid;
 
-
   $(document).on('submit', 'form', function(e) {
     var $this = $(this);
     $.ajax({
@@ -61,6 +60,65 @@
           });
     return false;
   });
+
+
+  // $(document).on('submit', 'form', function(e) {
+  //   var $this = $(this);
+  //   $.ajax({
+  //     type: "GET",
+  //     url: 'http://bwt-mc-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point.php',
+  //     data: $this.serialize(),
+  //     dataType: 'jsonp',
+  //     contentType: "application/json; charset=utf-8",
+  //     error: function(err) {
+  //       console.log('error');
+  //         $('#msgContent').html('<h3>Oops!</h3><p>Something went wrong, please try again later. Get in touch if the problem persists. <a href="http://twitter.com/matejlatin">@matejlatin</a></p>');
+  //         $('#msg').fadeIn(300);
+  //       },
+  //         success: function(data) {
+  //           if (data.status === 'subscribed') {
+  //               console.log(data);
+  //               window.location.href = "almost-finished.html";
+  //             } else {
+  //               console.log(data);
+  //               // var msg = data.msg;
+  //               // var msgReadable = msg.replace('0 -', '');
+  //               // $('#msgContent').html('<h3>Oops!</h3><p>' + msgReadable + '</p>');
+  //               $('#msgContent').html('<h3>Oops!</h3><p>Something went wrong.</p>');
+  //               $('#msg').fadeIn(300);
+  //             }
+  //             $('#btnClose').on('click', function(){
+  //               $('#msg').fadeOut(300);
+  //               $('#msgContent').removeClass().addClass('animated zoomOut');
+  //           });
+  //           }
+  //         });
+  //   return false;
+  // });
+
+  // $('form.form-join-bwt').on('submit',function(e) {
+  //   // Highjack the submit button, we will do it ourselves
+  //   e.preventDefault();
+  //   // uncomment next line & check console to see if button works
+  //   // console.log('submit button worked!');
+  //   // store all the form data in a variable
+  //   var formData = $(this).serialize();
+  //   // Let's make the call!
+  //   // Replace the path to your own endpoint!
+  //   $.getJSON('http://bwt-mc-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point.php', formData ,function(data) {
+  //     // uncomment next line to see your data output in console
+  //     console.log(data);
+
+  //     // If it worked...
+  //     if(data.status === 'subscribed') {
+  //       // Let us know!
+  //       alert('Thanks!');
+  //     } else {
+  //       // Otherwise tell us why it didn't
+  //       alert("oops error: " + data.detail);
+  //     }
+  //   });
+  // });
 
   $('#link-contact').on('click', function(){
     $('#msg').fadeIn(300);
