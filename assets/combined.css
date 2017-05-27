@@ -4935,7 +4935,7 @@ svg {
   margin-bottom: 1.5625rem;
 }
 
-.step-one, .step-two {
+.steps .step-one, .steps .step-two {
   margin-right: 100px;
 }
 
