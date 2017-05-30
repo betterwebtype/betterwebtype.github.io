@@ -15,13 +15,13 @@
   <meta property="og:title" content="Better Web Typography for a Better Web.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://betterwebtype.com/triangle">
-  <meta property="og:image" content="http://betterwebtype.com/better-web-type.jpg" />
+  <meta property="og:image" content="http://betterwebtype.com/better-web-type-triangle.jpg" />
   <meta property="og:description" content="Better Web Type is an easy-to-follow web typography email course for web designers and web developers." />
   <meta name="twitter:creator" content="@matejlatin">
   <meta name="twitter:description" content="Better Web Typography for a Better Web. An easy-to-follow web typography email course for web designers and web developers." />
   <meta name="twitter:url" content="http://betterwebtype.com/triangle" />
   <meta name="twitter:domain" content="betterwebtype.com" />
-  <meta name="twitter:image:src" content="http://betterwebtype.com/better-web-type.jpg" />
+  <meta name="twitter:image:src" content="http://betterwebtype.com/better-web-type-triangle.jpg" />
   <meta name="twitter:card" content="summary_large_image">
   <meta name="msvalidate.01" content="5360663AA079A15002B34C4289C56DA2" />
   <script src="https://use.typekit.net/evl6hgo.js"></script>
@@ -49,7 +49,7 @@
     <article>
       <section class="Grid Grid--gutter-xl">
         <div class="Grid-cell--xs-12">
-          <p class="floatCenter"><span class="dropcap">T</span>he Equilateral Triangle of a Perfect Paragraph is a theory developed by <a href="http://matejlatin.co.uk">Matej Latin</a> in the <a href="/">Better Web Type</a> course. Too many web designers and web developers still set line-height, font size and line width as independent features when in fact they should all be considered together. The equilateral triangle is a perfect representation of how the three features work in harmony.</p>
+          <p class="floatCenter"><span class="dropcap">T</span>he Equilateral Triangle of a Perfect Paragraph is a theory developed by <a href="http://matejlatin.co.uk" target="_blank">Matej Latin</a> in the <a href="/" target="_blank">Better Web Type</a> course. Too many web designers and web developers still set line-height, font size and line width as independent features when in fact they should all be considered together. The equilateral triangle is a perfect representation of how the three features work in harmony.</p>
 
           <p class="floatCenter">This game elaborates on the theory and puts it into practice. Its goal is to teach you about the three features that need to be considered for a perfect paragraph and help you train your eye. </p>
 
@@ -97,7 +97,7 @@
     </section>
     <footer class="alignCenter">
       <h1>Better Web Type</h1>
-      <p class="floatCenter"><strong>Brought to you by <a href="http://matejlatin.co.uk">Matej Latin</a>.</strong><br>
+      <p class="floatCenter"><strong>Brought to you by <a href="http://matejlatin.co.uk" target="_blank">Matej Latin</a>.</strong><br>
         <a href="javascript:void(0)" id="link-contact">Contact</a> • <a href="javascript:void(0)" id="link-terms">Terms &amp; Conditions</a> • <a href="javascript:void(0)" id="link-privacy">Privacy Policy</a>
       </p>
     </footer>
@@ -190,7 +190,7 @@
         </div>
         <div class="book-msg floatCenter"></div>
         <div class="form-triangle">
-          <form class="form-join-bwt cf">
+          <form class="form-join-bwt cf" id="theForm">
             <input type="hidden" name="u" value="d2aaa3155cfda7e76c73817a0">
             <input type="hidden" name="id" value="b76a5d78ca">
 
@@ -199,20 +199,20 @@
                 <div class="field-group">
                   <div class="form-name">
                     <label for="name">First name:</label>
-                    <input id="name" type="text" autocapitalize autocorrect="off" name="FNAME" id="FNAME" size="25" value="" placeholder="e.g. Gordon" required>
+                    <input type="text" autocapitalize autocorrect="off" name="FNAME" id="FNAME" size="25" value="" placeholder="e.g. Gordon" required>
                   </div>
                   <div class="form-surname">
                     <label for="surname">Last name:</label>
-                    <input id="surname" type="text" autocapitalize autocorrect="off" name="LNAME" id="LNAME" size="25" value="" placeholder="e.g. Freeman" required>
+                    <input type="text" autocapitalize autocorrect="off" name="LNAME" id="LNAME" size="25" value="" placeholder="e.g. Freeman" required>
                   </div>
                   <div class="cf">
                     <label for="email">Email address:</label>
-                    <input id="email" type="email" autocapitalize="off" autocorrect="off" name="EMAIL" id="EMAIL" size="25" value="" placeholder="e.g. gordon@gmail.com" required>
+                    <input type="email" autocapitalize="off" autocorrect="off" name="EMAIL" id="EMAIL" size="25" value="" placeholder="e.g. gordon@gmail.com" required>
                   </div>
                   <div class="mc-field-group input-group">
                     <div class="label">I’m a&hellip; (optional)</div>
-                    <ul class="ima"><li><input type="radio" value="1" name="group[47261]" id="mce-group[47261]-47261-0"><label for="mce-group[47261]-47261-0">Web designer</label></li>
-                      <li class="radio-developer"><input type="radio" value="2" name="group[47261]" id="mce-group[47261]-47261-1"><label for="mce-group[47261]-47261-1">Web developer</label></li>
+                    <ul class="ima"><li><input type="radio" value="1" name="INTEREST" class="interest" id="mce-group[47261]-47261-0"><label for="mce-group[47261]-47261-0">Web designer</label></li>
+                      <li class="radio-developer"><input type="radio" value="2" name="INTEREST" class="interest" id="mce-group[47261]-47261-1"><label for="mce-group[47261]-47261-1">Web developer</label></li>
                     </ul>
                   </div>
                 </div>
@@ -220,8 +220,10 @@
             </div>
 
             <div class="hide">
-              <label class="radio" for="MERGE8-0"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="MERGE8" id="MERGE8-0" value="No"  class="av-radio" checked="checked"><span>No</span></label>
-              <label class="radio" for="MERGE8-1"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="MERGE8" id="MERGE8-1" value="Yes"  class="av-radio"><span>Yes</span></label>
+              <label class="radio" for="MERGE8-0"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="SENDCOURSE" id="MERGE8-0" value="No"  class="av-radio" checked="checked"><span>No</span></label>
+              <label class="radio" for="MERGE8-1"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="SENDCOURSE" id="MERGE8-1" value="Yes"  class="av-radio"><span>Yes</span></label>
+              <label class="radio" for="MERGE9-0"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="PLAYEDTRI" id="MERGE9-0" value="No"  class="av-radio"><span>No</span></label>
+              <label class="radio" for="MERGE9-1"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="PLAYEDTRI" id="MERGE9-1" value="Yes"  class="av-radio" checked="checked"><span>Yes</span></label>
               <select class="select-small" id="JOINED" name="JOINED">
                 <option value="Course">Course</option>
                 <option value="Blog">Blog</option>
@@ -233,7 +235,8 @@
             </div>
 
             <div class="submit_container clear cf">
-              <input type="submit" class="button" name="submit" value="Start the course">
+              <!-- <input type="submit" class="button" name="submit-form" value="Start the course"> -->
+              <button id="myButton" class="button" name="submit">Start the course</button>
             </div>
           </form>
           <div id="msg" class="hide">
