@@ -6,21 +6,6 @@ var outOf;
 var multiplier;
 var maxScore;
 
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-var varId = getParameterByName('id');
-console.log(varId);
-var varEmail = getParameterByName('email');
-console.log(varEmail);
-
 var levels = [
 {
   id: "01",
@@ -653,7 +638,7 @@ if (level < numOfLevels - 1){
     var bookMsg;
     // var bookSwitch = 0;
 
-    if( varId != null ){
+    if( varEmail != null ){
       bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small.jpg' width='119'></td><td><h2>Get a chance to win a free <span>Better Web Type</span> book</h2><p><em>All you have to do is tweet your best score. The higher the score, the better the chance to win the free book.</em></p></td></tr></tbody></table>";
     } else {
       bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small.jpg' width='119'></td><td><h2>Get a chance to win the book <span>join Better Web Type</span></h2><p><em>You’ll get an occasional newsletter about producing better web typography and access to a free email course.</em></p></td></tr></tbody></table>";
@@ -677,20 +662,27 @@ if (level < numOfLevels - 1){
       animateScore();
     }, 4500);
     var tweetUrl = "<a href='https://twitter.com/intent/tweet?url=https%3A%2F%2Fbetterwebtype.com%2Ftriangle&via=matejlatin&text=I%20scored%20" + score + "/" + outOf + "%20in%20the%20Perfect%20Paragraph%20game.%20Can%20you%20do%20better%20than%20me%3F%20&hashtags=BetterWebType' class='btn-tweet floatCenter' target='_blank'>Tweet this</a>";
-    // setTimeout(function(){ $('.tweet-score').append(tweetUrl).fadeIn(); }, 6000);
+    setTimeout(function(){ $('.tweet-score').append(tweetUrl).fadeIn(); }, 6000);
     setTimeout(function(){ $('#tryAgain').fadeIn(); }, 8000);
-    // setTimeout(function(){ $('.book-msg').fadeIn(); }, 8500);
-    // if( varId == null ){
-    //   setTimeout(function(){ $('.form-triangle').fadeIn(); }, 8500);
-    // }
+    setTimeout(function(){ $('.book-msg').fadeIn(); }, 8500);
+    if( varEmail == null ){
+      setTimeout(function(){ $('.form-triangle').fadeIn(); }, 8500);
+    }
 
     // Update top score
     if (score > userTopScore){
       userTopScore = score;
     }
+    // $('#FNAME').val(varName);
+    // $('#LNAME').val(varSurname);
+    // $('#EMAIL').val(varEmail);
     $('#ATTEMPT').val(attempt);
     $('#TOPSCORE').val(userTopScore);
     console.log("Top score: " + userTopScore);
+    if( varEmail != null ){
+      // submit form
+      setTimeout(function(){ $('#theForm').submit(); }, 8500);
+    }
   }
 }
 
