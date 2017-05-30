@@ -1,74 +1,78 @@
-(function(window, document) {
-  'use strict';
+// Get data from URL
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+  results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
-  var flip = 0;
+var varEmail = getParameterByName('email');
+console.log(varEmail);
+var varName = getParameterByName('name');
+console.log(varName);
+var varSurname = getParameterByName('surname');
+console.log(varSurname);
 
-  function toggleGrid() {
-    var body = document.getElementsByTagName('body')[0];
-    var button = document.getElementById('btnToggleGrid');
+// Prefill form
+$('#FNAME').val(varName);
+$('#LNAME').val(varSurname);
+$('#EMAIL').val(varEmail);
 
-    if (flip === 0) {
-      body.classList.add('grid');
-      button.textContent = 'Turn Double Grid On';
-      button.classList.add('double-grid');
-      flip = 1;
-    } else if (flip === 1) {
-      body.classList.add('grid-double');
-      button.textContent = 'Turn Grid Off';
-      button.classList.remove('double-grid');
-      button.classList.add('grid-off');
-      flip = 2;
-    } else if (flip === 2) {
-      body.classList.remove('grid');
-      body.classList.remove('grid-double');
-      button.classList.remove('grid-off');
-      button.textContent = 'Turn Grid On';
-      flip = 0;
-    }
+var myButton = document.getElementById('myButton');
+
+// Button spinner behavior
+myButton.addEventListener("click", function() {
+  // myButton.className = myButton.className + ' loading';
+  if ( $('#FNAME').val().length === 0 || $('#LNAME').val().length === 0 || $('#EMAIL').val().length === 0 ){
+    $('#myButton').addClass('loading');
+    setTimeout( function(){ $('#myButton').removeClass('loading'); }, 500);
+  } else {
+    $('#myButton').addClass('loading');
   }
+}, false);
+
+
+  (function(window, document) {
+    'use strict';
+
+    var flip = 0;
+
+    function toggleGrid() {
+      var body = document.getElementsByTagName('body')[0];
+      var button = document.getElementById('btnToggleGrid');
+
+      if (flip === 0) {
+        body.classList.add('grid');
+        button.textContent = 'Turn Double Grid On';
+        button.classList.add('double-grid');
+        flip = 1;
+      } else if (flip === 1) {
+        body.classList.add('grid-double');
+        button.textContent = 'Turn Grid Off';
+        button.classList.remove('double-grid');
+        button.classList.add('grid-off');
+        flip = 2;
+      } else if (flip === 2) {
+        body.classList.remove('grid');
+        body.classList.remove('grid-double');
+        button.classList.remove('grid-off');
+        button.textContent = 'Turn Grid On';
+        flip = 0;
+      }
+    }
 
   // document.getElementById('btnToggleGrid').onclick = toggleGrid;
-
-  $(document).on('submit', 'form', function(e) {
-    var $this = $(this);
-    $.ajax({
-      type: "GET",
-      url: 'https://betterwebtype.us2.list-manage.com/subscribe/post-json?c=?',
-      data: $this.serialize(),
-      dataType: 'json',
-      contentType: "application/json; charset=utf-8",
-      error: function(err) {
-        console.log('error');
-          $('#msgContent').html('<h3>Oops!</h3><p>Something went wrong, please try again later. Get in touch if the problem persists. <a href="http://twitter.com/matejlatin">@matejlatin</a></p>');
-          $('#msg').fadeIn(300);
-        },
-          success: function(data) {
-            if (data.result != "success") {
-                var msg = data.msg;
-                var msgReadable = msg.replace('0 -', '')
-                $('#msgContent').html('<h3>Oops!</h3><p>' + msgReadable + '</p>');
-                $('#msg').fadeIn(300);
-                // $('.curtain').scrollTop(0);
-              } else {
-                window.location.href = "almost-finished.html";
-              }
-              $('#btnClose').on('click', function(){
-                $('#msg').fadeOut(300);
-                $('#msgContent').removeClass().addClass('animated zoomOut');
-            });
-            }
-          });
-    return false;
-  });
-
 
   // $(document).on('submit', 'form', function(e) {
   //   var $this = $(this);
   //   $.ajax({
   //     type: "GET",
-  //     url: 'http://bwt-mc-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point.php',
+  //     url: 'https://betterwebtype.us2.list-manage.com/subscribe/post-json?c=?',
   //     data: $this.serialize(),
-  //     dataType: 'jsonp',
+  //     dataType: 'json',
   //     contentType: "application/json; charset=utf-8",
   //     error: function(err) {
   //       console.log('error');
@@ -76,16 +80,14 @@
   //         $('#msg').fadeIn(300);
   //       },
   //         success: function(data) {
-  //           if (data.status === 'subscribed') {
-  //               console.log(data);
-  //               window.location.href = "almost-finished.html";
-  //             } else {
-  //               console.log(data);
-  //               // var msg = data.msg;
-  //               // var msgReadable = msg.replace('0 -', '');
-  //               // $('#msgContent').html('<h3>Oops!</h3><p>' + msgReadable + '</p>');
-  //               $('#msgContent').html('<h3>Oops!</h3><p>Something went wrong.</p>');
+  //           if (data.result != "success") {
+  //               var msg = data.msg;
+  //               var msgReadable = msg.replace('0 -', '')
+  //               $('#msgContent').html('<h3>Oops!</h3><p>' + msgReadable + '</p>');
   //               $('#msg').fadeIn(300);
+  //               // $('.curtain').scrollTop(0);
+  //             } else {
+  //               window.location.href = "almost-finished.html";
   //             }
   //             $('#btnClose').on('click', function(){
   //               $('#msg').fadeOut(300);
@@ -95,6 +97,53 @@
   //         });
   //   return false;
   // });
+
+
+  $(document).on('submit', 'form', function(e) {
+    var $this = $(this);
+    $.ajax({
+      type: "GET",
+      url: 'http://bwt-mc-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point.php',
+      data: $this.serialize(),
+      dataType: 'jsonp',
+      contentType: "application/json; charset=utf-8",
+      error: function(err) {
+        console.log(err);
+        console.log('error');
+        $('#msgContent').html('<h3>Oops!</h3><p>Something went wrong, please try again later. Get in touch if the problem persists. <a href="http://twitter.com/matejlatin">@matejlatin</a></p>');
+        setTimeout( function(){ $('#myButton').removeClass('loading'); }, 500);
+        $('#msg').fadeIn(300);
+        if ( $('body').hasClass('triangle')){
+          setTimeout(function(){$('.score').animate({
+            scrollTop: $("#msgContent").offset().top
+          }, 500); }, 400);
+        } else {
+          setTimeout(function(){$('html, body').animate({
+            scrollTop: $("#msgContent").offset().top
+          }, 500); }, 400);
+        }
+      },
+      success: function(data) {
+        if (data.status == 'subscribed' || data.status == 'pending') {
+          console.log(data);
+          if (varEmail == null) {
+            window.location.href = "almost-finished.html";
+          } else {
+            return;
+          }
+        } else {
+                // console.log(data);
+                // var msg = data.msg;
+                // var msgReadable = msg.replace('0 -', '');
+                // $('#msgContent').html('<h3>Oops!</h3><p>' + msgReadable + '</p>');
+                $('#msgContent').html('<h3>Oops!</h3><p>Something went wrong.</p>');
+                $('#msg').fadeIn(300);
+                $('#myButton').removeClass('loading');
+              }
+            }
+          });
+    return false;
+  });
 
   // $('form.form-join-bwt').on('submit',function(e) {
   //   // Highjack the submit button, we will do it ourselves
@@ -125,25 +174,25 @@
     $('body').addClass('no-scroll');
     $('.curtain').removeClass('show-overflow');
     $.get("contact.html", function (data) {
-    $('#msgContent').empty().append(data).removeClass().addClass('animated zoomIn');
+      $('#msgContent').empty().append(data).removeClass().addClass('animated zoomIn');
     });
   });
 
   $('#link-privacy').on('click', function(){
-      $('body').addClass('no-scroll');
-      $('.curtain').addClass('show-overflow');
-      $('#msg').fadeIn(300);
-      $.get("privacy-policy.html", function (data) {
+    $('body').addClass('no-scroll');
+    $('.curtain').addClass('show-overflow');
+    $('#msg').fadeIn(300);
+    $.get("privacy-policy.html", function (data) {
       $('#msgContent').empty().append(data).removeClass().addClass('animated zoomIn');
       $('.curtain').scrollTop(0);
     });
   });
 
   $('#link-terms').on('click', function(){
-      $('body').addClass('no-scroll');
-      $('.curtain').addClass('show-overflow');
-      $('#msg').fadeIn(300);
-      $.get("terms.html", function (data) {
+    $('body').addClass('no-scroll');
+    $('.curtain').addClass('show-overflow');
+    $('#msg').fadeIn(300);
+    $.get("terms.html", function (data) {
       $('#msgContent').empty().append(data).removeClass().addClass('animated zoomIn');
       $('.curtain').scrollTop(0);
     });
@@ -166,7 +215,7 @@ http://www.apache.org/licenses/LICENSE-2.0.html
 */
 
 (function() {
-"use strict";
+  "use strict";
 
 // Reference terms: http://blogs.wayne.edu/bcam/wp-content/blogs.dir/308/files/2013/09/glyphterms.gif
 
@@ -179,18 +228,18 @@ var LINEHEIGHT_DEFAULT = 1.15; // Blink fallback
 var _fontMetricsCache = {};
 
 function getLineMetrics(css) {
-    var fontSize = parseFloat(css.fontSize);
-    var lineHeight = (css.lineHeight==='normal')?(LINEHEIGHT_DEFAULT*fontSize):parseFloat(css.lineHeight);
+  var fontSize = parseFloat(css.fontSize);
+  var lineHeight = (css.lineHeight==='normal')?(LINEHEIGHT_DEFAULT*fontSize):parseFloat(css.lineHeight);
 
-    return {
-        leading: (lineHeight - fontSize),
-        lineHeight: lineHeight,
-        fontSize: fontSize
-    };
+  return {
+    leading: (lineHeight - fontSize),
+    lineHeight: lineHeight,
+    fontSize: fontSize
+  };
 }
 
 function createTestContainingBlock(document) {
-    var div = document.createElement('div');
+  var div = document.createElement('div');
 
     div.style.position = "fixed"; // To make containing block and out of flow
     div.style.padding = ZEROPX;
@@ -200,22 +249,22 @@ function createTestContainingBlock(document) {
 
     document.body.appendChild(div);
     return div;
-}
+  }
 
-function newTestGlyph(container) {
+  function newTestGlyph(container) {
     var span = container.ownerDocument.createElement('span');
     span.textContent = TEST_GLYPH;
     if (container) {
-        container.appendChild(span);
+      container.appendChild(span);
     }
     return span;
-}
+  }
 
-function destroyTestContainingBlock(element) {
+  function destroyTestContainingBlock(element) {
     element.ownerDocument.body.removeChild(element);
-}
+  }
 
-function measureCapHeightRatio(testParent, fontFamily, width, height) {
+  function measureCapHeightRatio(testParent, fontFamily, width, height) {
     // We use canvas to figure out the ratio of cap-height to overall font height.
     // This helps us figure out the factor by which to grow our drop cap's font
     // size to fill the entire drop cap float.
@@ -243,37 +292,37 @@ function measureCapHeightRatio(testParent, fontFamily, width, height) {
     var bottomL = null;
 
     function _isBlack(imageData, pxIndex) {
-        var firstByte = pxIndex*4;
-        var red = imageData.data[firstByte];
-        var green = imageData.data[firstByte + 1];
-        var blue = imageData.data[firstByte + 2];
+      var firstByte = pxIndex*4;
+      var red = imageData.data[firstByte];
+      var green = imageData.data[firstByte + 1];
+      var blue = imageData.data[firstByte + 2];
 
-        return (red===0 || green===0 || blue===0)?true:false;
+      return (red===0 || green===0 || blue===0)?true:false;
     }
 
     // From the bottom, go up until we fnd the first black pixel
     for (var y = canvas.height-1; y >= 0; y--) {
-        if (_isBlack(middleYline, y)) {
-            bottomL = y;
-            break;
-        }
+      if (_isBlack(middleYline, y)) {
+        bottomL = y;
+        break;
+      }
     }
 
     // From the top, go down until the first black pixel
     for (var y = 0; y < canvas.height; y++) {
-        if (_isBlack(middleYline, y)) {
-            ratio = (bottomL + 1 - y)/height;
-            break;
-        }
+      if (_isBlack(middleYline, y)) {
+        ratio = (bottomL + 1 - y)/height;
+        break;
+      }
     }
 
     return ratio;
-}
+  }
 
-function getFontMetrics(document, fontFamily) {
+  function getFontMetrics(document, fontFamily) {
     var ret = _fontMetricsCache[fontFamily];
     if (ret) {
-        return ret;
+      return ret;
     }
 
     ret = { baselineRatio: undefined, capHeightRatio: undefined };
@@ -285,78 +334,78 @@ function getFontMetrics(document, fontFamily) {
             <span style="font-size:0px">X</span>
             <span>X</span>
         </p>
-    */
+        */
 
-    var testBlock = createTestContainingBlock(document);
-    testBlock.style.fontFamily = fontFamily;
+        var testBlock = createTestContainingBlock(document);
+        testBlock.style.fontFamily = fontFamily;
 
-    var zeroX = newTestGlyph(testBlock);
-    zeroX.style.fontSize = ZEROPX;
-    var largeX = newTestGlyph(testBlock);
+        var zeroX = newTestGlyph(testBlock);
+        zeroX.style.fontSize = ZEROPX;
+        var largeX = newTestGlyph(testBlock);
 
-    ret.baselineRatio = zeroX.offsetTop/TEST_SIZE;
-    try {
-        ret.capHeightRatio = measureCapHeightRatio(testBlock, fontFamily, largeX.offsetWidth, TEST_SIZE);
-    } catch(e) {
-        throw new Error('[dropcap.js] Error computing font metrics: '+ e.message);
-    } finally {
-        destroyTestContainingBlock(testBlock);
-    }
+        ret.baselineRatio = zeroX.offsetTop/TEST_SIZE;
+        try {
+          ret.capHeightRatio = measureCapHeightRatio(testBlock, fontFamily, largeX.offsetWidth, TEST_SIZE);
+        } catch(e) {
+          throw new Error('[dropcap.js] Error computing font metrics: '+ e.message);
+        } finally {
+          destroyTestContainingBlock(testBlock);
+        }
 
-    _fontMetricsCache[fontFamily] = ret;
+        _fontMetricsCache[fontFamily] = ret;
 
-    return ret;
-}
+        return ret;
+      }
 
-var DCJS_DESCENDER_CLASS = "dcjs-descender";
+      var DCJS_DESCENDER_CLASS = "dcjs-descender";
 
-function toPxLength(pxNumber) {
-    return pxNumber + "px";
-}
+      function toPxLength(pxNumber) {
+        return pxNumber + "px";
+      }
 
-function hasDescenderClass(dcapElement) {
+      function hasDescenderClass(dcapElement) {
     // Note: classList not supported in IE9
     if (dcapElement.classList.contains(DCJS_DESCENDER_CLASS)) {
-        return true;
+      return true;
     }
-}
+  }
 
-function isDescenderChar(dcapElement) {
+  function isDescenderChar(dcapElement) {
     var descenders = "gjpqQ";
 
     if (descenders.indexOf(dcapElement.textContent) === -1) {
-        return false;
+      return false;
     }
     return true;
-}
+  }
 
-function resetDropcapStyle(element) {
+  function resetDropcapStyle(element) {
     if (element.dcapjs) {
-        element.style.cssFloat = "";
-        element.style.padding = "";
-        element.style.fontSize = "";
-        element.style.lineHeight = "";
-        element.style.marginTop = "";
+      element.style.cssFloat = "";
+      element.style.padding = "";
+      element.style.fontSize = "";
+      element.style.lineHeight = "";
+      element.style.marginTop = "";
     }
-}
+  }
 
-function layoutDropcap(dropcapElement, heightInLines, baselinePos) {
-        if (!baselinePos) {
-            baselinePos = heightInLines;
-        }
+  function layoutDropcap(dropcapElement, heightInLines, baselinePos) {
+    if (!baselinePos) {
+      baselinePos = heightInLines;
+    }
 
-        if(baselinePos==1 && heightInLines==1) {
+    if(baselinePos==1 && heightInLines==1) {
             // First baseline and one-line tall? Reset any dropcap.js
             // styling and let the browser lay it out
             resetDropcapStyle(dropcapElement);
             return;
-        }
+          }
 
-        var doc = dropcapElement.ownerDocument;
-        var dcap = dropcapElement;
-        var par = dcap.parentNode;
-        var dcapCSS = window.getComputedStyle(dcap);
-        var parCSS = window.getComputedStyle(par);
+          var doc = dropcapElement.ownerDocument;
+          var dcap = dropcapElement;
+          var par = dcap.parentNode;
+          var dcapCSS = window.getComputedStyle(dcap);
+          var parCSS = window.getComputedStyle(par);
 
         // Compute all our metrics
         var dcapFontMetrics = getFontMetrics(doc, dcapCSS.fontFamily);
@@ -400,8 +449,8 @@ function layoutDropcap(dropcapElement, heightInLines, baselinePos) {
         // Is the drop cap raised? Adjust its parent paragraph's top margin by the
         // height of the rise
         if (heightInLines > baselinePos) {
-            var parMarginTop = parseFloat(parCSS.marginTop);
-            par.style.marginTop = toPxLength(parMarginTop + (-1*verticalOffset));
+          var parMarginTop = parseFloat(parCSS.marginTop);
+          par.style.marginTop = toPxLength(parMarginTop + (-1*verticalOffset));
         }
 
         // Is it a descender? Make our float taller
@@ -411,15 +460,15 @@ function layoutDropcap(dropcapElement, heightInLines, baselinePos) {
             // Can we tell the dropcap has a descender?
             // Estimate the amount of space below the baseline
             descendAdjust = dcapFontSizeInPx*(1-dcapFontMetrics.baselineRatio);
-        } else if (hasDescenderClass(dcap)) {
+          } else if (hasDescenderClass(dcap)) {
             // Did the author tell us to treat this dropcap as a descender?
             // Then make the float font-size high
             // Note: the result may generally be too tall; experience will show
             // whether this is useful
             descendAdjust = dcapFontSizeInPx - dcapHeightInPx;
-        }
+          }
 
-        dcap.style.height = toPxLength(dcapHeightInPx + descendAdjust);
+          dcap.style.height = toPxLength(dcapHeightInPx + descendAdjust);
 
 
         // The baseline of an empty inline-block is its bottom
@@ -431,76 +480,76 @@ function layoutDropcap(dropcapElement, heightInLines, baselinePos) {
         //to the bottom of the span
         var strut = dcap.dcapjsStrut;
         if (!strut) {
-            strut=doc.createElement("span");
-            strut.style.display = "inline-block";
-            dcap.appendChild(strut);
-            dcap.dcapjsStrut = strut;
+          strut=doc.createElement("span");
+          strut.style.display = "inline-block";
+          dcap.appendChild(strut);
+          dcap.dcapjsStrut = strut;
         }
         strut.style.height = toPxLength(dcapHeightInPx);
 
-}
+      }
 
-function getCSSPropertyName(property) {
-    var _supportElement = (window.document.body)?window.document.body:document.createElement('div');
-    function _supported(p) {
-        return p in _supportElement.style;
-    }
+      function getCSSPropertyName(property) {
+        var _supportElement = (window.document.body)?window.document.body:document.createElement('div');
+        function _supported(p) {
+          return p in _supportElement.style;
+        }
 
     // Check for unprefixed first...
     if (_supported(property)) {
-        return property;
+      return property;
     }
 
     // ...then look for prefixed version...
     var prefix = ['-webkit-', '-moz-', '-ms-', '-o'];
     for (var i=0; i < prefix.length; i++) {
-        var name = prefix[i]+property;
-        if (_supported(name)) {
-            return name;
-        }
+      var name = prefix[i]+property;
+      if (_supported(name)) {
+        return name;
+      }
     }
 
     return null;
-}
+  }
 
-var global;
-if (typeof window !== 'undefined') {
-  global = window;
-} else if (typeof exports !== 'undefined') {
-  global = exports;
-} else {
-  global = this;
-}
-global.Dropcap = {
+  var global;
+  if (typeof window !== 'undefined') {
+    global = window;
+  } else if (typeof exports !== 'undefined') {
+    global = exports;
+  } else {
+    global = this;
+  }
+  global.Dropcap = {
 
     options: {
-        runEvenIfInitialLetterExists: true,
+      runEvenIfInitialLetterExists: true,
     },
 
     layout: function(dropcapRef, heightInLines, baselinePos) {
-        if (this.options.runEvenIfInitialLetterExists == false) {
-            var initialLetter = getCSSPropertyName('initial-letter');
-            if (initialLetter) {
-                return;
-            }
+      if (this.options.runEvenIfInitialLetterExists == false) {
+        var initialLetter = getCSSPropertyName('initial-letter');
+        if (initialLetter) {
+          return;
         }
+      }
 
-        if (heightInLines < 1 || (baselinePos && baselinePos < 1)) {
-            throw new RangeError("Dropcap.layout expects the baseline position and height to be 1 or above");
-        }
+      if (heightInLines < 1 || (baselinePos && baselinePos < 1)) {
+        throw new RangeError("Dropcap.layout expects the baseline position and height to be 1 or above");
+      }
 
-        if (dropcapRef instanceof HTMLElement) {
-            layoutDropcap(dropcapRef, heightInLines, baselinePos);
-        } else if (dropcapRef instanceof NodeList) {
-            var forEach = Array.prototype.forEach;
-            forEach.call(dropcapRef, function(dropcap) {
-                layoutDropcap(dropcap, heightInLines, baselinePos);
-            });
-        } else {
-            throw new TypeError("Dropcap.layout expects a single HTMLElement or a NodeList");
-        }
+      if (dropcapRef instanceof HTMLElement) {
+        layoutDropcap(dropcapRef, heightInLines, baselinePos);
+      } else if (dropcapRef instanceof NodeList) {
+        var forEach = Array.prototype.forEach;
+        forEach.call(dropcapRef, function(dropcap) {
+          layoutDropcap(dropcap, heightInLines, baselinePos);
+        });
+      } else {
+        throw new TypeError("Dropcap.layout expects a single HTMLElement or a NodeList");
+      }
     }
-};
+  };
 
 })();
 
@@ -521,10 +570,10 @@ global.Dropcap = {
 
     // Setup options
     var compressor = kompressor || 1,
-        settings = $.extend({
-          'minFontSize' : Number.NEGATIVE_INFINITY,
-          'maxFontSize' : Number.POSITIVE_INFINITY
-        }, options);
+    settings = $.extend({
+      'minFontSize' : Number.NEGATIVE_INFINITY,
+      'maxFontSize' : Number.POSITIVE_INFINITY
+    }, options);
 
     return this.each(function(){
 
