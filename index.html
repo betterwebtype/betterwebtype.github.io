@@ -310,7 +310,7 @@
       <section id="subscribe" class="subscribe Grid-cell--xs-12 Grid-cell--lg-12">
         <p class="alignCenter floatCenter tagline"><em>Join more than 11,000 designers and developers. You’ll receive the first lesson in less than a minute.</em></p>
         <div class="form-wrapper">
-          <form action="//betterwebtype.us2.list-manage.com/subscribe/post" method="POST" class="form-join-class cf">
+          <form class="form-join-class cf">
             <input type="hidden" name="u" value="d2aaa3155cfda7e76c73817a0">
             <input type="hidden" name="id" value="b76a5d78ca">
 
@@ -319,20 +319,20 @@
                 <div class="field-group">
                   <div class="form-name">
                     <label for="name">First name:</label>
-                    <input id="name" type="text" autocapitalize autocorrect="off" name="MERGE1" id="MERGE1" size="25" value="" placeholder="e.g. Gordon" required>
+                    <input id="FNAME" type="text" autocapitalize autocorrect="off" name="FNAME" size="25" value="" placeholder="e.g. Gordon" required>
                   </div>
                   <div class="form-surname">
                     <label for="surname">Last name:</label>
-                    <input id="surname" type="text" autocapitalize autocorrect="off" name="MERGE2" id="MERGE2" size="25" value="" placeholder="e.g. Freeman" required>
+                    <input id="LNAME" type="text" autocapitalize autocorrect="off" name="LNAME" size="25" value="" placeholder="e.g. Freeman" required>
                   </div>
                   <div class="cf">
                     <label for="email">Email address:</label>
-                    <input id="email" type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" placeholder="e.g. gordon@gmail.com" required>
+                    <input id="EMAIL" type="email" autocapitalize="off" autocorrect="off" name="EMAIL" size="25" value="" placeholder="e.g. gordon@gmail.com" required>
                   </div>
                   <div class="mc-field-group input-group">
                     <div class="label">I’m a&hellip; (optional)</div>
-                    <ul class="ima"><li><input type="radio" value="1" name="group[47261]" id="mce-group[47261]-47261-0"><label for="mce-group[47261]-47261-0">Web designer</label></li>
-                      <li class="radio-developer"><input type="radio" value="2" name="group[47261]" id="mce-group[47261]-47261-1"><label for="mce-group[47261]-47261-1">Web developer</label></li>
+                    <ul class="ima"><li><input type="radio" value="1" name="INTEREST" id="mce-group[47261]-47261-0"><label for="mce-group[47261]-47261-0">Web designer</label></li>
+                      <li class="radio-developer"><input type="radio" value="2" name="INTEREST" id="mce-group[47261]-47261-1"><label for="mce-group[47261]-47261-1">Web developer</label></li>
                     </ul>
                   </div>
                 </div>
@@ -340,9 +340,9 @@
             </div>
 
             <div class="hide">
-              <label class="radio" for="MERGE8-0"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="MERGE8" id="MERGE8-0" value="No"  class="av-radio"><span>No</span></label>
-              <label class="radio" for="MERGE8-1"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="MERGE8" id="MERGE8-1" value="Yes"  class="av-radio" checked="checked"><span>Yes</span></label>
-              <select class="select-small" id="MERGE7" name="MERGE7">
+              <label class="radio" for="MERGE8-0"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="SENDCOURSE" id="MERGE8-0" value="No"  class="av-radio"><span>No</span></label>
+              <label class="radio" for="MERGE8-1"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="SENDCOURSE" id="MERGE8-1" value="Yes"  class="av-radio" checked="checked"><span>Yes</span></label>
+              <select class="select-small" id="JOINED" name="JOINED">
                 <option value="Course" selected>Course</option>
                 <option value="Blog">Blog</option>
                 <option value="Triangle">Triangle</option>
@@ -351,7 +351,8 @@
             </div>
 
             <div class="submit_container clear cf">
-              <input type="submit" class="button" name="submit" value="Start the course">
+              <!-- <input type="submit" class="button" name="submit" value="Start the course"> -->
+              <button id="myButton" class="button" name="submit">Start the course</button>
             </div>
           </form>
           <div id="msg" class="hide">
