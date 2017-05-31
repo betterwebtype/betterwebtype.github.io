@@ -103,7 +103,7 @@ myButton.addEventListener("click", function() {
     var $this = $(this);
     $.ajax({
       type: "GET",
-      url: 'http://bwt-mc-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point.php',
+      url: 'https://secure-route-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point.php',
       data: $this.serialize(),
       dataType: 'jsonp',
       contentType: "application/json; charset=utf-8",
