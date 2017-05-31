@@ -5,6 +5,8 @@ var userTopScore = 0;
 var outOf;
 var multiplier;
 var maxScore;
+var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+console.log(h);
 
 var levels = [
 {
@@ -219,7 +221,7 @@ var levels = [
   cv: [1.5, 600, 18],
   piq: 1,
   maxScore: 15,
-  font: "Libre Baskerville",
+  font: "Baskerville",
   fallbackFont: "Serif",
   instructions: "Adjust the line width to what you think best matches other parameters.",
   parameters: [
@@ -279,7 +281,7 @@ var levels = [
   cv: [1.55, 550, 17],
   piq: 0,
   maxScore: 10,
-  font: "Libre Baskerville",
+  font: "Baskerville",
   fallbackFont: "Serif",
   instructions: "Adjust the line-height to what you think best matches other parameters.",
   parameters: [
@@ -666,7 +668,12 @@ if (level < numOfLevels - 1){
     setTimeout(function(){ $('#tryAgain').fadeIn(); }, 8000);
     setTimeout(function(){ $('.book-msg').fadeIn(); }, 8500);
     if( varEmail == null ){
-      setTimeout(function(){ $('.form-triangle').fadeIn(); }, 8500);
+      setTimeout(function(){
+        $('.form-triangle').fadeIn();
+        if ( h <= 710 ){
+          $('.arrow').fadeIn().addClass('bounce infinite animated');
+        }
+      }, 8500);
     }
 
     // Update top score
@@ -711,4 +718,8 @@ $("#next-level").click(function(e) {
   $('.anim').addClass('animated fadeOutUpBig');
   loadLevel();
   return false;
+});
+
+$(".score").on( 'scroll', function(){
+   $('.arrow').fadeOut();
 });
