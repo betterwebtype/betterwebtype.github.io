@@ -7,272 +7,272 @@ var multiplier;
 var maxScore;
 
 var levels = [
-// {
-//   id: "01",
-//   iv: [1.2, 500, 18],
-//   cv: [1.45, 500, 18],
-//   piq: 0,
-//   maxScore: 10,
-//   font: "Georgia",
-//   fallbackFont: "Serif",
-//   instructions: "Adjust the line-height to what you think best matches other parameters.",
-//   parameters: [
-//   {
-//     id: "lh",
-//     name: "line-height",
-//     adjust: true,
-//     values: [1.2, 1.8, 0.05]
-//   },
-//   {
-//     id: "lw",
-//     name: "max-width",
-//     adjust: false
-//   },
-//   {
-//     id: "fs",
-//     name: "font-size",
-//     adjust: false
-//   }
-//   ]
-// },
-// {
-//   id: "02",
-//   iv: [1.6, 400, 18],
-//   cv: [1.6, 630, 18],
-//   piq: 1,
-//   maxScore: 15,
-//   font: "Georgia",
-//   fallbackFont: "Serif",
-//   instructions: "Adjust the line width to what you think best matches other parameters.",
-//   parameters: [
-//   {
-//     id: "lh",
-//     name: "line-height",
-//     adjust: false
-//   },
-//   {
-//     id: "lw",
-//     name: "max-width",
-//     adjust: true,
-//     values: [300, 750, 10]
-//   },
-//   {
-//     id: "fs",
-//     name: "font-size",
-//     adjust: false
-//   }
-//   ]
-// },
-// {
-//   id: "03",
-//   iv: [1.3, 350, 20],
-//   cv: [1.3, 350, 16],
-//   piq: 2,
-//   maxScore: 5,
-//   font: "Georgia",
-//   fallbackFont: "Serif",
-//   instructions: "Adjust the font size to what you think best matches other parameters.",
-//   parameters: [
-//   {
-//     id: "lh",
-//     name: "line-height",
-//     adjust: false,
-//     values: [0.95, 2.2, 0.05]
-//   },
-//   {
-//     id: "lw",
-//     name: "max-width",
-//     adjust: false,
-//     values: [100, 1000, 1]
-//   },
-//   {
-//     id: "fs",
-//     name: "font-size",
-//     adjust: true,
-//     values: [11, 22, 1]
-//   }
-//   ]
-// },
-// {
-//   id: "04",
-//   iv: [2, 650, 20],
-//   cv: [1.55, 650, 20],
-//   piq: 0,
-//   maxScore: 10,
-//   font: "Georgia",
-//   fallbackFont: "Serif",
-//   instructions: "Adjust the line-height to what you think best matches other parameters.",
-//   parameters: [
-//   {
-//     id: "lh",
-//     name: "line-height",
-//     adjust: true,
-//     values: [1.3, 2.2, 0.05]
-//   },
-//   {
-//     id: "lw",
-//     name: "max-width",
-//     adjust: false,
-//     values: [100, 1000, 1]
-//   },
-//   {
-//     id: "fs",
-//     name: "font-size",
-//     adjust: false,
-//     values: [12, 29, 1]
-//   }
-//   ]
-// },
-// {
-//   id: "05",
-//   iv: [1.4, 750, 16],
-//   cv: [1.4, 500, 16],
-//   piq: 1,
-//   maxScore: 15,
-//   font: "Georgia",
-//   fallbackFont: "Serif",
-//   instructions: "Adjust the line width to what you think best matches other parameters.",
-//   parameters: [
-//   {
-//     id: "lh",
-//     name: "line-height",
-//     adjust: false,
-//     values: [0.95, 2.2, 0.05]
-//   },
-//   {
-//     id: "lw",
-//     name: "max-width",
-//     adjust: true,
-//     values: [300, 1000, 10]
-//   },
-//   {
-//     id: "fs",
-//     name: "font-size",
-//     adjust: false,
-//     values: [12, 29, 1]
-//   }
-//   ]
-// },
-// {
-//   id: "06",
-//   iv: [1.85, 750, 29],
-//   cv: [1.85, 750, 23],
-//   piq: 2,
-//   maxScore: 5,
-//   font: "Georgia",
-//   fallbackFont: "Serif",
-//   instructions: "Adjust the font size to what you think best matches other parameters.",
-//   parameters: [
-//   {
-//     id: "lh",
-//     name: "line-height",
-//     adjust: false,
-//     values: [0.95, 2.2, 0.05]
-//   },
-//   {
-//     id: "lw",
-//     name: "max-width",
-//     adjust: false,
-//     values: [100, 1000, 1]
-//   },
-//   {
-//     id: "fs",
-//     name: "font-size",
-//     adjust: true,
-//     values: [12, 29, 1]
-//   }
-//   ]
-// },
-// {
-//   id: "07",
-//   iv: [1, 750, 22],
-//   cv: [1.65, 750, 22],
-//   piq: 0,
-//   maxScore: 10,
-//   font: "Merriweather",
-//   fallbackFont: "Serif",
-//   instructions: "Adjust the line-height to what you think best matches other parameters.",
-//   parameters: [
-//   {
-//     id: "lh",
-//     name: "line-height",
-//     adjust: true,
-//     values: [0.9, 1.8, 0.05]
-//   },
-//   {
-//     id: "lw",
-//     name: "max-width",
-//     adjust: false,
-//     values: [100, 1000, 1]
-//   },
-//   {
-//     id: "fs",
-//     name: "font-size",
-//     adjust: false,
-//     values: [12, 29, 1]
-//   }
-//   ]
-// },
-// {
-//   id: "08",
-//   iv: [1.5, 250, 18],
-//   cv: [1.5, 600, 18],
-//   piq: 1,
-//   maxScore: 15,
-//   font: "Libre Baskerville",
-//   fallbackFont: "Serif",
-//   instructions: "Adjust the line width to what you think best matches other parameters.",
-//   parameters: [
-//   {
-//     id: "lh",
-//     name: "line-height",
-//     adjust: false,
-//     values: [0.95, 2.2, 0.05]
-//   },
-//   {
-//     id: "lw",
-//     name: "max-width",
-//     adjust: true,
-//     values: [100, 1000, 10]
-//   },
-//   {
-//     id: "fs",
-//     name: "font-size",
-//     adjust: false,
-//     values: [12, 29, 1]
-//   }
-//   ]
-// },
-// {
-//   id: "09",
-//   iv: [1.45, 500, 20],
-//   cv: [1.45, 500, 15],
-//   piq: 2,
-//   maxScore: 5,
-//   font: "Merriweather",
-//   fallbackFont: "Serif",
-//   instructions: "Adjust the font size to what you think best matches other parameters.",
-//   parameters: [
-//   {
-//     id: "lh",
-//     name: "line-height",
-//     adjust: false,
-//     values: [0.95, 2.2, 0.05]
-//   },
-//   {
-//     id: "lw",
-//     name: "max-width",
-//     adjust: false,
-//     values: [100, 1000, 1]
-//   },
-//   {
-//     id: "fs",
-//     name: "font-size",
-//     adjust: true,
-//     values: [10, 24, 1]
-//   }
-//   ]
-// },
+{
+  id: "01",
+  iv: [1.2, 500, 18],
+  cv: [1.45, 500, 18],
+  piq: 0,
+  maxScore: 10,
+  font: "Georgia",
+  fallbackFont: "Serif",
+  instructions: "Adjust the line-height to what you think best matches other parameters.",
+  parameters: [
+  {
+    id: "lh",
+    name: "line-height",
+    adjust: true,
+    values: [1.2, 1.8, 0.05]
+  },
+  {
+    id: "lw",
+    name: "max-width",
+    adjust: false
+  },
+  {
+    id: "fs",
+    name: "font-size",
+    adjust: false
+  }
+  ]
+},
+{
+  id: "02",
+  iv: [1.6, 400, 18],
+  cv: [1.6, 630, 18],
+  piq: 1,
+  maxScore: 15,
+  font: "Georgia",
+  fallbackFont: "Serif",
+  instructions: "Adjust the line width to what you think best matches other parameters.",
+  parameters: [
+  {
+    id: "lh",
+    name: "line-height",
+    adjust: false
+  },
+  {
+    id: "lw",
+    name: "max-width",
+    adjust: true,
+    values: [300, 750, 10]
+  },
+  {
+    id: "fs",
+    name: "font-size",
+    adjust: false
+  }
+  ]
+},
+{
+  id: "03",
+  iv: [1.3, 350, 20],
+  cv: [1.3, 350, 16],
+  piq: 2,
+  maxScore: 5,
+  font: "Georgia",
+  fallbackFont: "Serif",
+  instructions: "Adjust the font size to what you think best matches other parameters.",
+  parameters: [
+  {
+    id: "lh",
+    name: "line-height",
+    adjust: false,
+    values: [0.95, 2.2, 0.05]
+  },
+  {
+    id: "lw",
+    name: "max-width",
+    adjust: false,
+    values: [100, 1000, 1]
+  },
+  {
+    id: "fs",
+    name: "font-size",
+    adjust: true,
+    values: [11, 22, 1]
+  }
+  ]
+},
+{
+  id: "04",
+  iv: [2, 650, 20],
+  cv: [1.55, 650, 20],
+  piq: 0,
+  maxScore: 10,
+  font: "Georgia",
+  fallbackFont: "Serif",
+  instructions: "Adjust the line-height to what you think best matches other parameters.",
+  parameters: [
+  {
+    id: "lh",
+    name: "line-height",
+    adjust: true,
+    values: [1.3, 2.2, 0.05]
+  },
+  {
+    id: "lw",
+    name: "max-width",
+    adjust: false,
+    values: [100, 1000, 1]
+  },
+  {
+    id: "fs",
+    name: "font-size",
+    adjust: false,
+    values: [12, 29, 1]
+  }
+  ]
+},
+{
+  id: "05",
+  iv: [1.4, 750, 16],
+  cv: [1.4, 500, 16],
+  piq: 1,
+  maxScore: 15,
+  font: "Georgia",
+  fallbackFont: "Serif",
+  instructions: "Adjust the line width to what you think best matches other parameters.",
+  parameters: [
+  {
+    id: "lh",
+    name: "line-height",
+    adjust: false,
+    values: [0.95, 2.2, 0.05]
+  },
+  {
+    id: "lw",
+    name: "max-width",
+    adjust: true,
+    values: [300, 1000, 10]
+  },
+  {
+    id: "fs",
+    name: "font-size",
+    adjust: false,
+    values: [12, 29, 1]
+  }
+  ]
+},
+{
+  id: "06",
+  iv: [1.85, 750, 29],
+  cv: [1.85, 750, 23],
+  piq: 2,
+  maxScore: 5,
+  font: "Georgia",
+  fallbackFont: "Serif",
+  instructions: "Adjust the font size to what you think best matches other parameters.",
+  parameters: [
+  {
+    id: "lh",
+    name: "line-height",
+    adjust: false,
+    values: [0.95, 2.2, 0.05]
+  },
+  {
+    id: "lw",
+    name: "max-width",
+    adjust: false,
+    values: [100, 1000, 1]
+  },
+  {
+    id: "fs",
+    name: "font-size",
+    adjust: true,
+    values: [12, 29, 1]
+  }
+  ]
+},
+{
+  id: "07",
+  iv: [1, 750, 22],
+  cv: [1.65, 750, 22],
+  piq: 0,
+  maxScore: 10,
+  font: "Merriweather",
+  fallbackFont: "Serif",
+  instructions: "Adjust the line-height to what you think best matches other parameters.",
+  parameters: [
+  {
+    id: "lh",
+    name: "line-height",
+    adjust: true,
+    values: [0.9, 1.8, 0.05]
+  },
+  {
+    id: "lw",
+    name: "max-width",
+    adjust: false,
+    values: [100, 1000, 1]
+  },
+  {
+    id: "fs",
+    name: "font-size",
+    adjust: false,
+    values: [12, 29, 1]
+  }
+  ]
+},
+{
+  id: "08",
+  iv: [1.5, 250, 18],
+  cv: [1.5, 600, 18],
+  piq: 1,
+  maxScore: 15,
+  font: "Libre Baskerville",
+  fallbackFont: "Serif",
+  instructions: "Adjust the line width to what you think best matches other parameters.",
+  parameters: [
+  {
+    id: "lh",
+    name: "line-height",
+    adjust: false,
+    values: [0.95, 2.2, 0.05]
+  },
+  {
+    id: "lw",
+    name: "max-width",
+    adjust: true,
+    values: [100, 1000, 10]
+  },
+  {
+    id: "fs",
+    name: "font-size",
+    adjust: false,
+    values: [12, 29, 1]
+  }
+  ]
+},
+{
+  id: "09",
+  iv: [1.45, 500, 20],
+  cv: [1.45, 500, 15],
+  piq: 2,
+  maxScore: 5,
+  font: "Merriweather",
+  fallbackFont: "Serif",
+  instructions: "Adjust the font size to what you think best matches other parameters.",
+  parameters: [
+  {
+    id: "lh",
+    name: "line-height",
+    adjust: false,
+    values: [0.95, 2.2, 0.05]
+  },
+  {
+    id: "lw",
+    name: "max-width",
+    adjust: false,
+    values: [100, 1000, 1]
+  },
+  {
+    id: "fs",
+    name: "font-size",
+    adjust: true,
+    values: [10, 24, 1]
+  }
+  ]
+},
 {
   id: "10",
   iv: [1.1, 550, 17],
