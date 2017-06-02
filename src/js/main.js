@@ -124,14 +124,21 @@ myButton.addEventListener("click", function() {
         }
       },
       success: function(data) {
-        if (data.status == 'subscribed' || data.status == 'pending') {
+        if (data.status == 'pending') {
           console.log(data);
           if (varEmail == null) {
             window.location.href = "almost-finished.html";
           } else {
             return;
           }
+        } else if (data.status == 'subscribed') {
+          if (varEmail == null) {
+            window.location.href = "thanks-subscribed.html";
+          } else {
+            return;
+          }
         } else {
+          console.log(data);
                 // console.log(data);
                 // var msg = data.msg;
                 // var msgReadable = msg.replace('0 -', '');
