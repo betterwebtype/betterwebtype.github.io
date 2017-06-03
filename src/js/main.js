@@ -127,13 +127,13 @@ myButton.addEventListener("click", function() {
         if (data.status == 'pending') {
           console.log(data);
           if (varEmail == null) {
-            window.location.href = "almost-finished.html";
+            window.location.href = "almost-finished";
           } else {
             return;
           }
         } else if (data.status == 'subscribed') {
           if (varEmail == null) {
-            window.location.href = "thanks-subscribed.html";
+            window.location.href = "thanks-subscribed";
           } else {
             return;
           }

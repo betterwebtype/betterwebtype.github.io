@@ -2,6 +2,8 @@ User-agent: *
 Disallow: /stats
 Disallow: /almost-finished.html
 Disallow: /almost-finished
+Disallow: /thanks-subscribed.html
+Disallow: /thanks-subscribed
 Disallow: /thank-you.html
 Disallow: /thank-you
 Disallow: /terms.html
