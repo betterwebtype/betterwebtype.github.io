@@ -444,7 +444,7 @@ article.reviews {
     }
 
     h3 {
-      font-size: 36px!important;
+      font-size: 36px;
     }
   }
 
@@ -483,6 +483,7 @@ article.reviews {
 
       h3 {
         @include margin-top(1.5);
+        @include font-size(3);
       }
     }
 
@@ -499,8 +500,8 @@ article.reviews {
     color: $bwt-red;
     letter-spacing: 0.05em;
 
-    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-      font-size: 48px;
-    }
+    // @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    //   font-size: 48px;
+    // }
   }
 }

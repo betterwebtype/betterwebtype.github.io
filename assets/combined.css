@@ -2296,7 +2296,7 @@ article.reviews {
     margin-bottom: 1.5625rem;
   }
   .triangle-intro h3 {
-    font-size: 36px !important;
+    font-size: 36px;
   }
 }
 @media screen and (min-width: 660px) {
@@ -2341,6 +2341,8 @@ article.reviews {
   .triangle-intro h3 {
     margin-top: 37.5px;
     margin-top: 2.34375rem;
+    font-size: 48px;
+    font-size: 3rem;
   }
 }
 .triangle-intro .tagline {
@@ -2355,11 +2357,6 @@ article.reviews {
 .triangle-intro h3 {
   color: #F15D64;
   letter-spacing: 0.05em;
-}
-@media screen and (min-width: 38em) {
-  .triangle-intro h3 {
-    font-size: 48px;
-  }
 }
 
 footer {
@@ -3780,6 +3777,7 @@ video {
 .result {
   margin: 27px auto;
   color: #333;
+  max-width: none !important;
 }
 
 .slider {
