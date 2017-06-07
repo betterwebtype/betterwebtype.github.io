@@ -39,6 +39,10 @@
     display: inline-block;
     max-width: 100px;
     padding: 0;
+
+    @media screen and (min-width: 1121px){
+      max-width: 120px;
+    }
   }
 
   #font {
@@ -379,4 +383,11 @@ svg {
   text-align: center;
   // margin-right: 3%;
   margin-bottom: 0;
+}
+
+.triangle p {
+  max-width: 80%;
+  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    max-width: 33em;
+  }
 }

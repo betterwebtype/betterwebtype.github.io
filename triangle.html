@@ -38,7 +38,7 @@
     <div class="triangle-intro">
       <div class="alignCenter floatCenter tagline"><em>The Equilateral Triangle of a</em></div>
       <h1 class="alignCenter">Perfect Paragraph</h1>
-      <h3 class="alignCenter">A web typography learning game</h3>
+      <h3 class="alignCenter">A web typography learning&nbsp;game</h3>
     </div>
     <section class="Grid Grid--gutter-xl">
       <div class="Grid-cell--xs-12 alignCenter floatCenter">
@@ -49,7 +49,7 @@
     <article>
       <section class="Grid Grid--gutter-xl">
         <div class="Grid-cell--xs-12">
-          <p class="floatCenter"><span class="dropcap">T</span>he Equilateral Triangle of a Perfect Paragraph is a theory developed by <a href="http://matejlatin.co.uk" target="_blank">Matej Latin</a> in the <a href="/" target="_blank">Better Web Type</a> course—the email course about web typography for web designers and web developers. Too many web designers and web developers still set line-height, font size and line width as independent features when in fact they should all be considered together. The equilateral triangle is a perfect representation of how the three features work in harmony.</p>
+          <p class="floatCenter"><span class="dropcap">T</span>he Equilateral Triangle of a Perfect Paragraph is a theory developed by <a href="http://matejlatin.co.uk" target="_blank">Matej Latin</a> in the <a href="/" target="_blank">Better Web Type</a> course about web typography for web designers and web developers. Too many of them still set line-height, font size and line width as independent features when in fact they should all be considered together. The equilateral triangle is a perfect representation of how the three features work in harmony.</p>
 
           <p class="floatCenter">This game elaborates on the theory and puts it into practice. Its goal is to teach you about the three features that need to be considered for a perfect paragraph and help you train your eye. </p>
 
@@ -57,7 +57,7 @@
 
           <h2 class="alignCenter">The Equilateral Triangle</h2>
 
-          <p class="floatCenter">In an equilateral triangle, all sides are equal. All three internal angles are also congruent to each other and are each 60°. Therefore, an equilateral triangle is a representation of three things that are in perfect balance.</p>
+          <p class="floatCenter">In an equilateral triangle, all sides are equal. All three internal angles are also congruent to each other and are each 60°. Therefore, an equilateral triangle is a great representation of three things that are in perfect balance.</p>
 
           <img src="assets/images/perfect-paragraph-triangle-line-height-font-size.jpg" alt="Perfect paragraph triangle font-size and line-height" class="triangle-examples">
 
@@ -76,19 +76,21 @@
         </div>
       </section>
     </article>
-    <!-- <div class="block-full-width-dark group">
+    <div class="block-full-width-dark group">
       <section class="floatCenter book-giveaway group">
         <img src="assets/images/better-web-type-book-cover.jpg" alt="Better Web Type book cover" class="book-cover">
-        <h2>Get a chance to win a free <span>Better Web Type</span> book</h2>
-        <em>Coming June 2017</em><br><br>
-        <p>The higher the score, the better the chance. Follow the instructions at the end of the game to participate in the competition.</p>
+        <div class="book-giveaway-info no-margin">
+          <h2>Get a chance to win a free <span>Better Web Type</span> book</h2>
+          <em>Coming July 2017</em><br><br>
+          <p class="no-margin">The higher the score, the better the chance. Follow the instructions at the end of the game to participate in the competition.</p>
+        </div>
       </section>
-    </div> -->
+    </div>
     <section class="Grid Grid--gutter-xl countdown">
-      <!-- <div class="Grid-cell--xs-12">
+      <div class="Grid-cell--xs-12">
         <p class="alignCenter floatCenter tagline"><em>Competition ends in</em></p>
         <p id="countdown" class="cf"></p>
-      </div> -->
+      </div>
       <div class="Grid-cell--xs-12">
         <hr>
         <h2 class="alignCenter">Ready?</h2>
@@ -274,39 +276,39 @@
     window.Dropcap.layout(dropcaps, 3);
 
 
-    // // COUNTDOWN
-    // // set the date we're counting down to
-    // var target_date = new Date("Jun 14, 2017").getTime();
+    // COUNTDOWN
+    // set the date we're counting down to
+    var target_date = new Date("Jun 23, 2017").getTime();
 
-    // // variables for time units
-    // var days, hours, minutes, seconds;
+    // variables for time units
+    var days, hours, minutes, seconds;
 
-    // // get tag element
-    // var countdown = document.getElementById("countdown");
+    // get tag element
+    var countdown = document.getElementById("countdown");
 
-    // // update the tag with id "countdown" every 1 second
-    // setInterval(function () {
+    // update the tag with id "countdown" every 1 second
+    setInterval(function () {
 
-    //   // find the amount of "seconds" between now and target
-    //   var current_date = new Date().getTime();
-    //   var seconds_left = (target_date - current_date) / 1000;
+      // find the amount of "seconds" between now and target
+      var current_date = new Date().getTime();
+      var seconds_left = (target_date - current_date) / 1000;
 
-    //   // do some time calculations
-    //   days = parseInt(seconds_left / 86400);
-    //   seconds_left = seconds_left % 86400;
+      // do some time calculations
+      days = parseInt(seconds_left / 86400);
+      seconds_left = seconds_left % 86400;
 
-    //   hours = parseInt(seconds_left / 3600);
-    //   seconds_left = seconds_left % 3600;
+      hours = parseInt(seconds_left / 3600);
+      seconds_left = seconds_left % 3600;
 
-    //   minutes = parseInt(seconds_left / 60);
-    //   seconds = parseInt(seconds_left % 60);
+      minutes = parseInt(seconds_left / 60);
+      seconds = parseInt(seconds_left % 60);
 
-    //   // format countdown string + set tag value
-    //   // countdown.innerHTML = days + "days " + hours + "hours "
-    //   // + minutes + "m " + seconds + "s ";
-    //   countdown.innerHTML = "<div class='days'>" + days + "<br><span>days</span></div><div class='hours'>" + hours + "<br><span>hours</span></div><div class='minutes'>" + minutes + "<br><span>minutes</span></div><div class='seconds'>" + seconds + "<br><span>seconds</span></div>";
+      // format countdown string + set tag value
+      // countdown.innerHTML = days + "days " + hours + "hours "
+      // + minutes + "m " + seconds + "s ";
+      countdown.innerHTML = "<div class='days'>" + days + "<br><span>days</span></div><div class='hours'>" + hours + "<br><span>hours</span></div><div class='minutes'>" + minutes + "<br><span>minutes</span></div><div class='seconds'>" + seconds + "<br><span>seconds</span></div>";
 
-    // }, 1000);
+    }, 1000);
 
   </script>
 </body>

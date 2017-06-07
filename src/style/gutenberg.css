@@ -19,6 +19,10 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
   }
 }
 
+.no-margin {
+  margin-bottom: 0;
+}
+
 .floatLeft {
   float: left;
 }
@@ -1810,6 +1814,11 @@ html {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 38em) {
+  * .no-margin {
+    margin-bottom: 0;
+  }
+}
 
 *,
 *::before,
@@ -1849,11 +1858,15 @@ body {
   margin: 0 -12.5%;
   width: 125%;
 }
-@media screen and (min-width: 38em) {
+@media screen and (min-width: 760px) {
   .block-full-width, .block-full-width-dark {
-    padding: 0;
+    padding: 0 10%;
     margin: 0 -2.5%;
     width: 105%;
+  }
+  .block-full-width .book-giveaway-info, .block-full-width-dark .book-giveaway-info {
+    float: left;
+    max-width: 60%;
   }
 }
 
@@ -1864,6 +1877,9 @@ body {
   margin: 0;
   margin-top: 75px;
   margin-top: 4.6875rem;
+}
+.block-full-width-dark p {
+  max-width: 100% !important;
 }
 
 .countdown {
@@ -2081,6 +2097,9 @@ article.reviews {
   margin-bottom: 0px;
   margin-bottom: 0rem;
 }
+.book-giveaway h2 {
+  margin-top: 0;
+}
 .book-giveaway h2 span {
   color: #F15D64;
 }
@@ -2088,7 +2107,11 @@ article.reviews {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@media screen and (min-width: 50em) {
+.book-giveaway img {
+  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
+}
+@media screen and (min-width: 760px) {
   .book-giveaway {
     max-width: 50em;
     padding: 0px 0px;
@@ -2099,11 +2122,20 @@ article.reviews {
   .book-giveaway img {
     float: left;
     margin-right: 3em;
+    width: 30%;
+    margin-top: 37.5px;
+    margin-top: 2.34375rem;
+  }
+}
+@media screen and (min-width: 760px) and (min-width: 1120px) {
+  .book-giveaway img {
     margin-top: -25px;
     margin-top: -1.5625rem;
     margin-bottom: -50px;
     margin-bottom: -3.125rem;
   }
+}
+@media screen and (min-width: 760px) {
   .book-giveaway p {
     max-width: 100%;
   }
@@ -2128,22 +2160,62 @@ article.reviews {
   background-position: center;
   padding-top: 9rem;
   min-height: 380px;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .triangle-intro h1 {
-  font-size: 68.8px;
-  font-size: 4.3rem;
-  line-height: 50px;
-  line-height: 3.125rem;
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 37.5px;
+  line-height: 2.34375rem;
   margin-top: 12.5px;
   margin-top: 0.78125rem;
   margin-bottom: 12.5px;
   margin-bottom: 0.78125rem;
 }
 .triangle-intro h3 {
-  margin-top: 25px;
-  margin-top: 1.5625rem;
+  margin-top: 12.5px;
+  margin-top: 0.78125rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 430px) {
+  .triangle-intro {
+    padding-top: 10rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .triangle-intro {
+    padding-top: 8rem;
+  }
+  .triangle-intro h1 {
+    font-size: 64px;
+    font-size: 4rem;
+    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
+  }
+  .triangle-intro h3 {
+    font-size: 36px !important;
+  }
 }
 @media screen and (min-width: 660px) {
+  .triangle-intro {
+    padding-top: 9rem;
+    min-height: 450px;
+  }
+  .triangle-intro h1 {
+    font-size: 80px;
+    font-size: 5rem;
+    line-height: 62.5px;
+    line-height: 3.90625rem;
+  }
+  .triangle-intro h3 {
+    margin-top: 25px;
+    margin-top: 1.5625rem;
+  }
+}
+@media screen and (min-width: 943px) {
   .triangle-intro {
     padding-top: 9rem;
     min-height: 450px;
@@ -2155,7 +2227,7 @@ article.reviews {
     line-height: 3.90625rem;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .triangle-intro {
     min-height: 540px;
     padding-top: 10.5rem;
@@ -2350,7 +2422,12 @@ figure {
     margin-bottom: 0;
   }
 }
-
+@media screen and (min-width: 38em) {
+  figure.floatLeft .no-margin,
+  figure.floatRight .no-margin {
+    margin-bottom: 0;
+  }
+}
 @media screen and (min-width: 38em) {
   figure.floatLeft blockquote,
   figure.floatRight blockquote {
@@ -2365,7 +2442,12 @@ figure {
     margin-bottom: 0;
   }
 }
-
+@media screen and (min-width: 38em) {
+  figure.floatLeft blockquote .no-margin,
+  figure.floatRight blockquote .no-margin {
+    margin-bottom: 0;
+  }
+}
 @media screen and (min-width: 38em) {
   figure.floatLeft blockquote p,
   figure.floatRight blockquote p {
@@ -2444,7 +2526,7 @@ input[type=email] {
 
 .button, .btn-tweet {
   background-color: #F15D64;
-  color: white;
+  color: white !important;
   border: none;
   border-radius: 2px;
   height: 65px;
@@ -2749,6 +2831,10 @@ h6 {
 }
 
 @media screen and (min-width: 38em) {
+  .no-margin {
+    margin-bottom: 0;
+  }
+
   h1 {
     font-size: 117.44px;
     font-size: 7.34rem;
@@ -2830,6 +2916,11 @@ h1 + h2 {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 38em) {
+  h1 + h2 .no-margin {
+    margin-bottom: 0;
+  }
+}
 
 h1 {
   letter-spacing: -0.015em;
@@ -2873,6 +2964,13 @@ h4 + h5 {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 38em) {
+  h2 + h3 .no-margin,
+  h3 + h4 .no-margin,
+  h4 + h5 .no-margin {
+    margin-bottom: 0;
+  }
+}
 
 .lesson h3 {
   margin: 0;
@@ -2900,6 +2998,11 @@ h5 + h6 {
 }
 @media screen and (min-width: 38em) and (max-width: 38em) {
   h5 + h6 .no-bottom-margin {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 38em) {
+  h5 + h6 .no-margin {
     margin-bottom: 0;
   }
 }
@@ -2996,7 +3099,11 @@ hr {
     margin-bottom: 0;
   }
 }
-
+@media screen and (min-width: 38em) {
+  hr .no-margin {
+    margin-bottom: 0;
+  }
+}
 @media screen and (min-width: 38em) {
   hr {
     background-size: 100% 26px;
@@ -3300,6 +3407,10 @@ sub {
 }
 
 @media screen and (min-width: 38em) {
+  .no-margin {
+    margin-bottom: 0;
+  }
+
   p {
     max-width: 33em;
   }
@@ -3491,6 +3602,11 @@ video {
   display: inline-block;
   max-width: 100px;
   padding: 0;
+}
+@media screen and (min-width: 1121px) {
+  .parameters input {
+    max-width: 120px;
+  }
 }
 .parameters #font {
   color: #222;
@@ -3809,6 +3925,150 @@ svg {
   width: 94%;
   text-align: center;
   margin-bottom: 0;
+}
+
+.triangle p {
+  max-width: 80%;
+}
+@media screen and (min-width: 38em) {
+  .triangle p {
+    max-width: 33em;
+  }
+}
+
+.book-main {
+  text-align: center;
+}
+@media screen and (min-width: 760px) {
+  .book-main {
+    text-align: left;
+  }
+}
+.book-main img {
+  max-width: 180px;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 760px) {
+  .book-main img {
+    max-width: 30%;
+    float: left;
+    margin: 0px 37.5px 0px 0px;
+    margin: 0rem 2.34375rem 0rem 0rem;
+  }
+}
+.book-main h1 {
+  font-family: "acumin-pro", Helvetica, Arial, sans-serif !important;
+  text-transform: none;
+  margin: 0;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 37.5px;
+  line-height: 2.34375rem;
+  margin-bottom: 12.5px;
+  margin-bottom: 0.78125rem;
+}
+.book-main .tagline {
+  margin: 0;
+  margin-bottom: 12.5px;
+  margin-bottom: 0.78125rem;
+}
+@media screen and (min-width: 760px) {
+  .book-main {
+    max-width: 850px;
+  }
+}
+
+.price {
+  color: #F15D64;
+  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-size: 35.55555552px;
+  font-size: 2.22222222rem;
+  line-height: 37.5px;
+  line-height: 2.34375rem;
+}
+
+.original-price {
+  color: #c0c0c0;
+  margin-bottom: 0;
+  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-size: 35.55555552px;
+  font-size: 2.22222222rem;
+  line-height: 37.5px;
+  line-height: 2.34375rem;
+}
+.original-price span {
+  color: #222;
+  text-decoration: line-through;
+}
+
+.book-info {
+  width: 100%;
+}
+@media screen and (min-width: 760px) {
+  .book-info {
+    max-width: 65%;
+  }
+}
+
+body.book-page article {
+  max-width: none;
+}
+
+.featured-logo img {
+  width: 60%;
+  max-width: 270px;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+}
+@media screen and (min-width: 760px) {
+  .featured-logo img {
+    width: 100%;
+    margin-top: 25px;
+    margin-top: 1.5625rem;
+    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
+  }
+}
+
+.max-width {
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.purchase-bottom {
+  margin-top: 50px;
+  margin-top: 3.125rem;
+  margin-bottom: 75px;
+  margin-bottom: 4.6875rem;
+}
+.purchase-bottom img {
+  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
+  max-width: 119px;
+}
+.purchase-bottom h1 {
+  font-family: "acumin-pro", Helvetica, Arial, sans-serif !important;
+  text-transform: none;
+  margin: 0;
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  line-height: 37.5px;
+  line-height: 2.34375rem;
+  margin-bottom: 12.5px;
+  margin-bottom: 0.78125rem;
+}
+@media screen and (min-width: 760px) {
+  .purchase-bottom .price {
+    font-size: 60px;
+    margin-bottom: 37.5px;
+    margin-bottom: 2.34375rem;
+  }
 }
 
 /* TODOs:

@@ -44,7 +44,7 @@ input[type=email] {
 
 .button {
   background-color: $bwt-red;
-  color: white;
+  color: white!important;
   border: none;
   border-radius: 2px;
   height: #{2.5 * $leading-desktop + "px"};

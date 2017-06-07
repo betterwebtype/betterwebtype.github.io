@@ -132,10 +132,15 @@ body {
   margin: 0 -12.5%;
   width: 125%;
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    padding: 0;
+  @media screen and (min-width: 760px) {
+    padding: 0 10%;
     margin: 0 -2.5%;
     width: 105%;
+
+    .book-giveaway-info {
+      float: left;
+      max-width: 60%;
+    }
   }
 }
 
@@ -146,6 +151,10 @@ body {
   width: 100%;
   margin: 0;
   @include margin-top(3);
+
+  p {
+    max-width: 100%!important;
+  }
 }
 
 .countdown {
@@ -348,6 +357,8 @@ article.reviews {
   @include margin-bottom(0);
 
   h2 {
+    margin-top: 0;
+
     span {
       color: $bwt-red;
     }
@@ -358,7 +369,11 @@ article.reviews {
     -moz-osx-font-smoothing: grayscale;
   }
 
-  @media screen and (min-width: 50em) {
+  img {
+    @include margin-bottom(1);
+  }
+
+  @media screen and (min-width: 760px) {
     max-width: 50em;
     @include padding(0,0);
     @include margin-bottom(1);
@@ -366,8 +381,13 @@ article.reviews {
     img {
       float: left;
       margin-right: 3em;
-      @include margin-top(-1);
-      @include margin-bottom(-2);
+      width: 30%;
+      @include margin-top(1.5);
+
+      @media screen and (min-width: 1120px){
+        @include margin-top(-1);
+        @include margin-bottom(-2);
+      }
     }
 
     p {
@@ -395,19 +415,54 @@ article.reviews {
   background-position: center;
   padding-top: 9rem;
   min-height: 380px;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 
   h1 {
-    @include font-size(4.3);
-    @include line-height(2);
+    @include font-size(3);
+    @include line-height(1.5);
     @include margin-top(0.5);
     @include margin-bottom(0.5);
   }
 
   h3 {
-    @include margin-top(1);
+    @include margin-top(0.5);
+    @include font-size(1.5);
+  }
+
+  @media screen and (min-width: 430px) {
+    padding-top: 10rem;
+  }
+
+  @media screen and (min-width: 600px) {
+    padding-top: 8rem;
+
+    h1 {
+      @include font-size(4);
+      @include margin-bottom(1);
+    }
+
+    h3 {
+      font-size: 36px!important;
+    }
   }
 
   @media screen and (min-width: 660px) {
+    padding-top: 9rem;
+    min-height: 450px;
+
+    h1 {
+      @include font-size(5);
+      @include line-height(2.5);
+    }
+
+    h3 {
+      @include margin-top(1);
+    }
+  }
+
+  @media screen and (min-width: 943px) {
     padding-top: 9rem;
     min-height: 450px;
 
@@ -417,7 +472,7 @@ article.reviews {
     }
   }
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1000px) {
       min-height: 540px;
       padding-top: 10.5rem;
 

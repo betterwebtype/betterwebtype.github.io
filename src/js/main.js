@@ -10,11 +10,11 @@ function getParameterByName(name, url) {
 }
 
 var varEmail = getParameterByName('email');
-console.log(varEmail);
+// console.log(varEmail);
 var varName = getParameterByName('name');
-console.log(varName);
+// console.log(varName);
 var varSurname = getParameterByName('surname');
-console.log(varSurname);
+// console.log(varSurname);
 
 // Prefill form
 $('#FNAME').val(varName);
