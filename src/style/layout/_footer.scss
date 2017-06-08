@@ -8,6 +8,7 @@ footer {
     text-decoration: none;
 
     &:hover {
+      color: $color-font-body;
       text-decoration: underline;
     }
     &:visited {
