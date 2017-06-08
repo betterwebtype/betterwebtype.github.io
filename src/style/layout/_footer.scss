@@ -13,6 +13,10 @@ footer {
     }
     &:visited {
       color: $color-font-body;
+
+      &:hover {
+        color: $color-font-body;
+      }
     }
   }
 
@@ -21,6 +25,10 @@ footer {
 
     &:visited {
       color: $color-font-body;
+
+      &:hover {
+        color: $color-font-body;
+      }
     }
   }
 

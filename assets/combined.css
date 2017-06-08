@@ -2375,10 +2375,16 @@ footer a:hover {
 footer a:visited {
   color: #222;
 }
+footer a:visited:hover {
+  color: #222;
+}
 footer strong a {
   text-decoration: underline;
 }
 footer strong a:visited {
+  color: #222;
+}
+footer strong a:visited:hover {
   color: #222;
 }
 body > footer {
