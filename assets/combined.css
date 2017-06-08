@@ -2371,6 +2371,9 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+footer a:visited {
+  color: #222;
+}
 footer strong a {
   text-decoration: underline;
 }
