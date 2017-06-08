@@ -176,40 +176,40 @@ myButton.addEventListener("click", function() {
   //   });
   // });
 
-  $('#link-contact').on('click', function(){
-    $('#msg').fadeIn(300);
-    $('body').addClass('no-scroll');
-    $('.curtain').removeClass('show-overflow');
-    $.get("contact.html", function (data) {
-      $('#msgContent').empty().append(data).removeClass().addClass('animated zoomIn');
-    });
-  });
+  // $('#link-contact').on('click', function(){
+  //   $('#msg').fadeIn(300);
+  //   $('body').addClass('no-scroll');
+  //   $('.curtain').removeClass('show-overflow');
+  //   $.get("contact.html", function (data) {
+  //     $('#msgContent').empty().append(data).removeClass().addClass('animated zoomIn');
+  //   });
+  // });
 
-  $('#link-privacy').on('click', function(){
-    $('body').addClass('no-scroll');
-    $('.curtain').addClass('show-overflow');
-    $('#msg').fadeIn(300);
-    $.get("privacy-policy.html", function (data) {
-      $('#msgContent').empty().append(data).removeClass().addClass('animated zoomIn');
-      $('.curtain').scrollTop(0);
-    });
-  });
+  // $('#link-privacy').on('click', function(){
+  //   $('body').addClass('no-scroll');
+  //   $('.curtain').addClass('show-overflow');
+  //   $('#msg').fadeIn(300);
+  //   $.get("privacy-policy.html", function (data) {
+  //     $('#msgContent').empty().append(data).removeClass().addClass('animated zoomIn');
+  //     $('.curtain').scrollTop(0);
+  //   });
+  // });
 
-  $('#link-terms').on('click', function(){
-    $('body').addClass('no-scroll');
-    $('.curtain').addClass('show-overflow');
-    $('#msg').fadeIn(300);
-    $.get("terms.html", function (data) {
-      $('#msgContent').empty().append(data).removeClass().addClass('animated zoomIn');
-      $('.curtain').scrollTop(0);
-    });
-  });
+  // $('#link-terms').on('click', function(){
+  //   $('body').addClass('no-scroll');
+  //   $('.curtain').addClass('show-overflow');
+  //   $('#msg').fadeIn(300);
+  //   $.get("terms.html", function (data) {
+  //     $('#msgContent').empty().append(data).removeClass().addClass('animated zoomIn');
+  //     $('.curtain').scrollTop(0);
+  //   });
+  // });
 
-  $('#icon-close').on('click', function(){
-    $('#msg').fadeOut(300);
-    $('#msgContent').removeClass().addClass('animated zoomOut');
-    $('body').removeClass('no-scroll');
-  });
+  // $('#icon-close').on('click', function(){
+  //   $('#msg').fadeOut(300);
+  //   $('#msgContent').removeClass().addClass('animated zoomOut');
+  //   $('body').removeClass('no-scroll');
+  // });
 
 }(window, document));
 
