@@ -4044,6 +4044,11 @@ svg {
   }
 }
 
+.course-image {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .book-main {
   text-align: center;
 }
