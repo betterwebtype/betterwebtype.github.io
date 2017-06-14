@@ -7,6 +7,9 @@ Disallow: /thanks-subscribed
 Disallow: /thank-you.html
 Disallow: /thank-you
 Disallow: /terms.html
+Disallow: /terms
 Disallow: /contact.html
+Disallow: /contact
 Disallow: /privacy-policy.html
+Disallow: /privacy-policy
 Disallow: /slack

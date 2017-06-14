@@ -4086,6 +4086,11 @@ svg {
   margin: 0;
   margin-bottom: 12.5px;
   margin-bottom: 0.78125rem;
+  margin-top: 12.5px;
+  margin-top: 0.78125rem;
+}
+.book-main p {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 760px) {
   .book-main {
@@ -4113,7 +4118,15 @@ svg {
 }
 .original-price span {
   color: #222;
-  text-decoration: line-through;
+  position: relative;
+}
+.original-price span::before {
+  content: '';
+  border-bottom: 2px solid #222;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
 }
 
 .book-info {
