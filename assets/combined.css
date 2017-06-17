@@ -1611,6 +1611,12 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
  *
  * Copyright (c) 2017 Daniel Eden
  */
+.fadeOnScroll {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -1973,10 +1979,10 @@ body {
 .block-full-width-dark {
   background: #111F2E;
   color: #fff;
-  width: 100%;
-  margin: 0;
   margin-top: 75px;
   margin-top: 4.6875rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
 }
 .block-full-width-dark p {
   max-width: 100% !important;
@@ -3367,7 +3373,7 @@ input[type="radio"] {
 
 ul, ol {
   max-width: 33em;
-  padding: 1em;
+  padding: 0;
 }
 
 nav {
@@ -4049,6 +4055,11 @@ svg {
   margin-right: auto !important;
 }
 
+.full-width-triangle-fix {
+  width: 100%;
+  margin: 0;
+}
+
 .book-main {
   text-align: center;
 }
@@ -4170,7 +4181,7 @@ body.book-page article {
   margin-bottom: 75px;
   margin-bottom: 4.6875rem;
 }
-.purchase-bottom img {
+.purchase-bottom .cover {
   margin-bottom: 25px;
   margin-bottom: 1.5625rem;
   max-width: 119px;
@@ -4195,6 +4206,97 @@ body.book-page article {
     margin-bottom: 37.5px;
     margin-bottom: 2.34375rem;
   }
+}
+.purchase-bottom small {
+  font-family: "acumin-pro", Helvetica, Arial, sans-serif !important;
+}
+.purchase-bottom .paypal {
+  margin-top: 0;
+  max-width: 94px;
+}
+
+.toc li {
+  margin-bottom: 0;
+}
+.toc h3 {
+  margin-top: 0;
+}
+
+.small-caps {
+  font-variant-caps: all-small-caps;
+  -moz-font-feature-settings: "c2sc", "smcp";
+  -webkit-font-feature-settings: "c2sc", "smcp";
+  font-feature-settings: "c2sc", "smcp";
+}
+
+.half-bottom-margin {
+  margin-bottom: 12.5px;
+  margin-bottom: 0.78125rem;
+}
+
+.book-feature {
+  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
+  padding-right: 20px;
+}
+@media screen and (min-width: 29.375em) {
+  .book-feature {
+    width: 50%;
+    float: left;
+  }
+}
+.book-feature h3 {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 37.5px;
+  line-height: 2.34375rem;
+  margin-bottom: 12.5px;
+  margin-bottom: 0.78125rem;
+  margin-top: 12.5px;
+  margin-top: 0.78125rem;
+}
+.book-feature img {
+  margin: 0;
+  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
+}
+.book-feature .red-font {
+  font-size: 6rem;
+}
+
+.all-caps {
+  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  text-transform: uppercase;
+}
+
+.red-font {
+  color: #F15D64;
+}
+
+.book-reviews {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.anim-delay-1 {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+}
+
+.anim-delay-2 {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+}
+
+.anim-delay-3 {
+  -webkit-animation-delay: 0.85s;
+  -moz-animation-delay: 0.85s;
+}
+
+.anim-delay-4 {
+  -webkit-animation-delay: 1.1s;
+  -moz-animation-delay: 1.1s;
 }
 
 /* TODOs:

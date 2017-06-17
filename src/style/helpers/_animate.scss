@@ -8,6 +8,12 @@
  * Copyright (c) 2017 Daniel Eden
  */
 
+ .fadeOnScroll {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+ }
+
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;

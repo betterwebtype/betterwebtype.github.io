@@ -148,9 +148,9 @@ body {
   @extend .block-full-width;
   background: #111F2E;
   color: #fff;
-  width: 100%;
-  margin: 0;
   @include margin-top(3);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
 
   p {
     max-width: 100%!important;
