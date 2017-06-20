@@ -44,7 +44,7 @@
         <div class="tagline"><em>Coming July 31</em></div>
         <div class="original-price"><span>$19.95</span> -35%</div>
         <div class="price">$12.95</div>
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7GCMV4TVWFHSL" class="button alignCenter">Pre-order yours</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7GCMV4TVWFHSL" id="buttonTop" class="button alignCenter">Pre-order yours</a>
         <small>Includes: ePub, mobi and PDF, supports Kindle, iBooks and other e-readers.</small>
       </div>
     </div>
@@ -199,7 +199,7 @@
     <h1 class="alignCenter">Better Web Typography for a Better Web (eBook)</h1>
     <div class="original-price"><span>$19.95</span> -35%</div>
     <div class="price">$12.95</div>
-    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7GCMV4TVWFHSL" class="button alignCenter floatCenter">Pre-order yours</a>
+    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7GCMV4TVWFHSL" id="buttonBottom" class="button alignCenter floatCenter">Pre-order yours</a>
     <small>Secure payments by</small>
     <img src="assets/images/paypal.jpg" alt="PayPal" class="paypal">
   </section>
@@ -333,6 +333,26 @@
       if (scroll >= blockOffset.top - vheight + 200) {
           bookFeature.addClass("fadeOnScroll");
       }
+  });
+
+  $('#buttonTop').on('click', function(){
+    console.log('top button clicked');
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'buttons',
+      eventAction: 'buy',
+      eventLabel: 'top-button'
+    });
+  });
+
+  $('#buttonBottom').on('click', function(){
+    console.log('bottom button clicked');
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'buttons',
+      eventAction: 'buy',
+      eventLabel: 'bottom-button'
+    });
   });
 </script>
 </body>
