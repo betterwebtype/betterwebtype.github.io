@@ -13,3 +13,9 @@ Disallow: /contact
 Disallow: /privacy-policy.html
 Disallow: /privacy-policy
 Disallow: /slack
+Disallow: /purchase-complete
+Disallow: /purchase-complete.html
+Disallow: /purchase-complete-ps
+Disallow: /purchase-complete-ps.html
+Disallow: /purchase-cancelled
+Disallow: /purchase-cancelled.html
