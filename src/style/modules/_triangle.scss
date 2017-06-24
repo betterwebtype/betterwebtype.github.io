@@ -401,4 +401,5 @@ svg {
 .full-width-triangle-fix {
   width: 100%;
   margin: 0;
+  @include margin-top(2);
 }
