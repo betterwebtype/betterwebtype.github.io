@@ -49,9 +49,10 @@ svg:not(:root) {
 .lesson-example {
   max-width: 100%;
   margin: auto;
-  @include margin-top(4);
+  @include margin-top(1);
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
     max-width: 717px;
+    @include margin-top(4);
   }
 }
 

@@ -3275,12 +3275,14 @@ svg:not(:root) {
 .lesson-example {
   max-width: 100%;
   margin: auto;
-  margin-top: 100px;
-  margin-top: 6.25rem;
+  margin-top: 25px;
+  margin-top: 1.5625rem;
 }
 @media screen and (min-width: 38em) {
   .lesson-example {
     max-width: 717px;
+    margin-top: 100px;
+    margin-top: 6.25rem;
   }
 }
 
