@@ -29,7 +29,11 @@
       <link itemprop="url" href="https://betterwebtype.com/book" rel="author"/>
       <link itemprop="bookFormat" href="http://schema.org/Ebook">
 
-      <img src="assets/images/better-web-type-book-cover.jpg">
+      <picture>
+        <source srcset="assets/images/better-web-type-book-cover-small-retina.jpg 2x, assets/images/better-web-type-book-cover-small.jpg" media="(max-width: 450px)">
+        <source srcset="assets/images/better-web-type-book-cover-retina.jpg 2x, assets/images/better-web-type-book-cover.jpg">
+        <img src="assets/images/better-web-type-book-cover.jpg" alt="Better Web Typography for a Better Web">
+      </picture>
       <div class="book-info floatLeft no-bottom-margin">
         <h1><span itemprop="name">Better Web Typography for a Better Web</span>&nbsp;(eBook)</h1>
         <p>by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Matej Latin</span></span></p>
@@ -187,7 +191,10 @@
   </section>
 
   <section class="purchase-bottom alignCenter">
-    <img src="assets/images/better-web-type-book-cover-small.jpg" class="cover" alt="Better Web Typography for a Better Web">
+    <picture>
+      <source srcset="assets/images/better-web-type-book-cover-small-retina.jpg 2x, assets/images/better-web-type-book-cover-small.jpg">
+      <img src="assets/images/better-web-type-book-cover-small.jpg" class="cover" alt="Better Web Typography for a Better Web">
+    </picture>
     <h1 class="alignCenter">Better Web Typography for a Better Web (eBook)</h1>
     <div class="original-price"><span>$19.95</span> -30%</div>
     <div class="price">$13.95</div>
@@ -216,7 +223,6 @@
   <link rel="stylesheet" href="assets/combined.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="assets/combined.min.js"></script>
-  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script src="https://use.typekit.net/evl6hgo.js"></script>
   <script>try{Typekit.load({ async: false });}catch(e){}</script>
   <script type="text/javascript">
@@ -225,14 +231,14 @@
       window.location.protocol = "https";
   </script>
   <script>
-    (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:92378,hjsv:5};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    // (function(h,o,t,j,a,r){
+    //   h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    //   h._hjSettings={hjid:92378,hjsv:5};
+    //   a=o.getElementsByTagName('head')[0];
+    //   r=o.createElement('script');r.async=1;
+    //   r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    //   a.appendChild(r);
+    // })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
