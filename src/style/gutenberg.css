@@ -4215,6 +4215,10 @@ body.book-page article {
   -moz-animation-delay: 1.1s;
 }
 
+.faq {
+  padding: 0 5%;
+}
+
 /* TODOs:
  - some line heights produce margins with .5 results, seemingly breaking the gird (?),
  - table + side comments elements,
