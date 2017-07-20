@@ -4319,6 +4319,10 @@ body.book-page article {
   padding: 0 5%;
 }
 
+.countdown .tagline {
+  margin-bottom: 0;
+}
+
 /* TODOs:
  - some line heights produce margins with .5 results, seemingly breaking the gird (?),
  - table + side comments elements,
