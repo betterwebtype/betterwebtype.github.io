@@ -4415,8 +4415,14 @@ ul.tabs li.current {
 }
 
 .book-details {
+  display: none;
   padding: 3%;
   position: relative;
+}
+@media screen and (min-width: 48em) {
+  .book-details {
+    display: block;
+  }
 }
 
 .slide-details {
