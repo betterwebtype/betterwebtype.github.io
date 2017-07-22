@@ -329,7 +329,7 @@
     var tabs = $('.tabs li').length;
     var tab_id;
     var tab_id_num = 1;
-    console.log(tab_id_num);
+    // console.log(tab_id_num);
 
     $('ul.tabs li').click(function(){
       tab_id = $(this).attr('data-tab');
@@ -341,7 +341,7 @@
       $("#"+tab_id).addClass('current');
 
       tab_id_num = $('li.current').attr('data-id');
-      console.log(tab_id_num);
+      // console.log(tab_id_num);
     });
     $('#next').on('click', function(){
       if (tab_id_num == tabs){
@@ -349,7 +349,7 @@
       } else {
         tab_id_num++
       }
-      console.log(tab_id_num);
+      // console.log(tab_id_num);
       $('ul.tabs li').removeClass('current');
       $('.tab-content').removeClass('current');
       $('.'+tab_id_num).addClass('current');
