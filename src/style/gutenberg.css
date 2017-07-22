@@ -4379,6 +4379,19 @@ ul.tabs li.current {
   height: 0;
 }
 
+.see-more {
+  display: block;
+  max-width: 200px;
+  height: 60px;
+}
+
+.arrow-down {
+  display: block;
+  position: relative;
+  width: 30px;
+  margin: 5px auto;
+}
+
 /* TODOs:
  - some line heights produce margins with .5 results, seemingly breaking the gird (?),
  - table + side comments elements,

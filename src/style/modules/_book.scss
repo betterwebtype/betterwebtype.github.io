@@ -365,3 +365,16 @@ ul.tabs li.current{
   clear: both;
   height: 0;
 }
+
+.see-more {
+  display: block;
+  max-width: 200px;
+  height: 60px;
+}
+
+.arrow-down {
+  display: block;
+  position: relative;
+  width: 30px;
+  margin: 5px auto;
+}

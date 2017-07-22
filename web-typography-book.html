@@ -45,6 +45,11 @@
             <small>Includes: ePub, mobi and PDF, supports Kindle, iBooks and other e-readers.</small>
           </div>
         </div>
+        <a href="javascript:void(0);" class="see-more floatCenter alignCenter">See what’s in the book<br>
+          <svg width="30" height="17" viewBox="0 0 30 17" xmlns="http://www.w3.org/2000/svg" class="arrow-down">
+            <path d="M14.632 12.51L2.122 0 0 2.12l14.142 14.143.49-.49.49.49L29.26 2.12 27.143 0l-12.51 12.51z" fill="#D8D8D8" fill-rule="evenodd"/>
+          </svg>
+        </a>
 
 <!--     <div itemscope itemtype="http://schema.org/Book">
       <meta itemprop="description" content="Better Web Typography for a Better Web is a book about web typography for web designers and developers.">
@@ -115,6 +120,7 @@
       <p class="floatCenter"><em>I'm amazed at how many topics were covered in such a short course, while still going quite in-depth on several of them. I look forward to the fleshed out&nbsp;book!</em></p>
     </div>
   </section>
+  <a name="book-details"/>
   <div class="block-full-width no-bottom-margin book-details">
     <a href="javascript:void(0);" id="prev">
       <svg width="21" height="59" viewBox="0 0 21 59" xmlns="http://www.w3.org/2000/svg">
@@ -324,6 +330,17 @@
       window.location.protocol = "https";
   </script>
   <script>
+  // Scroll to behaviour
+  function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+  }
+
+  $('.see-more').on('click', function(event){
+    event.preventDefault();
+    scrollToAnchor('book-details');
+  });
+
   // Slider
   $(document).ready(function(){
     var tabs = $('.tabs li').length;
