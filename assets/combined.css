@@ -4385,6 +4385,7 @@ ul.tabs li {
   padding-left: 10px;
   font-size: 1.75vw;
   line-height: 1.1em;
+  border-left: 2px #fafafa solid;
 }
 
 ul.tabs li.current {
@@ -4490,6 +4491,14 @@ ul.tabs li.current {
   position: relative;
   width: 30px;
   margin: 5px auto;
+}
+
+.paypal-logo {
+  float: none !important;
+  display: inline;
+  margin: 0;
+  max-width: 200px !important;
+  padding: 0 !important;
 }
 
 /* TODOs:
