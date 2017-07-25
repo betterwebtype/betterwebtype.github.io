@@ -4165,11 +4165,30 @@ body.book-page article {
   max-width: 94px;
 }
 
+.toc {
+  width: 100%;
+}
+@media screen and (min-width: 64em) {
+  .toc {
+    width: 40%;
+    float: left;
+  }
+}
 .toc li {
   margin-bottom: 0;
 }
 .toc h3 {
   margin-top: 0;
+}
+
+.features {
+  width: 100%;
+}
+@media screen and (min-width: 64em) {
+  .features {
+    width: 59%;
+    float: left;
+  }
 }
 
 .small-caps {
@@ -4273,6 +4292,13 @@ ul.tabs {
   max-width: none !important;
   clear: left;
 }
+@media screen and (min-width: 90em) {
+  ul.tabs {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 ul.tabs li {
   background: none;
@@ -4286,6 +4312,12 @@ ul.tabs li {
   font-size: 1.75vw;
   line-height: 1.1em;
   border-left: 2px #fafafa solid;
+}
+@media screen and (min-width: 90em) {
+  ul.tabs li {
+    font-size: 25px;
+    width: 16%;
+  }
 }
 
 ul.tabs li.current {
@@ -4399,6 +4431,12 @@ ul.tabs li.current {
   margin: 0;
   max-width: 200px !important;
   padding: 0 !important;
+}
+
+.max-width-hdpi {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* TODOs:
