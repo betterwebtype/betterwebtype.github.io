@@ -1722,6 +1722,27 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
   animation-name: fadeOutUpBig;
 }
 
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.jackInTheBox {
+  animation-name: jackInTheBox;
+}
+
 aside {
   display: block;
 }
@@ -4437,6 +4458,54 @@ ul.tabs li.current {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.book-widget {
+  position: fixed;
+  bottom: 10px;
+  right: 60px;
+  text-align: right;
+}
+.book-widget img {
+  margin-left: 20px;
+  max-width: 100px;
+  transition: all 0.3s;
+  margin-bottom: 0;
+}
+.book-widget img:hover {
+  color: white;
+  cursor: pointer;
+  background-color: #f26b71;
+  -webkit-box-shadow: 0px 7px 26px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 7px 26px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 7px 26px 0px rgba(0, 0, 0, 0.23);
+  transform: scale3d(1.03, 1.03, 1.03);
+}
+.book-widget h1 {
+  font-size: 22px;
+  font-family: "acumin-pro", Helvetica, Arial, Sans-serif;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 25px;
+  line-height: 1.5625rem;
+  text-transform: none;
+  z-index: 999;
+}
+.book-widget p {
+  z-index: 999;
+}
+
+.widget-text, .widget-cover {
+  opacity: 0;
+  display: block;
+}
+
+.book-widget:hover ~ img {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 7px 26px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 7px 26px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 7px 26px 0px rgba(0, 0, 0, 0.23);
+  transform: scale3d(1.03, 1.03, 1.03);
 }
 
 /* TODOs:

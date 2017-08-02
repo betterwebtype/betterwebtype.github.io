@@ -419,3 +419,55 @@ ul.tabs li.current{
   margin-left: auto;
   margin-right: auto;
 }
+
+.book-widget {
+  // opacity: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 60px;
+  text-align: right;
+
+  img {
+    margin-left: 20px;
+    max-width: 100px;
+    transition: all 0.3s;
+    margin-bottom: 0;
+
+    &:hover {
+    color: white;
+    cursor: pointer;
+    background-color: lighten($bwt-red, 3%);
+    -webkit-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+    box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+    transform: scale3d(1.03, 1.03, 1.03);
+    }
+  }
+
+  h1 {
+    font-size: 22px;
+    font-family: "acumin-pro", Helvetica, Arial, Sans-serif;
+    margin-bottom: 0;
+    margin-top: 0;
+    @include line-height(1);
+    text-transform: none;
+    z-index: 999;
+  }
+
+  p {
+    z-index: 999;
+  }
+}
+
+.widget-text, .widget-cover {
+  opacity: 0;
+  display: block;
+}
+
+.book-widget:hover ~ img {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+  -moz-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+  box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+  transform: scale3d(1.03, 1.03, 1.03);
+}
