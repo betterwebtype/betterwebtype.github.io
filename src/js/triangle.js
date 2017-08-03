@@ -641,9 +641,9 @@ if (level < numOfLevels - 1){
     // var bookSwitch = 0;
 
     if( varEmail != null ){
-      bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small.jpg' width='119'></td><td><h2>Get a chance to win a free <span>Better Web Type</span> book</h2><p><em>All you have to do is tweet your best score. The higher the score, the better the chance to win the free book.</em></p></td></tr></tbody></table>";
+      bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small-retina.jpg' width='119'></td><td><h2>The <span>Better Web Type</span> book is&nbsp;here!</h2><p><em><a href='https://betterwebtype.com/web-typography-book'>Get your copy</a> and learn what typography is, why it’s important and how to get it right on your websites.</em></p></td></tr></tbody></table>";
     } else {
-      bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small.jpg' width='119'></td><td><h2>Get a chance to win the book <span>join Better Web Type</span></h2><p><em>You’ll get an occasional newsletter about producing better web typography and access to a free email course.</em></p></td></tr></tbody></table>";
+      bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small-retina.jpg' width='119'></td><td><h2>The <span>Better Web Type</span> book is&nbsp;here!</h2><p><em><a href='https://betterwebtype.com/web-typography-book'>Get your copy</a> and learn what typography is, why it’s important and how to get it right on your websites.</em></p></td></tr></tbody></table>";
       // bookMsg = "<img src='assets/images/better-web-type-course-small.png' width='157' class='course-image'><h2 class='align-center'>Learn about web typography <br><span>start the Better Web Type course</span></h2><p class='align-center'><em>Better Web Type is a free web typography course for web designers and developers. Learn about modular scales, vertical rhythm and more in 10, easy-to-digest lessons.</em></p><br><a href='/' class='button floatCenter align-center'>Check it out</a>";
     }
 
@@ -668,14 +668,14 @@ if (level < numOfLevels - 1){
     setTimeout(function(){ $('.tweet-score').append(tweetUrl).fadeIn(); }, 6000);
     setTimeout(function(){ $('#tryAgain').fadeIn(); }, 8000);
     setTimeout(function(){ $('.book-msg').fadeIn(); }, 8500);
-    if( varEmail == null ){
-      setTimeout(function(){
-        $('.form-triangle').fadeIn();
-        if ( h <= 710 ){
-          $('.arrow').fadeIn().addClass('bounce infinite animated');
-        }
-      }, 8500);
-    }
+    // if( varEmail == null ){
+    //   setTimeout(function(){
+    //     $('.form-triangle').fadeIn();
+    //     if ( h <= 710 ){
+    //       $('.arrow').fadeIn().addClass('bounce infinite animated');
+    //     }
+    //   }, 8500);
+    // }
 
     // Update top score
     if (score > userTopScore){
