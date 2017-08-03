@@ -12,8 +12,8 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://betterwebtype.com/reviews</loc>
-  <lastmod>2017-06-14T13:21:40+00:00</lastmod>
+  <loc>http://betterwebtype.com/web-typography-book</loc>
+  <lastmod>2017-08-02T13:21:40+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
@@ -24,8 +24,8 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://betterwebtype.com/web-typography-book</loc>
-  <lastmod>2017-08-02T13:21:40+00:00</lastmod>
+  <loc>http://betterwebtype.com/reviews</loc>
+  <lastmod>2017-06-14T13:21:40+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
