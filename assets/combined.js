@@ -1,3 +1,10 @@
+/*! Hammer.JS - v2.0.8 - 2016-04-23
+ * http://hammerjs.github.io/
+ *
+ * Copyright (c) 2016 Jorik Tangelder;
+ * Licensed under the MIT license */
+!function(a,b,c,d){"use strict";function e(a,b,c){return setTimeout(j(a,c),b)}function f(a,b,c){return Array.isArray(a)?(g(a,c[b],c),!0):!1}function g(a,b,c){var e;if(a)if(a.forEach)a.forEach(b,c);else if(a.length!==d)for(e=0;e<a.length;)b.call(c,a[e],e,a),e++;else for(e in a)a.hasOwnProperty(e)&&b.call(c,a[e],e,a)}function h(b,c,d){var e="DEPRECATED METHOD: "+c+"\n"+d+" AT \n";return function(){var c=new Error("get-stack-trace"),d=c&&c.stack?c.stack.replace(/^[^\(]+?[\n$]/gm,"").replace(/^\s+at\s+/gm,"").replace(/^Object.<anonymous>\s*\(/gm,"{anonymous}()@"):"Unknown Stack Trace",f=a.console&&(a.console.warn||a.console.log);return f&&f.call(a.console,e,d),b.apply(this,arguments)}}function i(a,b,c){var d,e=b.prototype;d=a.prototype=Object.create(e),d.constructor=a,d._super=e,c&&la(d,c)}function j(a,b){return function(){return a.apply(b,arguments)}}function k(a,b){return typeof a==oa?a.apply(b?b[0]||d:d,b):a}function l(a,b){return a===d?b:a}function m(a,b,c){g(q(b),function(b){a.addEventListener(b,c,!1)})}function n(a,b,c){g(q(b),function(b){a.removeEventListener(b,c,!1)})}function o(a,b){for(;a;){if(a==b)return!0;a=a.parentNode}return!1}function p(a,b){return a.indexOf(b)>-1}function q(a){return a.trim().split(/\s+/g)}function r(a,b,c){if(a.indexOf&&!c)return a.indexOf(b);for(var d=0;d<a.length;){if(c&&a[d][c]==b||!c&&a[d]===b)return d;d++}return-1}function s(a){return Array.prototype.slice.call(a,0)}function t(a,b,c){for(var d=[],e=[],f=0;f<a.length;){var g=b?a[f][b]:a[f];r(e,g)<0&&d.push(a[f]),e[f]=g,f++}return c&&(d=b?d.sort(function(a,c){return a[b]>c[b]}):d.sort()),d}function u(a,b){for(var c,e,f=b[0].toUpperCase()+b.slice(1),g=0;g<ma.length;){if(c=ma[g],e=c?c+f:b,e in a)return e;g++}return d}function v(){return ua++}function w(b){var c=b.ownerDocument||b;return c.defaultView||c.parentWindow||a}function x(a,b){var c=this;this.manager=a,this.callback=b,this.element=a.element,this.target=a.options.inputTarget,this.domHandler=function(b){k(a.options.enable,[a])&&c.handler(b)},this.init()}function y(a){var b,c=a.options.inputClass;return new(b=c?c:xa?M:ya?P:wa?R:L)(a,z)}function z(a,b,c){var d=c.pointers.length,e=c.changedPointers.length,f=b&Ea&&d-e===0,g=b&(Ga|Ha)&&d-e===0;c.isFirst=!!f,c.isFinal=!!g,f&&(a.session={}),c.eventType=b,A(a,c),a.emit("hammer.input",c),a.recognize(c),a.session.prevInput=c}function A(a,b){var c=a.session,d=b.pointers,e=d.length;c.firstInput||(c.firstInput=D(b)),e>1&&!c.firstMultiple?c.firstMultiple=D(b):1===e&&(c.firstMultiple=!1);var f=c.firstInput,g=c.firstMultiple,h=g?g.center:f.center,i=b.center=E(d);b.timeStamp=ra(),b.deltaTime=b.timeStamp-f.timeStamp,b.angle=I(h,i),b.distance=H(h,i),B(c,b),b.offsetDirection=G(b.deltaX,b.deltaY);var j=F(b.deltaTime,b.deltaX,b.deltaY);b.overallVelocityX=j.x,b.overallVelocityY=j.y,b.overallVelocity=qa(j.x)>qa(j.y)?j.x:j.y,b.scale=g?K(g.pointers,d):1,b.rotation=g?J(g.pointers,d):0,b.maxPointers=c.prevInput?b.pointers.length>c.prevInput.maxPointers?b.pointers.length:c.prevInput.maxPointers:b.pointers.length,C(c,b);var k=a.element;o(b.srcEvent.target,k)&&(k=b.srcEvent.target),b.target=k}function B(a,b){var c=b.center,d=a.offsetDelta||{},e=a.prevDelta||{},f=a.prevInput||{};b.eventType!==Ea&&f.eventType!==Ga||(e=a.prevDelta={x:f.deltaX||0,y:f.deltaY||0},d=a.offsetDelta={x:c.x,y:c.y}),b.deltaX=e.x+(c.x-d.x),b.deltaY=e.y+(c.y-d.y)}function C(a,b){var c,e,f,g,h=a.lastInterval||b,i=b.timeStamp-h.timeStamp;if(b.eventType!=Ha&&(i>Da||h.velocity===d)){var j=b.deltaX-h.deltaX,k=b.deltaY-h.deltaY,l=F(i,j,k);e=l.x,f=l.y,c=qa(l.x)>qa(l.y)?l.x:l.y,g=G(j,k),a.lastInterval=b}else c=h.velocity,e=h.velocityX,f=h.velocityY,g=h.direction;b.velocity=c,b.velocityX=e,b.velocityY=f,b.direction=g}function D(a){for(var b=[],c=0;c<a.pointers.length;)b[c]={clientX:pa(a.pointers[c].clientX),clientY:pa(a.pointers[c].clientY)},c++;return{timeStamp:ra(),pointers:b,center:E(b),deltaX:a.deltaX,deltaY:a.deltaY}}function E(a){var b=a.length;if(1===b)return{x:pa(a[0].clientX),y:pa(a[0].clientY)};for(var c=0,d=0,e=0;b>e;)c+=a[e].clientX,d+=a[e].clientY,e++;return{x:pa(c/b),y:pa(d/b)}}function F(a,b,c){return{x:b/a||0,y:c/a||0}}function G(a,b){return a===b?Ia:qa(a)>=qa(b)?0>a?Ja:Ka:0>b?La:Ma}function H(a,b,c){c||(c=Qa);var d=b[c[0]]-a[c[0]],e=b[c[1]]-a[c[1]];return Math.sqrt(d*d+e*e)}function I(a,b,c){c||(c=Qa);var d=b[c[0]]-a[c[0]],e=b[c[1]]-a[c[1]];return 180*Math.atan2(e,d)/Math.PI}function J(a,b){return I(b[1],b[0],Ra)+I(a[1],a[0],Ra)}function K(a,b){return H(b[0],b[1],Ra)/H(a[0],a[1],Ra)}function L(){this.evEl=Ta,this.evWin=Ua,this.pressed=!1,x.apply(this,arguments)}function M(){this.evEl=Xa,this.evWin=Ya,x.apply(this,arguments),this.store=this.manager.session.pointerEvents=[]}function N(){this.evTarget=$a,this.evWin=_a,this.started=!1,x.apply(this,arguments)}function O(a,b){var c=s(a.touches),d=s(a.changedTouches);return b&(Ga|Ha)&&(c=t(c.concat(d),"identifier",!0)),[c,d]}function P(){this.evTarget=bb,this.targetIds={},x.apply(this,arguments)}function Q(a,b){var c=s(a.touches),d=this.targetIds;if(b&(Ea|Fa)&&1===c.length)return d[c[0].identifier]=!0,[c,c];var e,f,g=s(a.changedTouches),h=[],i=this.target;if(f=c.filter(function(a){return o(a.target,i)}),b===Ea)for(e=0;e<f.length;)d[f[e].identifier]=!0,e++;for(e=0;e<g.length;)d[g[e].identifier]&&h.push(g[e]),b&(Ga|Ha)&&delete d[g[e].identifier],e++;return h.length?[t(f.concat(h),"identifier",!0),h]:void 0}function R(){x.apply(this,arguments);var a=j(this.handler,this);this.touch=new P(this.manager,a),this.mouse=new L(this.manager,a),this.primaryTouch=null,this.lastTouches=[]}function S(a,b){a&Ea?(this.primaryTouch=b.changedPointers[0].identifier,T.call(this,b)):a&(Ga|Ha)&&T.call(this,b)}function T(a){var b=a.changedPointers[0];if(b.identifier===this.primaryTouch){var c={x:b.clientX,y:b.clientY};this.lastTouches.push(c);var d=this.lastTouches,e=function(){var a=d.indexOf(c);a>-1&&d.splice(a,1)};setTimeout(e,cb)}}function U(a){for(var b=a.srcEvent.clientX,c=a.srcEvent.clientY,d=0;d<this.lastTouches.length;d++){var e=this.lastTouches[d],f=Math.abs(b-e.x),g=Math.abs(c-e.y);if(db>=f&&db>=g)return!0}return!1}function V(a,b){this.manager=a,this.set(b)}function W(a){if(p(a,jb))return jb;var b=p(a,kb),c=p(a,lb);return b&&c?jb:b||c?b?kb:lb:p(a,ib)?ib:hb}function X(){if(!fb)return!1;var b={},c=a.CSS&&a.CSS.supports;return["auto","manipulation","pan-y","pan-x","pan-x pan-y","none"].forEach(function(d){b[d]=c?a.CSS.supports("touch-action",d):!0}),b}function Y(a){this.options=la({},this.defaults,a||{}),this.id=v(),this.manager=null,this.options.enable=l(this.options.enable,!0),this.state=nb,this.simultaneous={},this.requireFail=[]}function Z(a){return a&sb?"cancel":a&qb?"end":a&pb?"move":a&ob?"start":""}function $(a){return a==Ma?"down":a==La?"up":a==Ja?"left":a==Ka?"right":""}function _(a,b){var c=b.manager;return c?c.get(a):a}function aa(){Y.apply(this,arguments)}function ba(){aa.apply(this,arguments),this.pX=null,this.pY=null}function ca(){aa.apply(this,arguments)}function da(){Y.apply(this,arguments),this._timer=null,this._input=null}function ea(){aa.apply(this,arguments)}function fa(){aa.apply(this,arguments)}function ga(){Y.apply(this,arguments),this.pTime=!1,this.pCenter=!1,this._timer=null,this._input=null,this.count=0}function ha(a,b){return b=b||{},b.recognizers=l(b.recognizers,ha.defaults.preset),new ia(a,b)}function ia(a,b){this.options=la({},ha.defaults,b||{}),this.options.inputTarget=this.options.inputTarget||a,this.handlers={},this.session={},this.recognizers=[],this.oldCssProps={},this.element=a,this.input=y(this),this.touchAction=new V(this,this.options.touchAction),ja(this,!0),g(this.options.recognizers,function(a){var b=this.add(new a[0](a[1]));a[2]&&b.recognizeWith(a[2]),a[3]&&b.requireFailure(a[3])},this)}function ja(a,b){var c=a.element;if(c.style){var d;g(a.options.cssProps,function(e,f){d=u(c.style,f),b?(a.oldCssProps[d]=c.style[d],c.style[d]=e):c.style[d]=a.oldCssProps[d]||""}),b||(a.oldCssProps={})}}function ka(a,c){var d=b.createEvent("Event");d.initEvent(a,!0,!0),d.gesture=c,c.target.dispatchEvent(d)}var la,ma=["","webkit","Moz","MS","ms","o"],na=b.createElement("div"),oa="function",pa=Math.round,qa=Math.abs,ra=Date.now;la="function"!=typeof Object.assign?function(a){if(a===d||null===a)throw new TypeError("Cannot convert undefined or null to object");for(var b=Object(a),c=1;c<arguments.length;c++){var e=arguments[c];if(e!==d&&null!==e)for(var f in e)e.hasOwnProperty(f)&&(b[f]=e[f])}return b}:Object.assign;var sa=h(function(a,b,c){for(var e=Object.keys(b),f=0;f<e.length;)(!c||c&&a[e[f]]===d)&&(a[e[f]]=b[e[f]]),f++;return a},"extend","Use `assign`."),ta=h(function(a,b){return sa(a,b,!0)},"merge","Use `assign`."),ua=1,va=/mobile|tablet|ip(ad|hone|od)|android/i,wa="ontouchstart"in a,xa=u(a,"PointerEvent")!==d,ya=wa&&va.test(navigator.userAgent),za="touch",Aa="pen",Ba="mouse",Ca="kinect",Da=25,Ea=1,Fa=2,Ga=4,Ha=8,Ia=1,Ja=2,Ka=4,La=8,Ma=16,Na=Ja|Ka,Oa=La|Ma,Pa=Na|Oa,Qa=["x","y"],Ra=["clientX","clientY"];x.prototype={handler:function(){},init:function(){this.evEl&&m(this.element,this.evEl,this.domHandler),this.evTarget&&m(this.target,this.evTarget,this.domHandler),this.evWin&&m(w(this.element),this.evWin,this.domHandler)},destroy:function(){this.evEl&&n(this.element,this.evEl,this.domHandler),this.evTarget&&n(this.target,this.evTarget,this.domHandler),this.evWin&&n(w(this.element),this.evWin,this.domHandler)}};var Sa={mousedown:Ea,mousemove:Fa,mouseup:Ga},Ta="mousedown",Ua="mousemove mouseup";i(L,x,{handler:function(a){var b=Sa[a.type];b&Ea&&0===a.button&&(this.pressed=!0),b&Fa&&1!==a.which&&(b=Ga),this.pressed&&(b&Ga&&(this.pressed=!1),this.callback(this.manager,b,{pointers:[a],changedPointers:[a],pointerType:Ba,srcEvent:a}))}});var Va={pointerdown:Ea,pointermove:Fa,pointerup:Ga,pointercancel:Ha,pointerout:Ha},Wa={2:za,3:Aa,4:Ba,5:Ca},Xa="pointerdown",Ya="pointermove pointerup pointercancel";a.MSPointerEvent&&!a.PointerEvent&&(Xa="MSPointerDown",Ya="MSPointerMove MSPointerUp MSPointerCancel"),i(M,x,{handler:function(a){var b=this.store,c=!1,d=a.type.toLowerCase().replace("ms",""),e=Va[d],f=Wa[a.pointerType]||a.pointerType,g=f==za,h=r(b,a.pointerId,"pointerId");e&Ea&&(0===a.button||g)?0>h&&(b.push(a),h=b.length-1):e&(Ga|Ha)&&(c=!0),0>h||(b[h]=a,this.callback(this.manager,e,{pointers:b,changedPointers:[a],pointerType:f,srcEvent:a}),c&&b.splice(h,1))}});var Za={touchstart:Ea,touchmove:Fa,touchend:Ga,touchcancel:Ha},$a="touchstart",_a="touchstart touchmove touchend touchcancel";i(N,x,{handler:function(a){var b=Za[a.type];if(b===Ea&&(this.started=!0),this.started){var c=O.call(this,a,b);b&(Ga|Ha)&&c[0].length-c[1].length===0&&(this.started=!1),this.callback(this.manager,b,{pointers:c[0],changedPointers:c[1],pointerType:za,srcEvent:a})}}});var ab={touchstart:Ea,touchmove:Fa,touchend:Ga,touchcancel:Ha},bb="touchstart touchmove touchend touchcancel";i(P,x,{handler:function(a){var b=ab[a.type],c=Q.call(this,a,b);c&&this.callback(this.manager,b,{pointers:c[0],changedPointers:c[1],pointerType:za,srcEvent:a})}});var cb=2500,db=25;i(R,x,{handler:function(a,b,c){var d=c.pointerType==za,e=c.pointerType==Ba;if(!(e&&c.sourceCapabilities&&c.sourceCapabilities.firesTouchEvents)){if(d)S.call(this,b,c);else if(e&&U.call(this,c))return;this.callback(a,b,c)}},destroy:function(){this.touch.destroy(),this.mouse.destroy()}});var eb=u(na.style,"touchAction"),fb=eb!==d,gb="compute",hb="auto",ib="manipulation",jb="none",kb="pan-x",lb="pan-y",mb=X();V.prototype={set:function(a){a==gb&&(a=this.compute()),fb&&this.manager.element.style&&mb[a]&&(this.manager.element.style[eb]=a),this.actions=a.toLowerCase().trim()},update:function(){this.set(this.manager.options.touchAction)},compute:function(){var a=[];return g(this.manager.recognizers,function(b){k(b.options.enable,[b])&&(a=a.concat(b.getTouchAction()))}),W(a.join(" "))},preventDefaults:function(a){var b=a.srcEvent,c=a.offsetDirection;if(this.manager.session.prevented)return void b.preventDefault();var d=this.actions,e=p(d,jb)&&!mb[jb],f=p(d,lb)&&!mb[lb],g=p(d,kb)&&!mb[kb];if(e){var h=1===a.pointers.length,i=a.distance<2,j=a.deltaTime<250;if(h&&i&&j)return}return g&&f?void 0:e||f&&c&Na||g&&c&Oa?this.preventSrc(b):void 0},preventSrc:function(a){this.manager.session.prevented=!0,a.preventDefault()}};var nb=1,ob=2,pb=4,qb=8,rb=qb,sb=16,tb=32;Y.prototype={defaults:{},set:function(a){return la(this.options,a),this.manager&&this.manager.touchAction.update(),this},recognizeWith:function(a){if(f(a,"recognizeWith",this))return this;var b=this.simultaneous;return a=_(a,this),b[a.id]||(b[a.id]=a,a.recognizeWith(this)),this},dropRecognizeWith:function(a){return f(a,"dropRecognizeWith",this)?this:(a=_(a,this),delete this.simultaneous[a.id],this)},requireFailure:function(a){if(f(a,"requireFailure",this))return this;var b=this.requireFail;return a=_(a,this),-1===r(b,a)&&(b.push(a),a.requireFailure(this)),this},dropRequireFailure:function(a){if(f(a,"dropRequireFailure",this))return this;a=_(a,this);var b=r(this.requireFail,a);return b>-1&&this.requireFail.splice(b,1),this},hasRequireFailures:function(){return this.requireFail.length>0},canRecognizeWith:function(a){return!!this.simultaneous[a.id]},emit:function(a){function b(b){c.manager.emit(b,a)}var c=this,d=this.state;qb>d&&b(c.options.event+Z(d)),b(c.options.event),a.additionalEvent&&b(a.additionalEvent),d>=qb&&b(c.options.event+Z(d))},tryEmit:function(a){return this.canEmit()?this.emit(a):void(this.state=tb)},canEmit:function(){for(var a=0;a<this.requireFail.length;){if(!(this.requireFail[a].state&(tb|nb)))return!1;a++}return!0},recognize:function(a){var b=la({},a);return k(this.options.enable,[this,b])?(this.state&(rb|sb|tb)&&(this.state=nb),this.state=this.process(b),void(this.state&(ob|pb|qb|sb)&&this.tryEmit(b))):(this.reset(),void(this.state=tb))},process:function(a){},getTouchAction:function(){},reset:function(){}},i(aa,Y,{defaults:{pointers:1},attrTest:function(a){var b=this.options.pointers;return 0===b||a.pointers.length===b},process:function(a){var b=this.state,c=a.eventType,d=b&(ob|pb),e=this.attrTest(a);return d&&(c&Ha||!e)?b|sb:d||e?c&Ga?b|qb:b&ob?b|pb:ob:tb}}),i(ba,aa,{defaults:{event:"pan",threshold:10,pointers:1,direction:Pa},getTouchAction:function(){var a=this.options.direction,b=[];return a&Na&&b.push(lb),a&Oa&&b.push(kb),b},directionTest:function(a){var b=this.options,c=!0,d=a.distance,e=a.direction,f=a.deltaX,g=a.deltaY;return e&b.direction||(b.direction&Na?(e=0===f?Ia:0>f?Ja:Ka,c=f!=this.pX,d=Math.abs(a.deltaX)):(e=0===g?Ia:0>g?La:Ma,c=g!=this.pY,d=Math.abs(a.deltaY))),a.direction=e,c&&d>b.threshold&&e&b.direction},attrTest:function(a){return aa.prototype.attrTest.call(this,a)&&(this.state&ob||!(this.state&ob)&&this.directionTest(a))},emit:function(a){this.pX=a.deltaX,this.pY=a.deltaY;var b=$(a.direction);b&&(a.additionalEvent=this.options.event+b),this._super.emit.call(this,a)}}),i(ca,aa,{defaults:{event:"pinch",threshold:0,pointers:2},getTouchAction:function(){return[jb]},attrTest:function(a){return this._super.attrTest.call(this,a)&&(Math.abs(a.scale-1)>this.options.threshold||this.state&ob)},emit:function(a){if(1!==a.scale){var b=a.scale<1?"in":"out";a.additionalEvent=this.options.event+b}this._super.emit.call(this,a)}}),i(da,Y,{defaults:{event:"press",pointers:1,time:251,threshold:9},getTouchAction:function(){return[hb]},process:function(a){var b=this.options,c=a.pointers.length===b.pointers,d=a.distance<b.threshold,f=a.deltaTime>b.time;if(this._input=a,!d||!c||a.eventType&(Ga|Ha)&&!f)this.reset();else if(a.eventType&Ea)this.reset(),this._timer=e(function(){this.state=rb,this.tryEmit()},b.time,this);else if(a.eventType&Ga)return rb;return tb},reset:function(){clearTimeout(this._timer)},emit:function(a){this.state===rb&&(a&&a.eventType&Ga?this.manager.emit(this.options.event+"up",a):(this._input.timeStamp=ra(),this.manager.emit(this.options.event,this._input)))}}),i(ea,aa,{defaults:{event:"rotate",threshold:0,pointers:2},getTouchAction:function(){return[jb]},attrTest:function(a){return this._super.attrTest.call(this,a)&&(Math.abs(a.rotation)>this.options.threshold||this.state&ob)}}),i(fa,aa,{defaults:{event:"swipe",threshold:10,velocity:.3,direction:Na|Oa,pointers:1},getTouchAction:function(){return ba.prototype.getTouchAction.call(this)},attrTest:function(a){var b,c=this.options.direction;return c&(Na|Oa)?b=a.overallVelocity:c&Na?b=a.overallVelocityX:c&Oa&&(b=a.overallVelocityY),this._super.attrTest.call(this,a)&&c&a.offsetDirection&&a.distance>this.options.threshold&&a.maxPointers==this.options.pointers&&qa(b)>this.options.velocity&&a.eventType&Ga},emit:function(a){var b=$(a.offsetDirection);b&&this.manager.emit(this.options.event+b,a),this.manager.emit(this.options.event,a)}}),i(ga,Y,{defaults:{event:"tap",pointers:1,taps:1,interval:300,time:250,threshold:9,posThreshold:10},getTouchAction:function(){return[ib]},process:function(a){var b=this.options,c=a.pointers.length===b.pointers,d=a.distance<b.threshold,f=a.deltaTime<b.time;if(this.reset(),a.eventType&Ea&&0===this.count)return this.failTimeout();if(d&&f&&c){if(a.eventType!=Ga)return this.failTimeout();var g=this.pTime?a.timeStamp-this.pTime<b.interval:!0,h=!this.pCenter||H(this.pCenter,a.center)<b.posThreshold;this.pTime=a.timeStamp,this.pCenter=a.center,h&&g?this.count+=1:this.count=1,this._input=a;var i=this.count%b.taps;if(0===i)return this.hasRequireFailures()?(this._timer=e(function(){this.state=rb,this.tryEmit()},b.interval,this),ob):rb}return tb},failTimeout:function(){return this._timer=e(function(){this.state=tb},this.options.interval,this),tb},reset:function(){clearTimeout(this._timer)},emit:function(){this.state==rb&&(this._input.tapCount=this.count,this.manager.emit(this.options.event,this._input))}}),ha.VERSION="2.0.8",ha.defaults={domEvents:!1,touchAction:gb,enable:!0,inputTarget:null,inputClass:null,preset:[[ea,{enable:!1}],[ca,{enable:!1},["rotate"]],[fa,{direction:Na}],[ba,{direction:Na},["swipe"]],[ga],[ga,{event:"doubletap",taps:2},["tap"]],[da]],cssProps:{userSelect:"none",touchSelect:"none",touchCallout:"none",contentZooming:"none",userDrag:"none",tapHighlightColor:"rgba(0,0,0,0)"}};var ub=1,vb=2;ia.prototype={set:function(a){return la(this.options,a),a.touchAction&&this.touchAction.update(),a.inputTarget&&(this.input.destroy(),this.input.target=a.inputTarget,this.input.init()),this},stop:function(a){this.session.stopped=a?vb:ub},recognize:function(a){var b=this.session;if(!b.stopped){this.touchAction.preventDefaults(a);var c,d=this.recognizers,e=b.curRecognizer;(!e||e&&e.state&rb)&&(e=b.curRecognizer=null);for(var f=0;f<d.length;)c=d[f],b.stopped===vb||e&&c!=e&&!c.canRecognizeWith(e)?c.reset():c.recognize(a),!e&&c.state&(ob|pb|qb)&&(e=b.curRecognizer=c),f++}},get:function(a){if(a instanceof Y)return a;for(var b=this.recognizers,c=0;c<b.length;c++)if(b[c].options.event==a)return b[c];return null},add:function(a){if(f(a,"add",this))return this;var b=this.get(a.options.event);return b&&this.remove(b),this.recognizers.push(a),a.manager=this,this.touchAction.update(),a},remove:function(a){if(f(a,"remove",this))return this;if(a=this.get(a)){var b=this.recognizers,c=r(b,a);-1!==c&&(b.splice(c,1),this.touchAction.update())}return this},on:function(a,b){if(a!==d&&b!==d){var c=this.handlers;return g(q(a),function(a){c[a]=c[a]||[],c[a].push(b)}),this}},off:function(a,b){if(a!==d){var c=this.handlers;return g(q(a),function(a){b?c[a]&&c[a].splice(r(c[a],b),1):delete c[a]}),this}},emit:function(a,b){this.options.domEvents&&ka(a,b);var c=this.handlers[a]&&this.handlers[a].slice();if(c&&c.length){b.type=a,b.preventDefault=function(){b.srcEvent.preventDefault()};for(var d=0;d<c.length;)c[d](b),d++}},destroy:function(){this.element&&ja(this,!1),this.handlers={},this.session={},this.input.destroy(),this.element=null}},la(ha,{INPUT_START:Ea,INPUT_MOVE:Fa,INPUT_END:Ga,INPUT_CANCEL:Ha,STATE_POSSIBLE:nb,STATE_BEGAN:ob,STATE_CHANGED:pb,STATE_ENDED:qb,STATE_RECOGNIZED:rb,STATE_CANCELLED:sb,STATE_FAILED:tb,DIRECTION_NONE:Ia,DIRECTION_LEFT:Ja,DIRECTION_RIGHT:Ka,DIRECTION_UP:La,DIRECTION_DOWN:Ma,DIRECTION_HORIZONTAL:Na,DIRECTION_VERTICAL:Oa,DIRECTION_ALL:Pa,Manager:ia,Input:x,TouchAction:V,TouchInput:P,MouseInput:L,PointerEventInput:M,TouchMouseInput:R,SingleTouchInput:N,Recognizer:Y,AttrRecognizer:aa,Tap:ga,Pan:ba,Swipe:fa,Pinch:ca,Rotate:ea,Press:da,on:m,off:n,each:g,merge:ta,extend:sa,assign:la,inherit:i,bindFn:j,prefixed:u});var wb="undefined"!=typeof a?a:"undefined"!=typeof self?self:{};wb.Hammer=ha,"function"==typeof define&&define.amd?define(function(){return ha}):"undefined"!=typeof module&&module.exports?module.exports=ha:a[c]=ha}(window,document,"Hammer");
+//# sourceMappingURL=hammer.min.js.map
 // Get data from URL
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
@@ -124,15 +131,29 @@ myButton.addEventListener("click", function() {
         }
       },
       success: function(data) {
-        if (data.status == 'pending') {
+        if (data.status == 'pending' && data.merge_fields.JOINED == 'Sample'){
+          if (varEmail == null) {
+            window.location.href = "almost-finished-sample";
+          } else {
+            return;
+          }
+        } else if (data.status == 'pending') {
           console.log(data);
           if (varEmail == null) {
             window.location.href = "almost-finished";
           } else {
             return;
           }
+        } else if (data.status == 'subscribed' && data.merge_fields.SAMPLE == 'Yes') {
+          if (varEmail == null) {
+            console.dir(data);
+            window.location.href = "sample-sent";
+          } else {
+            return;
+          }
         } else if (data.status == 'subscribed') {
           if (varEmail == null) {
+            console.dir(data);
             window.location.href = "thanks-subscribed";
           } else {
             return;
@@ -559,773 +580,59 @@ function createTestContainingBlock(document) {
   };
 
 })();
+/* global require, describe, beforeEach, it, browser */
 
-/*global jQuery */
-/*!
-* FitText.js 1.2
-*
-* Copyright 2011, Dave Rupert http://daverupert.com
-* Released under the WTFPL license
-* http://sam.zoy.org/wtfpl/
-*
-* Date: Thu May 05 14:23:00 2011 -0600
-*/
+const assert = require('assert');
 
-(function( $ ){
+describe('it loads', function () {
 
-  $.fn.fitText = function( kompressor, options ) {
-
-    // Setup options
-    var compressor = kompressor || 1,
-    settings = $.extend({
-      'minFontSize' : Number.NEGATIVE_INFINITY,
-      'maxFontSize' : Number.POSITIVE_INFINITY
-    }, options);
-
-    return this.each(function(){
-
-      // Store the object
-      var $this = $(this);
-
-      // Resizer() resizes items based on the object width divided by the compressor * 10
-      var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-      };
-
-      // Call once to set.
-      resizer();
-
-      // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', resizer);
-
-    });
-
-  };
-
-})( jQuery );
-var level;
-var attempt = -1;
-var score;
-var userTopScore = 0;
-var outOf;
-var multiplier;
-var maxScore;
-var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-// console.log(h);
-
-var levels = [
-{
-  id: "01",
-  iv: [1.2, 500, 18],
-  cv: [1.45, 500, 18],
-  piq: 0,
-  maxScore: 10,
-  font: "Georgia",
-  fallbackFont: "Serif",
-  instructions: "Adjust the line-height to what you think best matches other parameters.",
-  parameters: [
-  {
-    id: "lh",
-    name: "line-height",
-    adjust: true,
-    values: [1.2, 1.8, 0.05]
-  },
-  {
-    id: "lw",
-    name: "max-width",
-    adjust: false
-  },
-  {
-    id: "fs",
-    name: "font-size",
-    adjust: false
-  }
-  ]
-},
-{
-  id: "02",
-  iv: [1.6, 400, 18],
-  cv: [1.6, 650, 18],
-  piq: 1,
-  maxScore: 15,
-  font: "Georgia",
-  fallbackFont: "Serif",
-  instructions: "Adjust the line width to what you think best matches other parameters.",
-  parameters: [
-  {
-    id: "lh",
-    name: "line-height",
-    adjust: false
-  },
-  {
-    id: "lw",
-    name: "max-width",
-    adjust: true,
-    values: [300, 750, 10]
-  },
-  {
-    id: "fs",
-    name: "font-size",
-    adjust: false
-  }
-  ]
-},
-{
-  id: "03",
-  iv: [1.3, 350, 20],
-  cv: [1.3, 350, 16],
-  piq: 2,
-  maxScore: 5,
-  font: "Georgia",
-  fallbackFont: "Serif",
-  instructions: "Adjust the font size to what you think best matches other parameters.",
-  parameters: [
-  {
-    id: "lh",
-    name: "line-height",
-    adjust: false,
-    values: [0.95, 2.2, 0.05]
-  },
-  {
-    id: "lw",
-    name: "max-width",
-    adjust: false,
-    values: [100, 1000, 1]
-  },
-  {
-    id: "fs",
-    name: "font-size",
-    adjust: true,
-    values: [11, 22, 1]
-  }
-  ]
-},
-{
-  id: "04",
-  iv: [2, 650, 20],
-  cv: [1.5, 650, 20],
-  piq: 0,
-  maxScore: 10,
-  font: "Georgia",
-  fallbackFont: "Serif",
-  instructions: "Adjust the line-height to what you think best matches other parameters.",
-  parameters: [
-  {
-    id: "lh",
-    name: "line-height",
-    adjust: true,
-    values: [1.3, 2.2, 0.05]
-  },
-  {
-    id: "lw",
-    name: "max-width",
-    adjust: false,
-    values: [100, 1000, 1]
-  },
-  {
-    id: "fs",
-    name: "font-size",
-    adjust: false,
-    values: [12, 29, 1]
-  }
-  ]
-},
-{
-  id: "05",
-  iv: [1.35, 750, 16],
-  cv: [1.35, 500, 16],
-  piq: 1,
-  maxScore: 15,
-  font: "Georgia",
-  fallbackFont: "Serif",
-  instructions: "Adjust the line width to what you think best matches other parameters.",
-  parameters: [
-  {
-    id: "lh",
-    name: "line-height",
-    adjust: false,
-    values: [0.95, 2.2, 0.05]
-  },
-  {
-    id: "lw",
-    name: "max-width",
-    adjust: true,
-    values: [300, 1000, 10]
-  },
-  {
-    id: "fs",
-    name: "font-size",
-    adjust: false,
-    values: [12, 29, 1]
-  }
-  ]
-},
-{
-  id: "06",
-  iv: [1.85, 750, 29],
-  cv: [1.85, 750, 23],
-  piq: 2,
-  maxScore: 5,
-  font: "Georgia",
-  fallbackFont: "Serif",
-  instructions: "Adjust the font size to what you think best matches other parameters.",
-  parameters: [
-  {
-    id: "lh",
-    name: "line-height",
-    adjust: false,
-    values: [0.95, 2.2, 0.05]
-  },
-  {
-    id: "lw",
-    name: "max-width",
-    adjust: false,
-    values: [100, 1000, 1]
-  },
-  {
-    id: "fs",
-    name: "font-size",
-    adjust: true,
-    values: [12, 29, 1]
-  }
-  ]
-},
-{
-  id: "07",
-  iv: [1, 800, 22],
-  cv: [1.65, 800, 22],
-  piq: 0,
-  maxScore: 10,
-  font: "Merriweather",
-  fallbackFont: "Serif",
-  instructions: "Adjust the line-height to what you think best matches other parameters.",
-  parameters: [
-  {
-    id: "lh",
-    name: "line-height",
-    adjust: true,
-    values: [0.9, 1.8, 0.05]
-  },
-  {
-    id: "lw",
-    name: "max-width",
-    adjust: false,
-    values: [100, 1000, 1]
-  },
-  {
-    id: "fs",
-    name: "font-size",
-    adjust: false,
-    values: [12, 29, 1]
-  }
-  ]
-},
-{
-  id: "08",
-  iv: [1.5, 250, 18],
-  cv: [1.5, 600, 18],
-  piq: 1,
-  maxScore: 15,
-  font: "Baskerville",
-  fallbackFont: "Serif",
-  instructions: "Adjust the line width to what you think best matches other parameters.",
-  parameters: [
-  {
-    id: "lh",
-    name: "line-height",
-    adjust: false,
-    values: [0.95, 2.2, 0.05]
-  },
-  {
-    id: "lw",
-    name: "max-width",
-    adjust: true,
-    values: [100, 1000, 10]
-  },
-  {
-    id: "fs",
-    name: "font-size",
-    adjust: false,
-    values: [12, 29, 1]
-  }
-  ]
-},
-{
-  id: "09",
-  iv: [1.4, 500, 20],
-  cv: [1.4, 500, 15],
-  piq: 2,
-  maxScore: 5,
-  font: "Merriweather",
-  fallbackFont: "Serif",
-  instructions: "Adjust the font size to what you think best matches other parameters.",
-  parameters: [
-  {
-    id: "lh",
-    name: "line-height",
-    adjust: false,
-    values: [0.95, 2.2, 0.05]
-  },
-  {
-    id: "lw",
-    name: "max-width",
-    adjust: false,
-    values: [100, 1000, 1]
-  },
-  {
-    id: "fs",
-    name: "font-size",
-    adjust: true,
-    values: [10, 24, 1]
-  }
-  ]
-},
-{
-  id: "10",
-  iv: [1.1, 550, 17],
-  cv: [1.5, 550, 17],
-  piq: 0,
-  maxScore: 10,
-  font: "Baskerville",
-  fallbackFont: "Serif",
-  instructions: "Adjust the line-height to what you think best matches other parameters.",
-  parameters: [
-  {
-    id: "lh",
-    name: "line-height",
-    adjust: true,
-    values: [0.9, 2.1, 0.05]
-  },
-  {
-    id: "lw",
-    name: "max-width",
-    adjust: false,
-    values: [100, 1000, 1]
-  },
-  {
-    id: "fs",
-    name: "font-size",
-    adjust: false,
-    values: [12, 29, 1]
-  }
-  ]
-}
-];
-
-var numOfLevels = levels.length;
-
-
-function startGame() {
-  score = 0;
-  outOf = 0;
-  level = -1;
-  // attempt++;
-  if (attempt == -1){
-    $(".triangle-game").fadeOut();
-    setTimeout(function(){ $('.instructions').fadeIn(); }, 1000);
-    setTimeout(function(){ $('.instructions .start').addClass('animated infinite pulse'); }, 5000);
-    attempt++;
-  } else {
-    attempt++;
-    $('.instructions').fadeOut();
-    // console.log("Attempt:" + attempt);
-    $('#userScore').html(score);
-    setTimeout(function(){ $('.outOf').html(outOf); }, 1200);
-    $('#triangleBg').attr('stroke', '#353D44').removeClass('glow');
-    $('#triangle').attr('stroke', '#F15D64');
-    loadLevel();
-  }
-}
-
-function loadLevel() {
-  $('body').removeClass('hide-overflow');
-  $('#next-level').fadeOut();
-  $('#tryAgain').fadeOut();
-  $('.book-msg').fadeOut();
-  $('.form-triangle').fadeOut();
-  setTimeout(function(){
-    $(".score").fadeOut();
-    $('#score').css('color', '#fff');
-    $('.tweet-score .btn-tweet').remove();
-   }, 1200);
-  $(".tweet-score").fadeOut();
-  $(".slider").remove();
-  $('text.fs, text.lw, text.lh').attr('opacity', 0.4);
-  level++;
-  maxScore = levels[level].maxScore;
-
-  // Update instructions
-  $("#level-id").html(levels[level].id);
-  $("#instructions").html(levels[level].instructions);
-  $("#font").val(levels[level].font);
-
-  var ivLh = levels[level].iv[0];
-  var ivLw = levels[level].iv[1];
-  var ivFs = levels[level].iv[2];
-  var ivFont = levels[level].font + ", " + levels[level].fallbackFont;
-
-  $(".result").css({
-    "line-height": ivLh + "rem",
-    width: ivLw + "px",
-    "font-size": ivFs + "px",
-    "font-family": ivFont
+  beforeEach(function () {
+    browser.url('http://localhost:4200/examples/cart');
+    browser.waitForText('.product-title', '6 Panel – Aztec');
   });
 
-  // Go through the level parameters
-  for (i = 0; i < 3; i++) {
-    var sliderValues;
-    var paramString = levels[level].parameters[i].id;
-    var paramId = "#" + paramString;
-    var sliderName;
-
-    // Set initial values
-    if (paramString != "lh") {
-      $(paramId).val(levels[level].iv[i] + "px");
-    } else {
-      $(paramId).val(levels[level].iv[i]);
-    }
-
-    // If param. adjustable add slider
-    if (levels[level].parameters[i].adjust) {
-      multiplier = levels[level].parameters[i].values[2];
-      $(paramId).after(
-        '<div class="slider slider-' +
-        levels[level].parameters[i].id +
-        '"></div>'
-        );
-
-      sliderValues = levels[level].parameters[i].values;
-      sliderName = ".slider-" + paramString;
-
-      $(sliderName).slider({
-        value: levels[level].iv[i],
-        min: sliderValues[0],
-        max: sliderValues[1],
-        step: sliderValues[2],
-        change: function(e,ui){
-          if (level == 0){
-            $('#check').addClass('animated fadeInUpBig');
-            $('.ui-slider-handle').removeClass('animated infinite pulse');
-          }
-        }
-      });
-    }
-    if (level == 0){
-      $('.ui-slider-handle').addClass('animated infinite pulse');
-    }
-  }
-
-  $(".slider-lh").slider({
-    slide: function(event, ui) {
-      $("#lh").val(ui.value);
-      $(".result").css("line-height", ui.value);
-    }
+  it('should have the right title', function () {
+    assert.equal(browser.getTitle(), 'JS Buy SDK Example -- Cart 001');
   });
 
-  $(".slider-lw").slider({
-    slide: function(event, ui) {
-      $("#lw").val(ui.value + "px");
-      $(".result").css("width", ui.value);
-    }
+  it('it should render a product', function () {
+    assert.equal(browser.getAttribute('.variant-image', 'src'), 'https://cdn.shopify.com/s/files/1/1019/0495/products/i5.jpg?v=1446943528');
+    assert.equal(browser.getText('.variant-title'), 'Black');
+    assert.equal(browser.getText('.variant-price'), '$32.00');
+    assert.equal(browser.getValue('select[name=Color]'), 'Black');
+  });
+});
+
+describe('it behaves', function () {
+
+  beforeEach(function () {
+    browser.url('http://localhost:4200/examples/cart');
+    browser.waitForText('.product-title', '6 Panel – Aztec');
   });
 
-  $(".slider-fs").slider({
-    slide: function(event, ui) {
-      $("#fs").val(ui.value + "px");
-      $(".result").css("font-size", ui.value);
-    }
+  it('updates the variant by changing the select value', function () {
+    assert.equal(browser.getAttribute('.variant-image', 'src'), 'https://cdn.shopify.com/s/files/1/1019/0495/products/i5.jpg?v=1446943528');
+    assert.equal(browser.getText('.variant-title'), 'Black');
+    assert.equal(browser.getValue('select[name=Color]'), 'Black');
+
+    browser.selectByVisibleText('select[name=Color]', 'Red');
+
+    assert.equal(browser.getAttribute('.variant-image', 'src'), 'https://cdn.shopify.com/s/files/1/1019/0495/products/i6.jpg?v=1446943530');
+    assert.equal(browser.getText('.variant-title'), 'Red');
+    assert.equal(browser.getValue('select[name=Color]'), 'Red');
   });
 
-  // Show level
-  $(".level").fadeIn();
-}
+  it('adds an item to the cart by clicking add to cart', function () {
+    browser.click('.buy-button');
 
-function checkScore() {
-  $('body').addClass('hide-overflow');
+    assert.equal(browser.getText('.cart-item__title'), '6 Panel – Aztec');
+    assert.equal(browser.getText('.cart-item__variant-title'), 'Black');
+  });
 
-  var finalScore;
-  var piq = levels[level].piq;
-  var correctValue = levels[level].cv[piq]
-  var sliderValue = $( ".slider" ).slider( "option", "value" );
-  var result = Math.abs(correctValue - sliderValue);
-  var r = Math.round((correctValue - sliderValue) / multiplier);
+  it('takes us to checkout', function () {
+    browser.click('.buy-button');
+    browser.click('#checkout');
 
-
-  if (result / multiplier < maxScore){
-    finalScore = Math.round(maxScore - result / multiplier);
-  } else {
-    finalScore = 0;
-  }
-
-  var scoreMsg;
-  var counterColour;
-  var colourPositive = '#24D7D1';
-  var colourNeutral = '#EAD079';
-  var colourNegative = '#F15D64';
-
-  if (maxScore == 5){
-    if (maxScore - finalScore == 0){
-      scoreMsg = "Perfect!";
-      counterColour = colourPositive;
-    } else if (maxScore - finalScore == 1){
-      scoreMsg = "Well done";
-      counterColour = colourPositive;
-    } else if (maxScore - finalScore == 2){
-      scoreMsg = "Not bad";
-      counterColour = colourNeutral;
-    } else if (maxScore - finalScore == 3){
-      scoreMsg = "Could be better";
-      counterColour = colourNeutral;
-    } else if (maxScore - finalScore == 4){
-      scoreMsg = "Way off";
-      counterColour = colourNegative;
-    } else if (maxScore - finalScore >= 5){
-      scoreMsg = "Not even close";
-      counterColour = colourNegative;
-    }
-  } else if (maxScore == 10 || maxScore == 15) {
-    if (maxScore - finalScore == 0){
-      scoreMsg = "Perfect!";
-      counterColour = colourPositive;
-    } else if (maxScore - finalScore >= 10){
-      scoreMsg = "Way off!";
-      counterColour = colourNegative;
-    } else if (maxScore - finalScore >= 7){
-      scoreMsg = "Could be better";
-      counterColour = colourNegative;
-    } else if (maxScore - finalScore >= 5){
-      scoreMsg = "Not quite there";
-      counterColour = colourNeutral;
-    } else if (maxScore - finalScore >= 3){
-      scoreMsg = "Not bad";
-      counterColour = colourNeutral;
-    } else if (maxScore - finalScore >= 1){
-      scoreMsg = "Well done";
-      counterColour = colourPositive;
-    }
-  }
-
-  score = score + finalScore;
-  outOf = outOf + maxScore;
-
-  $('.scoreMsg').html(scoreMsg);
-  setTimeout(function(){
-    $('#userScore').html(score);
-    $('.outOf').html(outOf);
-  }, 1000);
-
-  if (piq == 0){
-    triangleResult = r / 2 * 10;
-  } else if (piq == 2){
-    triangleResult = -(r * 10);
-  } else {
-    triangleResult = (sliderValue- correctValue) / 2;
-  }
-
-  if (piq == 0 || piq == 2){
-    if (Math.abs(triangleResult) > 60 && triangleResult < 0){
-      triangleResult = -60;
-    } else if (triangleResult > 60){
-      triangleResult = 60;
-    }
-  } else {
-    if (Math.abs(triangleResult) > 30 && triangleResult < 0){
-      triangleResult = -30;
-    } else if (triangleResult > 30) {
-      triangleResult = 30;
-    }
-  }
-
-  var triangle = document.getElementById('triangleAnimation');
-  var tri = document.getElementById('triangle');
-  var piqClass = levels[level].parameters[piq].id;
-  var triangleCoordinates;
-
-  var animTime = 300 + Math.abs(triangleResult) * 10 + 'ms';
-  tri.setAttribute('points', '150,23 207,111 93,111');
-  $('text.' + piqClass).attr('opacity', 1);
-
-  if (triangleResult == 0){
-    triangle.setAttribute('to','150,23 207,111 93,111');
-    setTimeout(function(){ $('#triangleId').addClass('animated pulse2'); }, 2000);
-    setTimeout(function(){ $('#triangleId').removeClass('animated pulse2'); }, 3000);
-  } else {
-    if (piq != 1){
-      var tip = 150 + triangleResult;
-      // tri.setAttribute('points', '120,13 177,101 63,101');
-      setTimeout(function(){
-        triangleCoordinates = tip + ',23 207,111 93,111';
-        triangle.setAttribute('to',triangleCoordinates);
-        triangle.setAttribute('dur',animTime);
-        tri.setAttribute('points',triangleCoordinates);
-      }, 2000);
-    } else {
-      var b = 207 + triangleResult;
-      var c = 93 - triangleResult;
-      // tri.setAttribute('points', '120,13 177,101 63,101');
-      setTimeout(function(){
-        triangleCoordinates = '150, 23 ' + b + ',111 ' + c + ', 111';
-        triangle.setAttribute('to',triangleCoordinates);
-        triangle.setAttribute('dur',animTime);
-        tri.setAttribute('points',triangleCoordinates);
-      }, 2000);
-    }
-  }
-
-  setTimeout(function(){ triangle.beginElement(); }, 2000);
-
-  $('.score h1').html('Level ' + levels[level].id);
-  $('#score').html("<span class='counter' data-count='" + finalScore + "'>0</span>/" + maxScore).css('color', counterColour);
-  $('.score hr').show();
-
-  var countTime = 300 + Math.abs(triangleResult) * 10;
-
-  function animateScore(){
-    $('.anim').removeClass('fadeOutUpBig').addClass('animated');
-
-    setTimeout(function(){
-      $('.counter').each(function() {
-        var $this = $(this),
-        countTo = $this.attr('data-count');
-
-        $({ countNum: $this.text()}).animate({
-          countNum: countTo
-        },
-
-        {
-          duration: countTime,
-          easing:'linear',
-          step: function() {
-            $this.text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $this.text(this.countNum);
-          //alert('finished');
-        }
-
-      });
-      });
-    }, 2000);
-  };
-
-  $(".score").fadeIn();
-
-  animateScore();
-
-// Show next level link or final score
-if (level < numOfLevels - 1){
-  setTimeout(function(){ $('#next-level').fadeIn(); }, 4000);
-} else {
-    // Hide last level score
-    setTimeout(function(){ $('.score-content').fadeOut(); }, 4000);
-
-    // Final score attributes
-    var triangleColour;
-    var finalScoreTitle;
-    var finalScoreResult;
-
-    if (score <= 50){
-      triangleColour = '#CD7F32';
-      counterColour = colourNegative;
-      finalScoreTitle = "Oops, you seem to be a";
-      finalScoreResult = "Type newbie";
-    } else if (score <= 85) {
-      triangleColour = '#E8E8E2';
-      counterColour = colourNeutral;
-      finalScoreTitle = "Not bad, you’re a";
-      finalScoreResult = "Type geek wannabe";
-    } else {
-      triangleColour = '#FFC300';
-      counterColour = colourPositive;
-      finalScoreTitle = "Well done you’re a";
-      finalScoreResult = "Proper type geek";
-    }
-
-    // Book message
-    var bookMsg;
-    // var bookSwitch = 0;
-
-    if( varEmail != null ){
-      bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small-retina.jpg' width='119'></td><td><h2>The <span>Better Web Type</span> book is&nbsp;here!</h2><p><em><a href='https://betterwebtype.com/web-typography-book'>Get your copy</a> and learn what typography is, why it’s important and how to get it right on your websites.</em></p></td></tr></tbody></table>";
-    } else {
-      bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small-retina.jpg' width='119'></td><td><h2>The <span>Better Web Type</span> book is&nbsp;here!</h2><p><em><a href='https://betterwebtype.com/web-typography-book'>Get your copy</a> and learn what typography is, why it’s important and how to get it right on your websites.</em></p></td></tr></tbody></table>";
-      // bookMsg = "<img src='assets/images/better-web-type-course-small.png' width='157' class='course-image'><h2 class='align-center'>Learn about web typography <br><span>start the Better Web Type course</span></h2><p class='align-center'><em>Better Web Type is a free web typography course for web designers and developers. Learn about modular scales, vertical rhythm and more in 10, easy-to-digest lessons.</em></p><br><a href='/' class='button floatCenter align-center'>Check it out</a>";
-    }
-
-    // Show final score
-    setTimeout(function(){
-      tri.setAttribute('points','150,23 207,111 93,111');
-      triangle.setAttribute('to','150,23 207,111 93,111');
-      $('.score hr').hide();
-      $('#triangleBg').attr('stroke', triangleColour).addClass('glow');
-      $('#triangle').attr('stroke', triangleColour);
-      $('svg text').attr('opacity', 0);
-      $('.score-content h1').html(finalScoreTitle);
-      $('.scoreMsg').html(finalScoreResult);
-      $('#score').html("<span class='counter' data-count='" + score + "'>0</span>" + "/" + outOf).css('color', counterColour);
-      $('#final-score').html(score);
-      $('.outOf').html(outOf);
-      $('.score-content').show();
-      $('.book-msg').html(bookMsg);
-      animateScore();
-    }, 4500);
-    var tweetUrl = "<a href='https://twitter.com/intent/tweet?url=https%3A%2F%2Fbetterwebtype.com%2Ftriangle&via=matejlatin&text=I%20scored%20" + score + "/" + outOf + "%20in%20the%20Perfect%20Paragraph%20game.%20Can%20you%20do%20better%20than%20me%3F%20&hashtags=BetterWebType' class='btn-tweet floatCenter' target='_blank'>Tweet this</a>";
-    setTimeout(function(){ $('.tweet-score').append(tweetUrl).fadeIn(); }, 6000);
-    setTimeout(function(){ $('#tryAgain').fadeIn(); }, 8000);
-    setTimeout(function(){ $('.book-msg').fadeIn(); }, 8500);
-    // if( varEmail == null ){
-    //   setTimeout(function(){
-    //     $('.form-triangle').fadeIn();
-    //     if ( h <= 710 ){
-    //       $('.arrow').fadeIn().addClass('bounce infinite animated');
-    //     }
-    //   }, 8500);
-    // }
-
-    // Update top score
-    if (score > userTopScore){
-      userTopScore = score;
-    }
-    // $('#FNAME').val(varName);
-    // $('#LNAME').val(varSurname);
-    // $('#EMAIL').val(varEmail);
-    $('#ATTEMPT').val(attempt);
-    $('#TOPSCORE').val(userTopScore);
-    // console.log("Top score: " + userTopScore);
-    if( varEmail != null ){
-      // submit form
-      setTimeout(function(){ $('#theForm').submit(); }, 8500);
-    }
-  }
-}
-
-// Links
-$(".start").click(function(e) {
-  e.preventDefault();
-  startGame();
-  return false;
-});
-
-$("#tryAgain").click(function(e) {
-  e.preventDefault();
-  $('.anim').addClass('animated fadeOutUpBig');
-  startGame();
-  return false;
-});
-
-$("#check").click(function(e) {
-  e.preventDefault();
-  checkScore();
-  return false;
-});
-
-$("#next-level").click(function(e) {
-  e.preventDefault();
-  $('.anim').addClass('animated fadeOutUpBig');
-  loadLevel();
-  return false;
-});
-
-$(".score").on( 'scroll', function(){
-   $('.arrow').fadeOut();
+    assert.equal(browser.getTitle(), 'Embeds - Checkout');
+  });
 });

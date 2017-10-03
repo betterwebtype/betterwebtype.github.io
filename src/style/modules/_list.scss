@@ -50,3 +50,11 @@ ul, ol {
   max-width: #{$max-width + 'em'};
   padding: 0;
 }
+
+article ul {
+  padding-left: 20px;
+
+  @media screen and (min-width: 40em){
+    padding-left: 0;
+  }
+}

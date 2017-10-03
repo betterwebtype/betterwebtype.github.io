@@ -7,6 +7,7 @@ $edit-mode: false; // [ true / false ] - Enables/disables the grid toggle button
 $theme: custom; // [ Merriweather / OpenSans / custom ]
 $custom-font-body: "ff-meta-serif-web-pro", Georgia, serif; // [ "Libre Baskerville", Georgia, serif ]
 $custom-font-headings: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+$custom-font-acumin: acumin-pro, Helvetica, Arial, sans-serif;
 
 // Paragraph indenting
 $paragraph-indent: false; // [ true / false ]
@@ -39,6 +40,9 @@ $color-font-light: #888;
 $color-font-figcaption: $color-font-body;
 $color-light-gray: #f7f7f5;
 $bwt-red: #F15D64;
+$bwt-green: #ACB9D3;
+$bwt-gold: #D7C074;
+$bwt-silver: #B1B7B7;
 
 /* Calculations
    ========================================================================== */

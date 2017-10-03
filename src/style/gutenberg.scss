@@ -10,6 +10,12 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
 
 @import 'gutenberg-config';
 
+@import "shopify/variables";
+@import "shopify/initializers";
+@import "shopify/buttons";
+@import "shopify/cart";
+@import "shopify/utilities";
+
 @import 'mixins/font-size';
 @import 'mixins/line-height';
 @import 'mixins/margin';
@@ -26,6 +32,8 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
 @import 'layout/header';
 @import 'layout/main';
 @import 'layout/section';
+@import 'layout/book';
+@import 'layout/book-deluxe';
 
 @import 'modules/anchor';
 @import 'modules/article';
@@ -48,6 +56,8 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
 @import 'modules/video';
 @import 'modules/triangle';
 @import 'modules/book';
+
+@import "slider/slider";
 
 /* TODOs:
  - some line heights produce margins with .5 results, seemingly breaking the gird (?),

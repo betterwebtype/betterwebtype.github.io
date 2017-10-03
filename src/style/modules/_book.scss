@@ -86,11 +86,11 @@
 .book-info {
   width: 100%;
   @media screen and (min-width: 760px) {
-    max-width: 65%;
+    // max-width: 65%;
   }
 }
 
-body.book-page article {
+body.book-page article, body.book-page-deluxe article {
   max-width: none;
 }
 
@@ -259,57 +259,89 @@ body.book-page article {
 }
 
 // Slider
-.container{
+.container {
   width: 100%;
   margin: 0 auto;
 }
 
-ul.tabs{
+ul.tabs {
   margin: 0px;
   padding: 0px;
   list-style: none;
   width: 100%;
   max-width: none!important;
   clear: left;
-  @media screen and (min-width: 90em){
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
-ul.tabs li{
+ul.tabs li {
   background: none;
-  display: inline-block;
+  // display: inline-block;
   // padding: 10px 15px;
   cursor: pointer;
-  width: 16%;
+  // width: 16%;
   opacity: 0.3;
-  text-transform: uppercase;
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
-  padding-left: 10px;
-  font-size: 1.75vw;
-  line-height: 1.1em;
   border-left: 2px #fafafa solid;
+  @include margin-bottom(1);
+  vertical-align: top;
+  padding-left: 10px;
 
-  @media screen and (min-width: 90em){
-    font-size: 25px;
-    width: 16%;
-    // padding-right: 1%;
+  @media screen and (min-width: 80em){
+    max-width: 80%;
+  }
+
+  span {
+    display: block;
+    text-transform: uppercase;
+    font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+    font-size: 1.7rem;
+    @include line-height(1);
+    @include margin-bottom(0.5);
+    padding-bottom: 5px;
   }
 }
 
-ul.tabs li.current{
+ul.tabs li.current {
   border-left: 2px $bwt-red solid;
   opacity: 1;
 }
 
-.tab-content{
+.tab-content, .tab-content-cs {
   display: none;
   // background: #ededed;
 }
 
-.tab-content.current{
+.tab-content.current, .tab-content-cs.current {
   display: inherit;
+}
+
+@media screen and (min-width: 90em){
+  .tab-content img {
+    float: right;
+    margin-right: -10%;
+  }
+}
+
+@media screen and (min-width: 105em){
+  .tab-content img {
+    margin-right: -15%;
+  }
+}
+
+@media screen and (min-width: 110em){
+  .tab-content img {
+    margin-right: -20%;
+  }
+}
+
+@media screen and (min-width: 115em){
+  .tab-content img {
+    margin-right: -25%;
+  }
+}
+
+@media screen and (min-width: 120em){
+  .tab-content img {
+    margin-right: -30%;
+  }
 }
 
 .ipad {
@@ -470,4 +502,35 @@ ul.tabs li.current{
   -moz-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
   box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
   transform: scale3d(1.03, 1.03, 1.03);
+}
+
+.tabs-cheatsheet {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  font-family: $custom-font-acumin;
+  font-weight: bold;
+  max-width: none;
+  position: absolute;
+  bottom: -20px;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+
+  li {
+    display: inline-block;
+    margin: 0 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .current {
+    border-bottom: 3px solid $bwt-red;
+  }
+}
+
+.cheatsheet {
+  position: relative;
+  margin-bottom: 0;
 }

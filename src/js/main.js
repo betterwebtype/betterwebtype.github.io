@@ -124,15 +124,29 @@ myButton.addEventListener("click", function() {
         }
       },
       success: function(data) {
-        if (data.status == 'pending') {
+        if (data.status == 'pending' && data.merge_fields.JOINED == 'Sample'){
+          if (varEmail == null) {
+            window.location.href = "almost-finished-sample";
+          } else {
+            return;
+          }
+        } else if (data.status == 'pending') {
           console.log(data);
           if (varEmail == null) {
             window.location.href = "almost-finished";
           } else {
             return;
           }
+        } else if (data.status == 'subscribed' && data.merge_fields.SAMPLE == 'Yes') {
+          if (varEmail == null) {
+            console.dir(data);
+            window.location.href = "sample-sent";
+          } else {
+            return;
+          }
         } else if (data.status == 'subscribed') {
           if (varEmail == null) {
+            console.dir(data);
             window.location.href = "thanks-subscribed";
           } else {
             return;
@@ -559,47 +573,3 @@ function createTestContainingBlock(document) {
   };
 
 })();
-
-/*global jQuery */
-/*!
-* FitText.js 1.2
-*
-* Copyright 2011, Dave Rupert http://daverupert.com
-* Released under the WTFPL license
-* http://sam.zoy.org/wtfpl/
-*
-* Date: Thu May 05 14:23:00 2011 -0600
-*/
-
-(function( $ ){
-
-  $.fn.fitText = function( kompressor, options ) {
-
-    // Setup options
-    var compressor = kompressor || 1,
-    settings = $.extend({
-      'minFontSize' : Number.NEGATIVE_INFINITY,
-      'maxFontSize' : Number.POSITIVE_INFINITY
-    }, options);
-
-    return this.each(function(){
-
-      // Store the object
-      var $this = $(this);
-
-      // Resizer() resizes items based on the object width divided by the compressor * 10
-      var resizer = function () {
-        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
-      };
-
-      // Call once to set.
-      resizer();
-
-      // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', resizer);
-
-    });
-
-  };
-
-})( jQuery );

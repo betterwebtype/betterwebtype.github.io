@@ -1,0 +1,165 @@
+.content-slider { 
+  background: #fafafa;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    // display: -webkit-box;
+    // display: -moz-box;
+    // display: -ms-flexbox;
+    // display: -webkit-flex;
+    // display: flex;
+    // -webkit-flex-direction: column;
+    // -moz-box-direction: column;
+    // -ms-flex-direction: column;
+    // flex-direction: column;
+    // -webkit-justify-content: center;
+    // -ms-justify-content: center;
+    // -moz-box-justify-content: center;
+    // justify-content: center;
+    max-width: none;
+    // height: auto;
+  }
+  
+  li {
+    display: none;
+  }
+  
+  li.active {
+    display: block;
+  }
+  
+  img {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.fullscreen {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  li {
+    position: absolute;
+    height: 100%;
+    // top: 50%;
+    // transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#slider .slider-image:hover {
+  cursor: zoom-in;
+}
+
+#slider.fullscreen .slider-image:hover {
+  cursor: default!important;
+}
+
+.fullscreen .slider-image img {
+  width: auto;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.prev, .next {
+  display: none;
+  
+  @media screen and (min-width: 768px){
+    display: block;
+  position: absolute;
+  z-index: 100;
+  top: 43%;
+  transition: all 0.3s;
+  }
+  
+  &:hover {
+    cursor: pointer;
+    fill: red;
+  }
+}
+
+.prev {
+  left: 40px;
+}
+
+.next {
+  right: 60px;
+}
+
+.fullscreen {
+  .prev, .next {
+    top: 44%;
+  }
+  .prev {
+    left: 50px;
+  }
+  
+  .next {
+    right: 70px;
+  }
+}
+
+.close {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 110;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.pager {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  bottom: 40px;
+  
+  a {
+    background: #D6D6D6;
+    border-radius: 100%;
+    display: inline-block;
+    font-size: 0;
+    width: 9px;
+    height: 9px;
+    margin: 0 5px;
+  }
+  
+  a.active {
+    background: #01D7D2;
+  }
+}
+
+.fullscreen .pager {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.book-page-deluxe .pager {
+  a {
+    opacity: 0.3;
+  }
+
+  a.active {
+    opacity: 1;
+  }
+}
