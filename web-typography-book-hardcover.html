@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <title>Better Web Typography for a Better Web—a book about web typography for web designers & developers by Matej Latin | Better Web Type</title>
-  <meta name="description" content="Better Web Typography for a Better Web by Matej Latin is a web typography book for web designers and web developers. Based on the popular course that was featured on Codrops, Net magazine, Creative Bloq and CSS Tricks.">
+  <meta name="description" content="Better Web Typography for a Better Web by Matej Latin is a web typography book for web designers and web developers. Typography is often overlooked in the web desgin process, but this book puts it right in front and center of it.">
   <meta name="keywords" content="Web, typography, designers, developers, book, ebook, type, modular scale, vertical rhythm, Sass, responsive typography, ligatures, figures, small caps">
   <meta name="author" content="Matej Latin">
   <meta property="og:title" content="Better Web Typography for a Better Web—a book by Matej Latin">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://betterwebtype.com/web-typography-book">
   <meta property="og:image" content="http://betterwebtype.com/better-web-type-book.jpg" />
-  <meta property="og:description" content="Better Web Typography for a Better Web by Matej Latin is a web typography book for web designers and web developers. Based on the popular course that was featured on Codrops, Net magazine, Creative Bloq and CSS Tricks." />
+  <meta property="og:description" content="Better Web Typography for a Better Web by Matej Latin is a web typography book for web designers and web developers. Typography is often overlooked in the web desgin process, but this book puts it right in front and center of it." />
   <meta name="twitter:creator" content="@matejlatin">
-  <meta name="twitter:description" content="Better Web Typography for a Better Web by Matej Latin is a web typography book for web designers and web developers. Based on the popular course that was featured on Codrops, Net magazine, Creative Bloq and CSS Tricks." />
+  <meta name="twitter:description" content="Better Web Typography for a Better Web by Matej Latin is a web typography book for web designers and web developers. Typography is often overlooked in the web desgin process, but this book puts it right in front and center of it." />
   <meta name="twitter:url" content="http://betterwebtype.com/web-typography-book" />
   <meta name="twitter:domain" content="betterwebtype.com" />
   <meta name="twitter:image:src" content="http://betterwebtype.com/better-web-type-book.jpg" />
@@ -130,10 +130,11 @@
         <p class="no-margin">
           <strong>Deluxe Hardcover Pack <span class="silver-badge">Silver edition</span></strong>
         </p>
+        <p><em>13/15 remaining</em></p>
         <ul>
+          <li>Your name as a silver supporter inside the&nbsp;book</li>
           <li>Highest quality hardcover colour print with a dust jacket</li>
           <li>Hand-numbered</li>
-          <li>Your name as a silver supporter inside the&nbsp;book</li>
           <li>High-quality colour printed typography cheat&nbsp;sheet</li>
           <li>Type geek sticker pack</li>
           <li>Personal note from Matej</li>
@@ -148,10 +149,11 @@
         <p class="no-margin">
           <strong>Deluxe Hardcover Pack <span class="gold-badge">Gold edition</span></strong>
         </p>
+        <p><em>4/5 remaining</em></p>
         <ul>
+          <li>Your name as a gold supporter inside the&nbsp;book</li>
           <li>Highest quality hardcover colour print with a dust jacket</li>
           <li>Hand-numbered</li>
-          <li>Your name as a gold supporter inside the&nbsp;book</li>
           <li>High-quality colour printed typography cheat&nbsp;sheet</li>
           <li>Type geek sticker pack</li>
           <li>Personal note from Matej</li>
@@ -499,6 +501,15 @@
         ga('create', 'UA-36131831-5', 'auto');
         ga('send', 'pageview');
 
+        (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:92378,hjsv:5};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+
         // Book details tabs
         $(document).ready(function(){
           var tabs = $('.tabs li').length;
@@ -516,32 +527,7 @@
             $("#"+tab_id).addClass('current');
 
             tab_id_num = $('li.current').attr('data-id');
-            // console.log(tab_id_num);
           });
-          // $('#next').on('click', function(){
-          //   if (tab_id_num == tabs){
-          //     tab_id_num = 1;
-          //   } else {
-          //     tab_id_num++
-          //   }
-          //   // console.log(tab_id_num);
-          //   $('ul.tabs li').removeClass('current');
-          //   $('.tab-content').removeClass('current');
-          //   $('.'+tab_id_num).addClass('current');
-          //   $('#tab-'+tab_id_num).addClass('current');
-          // });
-          // $('#prev').on('click', function(){
-          //   tab_id_num = $('li.current').attr('data-id');
-          //   if (tab_id_num == 1){
-          //     tab_id_num = tabs;
-          //   } else {
-          //     tab_id_num--
-          //   }
-          //   $('ul.tabs li').removeClass('current');
-          //   $('.tab-content').removeClass('current');
-          //   $('.'+tab_id_num).addClass('current');
-          //   $('#tab-'+tab_id_num).addClass('current');
-          // });
         });
 
         // Book details tabs
@@ -560,33 +546,7 @@
             $(this).addClass('current');
             tab_id_num = $('ul.tabs-cheatsheet li.current').attr('data-id');
             $('#tab-cs-'+tab_id_num).addClass('current');
-
-            // console.log(tab_id_num);
           });
-          // $('#next').on('click', function(){
-          //   if (tab_id_num == tabs){
-          //     tab_id_num = 1;
-          //   } else {
-          //     tab_id_num++
-          //   }
-          //   // console.log(tab_id_num);
-          //   $('ul.tabs li').removeClass('current');
-          //   $('.tab-content').removeClass('current');
-          //   $('.'+tab_id_num).addClass('current');
-          //   $('#tab-'+tab_id_num).addClass('current');
-          // });
-          // $('#prev').on('click', function(){
-          //   tab_id_num = $('li.current').attr('data-id');
-          //   if (tab_id_num == 1){
-          //     tab_id_num = tabs;
-          //   } else {
-          //     tab_id_num--
-          //   }
-          //   $('ul.tabs li').removeClass('current');
-          //   $('.tab-content').removeClass('current');
-          //   $('.'+tab_id_num).addClass('current');
-          //   $('#tab-'+tab_id_num).addClass('current');
-          // });
         });
 
       </script>

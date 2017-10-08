@@ -96,14 +96,17 @@ function getProduct(){
       var optionsHtml = option.values.map(function(value) {
         var desc;
         var price;
+        var remains;
         if (value == 'Silver edition'){
-          desc = "Your name in the book as a silver supporter + goodies pack."
+          desc = "Your name in the book as a silver supporter + a pack of&nbsp;goodies."
           price = "89.95";
+          remains = "13/15"
         } else if (value == 'Gold edition'){
-          desc = "Your name in the book, goodies pack, T-shirt & Memory Game."
+          desc = "Your name in the book&#44; goodies pack&#44; T-shirt & the Type Memory Game."
           price = "149.95";
+          remains = "4/5"
         }
-        return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"><label for="' + value + '" class="book-option ' + value + '">' + value + '<br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';
+        return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"><label for="' + value + '" class="book-option ' + value + '">' + value + ' <span class="remaining"><b>' + remains + ' remaining</b><br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';
         // return '<option value="' + value + '">' + value + '</option>';
       });
       optionsHtml = optionsHtml.toString();

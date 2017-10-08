@@ -3138,6 +3138,19 @@ section {
 .book-page-deluxe .book-option .desc {
   color: #fff;
 }
+.book-page-deluxe .book-option .remaining {
+  color: #fff;
+  font-size: 12px;
+  font-family: acumin-pro, Helvetica, Arial, sans-serif;
+  display: block;
+  line-height: 2;
+}
+@media screen and (min-width: 23em) {
+  .book-page-deluxe .book-option .remaining {
+    display: inline;
+    line-height: 1;
+  }
+}
 .book-page-deluxe .book-option .price, .book-page-deluxe .book-option .price-from {
   color: #fff;
 }
