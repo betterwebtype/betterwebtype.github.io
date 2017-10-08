@@ -99,11 +99,11 @@ function getProduct(){
         var remains;
         if (value == 'Silver edition'){
           desc = "Your name in the book as a silver supporter + a pack of&nbsp;goodies."
-          price = "89.95";
+          price = "59.95";
           remains = "13/15"
         } else if (value == 'Gold edition'){
           desc = "Your name in the book&#44; goodies pack&#44; T-shirt & the Type Memory Game."
-          price = "149.95";
+          price = "99.95";
           remains = "4/5"
         }
         return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"><label for="' + value + '" class="book-option ' + value + '">' + value + ' <span class="remaining"><b>' + remains + ' remaining</b><br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';

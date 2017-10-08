@@ -3223,9 +3223,9 @@ section {
 .book-page-deluxe .price {
   top: 18px;
 }
-@media screen and (min-width: 33em) {
+@media screen and (min-width: 48em) {
   .book-page-deluxe .price {
-    top: 14px;
+    top: 22px;
   }
 }
 .book-page-deluxe .variant-selectors input[type="radio"]:checked + .book-option {
