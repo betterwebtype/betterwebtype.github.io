@@ -104,7 +104,7 @@ function getProduct(){
         } else if (value == 'Gold edition'){
           desc = "Your name in the book&#44; goodies pack&#44; T-shirt & the Type Memory Game."
           price = "99.95";
-          remains = "4/5"
+          remains = "3/5"
         }
         return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"><label for="' + value + '" class="book-option ' + value + '">' + value + ' <span class="remaining"><b>' + remains + ' remaining</b><br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';
         // return '<option value="' + value + '">' + value + '</option>';
