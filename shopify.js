@@ -110,7 +110,7 @@ function getProduct(){
       optionsHtml = removeCommas(optionsHtml);
 
       return '<div>\
-      <form class="select">' + optionsHtml + '<input class="bookVariant" type="radio" name="Type" id="hardcover" value="hardcover"><label for="hardcover" class="book-option">Hardcover Deluxe Edition<br><span class="desc">Limited edition pack with your name in the&nbsp;book.</span><span class="price-from">From</span><span class="price">$59.95</span></label></form>\
+      <form class="select">' + optionsHtml + '<input class="bookVariant" type="radio" name="Type" id="hardcover" value="hardcover"><label for="hardcover" class="book-option">Hardcover Deluxe<br><span class="desc">Limited edition pack with your name in the&nbsp;book.</span><span class="price-from">From</span><span class="price">$59.95</span></label></form>\
       </div>'
     });
 
