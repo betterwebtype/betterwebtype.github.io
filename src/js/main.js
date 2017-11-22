@@ -110,7 +110,7 @@ myButton.addEventListener("click", function() {
       error: function(err) {
         console.log(err);
         console.log('error');
-        $('#msgContent').html('<h3>Oops!</h3><p>Something went wrong, please try again later. Get in touch if the problem persists. <a href="http://twitter.com/matejlatin">@matejlatin</a></p>');
+        $('#msgContent').html('<h3>Oops!</h3><p>Something went wrong, please try again later. If the problem persists, try <a href="http://eepurl.com/ba-WxL">signing up here</a>.</p>');
         setTimeout( function(){ $('#myButton').removeClass('loading'); }, 500);
         $('#msg').fadeIn(300);
         if ( $('body').hasClass('triangle')){
