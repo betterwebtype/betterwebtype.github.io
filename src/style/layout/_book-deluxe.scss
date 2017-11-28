@@ -266,3 +266,99 @@ img.deluxe-box {
     display: block;
   }
 }
+
+.santa-img {
+  max-height: 100px;
+  @include margin-top(1);
+  @include margin-bottom(3);
+}
+
+.countdown {
+  position: block;
+  @include margin-bottom(4);
+}
+
+.book-details-xmas {
+  @include margin-bottom(4);
+  padding: 0;
+}
+
+#countdown {
+  z-index: 100;
+}
+
+.chocolate {
+  display: none;
+
+  @media screen and (min-width: 53em){
+    display: block;
+    position: absolute;
+    right: -170px;
+    max-width: 280px;
+    margin-top: -50px;
+  }
+
+  @media screen and (min-width: 64em){
+    right: 0;
+  }
+}
+
+.star {
+  display: none;
+
+  @media screen and (min-width: 53em){
+    display: block;
+    position: absolute;
+    left: 0;
+    max-width: 150px;
+    margin-top: 200px;
+  }
+}
+
+.tabs-cheatsheet {
+  padding-right: 8%;
+}
+
+.baulbs-wrap {
+  display: none;
+
+  @media screen and (min-width: 53em){
+    display: block;
+  }
+}
+
+.faq {
+  @media screen and (min-width: 53em){
+    @include margin-top(-3);
+  }
+}
+
+.baulbs {
+  float: right;
+  // right: 0;
+  max-width: 300px;
+  margin-top: -100px;
+  z-index: 100;
+}
+
+.book-page-xmas {
+  .desc {
+    margin-top: 10px;
+  }
+
+  .container .xmas {
+
+    @media screen and (min-width: 64em){
+      @include margin-top(5);
+      padding-right: 8%;
+    }
+  }
+
+  footer {
+    @include margin-top(5);
+  }
+
+  ul.tabs li span {
+    margin-bottom: 0;
+  }
+}
