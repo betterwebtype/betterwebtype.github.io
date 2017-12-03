@@ -100,7 +100,7 @@ function getProduct(){
         if (value == 'Silver edition'){
           desc = "Your name in the book as a silver supporter + a pack of&nbsp;goodies."
           price = "59.95";
-          remains = "1/15"
+          remains = "0/15"
         } else if (value == 'Gold edition'){
           desc = "Your name in the book&#44; goodies pack&#44; T-shirt & the Type Memory Game."
           price = "99.95";
