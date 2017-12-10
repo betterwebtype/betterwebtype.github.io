@@ -96,14 +96,17 @@ function getProduct(){
       var optionsHtml = option.values.map(function(value) {
         var desc;
         var price;
+        var remains;
         if (value == 'eBook'){
           desc = "epub (iBooks), mobi (Kindle) & PDF."
           price = "19.95";
+          remains;
         } else if (value == 'Paperback'){
           desc = "High-quality colour print with free shipping."
           price = "34.95";
+          remains = "Only 9 left";
         }
-        return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"><label for="' + value + '" class="book-option">' + value + '<br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';
+        return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"><label for="' + value + '" class="book-option ' + value + '">' + value + ' <span class="remaining"><b>' + remains + '</b></span><br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';
         // return '<option value="' + value + '">' + value + '</option>';
       });
       optionsHtml = optionsHtml.toString();

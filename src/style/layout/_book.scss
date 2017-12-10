@@ -360,3 +360,13 @@
     }
   }
 }
+
+.eBook .remaining {
+  display: none;
+}
+
+.Paperback .remaining {
+  font-size: 12px;
+  line-height: 2;
+  color: $bwt-red;
+}
