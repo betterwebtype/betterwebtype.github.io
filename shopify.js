@@ -104,7 +104,7 @@ function getProduct(){
         } else if (value == 'Paperback'){
           desc = "High-quality colour print with free shipping."
           price = "34.95";
-          remains = "Only 7 left";
+          remains = "Only 4 left";
         }
         return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"><label for="' + value + '" class="book-option ' + value + '">' + value + ' <span class="remaining"><b>' + remains + '</b></span><br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';
         // return '<option value="' + value + '">' + value + '</option>';
