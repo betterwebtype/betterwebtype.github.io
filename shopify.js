@@ -104,7 +104,7 @@ function getProduct(){
         } else if (value == 'Paperback'){
           desc = "High-quality colour print with free shipping."
           price = "34.95";
-          remains = "Only 1 left";
+          remains = "Sold out";
         }
         return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"><label for="' + value + '" class="book-option ' + value + '">' + value + ' <span class="remaining"><b>' + remains + '</b></span><br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';
         // return '<option value="' + value + '">' + value + '</option>';
@@ -113,7 +113,7 @@ function getProduct(){
       optionsHtml = removeCommas(optionsHtml);
 
       return '<div>\
-      <form class="select">' + optionsHtml + '<input class="bookVariant" type="radio" name="Type" id="hardcover" value="hardcover"><label for="hardcover" class="book-option">Hardcover Deluxe<br><span class="desc">Limited edition pack with your name in the&nbsp;book.</span><span class="price-from">From</span><span class="price">$59.95</span></label></form>\
+      <form class="select">' + optionsHtml + '<input class="bookVariant" type="radio" name="Type" id="hardcover" value="hardcover"><label for="hardcover" class="book-option Hardcover">Hardcover Deluxe <span class="remaining"><b>Sold out</b></span><br><span class="desc">Limited edition pack with your name in the&nbsp;book.</span><span class="price-from">From</span><span class="price">$59.95</span></label></form>\
       </div>'
     });
 

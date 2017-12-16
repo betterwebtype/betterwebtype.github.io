@@ -3195,7 +3195,7 @@ section {
   display: none;
 }
 
-.Paperback .remaining {
+.Paperback .remaining, .Hardcover .remaining {
   font-size: 12px;
   line-height: 2;
   color: #F15D64;
