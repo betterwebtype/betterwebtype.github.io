@@ -14,12 +14,30 @@ var varEmail = getParameterByName('email');
 var varName = getParameterByName('name');
 // console.log(varName);
 var varSurname = getParameterByName('surname');
+var varReferral = getParameterByName('r'); // NEW
 // console.log(varSurname);
 
 // Prefill form
 $('#FNAME').val(varName);
 $('#LNAME').val(varSurname);
 $('#EMAIL').val(varEmail);
+$('#REFERRAL').val(varReferral); // NEW
+
+// If referral URL, change source to 'REFERRAL' // NEW
+var refInput = $('#REFERRAL').val().length;
+
+if (refInput > 0){
+  $('#JOINED').val('Referral')
+}
+
+// Determine the signup endpoint // NEW
+var signupURL;
+
+if (refInput > 0){
+  signupURL = 'https://secure-route-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point-referral.php';
+} else {
+  signupURL = 'https://secure-route-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point.php';
+}
 
 var myButton = document.getElementById('myButton');
 
@@ -64,46 +82,12 @@ myButton.addEventListener("click", function() {
       }
     }
 
-  // document.getElementById('btnToggleGrid').onclick = toggleGrid;
-
-  // $(document).on('submit', 'form', function(e) {
-  //   var $this = $(this);
-  //   $.ajax({
-  //     type: "GET",
-  //     url: 'https://betterwebtype.us2.list-manage.com/subscribe/post-json?c=?',
-  //     data: $this.serialize(),
-  //     dataType: 'json',
-  //     contentType: "application/json; charset=utf-8",
-  //     error: function(err) {
-  //       console.log('error');
-  //         $('#msgContent').html('<h3>Oops!</h3><p>Something went wrong, please try again later. Get in touch if the problem persists. <a href="http://twitter.com/matejlatin">@matejlatin</a></p>');
-  //         $('#msg').fadeIn(300);
-  //       },
-  //         success: function(data) {
-  //           if (data.result != "success") {
-  //               var msg = data.msg;
-  //               var msgReadable = msg.replace('0 -', '')
-  //               $('#msgContent').html('<h3>Oops!</h3><p>' + msgReadable + '</p>');
-  //               $('#msg').fadeIn(300);
-  //               // $('.curtain').scrollTop(0);
-  //             } else {
-  //               window.location.href = "almost-finished.html";
-  //             }
-  //             $('#btnClose').on('click', function(){
-  //               $('#msg').fadeOut(300);
-  //               $('#msgContent').removeClass().addClass('animated zoomOut');
-  //           });
-  //           }
-  //         });
-  //   return false;
-  // });
-
 
   $(document).on('submit', 'form', function(e) {
     var $this = $(this);
     $.ajax({
       type: "GET",
-      url: 'https://secure-route-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point.php',
+      url: signupURL,
       data: $this.serialize(),
       dataType: 'jsonp',
       contentType: "application/json; charset=utf-8",
