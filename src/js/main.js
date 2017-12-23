@@ -25,6 +25,7 @@ $('#REFERRAL').val(varReferral); // NEW
 
 // If referral URL, change source to 'REFERRAL' // NEW
 var refInput = $('#REFERRAL').val().length;
+console.log(refInput);
 
 if (refInput > 0){
   $('#JOINED').val('Referral')
