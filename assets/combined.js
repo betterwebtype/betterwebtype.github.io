@@ -42,9 +42,9 @@ if (refInput > 0){
 var signupURL;
 
 if (refInput > 0){
-  signupURL = 'https://secure-route-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point-referral.php';
+  signupURL = 'https://endpoint.betterwebtype.com/mc-end-point-referral.php';
 } else {
-  signupURL = 'https://secure-route-bwt.1d35.starter-us-east-1.openshiftapps.com/mc-end-point.php';
+  signupURL = 'https://endpoint.betterwebtype.com/mc-end-point.php';
 }
 
 var myButton = document.getElementById('myButton');
