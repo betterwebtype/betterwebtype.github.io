@@ -643,8 +643,7 @@ if (level < numOfLevels - 1){
     if( varEmail != null ){
       bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small-retina.jpg' width='119'></td><td><h2>The <span>Better Web Type</span> book is&nbsp;here!</h2><p><em><a href='https://betterwebtype.com/web-typography-book'>Get your copy</a> and learn what typography is, why it’s important and how to get it right on your websites.</em></p></td></tr></tbody></table>";
     } else {
-      bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small-retina.jpg' width='119'></td><td><h2>The <span>Better Web Type</span> book is&nbsp;here!</h2><p><em><a href='https://betterwebtype.com/web-typography-book'>Get your copy</a> and learn what typography is, why it’s important and how to get it right on your websites.</em></p></td></tr></tbody></table>";
-      // bookMsg = "<img src='assets/images/better-web-type-course-small.png' width='157' class='course-image'><h2 class='align-center'>Learn about web typography <br><span>start the Better Web Type course</span></h2><p class='align-center'><em>Better Web Type is a free web typography course for web designers and developers. Learn about modular scales, vertical rhythm and more in 10, easy-to-digest lessons.</em></p><br><a href='/' class='button floatCenter align-center'>Check it out</a>";
+      bookMsg = "<img src='assets/images/better-web-type-course-small.png' width='157' class='course-image'><h2 class='align-center'>Learn about web typography <br><span>start the free course</span></h2><p class='align-center'><em>Better Web Type is a free web typography course for web designers and developers. Learn about modular scales, vertical rhythm and more in 7, easy-to-digest lessons.</em></p><br><a href='/' class='button floatCenter align-center'>Check it out</a>";
     }
 
     // Show final score
@@ -665,7 +664,7 @@ if (level < numOfLevels - 1){
       animateScore();
     }, 4500);
     var tweetUrl = "<a href='https://twitter.com/intent/tweet?url=https%3A%2F%2Fbetterwebtype.com%2Ftriangle&via=matejlatin&text=I%20scored%20" + score + "/" + outOf + "%20in%20the%20Perfect%20Paragraph%20game.%20Can%20you%20do%20better%20than%20me%3F%20&hashtags=BetterWebType' class='btn-tweet floatCenter' target='_blank'>Tweet this</a>";
-    setTimeout(function(){ $('.tweet-score').append(tweetUrl).fadeIn(); }, 6000);
+    // setTimeout(function(){ $('.tweet-score').append(tweetUrl).fadeIn(); }, 6000);
     setTimeout(function(){ $('#tryAgain').fadeIn(); }, 8000);
     setTimeout(function(){ $('.book-msg').fadeIn(); }, 8500);
     // if( varEmail == null ){
