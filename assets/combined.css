@@ -3199,9 +3199,6 @@ header nav a {
 header nav a:visited {
   color: #222;
 }
-header nav a:active {
-  border-bottom: 3px solid #DB2B7B;
-}
 header nav a.active {
   border-bottom: 3px solid #DB2B7B;
 }
