@@ -29,10 +29,6 @@ header nav {
       color: $bwt-black;
     }
 
-    &:active {
-      border-bottom: 3px solid $bwt-mix;
-    }
-
     &.active {
       border-bottom: 3px solid $bwt-mix;
     }
