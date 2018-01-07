@@ -1,0 +1,13 @@
+.reviews-page {
+  @include margin-top(3);
+  
+  h1 {
+    @include margin-top(0);
+  }
+
+  section.review {
+    max-width: 500px;
+    border-bottom: 1px solid $bwt-light;
+    padding-bottom: 20px;
+  }
+}

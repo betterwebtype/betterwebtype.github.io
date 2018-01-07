@@ -3896,6 +3896,20 @@ p.slack {
     background-size: 100% auto;
   }
 }
+.reviews-page {
+  margin-top: 75px;
+  margin-top: 4.6875rem;
+}
+.reviews-page h1 {
+  margin-top: 0px;
+  margin-top: 0rem;
+}
+.reviews-page section.review {
+  max-width: 500px;
+  border-bottom: 1px solid #F2EDED;
+  padding-bottom: 20px;
+}
+
 .signup-page h2 {
   margin-top: 50px;
   margin-top: 3.125rem;
