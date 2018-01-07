@@ -37,10 +37,6 @@ mark {
   color: #000;
 }
 
-.allsmallcaps {
-  font-feature-settings: "c2sc", "smcp";
-}
-
 small {
   @include line-height(.5);
 
@@ -132,35 +128,11 @@ sub {
 
 }
 
-// Text Alignment
-.alignLeft {
-  text-align: left;
-}
-
-.alignCenter {
-  text-align: center;
-}
-
-.alignRight {
-  text-align: right;
-}
-
-.narrow {
-  max-width: 300px;
-}
-
-// Fix letter spacing for uppercase
-.uppercase {
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
 .big-number {
   color: $bwt-red;
   @include font-size(2.1);
   @include line-height(1);
   font-family: $custom-font-headings;
-  // margin-right: 10px;
   margin-top: -0.06em;
   width: 45px;
   font-weight: normal;
@@ -168,23 +140,6 @@ sub {
   -moz-font-feature-settings: "tnum";
   -webkit-font-feature-settings: "tnum";
   font-feature-settings: "tnum";
-}
-
-.how-it-works {
-  font-size: 1.1em; /* fix for desktop only */
-
-  h4 {
-    font-size: 24px; /* fix for desktop only */
-    @include margin-bottom(0.25);
-  }
-}
-
-.chapter {
-  padding-left: 10px;
-  font-family: $custom-font-headings;
-  text-transform: uppercase;
-  @include font-size(2.1);
-  font-weight: 600;
 }
 
 .days,
@@ -223,26 +178,38 @@ sub {
   }
 }
 
-.dropcap {
-  font-family: $custom-font-headings;
-  height: 60px!important;
-  font-size: 100px!important;
-  margin-right: 5px!important;
-  margin-bottom: 0;
-  margin-top: 13px!important;
-  float: left;
-  margin-bottom: 0;
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    font-size: 100px!important;
-    margin-right: 5px!important;
-    margin-top: 13px!important;
-  }
+.tagline-large,
+.tagline-small {
+  font-family: $custom-font-acumin;
 }
 
-.intro {
-  @include margin-top(2);
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    @include margin-top(3);
+.tagline-large {
+  @include font-size(1.2);
+  @include line-height(1);
+  // @include margin-top(1.5);
+  @include margin-bottom(0.5);
+}
+
+.tagline-small {
+  font-size: 20px;
+}
+
+.small {
+  font-size: 12px;
+  font-family: $custom-font-acumin;
+  color: $bwt-medium;
+}
+
+// Responsive
+@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  .tagline-large {
+    max-width: 500px;
+    @include font-size(1.333333);
+    @include line-height(1);
+    @include margin-bottom(1);
+  }
+
+  .tagline-small {
+    max-width: 500px;
   }
 }

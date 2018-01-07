@@ -1,3 +1,101 @@
+.triangle-intro {
+  background: url(images/Triangle.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 9rem;
+  min-height: 380px;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+
+  h1 {
+    @include font-size(3);
+    @include line-height(1.5);
+    @include margin-top(0.5);
+    @include margin-bottom(0.5);
+  }
+
+  h3 {
+    @include margin-top(0.5);
+    @include font-size(1.5);
+  }
+
+  @media screen and (min-width: 430px) {
+    padding-top: 10rem;
+  }
+
+  @media screen and (min-width: 600px) {
+    padding-top: 8rem;
+
+    h1 {
+      @include font-size(4);
+      @include margin-bottom(1);
+    }
+
+    h3 {
+      font-size: 36px;
+    }
+  }
+
+  @media screen and (min-width: 660px) {
+    padding-top: 9rem;
+    min-height: 450px;
+
+    h1 {
+      @include font-size(5);
+      @include line-height(2.5);
+    }
+
+    h3 {
+      @include margin-top(1);
+    }
+  }
+
+  @media screen and (min-width: 943px) {
+    padding-top: 9rem;
+    min-height: 450px;
+
+    h1 {
+      @include font-size(6.1);
+      @include line-height(2.5);
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+      min-height: 540px;
+      padding-top: 10.5rem;
+
+      h1 {
+        @include font-size(7.34);
+        @include line-height(3.75);
+      }
+
+      h3 {
+        @include margin-top(1.5);
+        @include font-size(3);
+      }
+    }
+
+  .tagline {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+      font-size: 36px;
+    }
+  }
+
+  h3 {
+    color: $bwt-red;
+    letter-spacing: 0.05em;
+
+    // @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+    //   font-size: 48px;
+    // }
+  }
+}
+
 .triangle {
   padding: 0;
 }
@@ -137,16 +235,7 @@
 }
 
 .score {
-  background: rgba(10,19,29,0.98);
   color: #fff;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  height: 100%;
-  overflow-y: scroll;
   text-align: center;
   padding-bottom: 10%;
 }

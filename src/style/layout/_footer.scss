@@ -2,6 +2,7 @@ footer {
   display: block;
   font-family: "acumin-pro", Helvetica, Arial, sans-serif;
   font-size: 13px;
+  @include margin-top(5);
 
   a {
     color: $color-font-body;
@@ -32,12 +33,17 @@ footer {
     }
   }
 
-  body > & {
-    margin: 0 auto;
+  // body > & {
+  //   margin: 0 auto;
+  // }
 
-    @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-      width: 80%;
-    }
+}
+
+@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  footer {
+    width: 80%;
+    @include margin-top(6);
+    margin-left: auto;
+    margin-right: auto;
   }
-
 }

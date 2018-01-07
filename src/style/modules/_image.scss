@@ -3,7 +3,12 @@ img {
   border: 0;
   max-width: 100%;
   display: block;
-  margin: inherit auto;
+  // margin: inherit auto;
+  margin-bottom: 0;
+}
+
+picture {
+  margin-bottom: 0;
 }
 
 // Correct overflow not hidden in IE 9/10/11.
@@ -50,10 +55,6 @@ svg:not(:root) {
   max-width: 100%;
   margin: auto;
   @include margin-top(1);
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    max-width: 717px;
-    @include margin-top(4);
-  }
 }
 
 .author-img {

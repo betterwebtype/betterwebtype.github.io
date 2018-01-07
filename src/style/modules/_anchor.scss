@@ -1,14 +1,9 @@
 /* Links
    ========================================================================== */
 
-$color-link-normal: #5182BE;
-$color-link-hover: $color-link-normal;
-$color-link-active: $bwt-red;
-$color-link-visited: $color-link-normal;
-
 a {
   background: transparent;
-  color: $color-link-normal;
+  color: $bwt-blue;
   transition: all .3s;
 
   &:active,
@@ -16,24 +11,38 @@ a {
     outline: 0;
   }
 
-  &:hover {
-    color: $color-link-hover;
-  }
-
   &:visited {
-    color: $color-link-visited;
-
-    &:hover {
-      color: $color-link-hover;
-    }
+    color: darken($bwt-blue, 15%);
   }
 
   &:active {
-    color: $color-link-active;
+    color: lighten($bwt-blue, 15%);
   }
 }
 
 .block-link {
   background: $color-light-gray;
   padding: 15px 40px;
+}
+
+.button-secondary {
+  box-sizing: border-box;
+  font-family: $custom-font-acumin;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  @include margin-top(1);
+  background: url(/assets/images/btn-sec.svg) no-repeat;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $bwt-mix;
+    width: 263px;
+    height: 60px;
+    // background: $bwt-gradient;
+    padding: 15px 0;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+  }
 }

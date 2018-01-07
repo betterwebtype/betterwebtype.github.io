@@ -1,3 +1,8 @@
+.book-new {
+  margin: 0;
+  padding: 0;
+}
+
 .variant-selectors {
   margin-bottom: 20px;
 
@@ -101,6 +106,12 @@
     }
   }
 
+  .about-author {
+    h2 {
+      @include margin-top(3);
+    }
+  }
+
   .block-full-width, .block-full-width-dark {
     margin: 0;
     width: 100%;
@@ -163,19 +174,19 @@
   }
 
   h2, .content h3 {
-    color: $bwt-red;
     margin-top: 0;
     max-width: 80%;
 
     span {
       text-transform: none;
       font-family: $custom-font-body;
-      color: $color-font-body;
       font-size: 1.5rem;
       font-style: italic;
       display: block;
       line-height: 1;
       margin-bottom: 0;
+      font-weight: normal;
+      @include margin-bottom(0.5);
     }
   }
 

@@ -1,0 +1,7 @@
+.signup-page {
+  h2 {
+    @include margin-top(2);
+    @include margin-bottom(2);
+    text-align: center;
+  }
+}

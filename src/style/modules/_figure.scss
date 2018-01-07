@@ -40,7 +40,7 @@ figure.floatRight {
       @include padding-equal(1);
       @include margin-bottom(0);
     } @else {
-      @include padding(0, 1);
+      // @include padding(0, 1);
     }
 
   }

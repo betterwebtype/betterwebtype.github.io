@@ -8,33 +8,21 @@ License ....... Creative Commmons Attribution 3.0
 License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/license.txt
 */
 
-// @import url('https://use.typekit.net/evl6hgo.css');
 @import 'gutenberg-config';
 
 @import "shopify/variables";
 @import "shopify/initializers";
 @import "shopify/buttons";
 @import "shopify/cart";
-@import "shopify/utilities";
 
 @import 'mixins/font-size';
 @import 'mixins/line-height';
 @import 'mixins/margin';
 @import 'mixins/padding';
 
-@import 'helpers/alignment';
+@import 'helpers/reusables';
 @import 'helpers/grid';
-@import 'helpers/flexgrid';
 @import 'helpers/animate';
-
-@import 'layout/aside';
-@import 'layout/base';
-@import 'layout/footer';
-@import 'layout/header';
-@import 'layout/main';
-@import 'layout/section';
-@import 'layout/book';
-@import 'layout/book-deluxe';
 
 @import 'modules/anchor';
 @import 'modules/article';
@@ -58,10 +46,14 @@ License URL ... https://raw.githubusercontent.com/matejlatin/Gutenberg/master/li
 @import 'modules/triangle';
 @import 'modules/book';
 
-@import "slider/slider";
+@import 'layout/aside';
+@import 'layout/base';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/section';
+@import 'layout/book';
+@import 'layout/home';
+@import 'layout/signup';
 
-/* TODOs:
- - some line heights produce margins with .5 results, seemingly breaking the gird (?),
- - table + side comments elements,
- - translate to Less and Stylus.
- */
+@import "slider/slider";

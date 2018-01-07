@@ -4,12 +4,12 @@ $hr-type-content: '•••'; // [ '***' ]
 $hr-type-char-spacing: .2em; // [ .2em ]
 $hr-margin: 1;
 $hr-margin-desktop: $hr-margin;
-$hr-color: $color-font-body;
-$hr-width: 60; // [ 100 ] — In pixels, only for line style
-$hr-height: 3; // [ 2 ] — In pixels, only for line style
+$hr-color: $bwt-mix;
+$hr-width: 70; // [ 100 ] — In pixels, only for line style
+$hr-height: 8; // [ 2 ] — In pixels, only for line style
 
 hr {
-  margin: 0 auto;
+  // margin: 0 auto;
   @include margin-top($hr-margin);
   @include margin-bottom($hr-margin);
 
@@ -19,18 +19,6 @@ hr {
   display: block;
   height: #{$leading + 'px'};
   height: #{$leading-rem + 'rem'};
-
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    $leading: $leading-desktop;
-    $leading-rem: $leading-rem-desktop;
-
-    @import '../mixins/margin';
-
-    @include margin-top($hr-margin);
-    @include margin-bottom($hr-margin);
-    height: #{$leading + 'px'};
-    height: #{$leading-rem + 'rem'};
-  }
 
   @if $hr-style == 'line' {
     background-size: 100% #{$leading + 'px'};
@@ -44,25 +32,41 @@ hr {
     }
   }
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    $leading: $leading-desktop;
-    $leading-rem: $leading-rem-desktop;
-    $hr-margin: $hr-margin-desktop;
-
-    @if $hr-style == 'line' {
-      background-size: 100% #{$leading + 'px'};
-      background-size: 100% #{$leading-rem + 'rem'};
-      background-image: linear-gradient(to bottom, transparent 1px, transparent #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ .5 * $leading - (.5 * $hr-height) + 'px'}, $hr-color #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{ (.5 * $leading - (.5 * $hr-height)) + $hr-height + 'px'}, transparent #{$leading + 'px'});
-    }
-
-  }
-
   @if $hr-style == 'type' {
     text-align: center;
 
     &:before {
       content: $hr-type-content;
       letter-spacing: $hr-type-char-spacing;
+    }
+  }
+}
+
+// HR is smaller right after H2
+h2 + hr {
+  background-image: linear-gradient(to bottom, transparent 1px, transparent #{ .5 * $leading - (.5 * 5) + 'px'}, $hr-color #{ .5 * $leading - (.5 * 5) + 'px'}, $hr-color #{ (.5 * $leading - (.5 * 5)) + 5 + 'px'}, transparent #{ (.5 * $leading - (.5 * 5)) + 5 + 'px'}, transparent #{$leading + 'px'});
+  width: 50px;
+  @include margin-top(0);
+}
+
+@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  hr {
+    $leading: $leading-desktop;
+    $leading-rem: $leading-rem-desktop;
+    $hr-margin: $hr-margin-desktop;
+
+    @import '../mixins/margin';
+
+    @include margin-top($hr-margin);
+    @include margin-bottom($hr-margin);
+    height: #{$leading + 'px'};
+    height: #{$leading-rem + 'rem'};
+
+    @if $hr-style == 'line' {
+      background-size: 100% #{$leading + 'px'};
+      background-size: 100% #{$leading-rem + 'rem'};
+      background-image: linear-gradient(to bottom, transparent 1px, transparent #{ .5 * $leading - (.5 * 10) + 'px'}, $hr-color #{ .5 * $leading - (.5 * 10) + 'px'}, $hr-color #{ (.5 * $leading - (.5 * 10)) + 10 + 'px'}, transparent #{ (.5 * $leading - (.5 * 10)) + 10 + 'px'}, transparent #{$leading + 'px'});
+      width: 100px;
     }
   }
 }

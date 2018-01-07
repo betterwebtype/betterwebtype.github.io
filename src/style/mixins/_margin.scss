@@ -23,17 +23,3 @@
     margin: #{ $top * $leading-rem + 'rem'} #{ $right * $leading-rem + 'rem'} #{ $bottom * $leading-rem + 'rem'} #{ $left * $leading-rem + 'rem'};
   }
 }
-
-.no-bottom-margin {
-  @media screen and (max-width: #{ $max-width + 5 + 'em'}) {
-    margin-bottom: 0;
-  }
-}
-
-.no-margin {
-  margin-bottom: 0;
-}
-
-.no-top-margin {
-  margin-top: 0;
-}

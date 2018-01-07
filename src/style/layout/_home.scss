@@ -1,0 +1,340 @@
+
+.intro-wrap {
+  .intro {
+    // @include g-width(5);
+    // @include g-offset(1);
+    float: left;
+  }
+
+  .subscribe {
+    // @include g-width(5);
+    display: none;
+    float: left;
+  }
+
+  .rating {
+    margin-right: 10px;
+    width: 124px;
+  }
+}
+
+.subscribe .small {
+  @include margin-top(-0.5);
+}
+
+.lesson-img {
+  opacity: 1;
+}
+
+.popularity {
+  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 97%);
+  clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 97%);
+  background: $bwt-extra-light;
+  @include padding(0,0,4);
+  z-index: 1;
+  @include margin-top(2);
+  // @include margin-bottom(2);
+}
+
+.how-it-works {
+  background: #010409 url(/assets/images/space-portrait.jpg) no-repeat top;
+  background-size: 100% auto;
+  z-index: 0;
+  @include margin-top(-2.5);
+
+  h2 {
+    max-width: 330px;
+  }
+
+  ol {
+    list-style: none;
+  }
+}
+
+.hiw-number {
+  line-height: 60px;
+}
+
+.hiw-content {
+  font-size: 18px;
+  width: 60%;
+
+  strong {
+    font-size: 20px;
+  }
+}
+
+.about-author {
+  background: $bwt-extra-light;
+  position: relative;
+  @include margin-bottom(2);
+  @include margin-top(3);
+
+  figure, img {
+    width: 100%;
+  }
+}
+
+.white-fix {
+  display: none;
+}
+
+.bottom-cta {
+  h2 {
+    @include margin-top(1);
+    @include margin-bottom(2);
+  }
+}
+
+.lesson h2 {
+  @include margin-top(0);
+}
+
+.quote {
+  font-family: $custom-font-acumin;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.2;
+  text-indent: -0.5em;
+}
+
+.rating,
+.rating img {
+  width: 123px;
+}
+
+.reviewer img {
+  max-width: 45px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.reviewer-details p {
+  line-height: 1;
+}
+
+.quotes-slider {
+  .pager {
+    // text-align: left;
+    bottom: -40px;
+  }
+
+  .prev {
+    left: -60px;
+  }
+
+  .next {
+    right: -40px;
+  }
+
+  .rating {
+    display: block;
+    @include margin-bottom(1);
+  }
+
+  ul, li {
+    margin-bottom: 0;
+  }
+}
+
+.l-figure {
+  img {
+    display: inline;
+  }
+}
+
+.mobile-signup {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  width: 80%!important;
+}
+
+.show-on-top {
+  display: block!important;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  z-index: 100;
+  margin-bottom: 0;
+}
+
+.close-form {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.l-6 figure,
+.l-2 figure {
+  max-width: 80%;
+}
+
+p.slack {
+  max-width: 240px;
+  line-height: 20px;
+}
+
+@media screen and (min-width: $desktop) {
+  .lesson-example {
+    max-width: 717px;
+    @include margin-top(4);
+  }
+
+  .intro-wrap .subscribe {
+    display: block;
+    @include margin-top(4);
+  }
+  .lesson-img {
+    @include margin-top(-4);
+    opacity: 0;
+  }
+
+  .l-2 .l-content {
+    @include g-offset(0);
+  }
+
+  .l-2 .l-figure {
+    order: -1;
+    @include g-offset(1);
+  }
+
+  .l-4 .l-content {
+    @include g-offset(0);
+  }
+
+  .l-4 .l-figure {
+    order: -1;
+    @include g-offset(1);
+  }
+
+  .l-5 .l-figure {
+    @include g-width(6);
+  }
+
+  .l-6 .l-content {
+    @include g-offset(0);
+  }
+
+  .l-6 .l-figure {
+    order: -1;
+    @include g-offset(0);
+  }
+
+  .l-6 figure,
+  .l-2 figure {
+    max-width: 100%;
+  }
+
+  .about-author {
+    @include margin-bottom(0);
+  }
+
+  .about-author:before {
+    background: inherit;
+    top: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(1.5deg);
+    transform-origin: 100%;
+    z-index: -1;
+  }
+
+  .matej {
+    background: url(/assets/images/matej-latin-photo@2x.png) no-repeat top right;
+    background-size: auto 100%;
+    position: relative;
+    top: -60px;
+    margin-bottom: -60px;
+    // bottom: -50px;
+  }
+
+  .popularity {
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+    @include padding(3,0,6);
+    @include margin-top(0);
+  }
+
+  .quote {
+    font-size: 30px;
+    @include padding(2, 0, 0);
+  }
+
+  .how-it-works {
+    @include margin-top(-6);
+  }
+
+  .white-fix {
+    display: block;
+    height: 60px;
+    width: 100%;
+    margin-top: -60px;
+    background: #fff;
+    position: relative;
+    @include margin-bottom(2);
+  }
+
+  .hiw-content {
+    font-size: 20px;
+    padding-top: 10px;
+
+    strong {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 93.75em) {
+  .how-it-works {
+    background-size: cover;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+  .how-it-works {  
+    background: #010409 url(/assets/images/space-portrait@2x.jpg) no-repeat top;
+    background-size: 100% auto;
+  }
+}
+
+@media screen and (min-width: 37.5em) {
+  .how-it-works {
+    background: #010409 url(/assets/images/space-portrait-wide.jpg) no-repeat top;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em) { 
+  .how-it-works {  
+    background: #010409 url(/assets/images/space-portrait-wide@2x.jpg) no-repeat top;
+    background-size: 100% auto;
+  }
+}
+
+@media (min-width: $desktop) { 
+  .how-it-works {  
+    background: #010409 url(/assets/images/space-desktop.jpg) no-repeat top;
+    background-size: 100% auto;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: $desktop), (min-resolution: 192dpi) and (min-width: $desktop) { 
+  .how-it-works {  
+    background: #010409 url(/assets/images/space-desktop@2x.jpg) no-repeat top;
+    background-size: 100% auto;
+  }
+}

@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-/*!
- * animate.css -http://daneden.me/animate
- * Version - 3.5.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2017 Daniel Eden
- */
-
  .fadeOnScroll {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -38,34 +30,7 @@
   animation-duration: .75s;
 }
 
-@keyframes bounce {
-  from, 20%, 53%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(0,0,0);
-  }
-
-  40%, 43% {
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    transform: translate3d(0, -30px, 0);
-  }
-
-  70% {
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    transform: translate3d(0, -15px, 0);
-  }
-
-  90% {
-    transform: translate3d(0,-4px,0);
-  }
-}
-
-.bounce {
-  animation-name: bounce;
-  transform-origin: center bottom;
-}
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
+// PULSE
 @keyframes pulse {
   from {
     transform: scale3d(1, 1, 1);
@@ -73,6 +38,9 @@
 
   50% {
     transform: scale3d(1.05, 1.05, 1.05);
+    -webkit-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
+    box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
   }
 
   to {
@@ -84,24 +52,11 @@
   animation-name: pulse;
 }
 
-@keyframes shake {
-  from, to {
-    transform: translate3d(0, 0, 0);
-  }
-
-  10%, 30%, 50%, 70%, 90% {
-    transform: translate3d(-10px, 0, 0);
-  }
-
-  20%, 40%, 60%, 80% {
-    transform: translate3d(10px, 0, 0);
-  }
+.pulse:hover {
+  animation-name: none;
 }
 
-.shake {
-  animation-name: shake;
-}
-
+// FADE IN
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -116,6 +71,7 @@
   animation-name: fadeIn;
 }
 
+// FADE IN DOWN
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -148,6 +104,7 @@
   animation-name: fadeInDownBig;
 }
 
+// FADE IN UP
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -190,10 +147,46 @@
   }
 }
 
+// FADE IN RIGHT
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+// FADE IN LEFT
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+// FADE OUT
 .fadeOut {
   animation-name: fadeOut;
 }
 
+// FADE OUT DOWN
 @keyframes fadeOutDown {
   from {
     opacity: 1;
@@ -220,6 +213,7 @@
   }
 }
 
+// FADE OUT UP
 @keyframes fadeOutUp {
   from {
     opacity: 1;
@@ -250,64 +244,7 @@
   animation-name: fadeOutUpBig;
 }
 
-@keyframes jackInTheBox {
-  from {
-    opacity: 0;
-    transform: scale(0.1) rotate(30deg);
-    transform-origin: center bottom;
-  }
-
-  50% {
-    transform: rotate(-10deg);
-  }
-
-  70% {
-    transform: rotate(3deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.jackInTheBox {
-  animation-name: jackInTheBox;
-}
-
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.fadeInRight {
-  animation-name: fadeInRight;
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.fadeInLeft {
-  animation-name: fadeInLeft;
-}
-
+// FADE OUT LEFT
 @keyframes fadeOutLeft {
   from {
     opacity: 1;
@@ -323,6 +260,7 @@
   animation-name: fadeOutLeft;
 }
 
+// FADE OUT RIGHT
 @keyframes fadeOutRight {
   from {
     opacity: 1;
@@ -336,4 +274,36 @@
 
 .fadeOutRight {
   animation-name: fadeOutRight;
+}
+
+// Tutorial window animation
+.slide-in-fwd-bottom {
+  opacity: 1;
+  -webkit-animation: slide-in-fwd-bottom 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+          animation: slide-in-fwd-bottom 0.7s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@-webkit-keyframes slide-in-fwd-bottom {
+  0% {
+    -webkit-transform: translateZ(-1400px) translateY(800px);
+            transform: translateZ(-1400px) translateY(800px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-bottom {
+  0% {
+    -webkit-transform: translateZ(-1400px) translateY(800px);
+            transform: translateZ(-1400px) translateY(800px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
 }

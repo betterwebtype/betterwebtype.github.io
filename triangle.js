@@ -6,7 +6,6 @@ var outOf;
 var multiplier;
 var maxScore;
 var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-// console.log(h);
 
 var levels = [
 {
