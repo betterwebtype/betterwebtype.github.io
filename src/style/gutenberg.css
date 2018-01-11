@@ -3069,13 +3069,13 @@ footer strong a:visited:hover {
   }
 }
 header {
-  display: none;
   position: relative;
   margin-top: 50px;
   margin-top: 3.125rem;
 }
 
 .logo {
+  display: none;
   font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -3084,6 +3084,7 @@ header {
 
 header nav {
   position: absolute;
+  display: none;
   top: 0;
   right: 0;
   font-weight: bold;
@@ -3107,7 +3108,7 @@ header nav a:last-child {
 }
 
 @media screen and (min-width: 63.75em) {
-  header {
+  header nav, .logo {
     display: block;
   }
 }
@@ -3384,7 +3385,7 @@ section {
 .book-option .price, .book-option .price-from {
   position: absolute;
   right: 18px;
-  top: 14px;
+  top: 24px;
 }
 .book-option .price-from {
   display: none;

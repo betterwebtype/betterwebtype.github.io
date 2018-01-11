@@ -112,8 +112,11 @@ function getProduct(){
       optionsHtml = optionsHtml.toString();
       optionsHtml = removeCommas(optionsHtml);
 
+      // return '<div>\
+      // <form class="select">' + optionsHtml + '<input class="bookVariant" type="radio" name="Type" id="hardcover" value="hardcover"><label for="hardcover" class="book-option Hardcover">Hardcover Deluxe <span class="remaining"><b>Sold out</b></span><br><span class="desc">Limited edition pack with your name in the&nbsp;book.</span><span class="price-from">From</span><span class="price">$59.95</span></label></form>\
+      // </div>'
       return '<div>\
-      <form class="select">' + optionsHtml + '<input class="bookVariant" type="radio" name="Type" id="hardcover" value="hardcover"><label for="hardcover" class="book-option Hardcover">Hardcover Deluxe <span class="remaining"><b>Sold out</b></span><br><span class="desc">Limited edition pack with your name in the&nbsp;book.</span><span class="price-from">From</span><span class="price">$59.95</span></label></form>\
+      <form class="select">' + optionsHtml + '</form>\
       </div>'
     });
 
