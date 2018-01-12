@@ -1,3 +1,4 @@
+// If page is homepage
 $(function(){
   if($('body').is('.home')){
 
@@ -29,6 +30,11 @@ $(function(){
     if (scrollBottom < bottom){
       $('#mobile-signup').removeClass('animated infinite pulse').addClass('mobile-signup');
     }
+  });
+
+  $('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
   });
 
   } // End of if statement
