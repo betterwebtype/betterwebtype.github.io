@@ -43,7 +43,7 @@ hr {
 }
 
 // HR is smaller right after H2
-h2 + hr {
+h2 + hr, .small-hr {
   background-image: linear-gradient(to bottom, transparent 1px, transparent #{ .5 * $leading - (.5 * 5) + 'px'}, $hr-color #{ .5 * $leading - (.5 * 5) + 'px'}, $hr-color #{ (.5 * $leading - (.5 * 5)) + 5 + 'px'}, transparent #{ (.5 * $leading - (.5 * 5)) + 5 + 'px'}, transparent #{$leading + 'px'});
   width: 50px;
   @include margin-top(0);

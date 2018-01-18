@@ -1,0 +1,167 @@
+.quiz-page {
+  .sv_q img {
+    width: 100%;
+  }
+
+  .intro-wrap {
+    h1 {
+      max-width: 500px;
+    }
+  }
+
+  .quiz {
+    display: none;
+  }
+
+  .sv_q_erbox {
+    color: $bwt-red;
+    font-family: $custom-font-acumin;
+  }
+
+  .sv_q_title {
+    font-family: $custom-font-acumin;
+    font-size: 20px;
+  }
+
+  .sv_q {
+    max-width: 35em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  input[type=radio], input[type=checkbox] {
+    // margin-right: 10px;
+    float: left;
+    margin-left: -25px;
+    margin-right: 0;
+    // @include line-height(1);
+    height: 25px;
+    margin-top: 0;
+  }
+
+  label {
+    margin-left: 25px;
+    height: auto;
+  }
+
+  .sv_qcbx .checkbox-material {
+    margin-right: 0;
+  }
+
+  .sv_body {
+    padding: 0 10%;
+  }
+
+  .sv_complete_btn {
+    margin-left: auto;
+    margin-right: auto!important;
+    padding-top: 12px;
+  }
+
+  .quiz_results {
+    display: none;
+  }
+
+  .quiz_score {
+    font-size: 70px;
+    font-family: $custom-font-headings;
+    font-weight: bold;
+    line-height: 70px;
+    opacity: 0;
+    @include margin-top(2);
+  }
+
+  .msg {
+    max-width: 450px;
+    font-size: 20px;
+    opacity: 0;
+  }
+
+  .cta, .course_title, .course_button {
+    opacity: 0;
+  }
+
+  .good {
+    color: #24D7D1;
+  }
+
+  .average {
+    color: #EAD079;
+  }
+
+  .bad {
+    color: #F15D64;
+  }
+
+  .shareTw, .shareFb {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 35px;
+    color: #fff;
+    text-decoration: none;
+    font-family: $custom-font-acumin;
+    opacity: 0;
+  }
+
+  .share_title, .course_hr {
+    opacity: 0;
+  }
+
+  .shareTw {
+    background: url(/assets/images/shareTw.png) no-repeat;
+    margin-right: 10px;
+    background-size: contain;
+  }
+
+  .shareFb {
+    background: url(/assets/images/shareFb.png) no-repeat;
+    background-size: contain;
+  }
+
+  h2 {
+    @include margin-top(1);
+    max-width: 500px;
+  }
+
+  .quiz_results {
+    hr {
+      margin-bottom: 0;
+    }
+  }
+
+  .course-desc {
+    max-width: 500px;  
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .quiz-page {
+    .sv_body {
+      padding: 0;
+    }
+
+    h2 {
+      @include margin-top(3);
+    }
+
+    .quiz_results h2 {
+      @include margin-top(1);
+    }
+
+    .quiz_score {
+      font-size: 100px;
+      line-height: 100px;
+    }
+  }
+
+  .sv_q img {
+    width: 100%;
+  }
+
+  .paragraph_img {
+    width: 33%;
+    float: left;
+  }
+}

@@ -100,6 +100,14 @@
   padding: 0;
 }
 
+.title_ready {
+  @include margin-bottom(3);
+}
+
+.first_hr {
+  @include margin-top(3);
+}
+
 .level .sidebar {
   background: #fafafa;
   width: 25%;
@@ -435,7 +443,7 @@ svg {
   max-width: 950px;
 
   h2 {
-    margin-top: 0;
+    @include margin-top(3);
     @include margin-bottom(2.5);
   }
 }

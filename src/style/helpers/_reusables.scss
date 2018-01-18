@@ -71,6 +71,10 @@ $desktop: 63.75em;
   display: none;
 }
 
+.fixed_position {
+  position: fixed;
+}
+
 .bg-contain {
   background-size: contain!important;
   background-position: center!important;

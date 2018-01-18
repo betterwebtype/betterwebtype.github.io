@@ -47,7 +47,7 @@ input[type=email] {
   margin-bottom: 0;
 }
 
-.button {
+.button, .sv_complete_btn {
   color: white!important;
   background: $bwt-gradient;
   font-family: $custom-font-acumin;
@@ -121,7 +121,7 @@ input[type=email] {
 }
 
 // Links that look like buttons
-a.button {
+a.button, .sv_complete_btn {
   padding-top: 18px;
   min-width: 250px;
   @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
