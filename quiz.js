@@ -21,7 +21,7 @@ var surveyJSON = {
        text: "Both of the above."
       }
      ],
-     correctAnswer: "B",
+     ca: "B",
      isRequired: true,
      name: "What is considered a “font”?"
     },
@@ -41,7 +41,7 @@ var surveyJSON = {
        text: "c"
       }
      ],
-     correctAnswer: "C",
+     ca: "C",
      isRequired: true,
      name: "Which of the three paragraphs below do you think is typographically best shaped?"
     },
@@ -65,7 +65,7 @@ var surveyJSON = {
        text: "Tracking"
       }
      ],
-     correctAnswer: "C",
+     ca: "C",
      isRequired: true,
      name: "What’s the name of the marked part in the image below?"
     },
@@ -89,7 +89,7 @@ var surveyJSON = {
        text: "Crossbar"
       }
      ],
-     correctAnswer: "C",
+     ca: "C",
      isRequired: true,
      name: "What is the name of the marked part in the image below?"
     },
@@ -125,7 +125,7 @@ var surveyJSON = {
        text: "Font size in kilobytes"
       }
      ],
-     correctAnswer: [
+     ca: [
       "B",
       "C",
       "F",
@@ -150,18 +150,18 @@ var surveyJSON = {
       },
       {
        value: "B",
-       text: "Based on same style classification (Old-style serif, slab serif etc.)"
+       text: "Based on the same style classification (Old-style serif, slab serif etc.)"
       },
       {
        value: "C",
-       text: "Based on author"
+       text: "Based on the author"
       },
       {
        value: "D",
        text: "Based on overall similarity"
       }
      ],
-     correctAnswer: [
+     ca: [
       "C",
       "A"
      ],
@@ -192,14 +192,14 @@ var surveyJSON = {
       },
       {
        value: "D",
-       text: "Line length"
+       text: "Leading"
       },
       {
        value: "E",
        text: "Height of letters"
       }
      ],
-     correctAnswer: [
+     ca: [
       "A",
       "B",
       "C"
@@ -234,7 +234,7 @@ var surveyJSON = {
        text: "Use what visually looks best for all other text sizes"
       }
      ],
-     correctAnswer: [
+     ca: [
       "B",
       "C"
      ],
@@ -268,7 +268,7 @@ var surveyJSON = {
        text: "Proportional"
       }
      ],
-     correctAnswer: "A",
+     ca: "A",
      isRequired: true,
      name: "What style of figures is the one pictured below?"
     },
@@ -292,9 +292,9 @@ var surveyJSON = {
        text: "When the website needs to have an antique look"
       }
      ],
-     correctAnswer: "C",
+     ca: "C",
      isRequired: true,
-     name: "What is the figure style from the question before usually used for?"
+     name: "What is the figure style in the previous question usually used for?"
     },
     {
      type: "radiogroup",
@@ -312,7 +312,7 @@ var surveyJSON = {
        text: "It’s a symbolic combination of letters “a” and “d” and is simply a short way of writing “and”."
       }
      ],
-     correctAnswer: "B",
+     ca: "B",
      isRequired: true,
      name: "What is the origin of the ampersand (the “&” symbol)?"
     },
@@ -336,7 +336,7 @@ var surveyJSON = {
        text: "Use hanging punctuation so that the first quotation mark hangs outside of the body of text"
       }
      ],
-     correctAnswer: [
+     ca: [
       "A",
       "D"
      ],
@@ -362,10 +362,6 @@ var surveyJSON = {
 
 var img1 = '<figure class="paragraph_img"><picture><source srcset="assets/images/p1@2x.jpg 2x, assets/images/p1.jpg" media="(max-width: 450px)"><source srcset="assets/images/p1@2x.jpg 2x, assets/images/p1.jpg"><img src="assets/images/p1.jpg" alt="Paragraph"></picture></figure><figure class="paragraph_img"><picture><source srcset="assets/images/p2@2x.jpg 2x, assets/images/p2.jpg" media="(max-width: 450px)"><source srcset="assets/images/p2@2x.jpg 2x, assets/images/p2.jpg"><img src="assets/images/p2.jpg" alt="Paragraph"></picture></figure><figure class="paragraph_img"><picture><source srcset="assets/images/p3@2x.jpg 2x, assets/images/p3.jpg" media="(max-width: 450px)"><source srcset="assets/images/p3@2x.jpg 2x, assets/images/p3.jpg"><img src="assets/images/p3.jpg" alt="Paragraph"></picture></figure>';
 
-// var img2 = '';
-
-// var img3 = '<figure><picture class=""><source srcset="assets/images/p3@2x.jpg 2x, assets/images/p3.jpg" media="(max-width: 450px)"><source srcset="assets/images/p3@2x.jpg 2x, assets/images/p3.jpg"><img src="assets/images/p3.jpg" alt="Paragraph"></picture></figure>';
-
 var img4 = '<figure><picture class=""><source srcset="assets/images/Anatomy-mobile@2x.jpg 2x, assets/images/Anatomy-mobile.jpg" media="(max-width: 450px)"><source srcset="assets/images/Anatomy@2x.jpg 2x, assets/images/Anatomy.jpg"><img src="assets/images/Anatomy.jpg" alt="Anatomy"></picture></figure>';
 
 var img5 = '<figure><picture class=""><source srcset="assets/images/Anatomy-2-mobile@2x.jpg 2x, assets/images/Anatomy-2-mobile.jpg" media="(max-width: 450px)"><source srcset="assets/images/Anatomy-2@2x.jpg 2x, assets/images/Anatomy-2.jpg"><img src="assets/images/Anatomy-2.jpg" alt="Anatomy"></picture></figure>';
@@ -387,7 +383,7 @@ function checkQuizScore(s){
   // Go through answers
   while (i < rl) {
     var a = ra[i];
-    var ca = surveyJSON.pages[0].elements[i].correctAnswer;
+    var ca = surveyJSON.pages[0].elements[i].ca;
     if (a.constructor == Array){
       var al = Object.values(a).length;
       for ( var j = 0; j < al; j++){
@@ -413,8 +409,8 @@ function showScore(){
   var msg;
   var cta;
   var style;
-  var shareTw = 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fbetterwebtype.com%2Fweb-typography-quiz&via=matejlatin&text=I%20scored%20' + score + '/100%20in%20the%20web%20typography%20quiz&hashtags=typography%2C%20webdesign';
-  var shareFb = 'https://www.facebook.com/sharer/sharer.php?u=betterwebtype.com/web-typography-quiz&quote=I%20scored%20' + score + '/100%20on%20the%20web%20typography%20quiz.';
+  var shareTw = 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fbetterwebtype.com%2Fweb-typography-quiz&via=matejlatin&text=I%20scored%20' + score + '/100%20in%20the%20Web%20Typography%20Quiz%20by%20Better%20Web%20Type&hashtags=typography%2C%20webdesign';
+  var shareFb = 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbetterwebtype.com%2Fweb-typography-quiz&quote=I%20scored%20' + score + '/100%20on%20the%20Web%20Typography%20Quiz%20by%20Better%20Web%20Type.';
 
   if (score < 50) {
     title = 'Oh no!';
@@ -471,7 +467,7 @@ function showScore(){
     $('.cta').addClass('animated fadeInUpBig');
   }, 1300);
   setTimeout(function(){
-    $('.course_button').addClass('animated fadeInUpBig');
+    $('.button_wrapper').addClass('animated fadeInUpBig');
   }, 1500);
 }
 

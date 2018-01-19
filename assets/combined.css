@@ -3993,7 +3993,7 @@ p.slack {
   font-size: 20px;
   opacity: 0;
 }
-.quiz-page .cta, .quiz-page .course_title, .quiz-page .course_button {
+.quiz-page .cta, .quiz-page .course_title, .quiz-page .button_wrapper {
   opacity: 0;
 }
 .quiz-page .good {
