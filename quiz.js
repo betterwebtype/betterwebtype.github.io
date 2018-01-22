@@ -409,7 +409,7 @@ function showScore(){
   var msg;
   var cta;
   var style;
-  var shareTw = 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fbetterwebtype.com%2Fweb-typography-quiz&via=matejlatin&text=I%20scored%20' + score + '/100%20in%20the%20Web%20Typography%20Quiz%20by%20Better%20Web%20Type&hashtags=typography%2C%20webdesign';
+  var shareTw = 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fbetterwebtype.com%2Fweb-typography-quiz&via=matejlatin&text=I%20scored%20' + score + '/100%20in%20the%20Web%20Typography%20Quiz%20by%20Better%20Web%20Type&hashtags=typography%2C%20webdesign%2C%20BetterWebType';
   var shareFb = 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbetterwebtype.com%2Fweb-typography-quiz&quote=I%20scored%20' + score + '/100%20on%20the%20Web%20Typography%20Quiz%20by%20Better%20Web%20Type.';
 
   if (score < 50) {
