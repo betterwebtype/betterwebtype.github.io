@@ -639,11 +639,11 @@ if (level < numOfLevels - 1){
     var bookMsg;
     // var bookSwitch = 0;
 
-    if( varEmail != null ){
-      bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small-retina.jpg' width='119'></td><td><h2>The <span>Better Web Type</span> book is&nbsp;here!</h2><p><em><a href='https://betterwebtype.com/web-typography-book'>Get your copy</a> and learn what typography is, why it’s important and how to get it right on your websites.</em></p></td></tr></tbody></table>";
-    } else {
-      bookMsg = "<img src='assets/images/better-web-type-course-small.png' width='157' class='course-image'><h2 class='align-center'>Learn about web typography <br><span>start the free course</span></h2><p class='align-center'><em>Better Web Type is a free web typography course for web designers and developers. Learn about modular scales, vertical rhythm and more in 7, easy-to-digest lessons.</em></p><br><a href='/' class='button floatCenter align-center'>Check it out</a>";
-    }
+    // if( varEmail != null ){
+    //   bookMsg = "<table><tbody><tr><td><img src='assets/images/better-web-type-book-cover-small-retina.jpg' width='119'></td><td><h2>The <span>Better Web Type</span> book is&nbsp;here!</h2><p><em><a href='https://betterwebtype.com/web-typography-book'>Get your copy</a> and learn what typography is, why it’s important and how to get it right on your websites.</em></p></td></tr></tbody></table>";
+    // } else {
+      bookMsg = "<img src='assets/images/better-web-type-course-small.png' width='157' class='course-image'><h2 class='alignCenter'>Learn about web typography <br><span>start the free course</span></h2><p class='alignCenter'><em>Better Web Type is a free web typography course for web designers and developers. Learn about modular scales, vertical rhythm and more in 7, easy-to-digest lessons.</em></p><br><a href='/?utm_source=triangle' class='button floatCenter alignCenter'>Check it out</a>";
+    // }
 
     // Show final score
     setTimeout(function(){
@@ -685,10 +685,10 @@ if (level < numOfLevels - 1){
     $('#ATTEMPT').val(attempt);
     $('#TOPSCORE').val(userTopScore);
     // console.log("Top score: " + userTopScore);
-    if( varEmail != null ){
-      // submit form
-      setTimeout(function(){ $('#theForm').submit(); }, 8500);
-    }
+    // if( varEmail != null ){
+    //   // submit form
+    //   setTimeout(function(){ $('#theForm').submit(); }, 8500);
+    // }
   }
 }
 
