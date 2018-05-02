@@ -71,51 +71,8 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 27286,
+				"buffer_size": 27288,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "reviews.html",
-			"settings":
-			{
-				"buffer_size": 6323,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "thank-you.html",
-			"settings":
-			{
-				"buffer_size": 3503,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "almost-finished.html",
-			"settings":
-			{
-				"buffer_size": 3845,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/style/modules/_horizontal-rule.scss",
-			"settings":
-			{
-				"buffer_size": 2548,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/style/modules/_list.scss",
-			"settings":
-			{
-				"buffer_size": 162,
 				"line_ending": "Unix"
 			}
 		},
@@ -128,69 +85,10 @@
 			}
 		},
 		{
-			"contents": "Package Control Messages\n========================\n\nSass\n----\n\n  Thank you for installing this Sass syntax highlighting package.\n  \n  For more information about this package please see:\n  \n  https://github.com/P233/Syntax-highlighting-for-Sass\n  \n  Cheers,\n  Peiwen Lu\n",
-			"settings":
-			{
-				"buffer_size": 268,
-				"line_ending": "Unix",
-				"name": "Package Control Messages",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"file": "src/style/mixins/_margin.scss",
-			"settings":
-			{
-				"buffer_size": 1102,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/style/_gutenberg-config.scss",
-			"settings":
-			{
-				"buffer_size": 2543,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/style/modules/_anchor.scss",
-			"settings":
-			{
-				"buffer_size": 874,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/style/modules/_image.scss",
-			"settings":
-			{
-				"buffer_size": 1287,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/style/modules/_form.scss",
-			"settings":
-			{
-				"buffer_size": 4442,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "src/style/modules/_heading.scss",
 			"settings":
 			{
 				"buffer_size": 2851,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/style/modules/_text.scss",
-			"settings":
-			{
-				"buffer_size": 3756,
 				"line_ending": "Unix"
 			}
 		},
@@ -312,6 +210,19 @@
 	],
 	"file_history":
 	[
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_text.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_form.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_heading.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/mixins/_margin.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/_gutenberg-config.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_anchor.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_image.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/reviews.html",
+		"/Users/matejlatin/git/betterwebtype.github.io/thank-you.html",
+		"/Users/matejlatin/git/betterwebtype.github.io/almost-finished.html",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_horizontal-rule.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_list.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/layout/_base.scss",
 		"/Users/matejlatin/git/betterwebtype.github.io/src/style/helpers/_alignment.scss",
 		"/Users/matej.latin/Git/betterwebtype.github.io/src/style/gutenberg.scss",
 		"/Users/matej.latin/Git/betterwebtype.github.io/src/style/_gutenberg-config.scss",
@@ -380,7 +291,7 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -389,15 +300,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27286,
+						"buffer_size": 27288,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3210,
+								3210
 							]
 						],
 						"settings":
@@ -407,164 +318,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4146.0,
+						"translation.y": 626.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "reviews.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6323,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "thank-you.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3503,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "almost-finished.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3845,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 302.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/style/modules/_horizontal-rule.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2548,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/style/modules/_list.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 162,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 768.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "src/style/layout/_base.scss",
 					"semi_transient": false,
 					"settings":
@@ -576,13 +337,13 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								454,
+								454
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -590,46 +351,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 2,
+					"file": "src/style/modules/_heading.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 268,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								268,
-								268
-							]
-						],
-						"settings":
-						{
-							"auto_indent": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_width": 2,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/style/mixins/_margin.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1102,
+						"buffer_size": 2851,
 						"regions":
 						{
 						},
@@ -650,191 +381,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "src/style/_gutenberg-config.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2543,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/style/modules/_anchor.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 874,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "src/style/modules/_image.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1287,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "src/style/modules/_form.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4442,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 244.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "src/style/modules/_heading.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2851,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "src/style/modules/_text.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3756,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1496.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
+					"buffer": 3,
 					"file": "src/js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -860,7 +411,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -914,6 +465,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"base",
+				"src/style/layout/_base.scss"
+			],
+			[
+				"heading",
+				"src/style/modules/_heading.scss"
+			],
 			[
 				"almos",
 				"almost-finished.html"
@@ -973,10 +532,6 @@
 			[
 				"padding",
 				"src/style/mixins/_padding.scss"
-			],
-			[
-				"base",
-				"src/style/layout/_base.scss"
 			],
 			[
 				"footer",
