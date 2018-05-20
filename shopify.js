@@ -97,16 +97,20 @@ function getProduct(){
         var desc;
         var price;
         var remains;
+        var disabled;
+
         if (value == 'eBook'){
           desc = "epub (iBooks), mobi (Kindle) & PDF."
           price = "19.95";
           remains;
+          disabled;
         } else if (value == 'Paperback'){
           desc = "High-quality colour print with free shipping."
           price = "34.95";
-          remains = "Sold out";
+          remains = "SOLD OUT";
+          disabled = "disabled";
         }
-        return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"><label for="' + value + '" class="book-option ' + value + '">' + value + ' <span class="remaining"><b>' + remains + '</b></span><br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';
+        return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"' + disabled +'><label for="' + value + '" class="book-option ' + value + '">' + value + ' <span class="remaining"><b>' + remains + '</b></span><br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';
         // return '<option value="' + value + '">' + value + '</option>';
       });
       optionsHtml = optionsHtml.toString();
@@ -360,7 +364,7 @@ function getProduct(){
   ============================================================ */
   function updateVariantInCart(cartLineItem, quantity) {
     variantId = cartLineItem.variant_id;
-    
+
     var cartLength = cart.lineItems.length;
     cart.updateLineItem(cartLineItem.id, quantity).then(function(updatedCart) {
       var $cartItem = $('.cart').find('.cart-item[data-variant-id="' + variantId + '"]');

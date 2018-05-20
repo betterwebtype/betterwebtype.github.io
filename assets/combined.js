@@ -51,6 +51,30 @@ $(function(){
   } // End of if statement
 }); // End of homepage stuff
 
+// If page is book page
+$(function(){
+  if($('body').is('.book-page')){
+
+  // Animate tutorial image on scroll + mobile fixed button behavior
+  var triggerPoint;
+  var h = window.innerHeight;
+
+  $(window).on('load', function(){
+    triggerPoint = $('.popularity .button-secondary').position();
+  });
+
+  $(window).on('scroll', function() {
+    triggerPoint = $('.popularity .button-secondary').position();
+    var y_scroll_pos = window.pageYOffset;
+
+    if(y_scroll_pos > triggerPoint.top) {
+      $('.lesson-img').addClass('slide-in-fwd-bottom');
+    }
+  });
+
+  } // End of if statement
+}); // End of book page stuff
+
 // If page has a form
 $(function(){
   if($('body').is('.hasForm')){
@@ -107,6 +131,7 @@ $(function(){
       $('#myButton').addClass('loading');
     }
   }, false);
+
 
 
   (function(window, document) {
@@ -183,6 +208,22 @@ $(function(){
   }(window, document));
   } // End of if statement
 }); // End of form stuff
+
+// Scroll to anchor
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 800);
+        return false;
+      }
+    }
+  });
+});
 
 // GA
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

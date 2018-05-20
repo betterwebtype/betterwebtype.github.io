@@ -52,6 +52,10 @@ $column: 8.3333333333%;
     @include g-width(6);
   }
 
+  .col-7 {
+    @include g-width(7);
+  }
+
   .col-10 {
     @include g-width(10);
   }
@@ -62,7 +66,8 @@ $column: 8.3333333333%;
 
   .col-4,
   .col-5,
-  .col-6 {
+  .col-6,
+  .col-7 {
     float: left;
   }
 }

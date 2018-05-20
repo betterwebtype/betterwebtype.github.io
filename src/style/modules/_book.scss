@@ -150,10 +150,10 @@ body.book-page article, body.book-page-deluxe article {
 }
 
 .toc {
-  width: 100%;
+  // width: 100%;
   @media screen and (min-width: 64em){
-    width: 40%;
-    float: left;
+    width: 30%;
+    // float: left;
   }
 
   li {
