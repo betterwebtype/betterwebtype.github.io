@@ -101,16 +101,17 @@ function getProduct(){
 
         if (value == 'eBook'){
           desc = "epub (iBooks), mobi (Kindle) & PDF."
-          price = "19.95";
+          // price = '$19.95';
+          price = '$13.95 <strike class="original-price">$19.95</strike><span class="sticker">-30%</span>';
           remains;
           disabled;
         } else if (value == 'Paperback'){
           desc = "High-quality colour print with free shipping."
-          price = "34.95";
+          price = "$34.95";
           remains = "SOLD OUT";
           disabled = "disabled";
         }
-        return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"' + disabled +'><label for="' + value + '" class="book-option ' + value + '">' + value + ' <span class="remaining"><b>' + remains + '</b></span><br><span class="desc">' + desc + '</span><span class="price">$' + price + '</span></label>';
+        return '<input class="bookVariant" type="radio" id="' + value + '" name="' + option.name + '" value="' + value + '"' + disabled +'><label for="' + value + '" class="book-option ' + value + '">' + value + ' <span class="remaining"><b>' + remains + '</b></span><br><span class="desc">' + desc + '</span><span class="price">' + price + '</span></label>';
         // return '<option value="' + value + '">' + value + '</option>';
       });
       optionsHtml = optionsHtml.toString();

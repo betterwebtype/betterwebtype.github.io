@@ -2456,6 +2456,17 @@ svg {
   }
 }
 
+.book-rating {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 48em) {
+  .book-rating {
+    margin-left: 0;
+  }
+}
 .price {
   color: #F80759;
   font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
@@ -2463,6 +2474,22 @@ svg {
   font-size: 2.22222222rem;
   line-height: 37.5px;
   line-height: 2.34375rem;
+}
+
+.sticker {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #DB2B7B;
+  color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  font-family: acumin-pro, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  padding-top: 20px;
+  text-align: center;
 }
 
 .original-price {

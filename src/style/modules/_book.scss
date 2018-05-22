@@ -52,11 +52,39 @@
   }
 }
 
+.book-rating {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 48em) {
+  .book-rating {
+    margin-left: 0;
+  }
+}
+
 .price {
   color: $bwt-red;
   font-family: $custom-font-headings;
   @include font-size(2.22222222);
   @include line-height(1.5);
+}
+
+.sticker {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: $bwt-mix;
+  color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  font-family: $custom-font-acumin;
+  font-size: 20px;
+  padding-top: 20px;
+  text-align: center;
 }
 
 .original-price {
