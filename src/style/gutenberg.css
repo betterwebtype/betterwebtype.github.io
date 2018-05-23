@@ -1634,6 +1634,10 @@ svg:not(:root) {
   }
 }
 
+.m-l-portrait {
+  max-width: 450px;
+}
+
 ul, ol {
   max-width: 33em;
   padding: 0;
