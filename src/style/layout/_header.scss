@@ -9,6 +9,11 @@ header {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 30px;
+
+  a {
+    text-decoration: none;
+    color: $bwt-black;
+  }
 }
 
 header nav {
