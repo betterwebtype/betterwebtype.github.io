@@ -1640,6 +1640,7 @@ svg:not(:root) {
 
 .m-l-portrait {
   max-width: 450px;
+  margin-bottom: 1em;
 }
 
 ul, ol {
