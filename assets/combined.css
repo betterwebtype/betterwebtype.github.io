@@ -4224,6 +4224,8 @@ p.slack {
 }
 .content-slider img {
   margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fullscreen {
