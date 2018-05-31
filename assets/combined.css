@@ -3224,6 +3224,7 @@ header {
   position: relative;
   margin-top: 50px;
   margin-top: 3.125rem;
+  margin-bottom: 0;
 }
 
 .logo {
@@ -3239,11 +3240,9 @@ header {
 }
 
 header nav {
-  position: absolute;
-  display: none;
-  top: 0;
-  right: 0;
   font-weight: bold;
+  margin-left: 10%;
+  margin-bottom: 0;
 }
 header nav a {
   font-family: acumin-pro, Helvetica, Arial, sans-serif;
@@ -3266,6 +3265,12 @@ header nav a:last-child {
 @media screen and (min-width: 63.75em) {
   header nav, .logo {
     display: block;
+  }
+
+  header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 main {

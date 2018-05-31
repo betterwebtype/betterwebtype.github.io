@@ -1,6 +1,7 @@
 header {
   position: relative;
   @include margin-top(2);
+  margin-bottom: 0;
 }
 
 .logo {
@@ -17,11 +18,9 @@ header {
 }
 
 header nav {
-  position: absolute;
-  display: none;
-  top: 0;
-  right: 0;
   font-weight: bold;
+  margin-left: 10%;
+  margin-bottom: 0;
 
   a {
     font-family: $custom-font-acumin;
@@ -48,5 +47,11 @@ header nav {
 @media screen and (min-width: $desktop) {
   header nav, .logo {
     display: block;
+  }
+
+  header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
