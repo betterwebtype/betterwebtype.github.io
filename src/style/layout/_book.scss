@@ -54,10 +54,8 @@
 .product {
   background: #fafafa;
 
-  @media screen and (min-width: 48em){
-  .button {
-      max-width: 300px;
-    }
+.button {
+    max-width: 300px;
   }
 
   h1 {
@@ -229,7 +227,7 @@
   }
 
   p {
-    @include margin-bottom(1);
+    // @include margin-bottom(1);
   }
 
   .sketchSource img, .sourceCode img {

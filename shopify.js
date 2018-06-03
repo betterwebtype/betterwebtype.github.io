@@ -194,10 +194,10 @@ function getProduct(){
       var value = $element.val();
       // console.log(value);
       if (value != 'hardcover'){
-        $('#buyButton').show();
+        $('.buyButton').show();
         $('#findOutMore').hide();
       } else {
-        $('#buyButton').hide();
+        $('.buyButton').hide();
         $('#findOutMore').show().css('display', 'block');
       }
       product.options.filter(function(option) {

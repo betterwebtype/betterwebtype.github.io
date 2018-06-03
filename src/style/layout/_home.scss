@@ -79,13 +79,6 @@
   display: none;
 }
 
-.bottom-cta {
-  h2 {
-    @include margin-top(1);
-    @include margin-bottom(2);
-  }
-}
-
 .lesson h2 {
   @include margin-top(0);
 }
@@ -305,8 +298,8 @@ p.slack {
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
-  .how-it-works {  
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .how-it-works {
     background: #010409 url(/assets/images/space-portrait@2x.jpg) no-repeat top;
     background-size: 100% auto;
   }
@@ -318,22 +311,22 @@ p.slack {
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em) { 
-  .how-it-works {  
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em) {
+  .how-it-works {
     background: #010409 url(/assets/images/space-portrait-wide@2x.jpg) no-repeat top;
     background-size: 100% auto;
   }
 }
 
-@media (min-width: $desktop) { 
-  .how-it-works {  
+@media (min-width: $desktop) {
+  .how-it-works {
     background: #010409 url(/assets/images/space-desktop.jpg) no-repeat top;
     background-size: 100% auto;
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: $desktop), (min-resolution: 192dpi) and (min-width: $desktop) { 
-  .how-it-works {  
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: $desktop), (min-resolution: 192dpi) and (min-width: $desktop) {
+  .how-it-works {
     background: #010409 url(/assets/images/space-desktop@2x.jpg) no-repeat top;
     background-size: 100% auto;
   }

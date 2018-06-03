@@ -130,6 +130,10 @@ $desktop: 63.75em;
   margin-top: 0!important;
 }
 
+.bottom-margin-half {
+  @include margin-bottom(0.5);
+}
+
 .hr-border {
   border-bottom: solid 5px $bwt-mix;
   display: inline-block;
@@ -240,4 +244,8 @@ $desktop: 63.75em;
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.c-mix {
+  color: $bwt-mix;
 }

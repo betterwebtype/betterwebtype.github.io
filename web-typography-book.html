@@ -20,8 +20,6 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="msvalidate.01" content="5360663AA079A15002B34C4289C56DA2" />
   <link rel="stylesheet" href="https://use.typekit.net/evl6hgo.css">
-  <!-- <script src="https://use.typekit.net/evl6hgo.js"></script>
-  <script>try{Typekit.load({ async: false });}catch(e){}</script> -->
 </head>
 <link rel="stylesheet" href="assets/combined.min.css">
 <!-- <script src="slider.js"></script> -->
@@ -108,7 +106,7 @@
               <link itemprop="bookFormat" href="http://schema.org/Ebook">
               <h1><span itemprop="name">Better Web Typography for a Better&nbsp;Web</span></h1>
               <p class="subtitle">
-                <em>by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Matej Latin</span></span></em>
+                <!-- <em>by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Matej Latin</span></span></em> -->
               </p>
               <p class="book-rating">
                 <picture class="floatLeft rating">
@@ -123,8 +121,27 @@
               <!-- <h1 class="product-title"></h1> -->
               <!-- <h2 class="variant-title"></h2> -->
               <!-- <h2 class="variant-price"></h2> -->
-              <div class="variant-selectors"></div>
-              <button class="buy-button button js-prevent-cart-listener" id="buyButton">Add To Cart</button>
+              <!-- <div class="variant-selectors"></div> -->
+              <div class="buy-options group">
+                <div class="buy-option variant-ebook alignCenter">
+                  <span class="sticker">-30%</span>
+                  <h4 class="f-acumin">eBook</h4>
+                  <p class="f-s-14px no-bottom-margin floatCenter">PDF, Kindle &amp; iBooks</p>
+                  <p class="f-acumin"><del>$19.95</del> <strong class="c-mix">$13.95</strong></p>
+                  <button class="buy-button button js-prevent-cart-listener floatCenter buyButton" id="buyButton">Buy now</button>
+                  <p class="money-back f-acumin floatCenter no-bottom-margin">30-day money back guarantee</p>
+                </div>
+                <div class="buy-option variant-paperback alignCenter">
+                  <h4 class="f-acumin">Paperback</h4>
+                  <p class="f-s-14px no-bottom-margin floatCenter">High-quality colour print</p>
+                  <p class="f-acumin"><strong>$34.95</strong></p>
+                  <p class="f-acumin f-s-14px floatCenter bottom-margin-half">Buy now on</p>
+                  <ul class="paperback-options floatCenter">
+                    <li><a href="https://www.amazon.com/Better-Web-Typography/dp/1999809521/ref=sr_1_1?ie=UTF8&qid=1528042474&sr=8-1&keywords=better+web+typography+for+a+better+web"><img src="/assets/images/logo-amazon.png" alt="Amazon"></a></li>
+                    <li><a href="https://www.bookdepository.com/Better-Web-Typography-for-a-Better-Web/9781999809522"><img src="/assets/images/logo-book-depository.png" alt="Book Depository"></a></li>
+                  </ul>
+                </div>
+              </div>
               <a href="web-typography-book-hardcover" class="button alignCenter" id="findOutMore">Find out more</a>
             </div>
           </div>
@@ -172,7 +189,7 @@
 
     <!-- What will you learn? -->
     <section class="group">
-      <h3 class="floatCenter alignCenter">What will you learn from this book?</h3>
+      <h3 class="floatCenter alignCenter">What will you learn from this&nbsp;book?</h3>
       <p>&nbsp;</p>
       <ul class="learn-how alignCenter group floatCenter">
         <li>
@@ -335,11 +352,37 @@
     <div class="white-fix">&nbsp;</div>
 
     <!-- Sale CTA -->
-    <section class="sale-cta alignCenter">
+    <!-- <section class="sale-cta alignCenter">
       <p class="uppercase f-acumin f-s-14px floatCenter">LIMITED TIME OFFER</p>
       <h3>Better Web Typography for a Better Web</h3>
       <p class="floatCenter"><span class="price">$13.95</span> <strike class="original-price">$19.95</strike></p>
       <a href="#buy-button-1" class="button floatCenter animated infinite pulse hide-mobile scrollToTop">Buy the book</a>
+    </section> -->
+    <section class="bottom-cta side-pad-10">
+      <h2 class="alignCenter floatCenter no-top-margin">Buy the book</h2>
+      <hr class="alignCenter floatCenter">
+      <div class="buy-options group floatCenter">
+        <div class="buy-option variant-ebook alignCenter">
+          <span class="sticker">-30%</span>
+          <img class="floatCenter bottom-margin-half" src="/assets/images/ebook-icon.png" width="110">
+          <h4 class="f-acumin">eBook</h4>
+          <!-- <p class="f-s-14px no-bottom-margin floatCenter">PDF, Kindle &amp; iBooks</p> -->
+          <p class="f-acumin"><del>$19.95</del> <strong class="c-mix">$13.95</strong></p>
+          <button class="buy-button button js-prevent-cart-listener floatCenter buyButton" id="buyButton">Buy now</button>
+          <p class="money-back f-acumin floatCenter no-bottom-margin">30-day money back guarantee</p>
+        </div>
+        <div class="buy-option variant-paperback alignCenter">
+          <img class="floatCenter bottom-margin-half" src="/assets/images/paperback-icon.png" width="110">
+          <h4 class="f-acumin">Paperback</h4>
+          <!-- <p class="f-s-14px no-bottom-margin floatCenter">High-quality colour print</p> -->
+          <p class="f-acumin">$34.95</p>
+          <p class="f-acumin f-s-14px floatCenter bottom-margin-half">Buy now on</p>
+          <ul class="paperback-options floatCenter">
+            <li><a href="https://www.amazon.com/Better-Web-Typography/dp/1999809521/ref=sr_1_1?ie=UTF8&qid=1528042474&sr=8-1&keywords=better+web+typography+for+a+better+web"><img src="/assets/images/logo-amazon.png" alt="Amazon"></a></li>
+            <li><a href="https://www.bookdepository.com/Better-Web-Typography-for-a-Better-Web/9781999809522"><img src="/assets/images/logo-book-depository.png" alt="Book Depository"></a></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- FAQs -->
@@ -361,7 +404,7 @@
         </div>
         <div class="question floatCenter">
           <h4>Can you ship to my country and what are the shipping costs?</h4>
-          <p>The paperback edition is currently out of stock. Sign up for the updates and I’ll let you know when it’s available again.</p>
+          <p>Book Depository have free shipping and ship everywhere in the world, Amazon may not be available everywhere.</p>
         </div>
         <div class="question floatCenter">
           <h4>Do you have a money-back guarantee?</h4>
