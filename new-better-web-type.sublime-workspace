@@ -4,16 +4,76 @@
 		"selected_items":
 		[
 			[
-				"marg",
-				"margin-left: "
+				"bacgk",
+				"background-size"
+			],
+			[
+				"f-s",
+				"f-s-14px"
 			],
 			[
 				"padd",
-				"padding: "
+				"padding"
+			],
+			[
+				"strike",
+				"strike"
+			],
+			[
+				"max-wid",
+				"max-width-hdpi"
+			],
+			[
+				"max",
+				"max-width-hdpi"
+			],
+			[
+				"media",
+				"@media\t@media ${1:screen} {\n\t${0}\n}"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"bg",
+				"bg\tbackground: #${1:000};"
+			],
+			[
+				"nth",
+				"nth-child"
+			],
+			[
+				"text",
+				"text-top"
+			],
+			[
+				"margin",
+				"margin-top"
 			],
 			[
 				"back",
-				"background: "
+				"background"
+			],
+			[
+				"includ",
+				"include\t@include"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"float",
+				"floatCenter"
 			],
 			[
 				"time",
@@ -22,10 +82,6 @@
 			[
 				"twt",
 				"twitterHandle"
-			],
-			[
-				"text",
-				"text-decoration: "
 			],
 			[
 				"inline",
@@ -48,10 +104,6 @@
 				"font-size: "
 			],
 			[
-				"max",
-				"max-width: "
-			],
-			[
 				"mt",
 				"margin-top: "
 			],
@@ -71,7 +123,16 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 27241,
+				"buffer_size": 28600,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "about.html",
+			"settings":
+			{
+				"buffer_size": 6715,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -80,24 +141,54 @@
 			"file": "web-typography-book.html",
 			"settings":
 			{
-				"buffer_size": 30514,
+				"buffer_size": 39693,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/style/layout/_base.scss",
+			"file": "src/style/modules/_book.scss",
 			"settings":
 			{
-				"buffer_size": 2045,
+				"buffer_size": 9795,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/style/modules/_heading.scss",
+			"file": "src/style/layout/_book.scss",
 			"settings":
 			{
-				"buffer_size": 2851,
+				"buffer_size": 7400,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 51 files for \"bottom-cta\"\n\n/Users/matejlatin/git/betterwebtype.github.io/src/style/gutenberg.css:\n 2417  }\n 2418  \n 2419: .bottom-cta .buy-option {\n 2420    background: #f5f5f5;\n 2421    border: none;\n ....\n 3759  }\n 3760  \n 3761: .bottom-cta h2 {\n 3762    margin-top: 25px;\n 3763    margin-top: 1.5625rem;\n\n/Users/matejlatin/git/betterwebtype.github.io/src/style/layout/_home.scss:\n   80  }\n   81  \n   82: .bottom-cta {\n   83    h2 {\n   84      @include margin-top(1);\n\n/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_book.scss:\n    1: .bottom-cta {\n    2    .buy-option {\n    3      background: $bwt-extra-light;\n\n4 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 668,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "src/style/layout/_home.scss",
+			"settings":
+			{
+				"buffer_size": 5337,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "contact.html",
+			"settings":
+			{
+				"buffer_size": 3847,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -105,7 +196,70 @@
 			"file": "src/js/main.js",
 			"settings":
 			{
-				"buffer_size": 6357,
+				"buffer_size": 7459,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "triangle.js",
+			"settings":
+			{
+				"buffer_size": 18349,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "shopify.js",
+			"settings":
+			{
+				"buffer_size": 17264,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/style/gutenberg.scss",
+			"settings":
+			{
+				"buffer_size": 1536,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/style/layout/_header.scss",
+			"settings":
+			{
+				"buffer_size": 827,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web-typography-quiz.html",
+			"settings":
+			{
+				"buffer_size": 5075,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/matejlatin/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 260,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/style/helpers/_reusables.scss",
+			"settings":
+			{
+				"buffer_size": 3266,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -118,12 +272,68 @@
 	"command_palette":
 	{
 		"height": 169.0,
-		"last_filter": "install",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"them",
+				"UI: Select Color Scheme"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set ",
+				"Set Syntax: SCSS"
+			],
+			[
+				"diable",
+				"Package Control: Disable Package"
+			],
+			[
+				"set sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"set scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"set css",
+				"Set Syntax: SCSS"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reint",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"user setting",
+				"SBC: Settings – User"
 			],
 			[
 				"packag",
@@ -136,22 +346,6 @@
 			[
 				"package",
 				"Package Control: List Packages"
-			],
-			[
-				"reind",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"html",
-				"Set Syntax: HTML"
-			],
-			[
-				"rein",
-				"Indentation: Reindent Lines"
-			],
-			[
-				"reint",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"reinde",
@@ -215,23 +409,49 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/matejlatin/git/betterwebtype.github.io"
+		"/Users/matejlatin/git/betterwebtype.github.io",
+		"/Users/matejlatin/git/betterwebtype.github.io/src",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/helpers"
 	],
 	"file_history":
 	[
-		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_text.scss",
-		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_form.scss",
-		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_heading.scss",
-		"/Users/matejlatin/git/betterwebtype.github.io/src/style/mixins/_margin.scss",
-		"/Users/matejlatin/git/betterwebtype.github.io/src/style/_gutenberg-config.scss",
-		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_anchor.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/shopify2.js",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/shopify/_buttons.scss",
+		"/Users/matejlatin/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/matejlatin/git/betterwebtype.github.io/web-typography-book-hardcover.html",
+		"/Users/matejlatin/git/betterwebtype.github.io/about.html",
+		"/Users/matejlatin/git/betterwebtype.github.io/sitemap.xml",
 		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_image.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/layout/_book.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_book.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/contact.html",
+		"/Users/matejlatin/git/betterwebtype.github.io/privacy.html",
+		"/Users/matejlatin/git/betterwebtype.github.io/terms.html",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/slider/_slider.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/js/main.js",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/layout/_home.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/gutenberg.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/layout/_header.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/shopify.js",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/layout/_base.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_heading.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/mixins/_padding.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/_gutenberg-config.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_text.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/helpers/_grid.scss",
+		"/Users/matejlatin/Library/Application Support/Sublime Text 3/Packages/User/sbc-setting.sublime-settings",
+		"/Users/matejlatin/Library/Application Support/Sublime Text 3/Packages/Better Completion/sbc-setting.sublime-settings",
+		"/Users/matejlatin/git/betterwebtype.github.io/.sass-cache/1eb7a7e482a2d35a76421cc1cb515f64ddd17ad9/_base.scssc",
+		"/Users/matejlatin/git/betterwebtype.github.io/index.html",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_form.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/mixins/_margin.scss",
+		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_anchor.scss",
 		"/Users/matejlatin/git/betterwebtype.github.io/reviews.html",
 		"/Users/matejlatin/git/betterwebtype.github.io/thank-you.html",
 		"/Users/matejlatin/git/betterwebtype.github.io/almost-finished.html",
 		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_horizontal-rule.scss",
 		"/Users/matejlatin/git/betterwebtype.github.io/src/style/modules/_list.scss",
-		"/Users/matejlatin/git/betterwebtype.github.io/src/style/layout/_base.scss",
 		"/Users/matejlatin/git/betterwebtype.github.io/src/style/helpers/_alignment.scss",
 		"/Users/matej.latin/Git/betterwebtype.github.io/src/style/gutenberg.scss",
 		"/Users/matej.latin/Git/betterwebtype.github.io/src/style/_gutenberg-config.scss",
@@ -257,13 +477,14 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
 		"height": 106.0,
 		"where_history":
 		[
+			"/Users/matejlatin/git/betterwebtype.github.io/src/style",
 			"",
 			"/Users/matej.latin/Personal/Gutenberg/"
 		]
@@ -273,6 +494,56 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bottom-cta",
+			"buyButton",
+			".button",
+			"book-page",
+			"margin",
+			"buy",
+			"buybutton",
+			"buy-button",
+			"buybutton",
+			"buy-button",
+			"checkout",
+			"iframe",
+			"3px",
+			"radius",
+			"fonts",
+			"blank",
+			"cheat",
+			"content-slider",
+			"hr",
+			"padding",
+			"mobile",
+			"max",
+			".logo",
+			"logo",
+			"fonts",
+			"typekit",
+			".toc",
+			"toc",
+			"40%",
+			"toc",
+			"discount",
+			"sale",
+			"seconda",
+			"how-it-works",
+			"lesson-im",
+			"book",
+			"popula",
+			"popular",
+			"popularity",
+			"base",
+			"preferences",
+			"featured",
+			"margin",
+			"content",
+			"h2",
+			"and build",
+			"question",
+			"reviews",
+			"review",
+			"reviews",
 			"font-family: \"Droid Serif\";",
 			"font-size: 0.88889em;",
 			"hide",
@@ -302,7 +573,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -311,15 +582,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27241,
+						"buffer_size": 28600,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24006,
-								24006
+								19777,
+								19781
 							]
 						],
 						"settings":
@@ -329,67 +600,80 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6119.0,
+						"translation.y": 7516.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "web-typography-book.html",
+					"file": "about.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 30514,
+						"buffer_size": 6715,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16543,
-								16588
+								2144,
+								2133
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3595.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/style/layout/_base.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2045,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								454,
-								454
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "web-typography-book.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 39693,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										23273,
+										23273
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								39232,
+								39232
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 10118.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -397,19 +681,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "src/style/modules/_heading.scss",
+					"file": "src/style/modules/_book.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2851,
+						"buffer_size": 9795,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								824,
+								824
 							]
 						],
 						"settings":
@@ -419,27 +703,176 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "src/js/main.js",
+					"file": "src/style/layout/_book.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6357,
+						"buffer_size": 7400,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								852,
+								858
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 72.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 668,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										133,
+										143
+									],
+									[
+										242,
+										252
+									],
+									[
+										418,
+										428
+									],
+									[
+										565,
+										575
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								381,
+								381
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/style/layout/_home.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5337,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4496,
+								4496
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4034.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "contact.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1702,
+								1702
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3121,
+								3137
 							]
 						],
 						"settings":
@@ -452,7 +885,213 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "triangle.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18038,
+								18038
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "shopify.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17264,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5608,
+								5608
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1752.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/style/gutenberg.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1341,
+								1341
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/style/layout/_header.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 827,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								310,
+								310
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "web-typography-quiz.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5075,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2095,
+								1870
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/Users/matejlatin/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								147,
+								147
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "src/style/helpers/_reusables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3266,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								299,
+								299
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 17.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -460,11 +1099,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 24.0
 	},
 	"input":
 	{
-		"height": 35.0
+		"height": 36.0
 	},
 	"layout":
 	{
@@ -497,7 +1136,7 @@
 	"project": "new-better-web-type.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -507,12 +1146,124 @@
 		"selected_items":
 		[
 			[
-				"web-ty",
-				"web-typography-book.html"
+				"triangl",
+				"triangle.js"
+			],
+			[
+				"butto",
+				"src/style/shopify/_buttons.scss"
+			],
+			[
+				"book",
+				"src/style/layout/_book.scss"
+			],
+			[
+				"reusa",
+				"src/style/helpers/_reusables.scss"
+			],
+			[
+				"shopi",
+				"shopify.js"
+			],
+			[
+				"about",
+				"about.html"
+			],
+			[
+				"header",
+				"src/style/layout/_header.scss"
+			],
+			[
+				"gute",
+				"src/style/gutenberg.scss"
+			],
+			[
+				"conta",
+				"contact.html"
+			],
+			[
+				"hardco",
+				"web-typography-book-hardcover.html"
+			],
+			[
+				"slider",
+				"src/style/slider/_slider.scss"
+			],
+			[
+				"main.",
+				"src/js/main.js"
+			],
+			[
+				"sitem",
+				"sitemap.xml"
+			],
+			[
+				"image",
+				"src/style/modules/_image.scss"
+			],
+			[
+				"cont",
+				"contact.html"
+			],
+			[
+				"guteng",
+				"src/style/gutenberg.scss"
+			],
+			[
+				"quiz",
+				"web-typography-quiz.html"
+			],
+			[
+				"_base",
+				"src/style/layout/_base.scss"
+			],
+			[
+				"priva",
+				"privacy.html"
+			],
+			[
+				"term",
+				"terms.html"
+			],
+			[
+				"shopif",
+				"shopify.js"
+			],
+			[
+				"grid",
+				"src/style/helpers/_grid.scss"
+			],
+			[
+				"guten",
+				"src/style/gutenberg.scss"
+			],
+			[
+				"home",
+				"src/style/layout/_home.scss"
+			],
+			[
+				"paddin",
+				"src/style/mixins/_padding.scss"
+			],
+			[
+				"text",
+				"src/style/modules/_text.scss"
 			],
 			[
 				"base",
-				"src/style/layout/_base.scss"
+				".sass-cache/1eb7a7e482a2d35a76421cc1cb515f64ddd17ad9/_base.scssc"
+			],
+			[
+				"config",
+				"src/style/_gutenberg-config.scss"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"web-ty",
+				"web-typography-book.html"
 			],
 			[
 				"heading",
@@ -533,10 +1284,6 @@
 			[
 				"align",
 				"src/style/helpers/_alignment.scss"
-			],
-			[
-				"config",
-				"src/style/_gutenberg-config.scss"
 			],
 			[
 				"anchor",
@@ -595,16 +1342,8 @@
 				"src/style/modules/_horizontal-rule.scss"
 			],
 			[
-				"image",
-				"src/style/modules/_image.scss"
-			],
-			[
 				"font-s",
 				"src/style/mixins/_font-size.scss"
-			],
-			[
-				"text",
-				"src/style/modules/_text.scss"
 			],
 			[
 				"alignmen",
@@ -668,7 +1407,7 @@
 	"show_tabs": true,
 	"side_bar_visible": false,
 	"side_bar_width": 231.0,
-	"status_bar_visible": false,
+	"status_bar_visible": true,
 	"template_settings":
 	{
 	}
