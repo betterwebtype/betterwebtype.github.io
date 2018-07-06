@@ -1,0 +1,447 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.not-supported {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background: #000; */
+  margin-bottom: 0;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck, .game {
+  /* max-width: 125vh; */
+  width: auto;
+}
+
+.deck {
+  max-width: none;
+  padding: 1rem;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  list-style: none;
+}
+
+.deck .card {
+  /* width: 18%; */
+  /* padding-top: 18%; */
+  height: 17vh;
+  width: 17vh;
+  /* padding-left: 18%; */
+  margin: 1vh 1vh;
+  background: url(../assets/images/redkvica.svg) center center/40% no-repeat, linear-gradient(135deg, #90F1EE 0%, #67D5D1 100%);
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  float: left;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 6px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.deck .card img {
+  display: none;
+}
+
+.deck .card.open {
+  transform: rotateY(0);
+  background: #fafafa;
+  cursor: default;
+  animation-name: flipInY;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: .75s;
+}
+
+.deck .card.flipClose {
+  /* transform: rotateY(90deg); */
+  /* background: #fafafa; */
+  cursor: default;
+  animation-name: flipInYreverse;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: .5s;
+}
+
+/* .deck .card.show {
+  font-size: 33px;
+} */
+
+.deck .card.show img {
+  display: block;
+}
+
+.deck .card.match {
+  cursor: default;
+  /* background: #E5F720; */
+  /* font-size: 33px; */
+  animation-name: pulse;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: .75s;
+}
+
+.deck .card.unmatched {
+  transform: rotateY(0);
+  /* animation-name: pulse; */
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: .75s;
+  /* background: #e2043b; */
+}
+
+.deck .card.disabled {
+  pointer-events: none;
+  /* opacity: 0.9; */
+}
+
+
+/*
+ * Styles for the Score Panel
+ */
+
+
+.score-panel {
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 50px 30px 0;
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+
+.timer {
+  display: inline-block;
+  margin: 0;
+}
+
+.moves-counter, .pairs img {
+  margin-right: 20px;
+}
+
+
+/*
+ * Styles for congratulations modal
+ */
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#popup1 .shareTw, #popup1 .shareFb {
+  opacity: 1;
+}
+
+.fmg-msg {
+  max-width: 430px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 30px 40px;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 85%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #E5F720;
+}
+
+.popup .content-1,
+.content-2 {
+  max-height: 30%;
+  overflow: auto;
+  text-align: center;
+}
+
+.content-2 {
+  max-width: 250px;
+}
+
+.show {
+  visibility: visible !important;
+  opacity: 100 !important;
+}
+
+#starRating li {
+  display: inline-block;
+}
+
+#play-again {
+  background-color: #141214;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+/* animations */
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInYreverse {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 5deg);
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+/****** Media queries
+***************************/
+
+
+@media (max-width: 320px) {
+  .deck {
+    width: 85%;
+  }
+
+  .deck .card {
+    height: 4.7rem;
+    width: 4.7rem;
+  }
+}
+
+
+/* For Tablets and larger screens
+****************/
+
+@media (min-width: 768px) {
+  .container {
+    font-size: 22px;
+  }
+
+  /* .deck {
+    width: 660px;
+    height: 680px;
+  } */
+
+  /* .deck .card {
+    height: 10%;
+    width: 10%;
+  } */
+
+  .popup {
+    width: 60%;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .not-supported {
+    display: block;
+  }
+}
+
+.pairs {
+  float: right;
+}
+
+.score-number {
+  font-size: 64px;
+  line-height: 50px;
+  color: #DB2B7B;
+}
+
+.fmg-msg .level-complete, .game-over,
+.fmg-buttons a {
+  display: none;
+}
+
+.level-complete div.floatLeft {
+  width: 70%;
+  padding-left: 20px;
+}
+
+.level-complete .discount-code {
+  background: #F80759;
+  padding: 0 6px 6px;
+  font-size: 36px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.level-1 {
+  max-width: 105vh;
+}
+
+/* @media screen and (min-width: 1680px){ */
+  .level-2 {
+    max-width: 157vh;
+  }
+/* } */
+
+.awards {
+  max-width: 550px;
+}
+
+.awards div {
+  width: 48%;
+  padding: 1%;
+}
+
+.fmg-disclaimer {
+  max-width: none;
+}
+
+.fmg-splash {
+  background: rgba(248, 250, 253, 0.95);
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

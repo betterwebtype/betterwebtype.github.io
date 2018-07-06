@@ -1,7 +1,7 @@
+/*eslint-env jquery*/
 // If page is homepage
-$(function(){
-  if($('body').is('.home')){
-
+$(function () {
+  if ($('body').is('.home')) {
   // Animate tutorial image on scroll + mobile fixed button behavior
   var triggerPoint;
   var el;

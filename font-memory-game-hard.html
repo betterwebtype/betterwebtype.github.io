@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  <title>Font Memory Game — Learn how to recognize typefaces | Better Web Type</title>
+  <meta name="description" content="Recognizing different styles of fonts is one of the most challenging parts of typography. This game helps you train your eyes to notice the smallest details.">
+  <meta name="keywords" content="Web, typography, designers, developers, course, type, memory, game, font, matej, latin">
+  <meta name="author" content="Matej Latin">
+  <meta property="og:title" content="Font Memory Game by Better Web Type">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://betterwebtype.com/font-memory-game">
+  <meta property="og:image" content="http://betterwebtype.com/font-memory-game.jpg" />
+  <meta property="og:description" content="Recognizing different styles of fonts is one of the most challenging parts of typography. This game helps you train your eyes to notice the smallest details." />
+  <meta name="twitter:creator" content="@matejlatin">
+  <meta name="twitter:site" content="@betterwebtype">
+  <meta name="twitter:description" content="Recognizing different styles of fonts is one of the most challenging parts of typography. This game helps you train your eyes to notice the smallest details." />
+  <meta name="twitter:url" content="http://betterwebtype.com/font-memory-game" />
+  <meta name="twitter:domain" content="betterwebtype.com" />
+  <meta name="twitter:image:src" content="http://betterwebtype.com/font-memory-game.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="msvalidate.01" content="5360663AA079A15002B34C4289C56DA2" />
+  <script type="text/javascript">
+    var host = "betterwebtype.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+      window.location.protocol = "https";
+  </script>
+</head>
+<body class="quiz-page">
+
+  <article>
+    <div class="not-supported curtain alignCenter bg-dark f-smoothing side-pad-10">
+      <h2 class="floatCenter">Not supported</h2>
+      <p class="floatCenter">Sorry, this game can’t be played on mobile devices.</p>
+    </div>
+
+    <div class="fmg-splash alignCenter">
+      <h2 class=" floatCenter t-m-4">2/2</h2>
+      <p class="uppercase f-acumin f-s-14px  floatCenter">Hard Difficulty</p>
+      <div class="awards group floatCenter">
+        <div class="t-shirt floatLeft">
+          <img src="../assets/images/fmg-t-shirt.png" width="138" class="floatCenter">
+          <strong>T-shirt giveaway</strong>
+          <p class="">Tweet your best score to enter the T-shirt giveaway*</p>
+        </div>
+        <div class="book-giveaway floatLeft">
+          <img src="../assets/images/fmg-book.png" width="130" class="floatCenter">
+          <strong>-50% discount</strong>
+          <p class="">Get an instant discount on the Better Web Type ebook.</p>
+        </div>
+      </div>
+      <a href="javascript:void(0)" class="fmg-btn-start button alignCenter floatCenter course_button">Start</a>
+      <p class="fmg-disclaimer f-s-14px floatCenter">* Winner will be randomly chosen and announced on July 24 2018 via <a href="https://twitter.com/matejlatin" target="_blank">Twitter</a>.</p>
+    </div>
+
+    <section class="score-panel group">
+      <div class="floatLeft moves-counter no-bottom-margin">
+        <span class="score-number f-acumin-c"><span class="moves">0</span>/40</span>
+        <br><strong class="f-s-14px f-acumin">Moves</strong>
+      </div>
+      <div class="time floatLeft no-bottom-margin">
+        <span class="f-acumin-c score-number"><span class="timer"></span></span>
+        <br><strong class="f-s-14px f-acumin">Time</strong>
+      </div>
+      <!-- <div class="restart" onclick=startGame()>
+        <i class="">Restart</i>
+      </div> -->
+      <div class="pairs no-bottom-margin">
+        <img src="../assets/images/font-pair.jpg" width="62" class="floatLeft">
+        <div class="floatLeft no-bottom-margin">
+          <span class="score-number f-acumin-c"><span class="pairs-found">0</span>/16</span>
+          <br><strong class="f-s-14px f-acumin">Pairs found</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="game floatCenter level-2">
+      <ul class="deck floatCenter" id="card-deck">
+        <li class="card" type="questa-grande">
+          <img src="../assets/images/memory-game-fonts/questa-grande.jpg">
+        </li>
+        <li class="card" type="questa-grande">
+          <img src="../assets/images/memory-game-fonts/questa-grande.jpg">
+        </li>
+        <li class="card match" type="futura">
+          <img src="../assets/images/memory-game-fonts/futura.jpg">
+        </li>
+        <li class="card" type="futura" >
+          <img src="../assets/images/memory-game-fonts/futura.jpg">
+        </li>
+        <li class="card" type="bodoni">
+          <img src="../assets/images/memory-game-fonts/bodoni.jpg">
+        </li>
+        <li class="card match" type="bodoni">
+          <img src="../assets/images/memory-game-fonts/bodoni.jpg">
+        </li>
+        <li class="card" type="garamond">
+          <img src="../assets/images/memory-game-fonts/garamond.jpg">
+        </li>
+        <li class="card" type="garamond">
+          <img src="../assets/images/memory-game-fonts/garamond.jpg">
+        </li>
+        <li class="card" type="helvetica">
+          <img src="../assets/images/memory-game-fonts/helvetica.jpg">
+        </li>
+        <li class="card" type="helvetica">
+          <img src="../assets/images/memory-game-fonts/helvetica.jpg">
+        </li>
+        <li class="card" type="adelle">
+          <img src="../assets/images/memory-game-fonts/adelle.jpg">
+        </li>
+        <li class="card" type="adelle">
+          <img src="../assets/images/memory-game-fonts/adelle.jpg">
+        </li>
+        <li class="card open show" type="slabo">
+          <img src="../assets/images/memory-game-fonts/slabo.jpg">
+        </li>
+        <li class="card" type="slabo">
+          <img src="../assets/images/memory-game-fonts/slabo.jpg">
+        </li>
+        <li class="card" type="gill-sans">
+          <img src="../assets/images/memory-game-fonts/gill-sans.jpg">
+        </li>
+        <li class="card" type="gill-sans">
+          <img src="../assets/images/memory-game-fonts/gill-sans.jpg">
+        </li>
+        <li class="card open show" type="baskerville">
+          <img src="../assets/images/memory-game-fonts/baskerville.jpg">
+        </li>
+        <li class="card" type="baskerville">
+          <img src="../assets/images/memory-game-fonts/baskerville.jpg">
+        </li>
+        <li class="card" type="museo-slab">
+          <img src="../assets/images/memory-game-fonts/museo-slab.jpg">
+        </li>
+        <li class="card" type="museo-slab">
+          <img src="../assets/images/memory-game-fonts/museo-slab.jpg">
+        </li>
+        <li class="card" type="minion">
+          <img src="../assets/images/memory-game-fonts/minion.jpg">
+        </li>
+        <li class="card" type="minion">
+          <img src="../assets/images/memory-game-fonts/minion.jpg">
+        </li>
+        <li class="card" type="mrs-eaves">
+          <img src="../assets/images/memory-game-fonts/mrs-eaves.jpg">
+        </li>
+        <li class="card" type="mrs-eaves">
+          <img src="../assets/images/memory-game-fonts/mrs-eaves.jpg">
+        </li>
+        <li class="card open show" type="petersburg">
+          <img src="../assets/images/memory-game-fonts/petersburg.jpg">
+        </li>
+        <li class="card" type="petersburg">
+          <img src="../assets/images/memory-game-fonts/petersburg.jpg">
+        </li>
+        <li class="card" type="nimbus">
+          <img src="../assets/images/memory-game-fonts/nimbus.jpg">
+        </li>
+        <li class="card" type="nimbus">
+          <img src="../assets/images/memory-game-fonts/nimbus.jpg">
+        </li>
+        <li class="card open show" type="objektiv">
+          <img src="../assets/images/memory-game-fonts/objektiv.jpg">
+        </li>
+        <li class="card" type="objektiv">
+          <img src="../assets/images/memory-game-fonts/objektiv.jpg">
+        </li>
+        <li class="card" type="mr-eaves">
+          <img src="../assets/images/memory-game-fonts/mr-eaves.jpg">
+        </li>
+        <li class="card" type="mr-eaves">
+          <img src="../assets/images/memory-game-fonts/mr-eaves.jpg">
+        </li>
+      </ul>
+
+      <div id="popup1" class="overlay curtain alignCenter bg-dark f-smoothing side-pad-10">
+        <div class="alignCenter floatCenter t-m-2">
+          <span class="uppercase f-acumin f-s-14px">Level 2</span><br>
+          <h2 class="floatCenter no-top-margin"></h2>
+          <hr class="floatCenter small-hr">
+          <div class="content-1 floatCenter f-acumin">
+            Your result:
+          </div>
+          <div class="content-2 group floatCenter">
+            <p class="floatLeft w-50p no-bottom-margin"><span class="score-number f-acumin-c"><span id=finalMove> </span>/40</span>
+              <br><strong class="f-s-14px f-acumin">Moves</strong></p>
+            <p class="floatLeft w-50p no-bottom-margin"><span class="score-number f-acumin-c"><span id=totalTime> </span></span>
+              <br><strong class="f-s-14px f-acumin">Time</strong></p>
+          </div>
+          <a class="shareTw" target="_blank">Tweet</a> <a class="shareFb" target="_blank">Share</a>
+          <div class="fmg-msg f-acumin floatCenter t-m-1 b-m-2">
+            <div class="game-over no-bottom-margin">You need to complete the game in <strong>4 minutes</strong> and <strong>40 moves</strong> to unlock the 50% book discount.</div>
+            <div class="level-complete no-bottom-margin group">
+              <img src="../assets/images/paperback-icon-alt.png" width="73" alt="Better Web Type book" class="floatLeft">
+              <div class="floatLeft alignLeft no-bottom-margin">
+                <p class="discount-code f-acumin-c">BWT50OFF</p><br>
+                <p class="no-bottom-margin">Use the promo code at the checkout to get <strong>50% off</strong> the <a href="https://betterwebtype.com/web-typography-book">Better Web Type ebook</a>.</p>
+              </div>
+            </div>
+          </div>
+          <div class="fmg-buttons">
+            <a href="javascript:void(0)" class="fmg-btn-again button alignCenter floatCenter course_button">Try again</a>
+            <a href="/web-typography-book" class="fmg-btn-next button alignCenter floatCenter course_button">Get the book</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- <noscript id="deferred-styles"> -->
+  <link rel="stylesheet" type="text/css" href="assets/combined.min.css">
+  <link rel="stylesheet" type="text/css" href="memory-game.css">
+  <!-- <link href="https://surveyjs.azureedge.net/1.0.1/survey.css" type="text/css" rel="stylesheet" /> -->
+  <link rel="stylesheet" href="https://use.typekit.net/evl6hgo.css">
+  <!-- </noscript> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="assets/combined.min.js"></script>
+  <script src="memory-game-hard.js"></script>
+</body>
+</html>

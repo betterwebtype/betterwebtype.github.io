@@ -71,6 +71,16 @@ $desktop: 63.75em;
   display: none;
 }
 
+.show-element {
+  display: block!important;
+}
+
+.o-0 {
+  // animation-name: hide-delay;
+  // animation-duration: 1s;
+  opacity: 0!important;
+}
+
 .fixed_position {
   position: fixed;
 }
@@ -116,22 +126,6 @@ $desktop: 63.75em;
 
 .top-pad-1-mobile {
   @include padding(1,0);
-}
-
-.no-bottom-margin {
-  margin-bottom: 0!important;
-}
-
-.no-margin {
-  margin: 0;
-}
-
-.no-top-margin {
-  margin-top: 0!important;
-}
-
-.bottom-margin-half {
-  @include margin-bottom(0.5);
 }
 
 .hr-border {
@@ -248,4 +242,62 @@ $desktop: 63.75em;
 
 .c-mix {
   color: $bwt-mix;
+}
+
+.c-green {
+  color: #24D7D1;
+}
+
+// Margins
+
+.no-bottom-margin {
+  margin-bottom: 0!important;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-top-margin {
+  margin-top: 0!important;
+}
+
+.bottom-margin-half {
+  @include margin-bottom(0.5);
+}
+
+.t-m-1 {
+  @include margin-top(1);
+}
+
+.t-m-2 {
+  @include margin-top(2);
+}
+
+.t-m-3 {
+  @include margin-top(3);
+}
+
+.t-m-4 {
+  @include margin-top(4);
+}
+
+.b-m-1 {
+  @include margin-bottom(1);
+}
+
+.b-m-2 {
+  @include margin-bottom(2);
+}
+
+.b-m-3 {
+  @include margin-bottom(3);
+}
+
+.b-m-4 {
+  @include margin-bottom(4);
+}
+
+.w-50p {
+  width: 50%;
 }
