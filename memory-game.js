@@ -231,8 +231,8 @@ function congratulations(){
         console.log(String(finalTime));
 
         // Set share links
-        var shareTw = 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fbetterwebtype.com%2Ffont-memory-game&via=matejlatin&text=I%20completed%20the%20Font%20Memory%20Game%20in%20' + moves + '%20moves%20and%20it%20took%20me%20' + timerRead + '.&hashtags=typography%2C%20webdesign%2C%20BetterWebType';
-        var shareFb = 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbetterwebtype.com%2Ffont-memory-game&quote=I%20completed%20the%20Font%20Memory%20Game%20in%20' + moves + '%20moves%20and%20it%20took%20me%20' + timerRead + '.';
+        var shareTw = 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fbetterwebtype.com%2Ffont-memory-game.html&via=matejlatin&text=I%20completed%20the%20Font%20Memory%20Game%20in%20' + moves + '%20moves%20and%20it%20took%20me%20' + timerRead + '.&hashtags=typography%2C%20webdesign%2C%20BetterWebType';
+        var shareFb = 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbetterwebtype.com%2Ffont-memory-game.html&quote=I%20completed%20the%20Font%20Memory%20Game%20in%20' + moves + '%20moves%20and%20it%20took%20me%20' + timerRead + '.';
         $('.game .shareTw').attr("href", shareTw);
         $('.game .shareFb').attr("href", shareFb);
 
