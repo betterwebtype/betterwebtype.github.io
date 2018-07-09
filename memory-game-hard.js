@@ -1,5 +1,5 @@
 // Level specifications
-var allowedMoves = 40;
+var allowedMoves = 45;
 var allowedTime = '03:00';
 var lvlPairs = 14;
 
