@@ -417,11 +417,15 @@ body {
   max-width: 105vh;
 }
 
-/* @media screen and (min-width: 1680px){ */
+.level-2 {
+  max-width: 140vh;
+}
+
+@media screen and (min-width: 1680px){
   .level-2 {
     max-width: 137vh;
   }
-/* } */
+}
 
 .awards {
   max-width: 550px;
