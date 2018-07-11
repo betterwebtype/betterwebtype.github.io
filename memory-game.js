@@ -134,10 +134,10 @@ function matched(){
 // description when cards don't match
 function unmatched(){
   openedCards[1].classList.add("open");
+  disable();
     setTimeout(function(){
       openedCards[0].classList.add("unmatched");
       openedCards[1].classList.add("unmatched");
-      disable();
     }, 750);
     setTimeout(function(){
       openedCards[0].classList.add("flipClose");
