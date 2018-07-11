@@ -115,6 +115,7 @@ function matched(){
     pairsFound++;
     $('.pairs-found').html(pairsFound);
     openedCards[1].classList.add("open");
+    disable();
     setTimeout(function(){
       openedCards[0].classList.add("match", "disabled");
       openedCards[1].classList.add("match", "disabled");
@@ -126,6 +127,7 @@ function matched(){
     setTimeout(function() {
       openedCards[0].classList.add("o-0");
       openedCards[1].classList.add("o-0");
+      enable();
       openedCards = [];
     }, 1500);
 }
