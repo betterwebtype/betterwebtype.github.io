@@ -150,7 +150,7 @@ function unmatched(){
       openedCards[1].classList.remove("flipClose", "no-event");
       enable();
       openedCards = [];
-    }, 1800);
+    }, 1900);
 }
 
 
