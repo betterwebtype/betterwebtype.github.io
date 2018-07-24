@@ -1,3 +1,21 @@
 nav {
   display: block;
 }
+
+.side-navigation {
+  ul {
+    list-style: none;
+  }
+
+  li {
+    @include margin-bottom(0.25);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

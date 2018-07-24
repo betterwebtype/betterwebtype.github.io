@@ -473,6 +473,10 @@ input[type=number]::-webkit-outer-spin-button {
   display: none !important;
 }
 
+.show-desktop {
+  display: none;
+}
+
 .f-smoothing {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -480,6 +484,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .f-s-14px {
   font-size: 14px;
+}
+
+.f-s-24px {
+  font-size: 24px;
 }
 
 .uppercase {
@@ -493,6 +501,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .f-acumin-c {
   font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+}
+
+h3.f-acumin {
+  text-transform: none;
 }
 
 .alignLeft {
@@ -546,6 +558,11 @@ input[type=number]::-webkit-outer-spin-button {
   .huge-number {
     font-size: 100px;
     line-height: 135px;
+  }
+}
+@media screen and (min-width: 80em) {
+  .show-desktop {
+    display: block;
   }
 }
 @media screen and (min-width: 90em) {
@@ -622,6 +639,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .w-50p {
   width: 50%;
+}
+
+.pos-relative {
+  position: relative;
 }
 
 /* Grid
@@ -1735,6 +1756,20 @@ article ul {
 
 nav {
   display: block;
+}
+
+.side-navigation ul {
+  list-style: none;
+}
+.side-navigation li {
+  margin-bottom: 6.25px;
+  margin-bottom: 0.390625rem;
+}
+.side-navigation a {
+  text-decoration: none;
+}
+.side-navigation a:hover {
+  text-decoration: underline;
 }
 
 progress {
@@ -4229,6 +4264,83 @@ p.slack {
     float: left;
   }
 }
+.bwt-resources {
+  width: 100%;
+  max-width: 800px;
+}
+.bwt-resources h3 {
+  margin-top: 0px;
+  margin-top: 0rem;
+}
+.bwt-resources a.res-title {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0;
+  color: #222;
+}
+.bwt-resources a.res-title:hover {
+  text-decoration: underline;
+}
+
+.resource {
+  width: 100%;
+  max-width: 400px;
+  padding-right: 20px;
+  padding-top: 40px;
+}
+.resource * {
+  margin-bottom: 12.5px;
+  margin-bottom: 0.78125rem;
+}
+
+@media screen and (min-width: 48em) {
+  .resource {
+    width: 50%;
+  }
+}
+.res-tag {
+  background: #F2EDED;
+  padding: 3px 12px;
+  border-radius: 20px;
+}
+
+.tag-bg-turq {
+  background: #24D7D1;
+  color: #fff;
+}
+
+.tag-bg-orange {
+  background: #E4B53A;
+  color: #fff;
+}
+
+.tag-bg-red {
+  background: #F80759;
+  color: #fff;
+}
+
+.tag-bg-pink {
+  background: #BC4E9C;
+  color: #fff;
+}
+
+a.check-it-out {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 48em) {
+  a.check-it-out {
+    display: none;
+  }
+}
+.side-navigation {
+  position: fixed;
+  right: 10%;
+}
+.side-navigation .button-secondary a:hover {
+  text-decoration: none;
+}
+
 .content-slider {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;

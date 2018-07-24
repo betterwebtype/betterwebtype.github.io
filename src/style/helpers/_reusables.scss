@@ -152,6 +152,10 @@ $desktop: 63.75em;
   display: none!important;
 }
 
+.show-desktop {
+  display: none;
+}
+
 // Fonts
 .f-smoothing {
   -webkit-font-smoothing: antialiased;
@@ -160,6 +164,10 @@ $desktop: 63.75em;
 
 .f-s-14px {
   font-size: 14px;
+}
+
+.f-s-24px {
+  font-size: 24px;
 }
 
 .uppercase {
@@ -173,6 +181,10 @@ $desktop: 63.75em;
 
 .f-acumin-c {
   font-family: $custom-font-headings;
+}
+
+h3.f-acumin {
+  text-transform: none;
 }
 
 // Text Alignment
@@ -228,6 +240,13 @@ $desktop: 63.75em;
   .huge-number {
     font-size: 100px;
     line-height: 135px;
+  }
+}
+
+// Wider than 1280 px
+@media screen and (min-width: 80em) {
+  .show-desktop {
+    display: block;
   }
 }
 
@@ -300,4 +319,8 @@ $desktop: 63.75em;
 
 .w-50p {
   width: 50%;
+}
+
+.pos-relative {
+  position: relative;
 }
