@@ -152,7 +152,7 @@ $desktop: 63.75em;
   display: none!important;
 }
 
-.show-desktop {
+.show-desktop, .show-tablet {
   display: none;
 }
 
@@ -243,6 +243,12 @@ h3.f-acumin {
   }
 }
 
+@media screen and (min-width: 40em) {
+  .show-tablet {
+    display: block;
+  }
+}
+
 // Wider than 1280 px
 @media screen and (min-width: 80em) {
   .show-desktop {
@@ -285,6 +291,10 @@ h3.f-acumin {
   @include margin-bottom(0.5);
 }
 
+.no-top-padding {
+  padding-top: 0!important;
+}
+
 .t-m-1 {
   @include margin-top(1);
 }
@@ -299,6 +309,10 @@ h3.f-acumin {
 
 .t-m-4 {
   @include margin-top(4);
+}
+
+.b-m-05 {
+  @include margin-bottom(0.5);
 }
 
 .b-m-1 {
@@ -323,4 +337,14 @@ h3.f-acumin {
 
 .pos-relative {
   position: relative;
+}
+
+.dis-i-b {
+  display: inline-block!important;
+}
+
+.width-200px {
+  max-width: none!important;
+  min-width: 0!important;
+  width: 200px!important;
 }
