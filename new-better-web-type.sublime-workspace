@@ -242,7 +242,7 @@
 			"file": "web-typography-resources.html",
 			"settings":
 			{
-				"buffer_size": 46077,
+				"buffer_size": 46051,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -947,15 +947,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 46077,
+						"buffer_size": 46051,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6326,
-								6326
+								17004,
+								17004
 							]
 						],
 						"settings":
@@ -973,12 +973,25 @@
 								"sublime_linter.protected_regions",
 								"SL.eslint.Highlights.|4cd835901317d3952b7e3c4714861a13f4a3debb40db3e76df30528c83ee8208|region.redish markup.error.sublime_linter|32"
 							],
+							"SL.32.region_keys":
+							[
+								"SL.eslint.Highlights.|85ab9d4be4ba222872a1462dcf38a25a0a6a2cb92213981d3320c324aad377c9|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|4bf900450802444b4d6c746899d3c18e386bf54c08b0943d52400a9a82a003e4|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|6a39960d917690bac46c543b86052134bb0e64b411ee99ce942d0a3d6a46ec36|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.eslint.Highlights.|5bb011bde24c6778574466baf77ab95211445aa5f687614c0d3d51ad547b6614|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.eslint.Highlights.|5269dc81162be23f1aca5434de70d46eecbdd6551cd17aae62398fc44a2dcab8|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|5c686216dc966b3ca458da52fb74844760ddaaedd59a8dabe43a59ba03148030|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|4cd835901317d3952b7e3c4714861a13f4a3debb40db3e76df30528c83ee8208|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|03534bb1461e7014b3d47b6bad3d1b4c49f7bf706222ad464d4241bae249e27d|region.redish markup.error.sublime_linter|32"
+							],
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1343.0,
+						"translation.y": 4155.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
