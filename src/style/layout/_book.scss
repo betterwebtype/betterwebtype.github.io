@@ -502,3 +502,11 @@
   line-height: 2;
   color: $bwt-red;
 }
+
+.cs-bonus {
+  background: $bwt-gradient;
+  padding: 3px 10px;
+  color: #fff;
+  border-radius: $radius-soft;
+  display: inline-block;
+}

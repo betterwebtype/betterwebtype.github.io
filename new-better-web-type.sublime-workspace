@@ -215,7 +215,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 28668,
+				"buffer_size": 28677,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -541,7 +541,7 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -687,7 +687,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -696,15 +696,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 28668,
+						"buffer_size": 28677,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2169,
-								2111
+								25604,
+								25604
 							]
 						],
 						"settings":
@@ -721,6 +721,19 @@
 								"sublime_linter.protected_regions",
 								"SL.eslint.Highlights.|09052be5c201906a1e40c5513f9c56f03f1716bc2fec7ee9fe2ac2ca0ba083e7|region.redish markup.error.sublime_linter|32",
 								"SL.eslint.Highlights.|e07dc524bb7e211924fddec316274477348d332e97494dd2aa03d1321b3f5561|region.redish markup.error.sublime_linter|32"
+							],
+							"SL.34.region_keys":
+							[
+								"SL.eslint.Highlights.|9248c887a02f2984b0759b1f9c5aeac36d6d547a646755e972c64599239f9231|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|09052be5c201906a1e40c5513f9c56f03f1716bc2fec7ee9fe2ac2ca0ba083e7|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|3aa36eab70ffb4221f28cd27c3bdffb2d194e754b208644be358d42f3c8c335f|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|6148ac1c6eaba93e71528bc3ad45e77f11de425c95bdb68840e71e905a4e6b10|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.eslint.Highlights.|76171aae3ded4943f4a9362a47f2f0b5ef52e89f6a3f73dc973886677235b398|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|e07dc524bb7e211924fddec316274477348d332e97494dd2aa03d1321b3f5561|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|2d40734d5a4d56975d3e89a509237f5e0427e13418b5046eb410ef5942cd0758|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|1195f9303065bf4a440398fed20190e4e3376619da93f85f234ac37640efa834|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot"
 							],
 							"SL.36.region_keys":
 							[
@@ -769,10 +782,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2814.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -844,7 +857,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -938,7 +951,7 @@
 						"translation.y": 10268.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -986,6 +999,19 @@
 								"SL.eslint.Highlights.|4cd835901317d3952b7e3c4714861a13f4a3debb40db3e76df30528c83ee8208|region.redish markup.error.sublime_linter|32",
 								"SL.eslint.Highlights.|03534bb1461e7014b3d47b6bad3d1b4c49f7bf706222ad464d4241bae249e27d|region.redish markup.error.sublime_linter|32"
 							],
+							"SL.37.region_keys":
+							[
+								"SL.eslint.Highlights.|85ab9d4be4ba222872a1462dcf38a25a0a6a2cb92213981d3320c324aad377c9|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|5bb011bde24c6778574466baf77ab95211445aa5f687614c0d3d51ad547b6614|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|4bf900450802444b4d6c746899d3c18e386bf54c08b0943d52400a9a82a003e4|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|5c686216dc966b3ca458da52fb74844760ddaaedd59a8dabe43a59ba03148030|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|03534bb1461e7014b3d47b6bad3d1b4c49f7bf706222ad464d4241bae249e27d|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|5269dc81162be23f1aca5434de70d46eecbdd6551cd17aae62398fc44a2dcab8|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.eslint.Highlights.|4cd835901317d3952b7e3c4714861a13f4a3debb40db3e76df30528c83ee8208|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|6a39960d917690bac46c543b86052134bb0e64b411ee99ce942d0a3d6a46ec36|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions"
+							],
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -994,7 +1020,7 @@
 						"translation.y": 4155.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1525,7 +1551,7 @@
 						"translation.y": 7082.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1746,7 +1772,7 @@
 						"translation.y": 1952.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1792,7 +1818,7 @@
 						"translation.y": 4030.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1831,7 +1857,7 @@
 						"translation.y": 503.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1867,7 +1893,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1909,7 +1935,7 @@
 						"translation.y": 3330.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]

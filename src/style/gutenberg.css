@@ -3811,6 +3811,14 @@ section {
   color: #F80759;
 }
 
+.cs-bonus {
+  background: linear-gradient(135deg, #BC4E9C 0%, #F80759 100%);
+  padding: 3px 10px;
+  color: #fff;
+  border-radius: 7px;
+  display: inline-block;
+}
+
 .intro-wrap .intro {
   float: left;
 }
