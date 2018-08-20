@@ -41,4 +41,16 @@
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>http://betterwebtype.com/web-typography-resources</loc>
+  <lastmod>2018-07-30T13:21:40+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://betterwebtype.com/combining-fonts-guide</loc>
+  <lastmod>2018-08-22T13:21:40+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
 </urlset>

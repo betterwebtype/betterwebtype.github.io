@@ -755,6 +755,10 @@ h3.f-acumin {
   width: 50%;
 }
 
+.p-l-50px {
+  padding-left: 50px;
+}
+
 .pos-relative {
   position: relative;
 }
@@ -767,6 +771,10 @@ h3.f-acumin {
   max-width: none !important;
   min-width: 0 !important;
   width: 200px !important;
+}
+
+.floatNone {
+  float: none !important;
 }
 
 /* Grid
