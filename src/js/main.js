@@ -165,13 +165,6 @@ $(function(){
             } else {
               return;
             }
-          } else if (data.status == 'subscribed' && data.merge_fields.SAMPLE == 'Yes') {
-            if (varEmail == null) {
-              console.dir(data);
-              window.location.href = "sample-sent";
-            } else {
-              return;
-            }
           } else if (data.status == 'subscribed') {
             if (varEmail == null) {
               console.dir(data);
