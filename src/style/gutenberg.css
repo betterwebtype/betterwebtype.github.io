@@ -533,7 +533,7 @@ h3.f-acumin {
 }
 
 .floatRight {
-  float: right;
+  float: right !important;
 }
 
 @media screen and (min-width: 63.75em) {
@@ -563,6 +563,11 @@ h3.f-acumin {
 @media screen and (min-width: 40em) {
   .show-tablet {
     display: block;
+  }
+}
+@media screen and (min-width: 64em) {
+  .left-pad-20px-desktop {
+    padding-left: 20px !important;
   }
 }
 @media screen and (min-width: 80em) {
@@ -1817,16 +1822,7 @@ nav {
 
 @media screen and (min-width: 80em) {
   .fixed-side-nav {
-    position: fixed;
-    right: 5%;
-    bottom: 1%;
-  }
-}
-@media screen and (min-width: 86em) {
-  .fixed-side-nav {
-    position: fixed;
-    right: 10%;
-    bottom: 3%;
+    float: right;
   }
 }
 progress {

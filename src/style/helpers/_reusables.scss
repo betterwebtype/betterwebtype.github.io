@@ -215,7 +215,7 @@ h3.f-acumin {
 }
 
 .floatRight {
-  float: right;
+  float: right!important;
 }
 
 // Flex
@@ -246,6 +246,12 @@ h3.f-acumin {
 @media screen and (min-width: 40em) {
   .show-tablet {
     display: block;
+  }
+}
+
+@media screen and (min-width: 64em){
+  .left-pad-20px-desktop {
+    padding-left: 20px!important;
   }
 }
 
