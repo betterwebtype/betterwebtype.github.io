@@ -1904,6 +1904,31 @@ nav {
   text-decoration: underline;
 }
 
+.fixed-side-nav li {
+  margin-bottom: 6.25px;
+  margin-bottom: 0.390625rem;
+}
+.fixed-side-nav a {
+  text-decoration: none;
+}
+.fixed-side-nav a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 80em) {
+  .fixed-side-nav {
+    position: fixed;
+    right: 5%;
+    bottom: 1%;
+  }
+}
+@media screen and (min-width: 86em) {
+  .fixed-side-nav {
+    position: fixed;
+    right: 10%;
+    bottom: 3%;
+  }
+}
 progress {
   display: inline-block;
   vertical-align: baseline;

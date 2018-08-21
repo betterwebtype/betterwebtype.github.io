@@ -19,3 +19,34 @@ nav {
     text-decoration: underline;
   }
 }
+
+.fixed-side-nav {
+
+  li {
+    @include margin-bottom(0.25);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .fixed-side-nav {
+    position: fixed;
+    right: 5%;
+    bottom: 1%;
+  }
+}
+
+@media screen and (min-width: 86em) {
+  .fixed-side-nav {
+    position: fixed;
+    right: 10%;
+    bottom: 3%;
+  }
+}
