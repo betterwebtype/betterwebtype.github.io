@@ -277,9 +277,9 @@ $('.play_fgm').on('click', function(){
   setTimeout(function(){
     $('.game, .score-panel').fadeIn();
   }, 300);
-  setTimeout(function(){
-    $('.fmg-splash').fadeIn();
-  }, 600);
+  // setTimeout(function(){
+  //   $('.fmg-splash').fadeIn();
+  // }, 600);
 });
 
 $('.fmg-btn-start').on('click', function(){

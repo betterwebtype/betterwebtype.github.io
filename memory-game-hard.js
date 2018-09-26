@@ -271,9 +271,9 @@ $('.fmg-btn-again').on('click', function (){
   playAgain ();
 });
 
-$('.fmg-btn-start').on('click', function(){
-  $('.fmg-splash').fadeOut();
-});
+// $('.fmg-btn-start').on('click', function(){
+//   $('.fmg-splash').fadeOut();
+// });
 
 
 // loop to add event listeners to each card
