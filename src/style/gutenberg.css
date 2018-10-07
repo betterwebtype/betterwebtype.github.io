@@ -2624,6 +2624,8 @@ svg {
   padding-left: 25px;
   text-align: left;
   max-width: 192px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .variant-ebook {
