@@ -12,17 +12,12 @@ samp {
 }
 
 code {
-  @include padding-equal(1);
-
+  padding: 1em!important;
   display: block;
+}
 
-  @media screen and (min-width: #{ $max-width + 5 + 'em'}) {
-    $leading: $leading-desktop;
-    $leading-rem: $leading-rem-desktop;
-
-    @import '../mixins/padding';
-
-    @include padding-equal(1);
+@media screen and (min-width: #{ $max-width + 5 + 'em'}) {
+  code {
+    padding: 2em!important;
   }
-
 }
