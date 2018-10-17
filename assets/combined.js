@@ -82,12 +82,12 @@ $(function(){
 // Get data from URL
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
     results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
   }
 
   var varEmail = getParameterByName('email');
@@ -106,8 +106,8 @@ $(function(){
 
   if (refInput > 0){
     $('#JOINED').val('Referral');
-    var refURL = "/sign-up?r=" + varReferral;
-    $('#mobile-signup').attr("href", refURL);
+    var refURL = '/sign-up?r=' + varReferral;
+    $('#mobile-signup').attr('href', refURL);
   }
 
   // Determine the signup endpoint
@@ -123,8 +123,8 @@ $(function(){
   // Button spinner behavior
   var myButton = document.getElementById('myButton');
 
-  myButton.addEventListener("click", function() {
-    if ( $('#FNAME').val().length === 0 || $('#LNAME').val().length === 0 || $('#EMAIL').val().length === 0 ){
+  myButton.addEventListener('click', function() {
+    if ($('#FNAME').val().length === 0 || $('#LNAME').val().length === 0 || $('#EMAIL').val().length === 0) {
       $('#myButton').addClass('loading');
       setTimeout( function(){ $('#myButton').removeClass('loading'); }, 500);
     } else {
@@ -141,11 +141,11 @@ $(function(){
     $(document).on('submit', 'form', function(e) {
       var $this = $(this);
       $.ajax({
-        type: "GET",
+        type: 'GET',
         url: signupURL,
         data: $this.serialize(),
         dataType: 'jsonp',
-        contentType: "application/json; charset=utf-8",
+        contentType: 'application/json; charset=utf-8',
         error: function(err) {
           console.log(err);
           console.log('error');
@@ -154,32 +154,32 @@ $(function(){
           $('#msg').fadeIn(300);
           if ( $('body').hasClass('triangle')){
             setTimeout(function(){$('.score').animate({
-              scrollTop: $("#msgContent").offset().top
+              scrollTop: $('#msgContent').offset().top
             }, 500); }, 400);
           } else {
             setTimeout(function(){$('html, body').animate({
-              scrollTop: $("#msgContent").offset().top
+              scrollTop: $('#msgContent').offset().top
             }, 500); }, 400);
           }
         },
         success: function(data) {
           if (data.status == 'pending' && data.merge_fields.JOINED == 'Sample'){
             if (varEmail == null) {
-              window.location.href = "almost-finished-sample";
+              window.location.href = 'almost-finished-sample';
             } else {
               return;
             }
           } else if (data.status == 'pending') {
             console.log(data);
             if (varEmail == null) {
-              window.location.href = "almost-finished";
+              window.location.href = 'almost-finished';
             } else {
               return;
             }
           } else if (data.status == 'subscribed') {
             if (varEmail == null) {
               console.dir(data);
-              window.location.href = "thanks-subscribed";
+              window.location.href = 'thanks-subscribed';
             } else {
               return;
             }
