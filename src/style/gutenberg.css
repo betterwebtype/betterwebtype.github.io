@@ -455,7 +455,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .huge-number {
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   font-size: 70px;
   line-height: 90px;
   font-weight: 300;
@@ -504,7 +504,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .f-acumin-c {
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
 }
 
 h3.f-acumin {
@@ -1722,7 +1722,7 @@ h4,
 h5,
 h6,
 .heading {
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
 }
 
 hgroup {
@@ -2070,7 +2070,7 @@ sub {
   font-size: 2.1rem;
   line-height: 25px;
   line-height: 1.5625rem;
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   margin-top: -0.06em;
   width: 45px;
   font-weight: normal;
@@ -2084,7 +2084,7 @@ sub {
 .hours,
 .minutes,
 .seconds {
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   font-weight: normal;
   color: #F80759;
   font-size: 64px;
@@ -2322,7 +2322,7 @@ video {
 }
 .parameters li {
   color: #F80759;
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   margin-bottom: 0px;
@@ -2332,7 +2332,7 @@ video {
   background: #fafafa;
   color: #222;
   border: none;
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   font-size: 30px;
   display: inline-block;
   max-width: 100px;
@@ -2354,7 +2354,7 @@ video {
 }
 
 .totalScore {
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   font-size: 50px;
   margin: 0;
   position: fixed;
@@ -2568,7 +2568,7 @@ svg {
 }
 .score .big-font {
   font-size: 90px;
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   line-height: 50px;
@@ -2807,7 +2807,7 @@ svg {
 }
 .price {
   color: #F80759;
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   font-size: 35.55555552px;
   font-size: 2.22222222rem;
   line-height: 37.5px;
@@ -2833,7 +2833,7 @@ svg {
 .original-price {
   color: #c0c0c0;
   margin-bottom: 0;
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   font-size: 35.55555552px;
   font-size: 2.22222222rem;
   line-height: 37.5px;
@@ -2987,7 +2987,7 @@ body.book-page article, body.book-page-deluxe article {
 }
 
 .all-caps {
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   text-transform: uppercase;
 }
 
@@ -3374,7 +3374,7 @@ body {
 }
 
 #product-component-bf3df1ca0db button {
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
 }
 
 @media screen and (min-width: 38em) {
@@ -3458,7 +3458,7 @@ header {
 
 .logo {
   display: none;
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 30px;
@@ -4348,7 +4348,7 @@ p.slack {
 }
 .quiz-page .quiz_score {
   font-size: 70px;
-  font-family: "acumin-pro-extra-condensed", Helvetica, Arial, Sans-serif;
+  font-family: "acumin-pro-extra-condensed", Impact, Helvetica, Arial, Sans-serif;
   font-weight: bold;
   line-height: 70px;
   opacity: 0;
