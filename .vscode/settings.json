@@ -1,6 +1,6 @@
 {
   "editor.wordWrap": "wordWrapColumn",
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "html.format.wrapLineLength": 80,
-  "editor.wordWrapColumn": 100
+  "html.format.wrapLineLength": 120,
+  "editor.wordWrapColumn": 120
 }
