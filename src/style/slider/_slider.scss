@@ -30,7 +30,7 @@
 }
 
 .fullscreen {
-  background: #fafafa;
+  background: #fff;
   z-index: 100;
   position: fixed;
   width: 100%;
@@ -65,26 +65,37 @@
 .prev, .next {
   display: none;
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 1020px){
     display: block;
-  position: absolute;
-  z-index: 100;
-  top: 43%;
-  transition: all 0.3s;
+    position: absolute;
+    z-index: 100;
+    top: 40%;
+    transition: all 0.3s;
   }
 
-  &:hover {
-    cursor: pointer;
-    fill: red;
+}
+
+.prev:hover, .next:hover {
+  cursor: pointer;
+
+  path {
+    opacity: .6;
+    transition: .3s all;
+  }
+}
+
+.prev:active, .next:active {
+  path {
+    opacity: 1;
   }
 }
 
 .prev {
-  left: 40px;
+  left: 0px;
 }
 
 .next {
-  right: 60px;
+  right: 17px;
 }
 
 .fullscreen {

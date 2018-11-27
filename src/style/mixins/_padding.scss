@@ -25,3 +25,13 @@
   padding: #{ $number * $leading + 'px'};
   padding: #{ $number * $leading-rem + 'rem'};
 }
+
+@mixin padding-top($number){
+  padding-top: #{ $number * $leading + 'px'};
+  padding-top: #{ $number * $leading-rem + 'rem'};
+}
+
+@mixin padding-bottom($number){
+  padding-bottom: #{ $number * $leading + 'px'};
+  padding-bottom: #{ $number * $leading-rem + 'rem'};
+}

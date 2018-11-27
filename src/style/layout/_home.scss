@@ -30,15 +30,19 @@
   -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 97%);
   clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 97%);
   background: $bwt-extra-light;
-  @include padding(0,0,4);
+  @include padding(0,0,2);
   z-index: 1;
   @include margin-top(2);
   // @include margin-bottom(2);
 }
 
+.book-page {
+  .popularity {
+    @include padding(0,0,0);
+  }
+}
+
 .how-it-works {
-  background: #010409 url(/assets/images/space-portrait.jpg) no-repeat top;
-  background-size: 100% auto;
   z-index: 0;
   @include margin-top(-2.5);
 
@@ -292,42 +296,10 @@ p.slack {
   }
 }
 
-@media screen and (min-width: 93.75em) {
-  .how-it-works {
-    background-size: cover;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .how-it-works {
-    background: #010409 url(/assets/images/space-portrait@2x.jpg) no-repeat top;
-    background-size: 100% auto;
-  }
-}
-
-@media screen and (min-width: 37.5em) {
-  .how-it-works {
-    background: #010409 url(/assets/images/space-portrait-wide.jpg) no-repeat top;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em) {
-  .how-it-works {
-    background: #010409 url(/assets/images/space-portrait-wide@2x.jpg) no-repeat top;
-    background-size: 100% auto;
-  }
-}
-
-@media (min-width: $desktop) {
-  .how-it-works {
-    background: #010409 url(/assets/images/space-desktop.jpg) no-repeat top;
-    background-size: 100% auto;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: $desktop), (min-resolution: 192dpi) and (min-width: $desktop) {
-  .how-it-works {
-    background: #010409 url(/assets/images/space-desktop@2x.jpg) no-repeat top;
-    background-size: 100% auto;
+@media screen and (min-width: 1020px){
+  .book-page {
+    .popularity {
+      @include padding(3,0,2);
+    }
   }
 }

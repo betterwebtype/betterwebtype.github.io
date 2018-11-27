@@ -8,12 +8,15 @@ $bwt-light: #F2EDED;
 $bwt-extra-light: #f5f5f5;
 $bwt-blue: #2D9CDB;
 $bwt-dark-blue: #0F1F2F;
+$bwt-purple: #1C1020;
 
 $bwt-gradient: linear-gradient(135deg, #BC4E9C 0%, #F80759 100%);
+$bwt-gradient-horizontal: linear-gradient(90deg, #BC4E9C 0%, #F80759 100%);
 
 // Presets
 $radius-soft: 7px;
 $radius-round: 100px;
+$box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1), 0px 4px 17px rgba(0, 0, 0, 0.05);
 
 // Breakpoints
 $desktop: 63.75em;
@@ -38,6 +41,15 @@ $desktop: 63.75em;
 
 .table {
   display: table;
+}
+
+.on-top {
+  position: relative;
+  z-index: 10!important;
+}
+
+.l-h-30px {
+  line-height: 30px;
 }
 
 .curtain {
@@ -81,10 +93,27 @@ $desktop: 63.75em;
   opacity: 0!important;
 }
 
+.hide-mobile {
+  display: none!important;
+}
+
+.show-desktop, .show-tablet {
+  display: none;
+}
+
 .fixed_position {
   position: fixed;
 }
 
+.pos-relative {
+  position: relative;
+}
+
+.dis-i-b {
+  display: inline-block!important;
+}
+
+// Backgrounds
 .bg-contain {
   background-size: contain!important;
   background-position: center!important;
@@ -100,8 +129,17 @@ $desktop: 63.75em;
   color: #fff;
 }
 
+.bg-space {
+  background: #010409 url(/assets/images/space-portrait.jpg) no-repeat top;
+  background-size: 100% auto;
+}
+
 .bg-dark-blue {
   background: $bwt-dark-blue;
+}
+
+.bg-purple {
+  background: $bwt-purple;
 }
 
 .bg-gradient {
@@ -112,25 +150,75 @@ $desktop: 63.75em;
   background: $bwt-extra-light;
 }
 
-.allsmallcaps {
-  font-feature-settings: "c2sc", "smcp";
+.bg-clip-both-right {
+  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 97%);
+  clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 97%);
 }
 
-.no-padding {
-  padding: 0;
+.bg-clip-top-right {
+  -webkit-clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
 }
 
-.no-padding-bottom {
-  padding-bottom: 0!important;
+.bg-clip-bottom-right {
+  -webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 97%);
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 97%);
 }
 
-.top-pad-1-mobile {
-  @include padding(1,0);
+@media screen and (min-width: $desktop) {
+  .bg-clip-top-right {
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .bg-clip-both-right {
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 85%);
+  }
+
+  .bg-clip-bottom-right {
+    -webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 85%);
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 85%);
+  }
 }
 
 .hr-border {
   border-bottom: solid 5px $bwt-mix;
   display: inline-block;
+}
+
+// Fonts
+.f-style-n {
+  font-style: normal;
+}
+
+.f-style-b {
+  font-weight: bold;
+}
+
+.f-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.f-s-10px {
+  font-size: 10px;
+}
+
+.f-s-14px {
+  font-size: 14px;
+}
+
+.f-s-16px {
+  font-size: 16px;
+}
+
+.f-s-20px {
+  font-size: 20px;
+}
+
+.f-s-24px {
+  font-size: 24px;
 }
 
 .huge-number {
@@ -140,43 +228,35 @@ $desktop: 63.75em;
   font-weight: 300;
 }
 
-.side-pad-10 {
-  padding: 5px 10%;
+.large-text {
+  @include font-size(5.3);
+  @include line-height(3);
 }
 
-.left-pad-20px {
-  padding-left: 20px;
+.medium-text {
+  @include font-size(1.8);
+  @include line-height(1.5);
+  padding-bottom: 5px;
 }
 
-.hide-mobile {
-  display: none!important;
-}
-
-.show-desktop, .show-tablet {
-  display: none;
-}
-
-// Fonts
-.f-smoothing {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.f-s-14px {
-  font-size: 14px;
-}
-
-.f-s-10px {
-  font-size: 10px;
-}
-
-.f-s-24px {
-  font-size: 24px;
+.allsmallcaps {
+  font-feature-settings: "c2sc", "smcp";
 }
 
 .uppercase {
   letter-spacing: .1em;
   text-transform: uppercase;
+}
+
+.neg-letter-spacing {
+  letter-spacing: -0.05em;
+}
+
+.gradient-text {
+  display: inline-block;
+  background: -webkit-linear-gradient(135deg, #F80759 0%, #BC4E9C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .f-acumin {
@@ -189,6 +269,14 @@ $desktop: 63.75em;
 
 h3.f-acumin {
   text-transform: none;
+}
+
+.c-mix {
+  color: $bwt-mix;
+}
+
+.c-green {
+  color: #24D7D1;
 }
 
 // Text Alignment
@@ -208,10 +296,6 @@ h3.f-acumin {
   max-width: 300px;
 }
 
-.max-width-500px {
-  max-width: 500px;
-}
-
 // Float defaults
 .floatLeft {
   float: left;
@@ -226,7 +310,157 @@ h3.f-acumin {
   float: right!important;
 }
 
-// Flex
+.floatNone {
+  float: none!important;
+}
+
+// Margins
+
+.no-bottom-margin {
+  margin-bottom: 0!important;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-top-margin {
+  margin-top: 0!important;
+}
+
+.bottom-margin-half {
+  @include margin-bottom(0.5);
+}
+
+.r-m-10px {
+  margin-right: 10px;
+}
+
+.t-m-1 {
+  @include margin-top(1);
+}
+
+.t-m-2 {
+  @include margin-top(2);
+}
+
+.t-m-3 {
+  @include margin-top(3);
+}
+
+.t-m-4 {
+  @include margin-top(4);
+}
+
+.t-m-5 {
+  @include margin-top(5);
+}
+
+.b-m-05 {
+  @include margin-bottom(0.5);
+}
+
+.b-m-1 {
+  @include margin-bottom(1);
+}
+
+.b-m-2 {
+  @include margin-bottom(2);
+}
+
+.b-m-3 {
+  @include margin-bottom(3);
+}
+
+.b-m-4 {
+  @include margin-bottom(4);
+}
+
+// Paddings
+.no-top-padding {
+  padding-top: 0!important;
+}
+
+.t-p-1 {
+  @include padding-top(1);
+}
+
+.t-p-2 {
+  @include padding-top(2);
+}
+
+.t-p-3 {
+  @include padding-top(3);
+}
+
+.t-p-4 {
+  @include padding-top(4);
+}
+
+.b-p-1 {
+  @include padding-bottom(1);
+}
+
+.b-p-2 {
+  @include padding-bottom(2);
+}
+
+.b-p-3 {
+  @include padding-bottom(3);
+}
+
+.b-p-4 {
+  @include padding-bottom(4);
+}
+
+.p-l-50px {
+  padding-left: 50px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0!important;
+}
+
+.top-pad-1-mobile {
+  @include padding(1,0);
+}
+
+.side-pad-10 {
+  padding: 5px 10%;
+}
+
+.left-pad-20px {
+  padding-left: 20px;
+}
+
+// Widths
+.w-50p {
+  width: 50%;
+}
+
+.w-90p {
+  width: 90%;
+}
+
+.width-200px {
+  max-width: none!important;
+  min-width: 0!important;
+  width: 200px!important;
+}
+
+.max-width-500px {
+  max-width: 500px;
+}
+
+.max-width-300px {
+  max-width: 300px;
+}
+
+// Responsive
 @media screen and (min-width: $desktop) {
   .mobile-only {
     display: none!important;
@@ -255,6 +489,11 @@ h3.f-acumin {
   .show-tablet {
     display: block;
   }
+
+  .medium-text {
+    @include font-size(2.4);
+    @include line-height(1.8);
+  }
 }
 
 @media screen and (min-width: 64em){
@@ -279,94 +518,43 @@ h3.f-acumin {
   }
 }
 
-.c-mix {
-  color: $bwt-mix;
+// Space background responsive
+@media screen and (min-width: 93.75em) {
+  .bg-space {
+    background-size: cover;
+  }
 }
 
-.c-green {
-  color: #24D7D1;
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bg-space {
+    background: #010409 url(/assets/images/space-portrait@2x.jpg) no-repeat top;
+    background-size: 100% auto;
+  }
 }
 
-// Margins
-
-.no-bottom-margin {
-  margin-bottom: 0!important;
+@media screen and (min-width: 37.5em) {
+  .bg-space {
+    background: #010409 url(/assets/images/space-portrait-wide.jpg) no-repeat top;
+  }
 }
 
-.no-margin {
-  margin: 0;
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em) {
+  .bg-space {
+    background: #010409 url(/assets/images/space-portrait-wide@2x.jpg) no-repeat top;
+    background-size: 100% auto;
+  }
 }
 
-.no-top-margin {
-  margin-top: 0!important;
+@media (min-width: $desktop) {
+  .bg-space {
+    background: #010409 url(/assets/images/space-desktop.jpg) no-repeat top;
+    background-size: 100% auto;
+  }
 }
 
-.bottom-margin-half {
-  @include margin-bottom(0.5);
-}
-
-.no-top-padding {
-  padding-top: 0!important;
-}
-
-.t-m-1 {
-  @include margin-top(1);
-}
-
-.t-m-2 {
-  @include margin-top(2);
-}
-
-.t-m-3 {
-  @include margin-top(3);
-}
-
-.t-m-4 {
-  @include margin-top(4);
-}
-
-.b-m-05 {
-  @include margin-bottom(0.5);
-}
-
-.b-m-1 {
-  @include margin-bottom(1);
-}
-
-.b-m-2 {
-  @include margin-bottom(2);
-}
-
-.b-m-3 {
-  @include margin-bottom(3);
-}
-
-.b-m-4 {
-  @include margin-bottom(4);
-}
-
-.w-50p {
-  width: 50%;
-}
-
-.p-l-50px {
-  padding-left: 50px;
-}
-
-.pos-relative {
-  position: relative;
-}
-
-.dis-i-b {
-  display: inline-block!important;
-}
-
-.width-200px {
-  max-width: none!important;
-  min-width: 0!important;
-  width: 200px!important;
-}
-
-.floatNone {
-  float: none!important;
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: $desktop), (min-resolution: 192dpi) and (min-width: $desktop) {
+  .bg-space {
+    background: #010409 url(/assets/images/space-desktop@2x.jpg) no-repeat top;
+    background-size: 100% auto;
+  }
 }

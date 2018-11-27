@@ -5,6 +5,111 @@
   padding: 0;
 }
 
+.align-center-mobile {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.read-by {
+  max-width: 454px;
+}
+
+.book-info-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.book-info-flex {
+  order: 1;
+  flex: 0 1 auto;
+  align-self: auto;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.book-slider-flex {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.book-description {
+  max-width: 80%;
+}
+
+.book-praise {
+  margin-top: -1px;
+  @include padding-bottom(12);
+}
+
+.buy-section {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  @include margin-top(-10);
+}
+
+.buy-option {
+  background: $bwt-extra-light;
+  border-radius: $radius-soft;
+  max-width: 330px;
+  padding: 40px 20px;
+  box-shadow: $box-shadow;
+  margin: 0 30px;
+  @include margin-top(2);
+
+  display: flex;
+  flex-direction: column;
+
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+
+  .buy-button {
+    width: 240px;
+  }
+}
+
+.buy-option-footer {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.example-website {
+  @include margin-top(-3);
+  @include padding-top(1);
+
+  ol {
+    list-style: none;
+  }
+}
+
 .example-links {
   span {
     display: block;
@@ -52,31 +157,31 @@
 }
 
 .product {
-  background: #fafafa;
+  // background: #fafafa;
 
 .button {
     max-width: 300px;
   }
 
-  h1 {
-    font-family: $custom-font-acumin;
-    text-transform: none;
-    font-size: 1.7rem;
-    @include line-height(1.5);
-    margin: 0;
-    @include margin-bottom(0.5);
-    margin-top: 0;
-    text-align: center;
-  }
+  // h1 {
+  //   font-family: $custom-font-acumin;
+  //   text-transform: none;
+  //   font-size: 1.7rem;
+  //   @include line-height(1.5);
+  //   margin: 0;
+  //   @include margin-bottom(0.5);
+  //   margin-top: 0;
+  //   text-align: center;
+  // }
 
-  .subtitle {
-    font-family: $custom-font-body;
-    font-size: 1.3rem;
-    margin: 0;
-    text-transform: none;
-    @include margin-bottom(0.5);
-    text-align: center;
-  }
+  // .subtitle {
+  //   font-family: $custom-font-body;
+  //   font-size: 1.3rem;
+  //   margin: 0;
+  //   text-transform: none;
+  //   @include margin-bottom(0.5);
+  //   text-align: center;
+  // }
 
   .book-info {
     max-width: 90%;
@@ -93,13 +198,13 @@
       max-width: none;
     }
 
-    h1 {
-      @include margin-top(2);
-      text-align: left;
-      margin-left: 0;
-      font-size: 2rem;
-      max-width: 400px;
-    }
+    // h1 {
+    //   @include margin-top(2);
+    //   text-align: left;
+    //   margin-left: 0;
+    //   font-size: 2rem;
+    //   max-width: 400px;
+    // }
 
     .subtitle {
       text-align: left;
@@ -116,50 +221,9 @@
   }
 
   @media screen and (min-width: 80em){
-    h1 {
-      @include margin-top(4);
-    }
-  }
-}
-
-.whats_inside {
-  background: #fafafa;
-  border-radius: $radius-soft;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-
-  .whats_inside-image {
-    display: none;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    @include margin-bottom(.5);
-    background: url(../assets/images/tick.svg) no-repeat center left;
-    padding: 0 0 0 28px;
-  }
-}
-
-@media screen and (min-width: 60em){
-  .whats_inside {
-    padding: 0;
-
-    .whats_inside-image {
-      display: block;
-    }
-
-    .whats_inside-image, .whats_inside-content {
-      float: left;
-    }
-
-    .whats_inside-image {
-      max-width: 45%;
-    }
+    // h1 {
+    //   @include margin-top(4);
+    // }
   }
 }
 
@@ -251,26 +315,8 @@
   }
 
   .book-features {
-    text-align: center;
-    line-height: 2;
-
-    img, .sketchSource img, .sourceCode img {
-      margin: 0 5px -5px;
-      display: inline;
-
-      &:first-child {
-        margin-left: 0;
-        margin-right: 8px;
-      }
-
-      &:nth-child(2){
-        margin-right: 0;
-      }
-    }
-
-    @media screen and (min-width: 48em){
-      text-align: left;
-      @include line-height(1);
+    .feature-label {
+      max-width: 220px;
     }
   }
 
@@ -368,68 +414,6 @@
   }
 }
 
-.book-option {
-  font-family: $custom-font-acumin;
-  background: #fff;
-  height: auto;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.18);
-  border-radius: 4px;
-  position: relative;
-  padding: 18px;
-
-  @media screen and (min-width: 48em){
-    max-width: 500px;
-  }
-
-  .desc {
-    font-size: 12px;
-    color: #938D8F;
-    display: block;
-    max-width: 75%;
-
-    @media screen and (min-width: 375px){
-      max-width: 80%;
-    }
-  }
-
-  .price, .price-from {
-    position: absolute;
-    right: 18px;
-    top: 24px;
-  }
-
-  .price-from {
-    display: none;
-    font-size: 14px;
-    color: #938D8F;
-    font-family: $custom-font-acumin;
-    top: 27px;
-    right: 95px;
-
-    @media screen and (min-width: 29em){
-      display: block;
-    }
-
-    @media screen and (min-width: 48em){
-      display: none;
-    }
-
-    @media screen and (min-width: 60em){
-      display: block;
-    }
-  }
-
-  @media screen and (min-width: 48em){
-    .desc {
-      font-size: 14px;
-    }
-  }
-}
-
-.variant-selectors input[type="radio"]:checked+.book-option {
-  border: 2px solid $bwt-green;
-}
-
 .basic-padding {
   padding: 10% 5%;
 
@@ -453,16 +437,6 @@
     width: 100%;
     float: left;
     margin-bottom: 0;
-    // margin-left: auto;
-    // margin-right: auto;
-
-    // &:nth-child(odd){
-    //   padding-right: 15px;
-    // }
-
-    // &:nth-child(even){
-    //   padding-left: 15px;
-    // }
 
     @media screen and (min-width: 48em){
       &:nth-child(odd){
@@ -473,23 +447,6 @@
         padding-left: 0px;
       }
     }
-  }
-}
-
-@media screen and (min-width: 48em){
-  .learn-how {
-    max-width: 720px;
-  }
-
-  .learn-how li {
-    max-width: 50%;
-    min-height: 177px;
-  }
-}
-
-@media screen and (min-width: 60em){
-  .learn-how li {
-    max-width: 33%;
   }
 }
 
@@ -509,4 +466,111 @@
   color: #fff;
   border-radius: $radius-soft;
   display: inline-block;
+}
+
+.book-features {
+  width: 100%;
+  background: linear-gradient( rgba(28, 16, 32, 0) 0%, $bwt-purple 100%);
+
+  p {
+    font-size: 20px;
+  }
+
+  ul {
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: flex-start;
+    @include padding(3,0,0);
+    list-style: none;
+  }
+
+  li {
+    width: 45%;
+    flex: 0 1 auto;
+    align-self: auto;
+    margin: 0 2%;
+  }
+}
+
+@media screen and (min-width: 30em){
+  .book-description {
+    max-width: 420px;
+  }
+}
+
+@media screen and (min-width: 48em){
+  .learn-how {
+    max-width: 720px;
+  }
+
+  .learn-how li {
+    max-width: 50%;
+    min-height: 177px;
+  }
+
+  .book-features {
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 60em){
+  .learn-how li {
+    max-width: 33%;
+  }
+
+  .book-features {
+    ul {
+      max-width: 90%;
+    }
+
+    li {
+      width: 20%;
+    }
+  }
+}
+
+@media screen and (min-width: 1020px){
+  .book-info-container {
+    display: block;
+    text-align: left;
+  }
+
+  .align-center-mobile {
+    margin-left: 0;
+  }
+
+  .book-slider-flex {
+    @include margin-top(2);
+  }
+
+  .book-info {
+    h1 {
+      @include margin-top(2);
+      max-width: 550px;
+    }
+
+    .tagline-large {
+      max-width: 440px;
+    }
+  }
+
+  .example-website {
+    @include margin-top(-6);
+  }
+
+  .book-page blockquote.max-width-500px {
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 1170px){
+  .buy-option {
+    @include margin-top(0);
+  }
 }
