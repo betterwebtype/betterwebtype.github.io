@@ -36,6 +36,10 @@ $column: 8.3333333333%;
     @include g-offset(1);
   }
 
+  .off-2 {
+    @include g-offset(2);
+  }
+
   .col-3 {
     @include g-width(3);
   }

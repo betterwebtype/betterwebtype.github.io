@@ -1,10 +1,3 @@
-.bottom-cta {
-  .buy-option {
-    background: $bwt-extra-light;
-    border: none;
-  }
-}
-
 .paperback-options {
   list-style: none;
   max-width: 300px;
@@ -16,23 +9,8 @@
   }
 }
 
-.buy-options {
-  max-width: 650px;
-}
-
 .buy-button {
   @include margin-bottom(0.5);
-}
-
-.buy-options>div {
-  background: #fff;
-  border-radius: $radius-soft;
-  border: 2px solid $bwt-light;
-  @include padding(1, 1)
-}
-
-.buy-option {
-  width: 100%;
 }
 
 .money-back {
@@ -51,13 +29,6 @@
 .variant-ebook {
   margin-right: 4%;
   position: relative;
-}
-
-@media screen and (min-width: 60em) {
-  .buy-option {
-    width: 48%;
-    float: left;
-  }
 }
 
 .book-main {
@@ -115,15 +86,9 @@
 }
 
 .book-rating {
-  max-width: 250px;
+  max-width: 260px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media screen and (min-width: 48em) {
-  .book-rating {
-    margin-left: 0;
-  }
 }
 
 .price {
@@ -534,58 +499,6 @@ ul.tabs li.current {
   margin: 0;
   max-width: 200px!important;
   padding: 0!important;
-}
-
-.book-widget {
-  // opacity: 0;
-  position: fixed;
-  bottom: 10px;
-  right: 60px;
-  text-align: right;
-
-  img {
-    margin-left: 20px;
-    max-width: 100px;
-    transition: all 0.3s;
-    margin-bottom: 0;
-
-    &:hover {
-    color: white;
-    cursor: pointer;
-    background-color: lighten($bwt-red, 3%);
-    -webkit-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
-    -moz-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
-    box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
-    transform: scale3d(1.03, 1.03, 1.03);
-    }
-  }
-
-  h1 {
-    font-size: 22px;
-    font-family: "acumin-pro", Helvetica, Arial, Sans-serif;
-    margin-bottom: 0;
-    margin-top: 0;
-    @include line-height(1);
-    text-transform: none;
-    z-index: 999;
-  }
-
-  p {
-    z-index: 999;
-  }
-}
-
-.widget-text, .widget-cover {
-  opacity: 0;
-  display: block;
-}
-
-.book-widget:hover ~ img {
-  cursor: pointer;
-  -webkit-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
-  -moz-box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
-  box-shadow: 0px 7px 26px 0px rgba(0,0,0,0.23);
-  transform: scale3d(1.03, 1.03, 1.03);
 }
 
 .tabs-cheatsheet {

@@ -4,6 +4,10 @@ header {
   margin-bottom: 0;
 }
 
+article header {
+  margin-top: 0;
+}
+
 .logo {
   display: none;
   font-family: $custom-font-headings;
@@ -52,5 +56,11 @@ header nav {
     position: absolute;
     top: 0;
     right: 0;
+  }
+}
+
+@media screen and (min-width: 1020px){
+  article header {
+    @include margin-top(2);
   }
 }
