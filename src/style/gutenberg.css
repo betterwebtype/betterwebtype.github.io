@@ -3875,7 +3875,7 @@ section {
   font-weight: bold;
 }
 .book-page .book-features .feature-label {
-  max-width: 220px;
+  max-width: 250px;
 }
 .book-page h2, .book-page .content h3 {
   max-width: 80%;
@@ -4701,18 +4701,20 @@ a.check-it-out {
 }
 
 .prev, .next {
-  display: none;
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
 }
+
 @media screen and (min-width: 1020px) {
-  .prev, .next {
-    display: block;
-    position: absolute;
+  .content-slider:hover .prev, .content-slider:hover .next {
+    display: inline-block;
+    opacity: 1;
     z-index: 100;
     top: 40%;
     transition: all 0.3s;
   }
 }
-
 .prev:hover, .next:hover {
   cursor: pointer;
 }

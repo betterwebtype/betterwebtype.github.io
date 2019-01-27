@@ -63,16 +63,19 @@
 }
 
 .prev, .next {
-  display: none;
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+}
 
-  @media screen and (min-width: 1020px){
-    display: block;
-    position: absolute;
+@media screen and (min-width: 1020px){
+  .content-slider:hover .prev, .content-slider:hover .next {
+    display: inline-block;
+    opacity: 1;
     z-index: 100;
     top: 40%;
     transition: all 0.3s;
   }
-
 }
 
 .prev:hover, .next:hover {
