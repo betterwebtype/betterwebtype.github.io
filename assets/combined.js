@@ -13,41 +13,35 @@
 // If page is homepage
 $(function () {
   if ($('body').is('.home')) {
-  // Animate tutorial image on scroll + mobile fixed button behavior
-  var triggerPoint;
-  var el;
-  var bottom;
-  var h = window.innerHeight;
+    // Animate tutorial image on scroll + mobile fixed button behavior
+    var el;
+    var bottom;
+    var h = window.innerHeight;
 
-  $(window).on('load', function(){
-    triggerPoint = $('.popularity .button-secondary').position();
-    el = $('.bottom-cta-tag');
-    bottom = el.position().top + el.outerHeight(true);
-  });
+    $(window).on('load', function(){
+      el = $('.bottom-cta-tag');
+      bottom = el.position().top + el.outerHeight(true);
+    });
 
-  $(window).on('scroll', function() {
-    triggerPoint = $('.popularity .button-secondary').position();
-    var y_scroll_pos = window.pageYOffset;
-    var scrollBottom = y_scroll_pos + h - 60;
+    animateOnScroll('.lesson-img', 'slide-in-fwd-bottom', 1);
 
-    if(y_scroll_pos > triggerPoint.top) {
-      $('.lesson-img').addClass('slide-in-fwd-bottom');
-    }
+    $(window).on('scroll', function() {
+      var y_scroll_pos = window.pageYOffset;
+      var scrollBottom = y_scroll_pos + h - 60;
 
-    if (scrollBottom >= bottom){
-      $('#mobile-signup').removeClass('mobile-signup').addClass('animated infinite pulse');
-    }
+      if (scrollBottom >= bottom){
+        $('#mobile-signup').removeClass('mobile-signup').addClass('animated infinite pulse');
+      }
 
-    if (scrollBottom < bottom){
-      $('#mobile-signup').removeClass('animated infinite pulse').addClass('mobile-signup');
-    }
-  });
+      if (scrollBottom < bottom){
+        $('#mobile-signup').removeClass('animated infinite pulse').addClass('mobile-signup');
+      }
+    });
 
-  $('.scrollToTop').click(function(){
-    $('html, body').animate({scrollTop : 0},800);
-    return false;
-  });
-
+    $('.scrollToTop').click(function(){
+      $('html, body').animate({scrollTop : 0},800);
+      return false;
+    });
   } // End of if statement
 }); // End of homepage stuff
 
@@ -55,24 +49,13 @@ $(function () {
 $(function(){
   if($('body').is('.book-page')){
 
-  // Animate tutorial image on scroll + mobile fixed button behavior
-  var triggerPoint;
-  var h = window.innerHeight;
+    // Animate example website image
+    animateOnScroll('.lesson-img', 'slide-in-fwd-bottom', 1);
 
-  $(window).on('load', function(){
-    triggerPoint = $('.popularity .button-secondary').position();
-  });
+    // Animate book features
+    animateChildrenOnScroll('.animate-features', 'fadeIn', 0.5, 0.5);
 
-  $(window).on('scroll', function() {
-    triggerPoint = $('.popularity .button-secondary').position();
-    var y_scroll_pos = window.pageYOffset;
-
-    if(y_scroll_pos > triggerPoint.top) {
-      $('.lesson-img').addClass('slide-in-fwd-bottom');
-    }
-  });
-
-  } // End of if statement
+  }
 }); // End of book page stuff
 
 // If page has a form
@@ -217,6 +200,54 @@ $(function() {
     }
   });
 });
+
+// Animate children on scroll
+function animateChildrenOnScroll(parent, animation, delay, triggerDelay, trigger) {
+  if (triggerDelay == null) {
+    triggerDelay = 0
+  }
+  if (trigger == null) {
+    trigger = parent;
+  }
+  if (delay == null) {
+    delay = 0;
+  }
+  var triggerPoint = $(trigger).offset().top;
+  console.log(triggerPoint);
+  var scrollPosition;
+  var children = $(parent).children();
+
+  $(window).on('scroll', function () {
+    scrollPosition = window.pageYOffset + window.innerHeight;
+    console.log(scrollPosition);
+
+    if (scrollPosition > triggerPoint) {
+      for (i = 0; i < children.length; i++) {
+        var calculateDelay = triggerDelay + (i * delay) + 's';
+
+        $(children[i]).css("animation-delay", calculateDelay).removeClass('o-0').addClass(animation);
+      }
+    }
+  });
+}
+
+function animateOnScroll(element, animation, triggerDelay, trigger) {
+  if (trigger == null) {
+    trigger = element;
+  }
+
+  var triggerPoint = $(trigger).position().top;
+  var scrollPosition;
+
+  $(window).on('scroll', function () {
+    scrollPosition = window.pageYOffset + window.innerHeight;
+    var calculateDelay = triggerDelay + 's';
+
+    if (scrollPosition > triggerPoint) {
+      $(element).css("animation-delay", calculateDelay).removeClass('o-0').addClass(animation);
+    }
+  });
+}
 
 // GA
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

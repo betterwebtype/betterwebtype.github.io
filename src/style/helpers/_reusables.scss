@@ -65,6 +65,14 @@ $desktop: 63.75em;
   overflow-y: scroll;
 }
 
+.author-small {
+  max-width: 48px;
+}
+
+.inline {
+  display: inline;
+}
+
 .group:after {
   content: "";
   display: table;

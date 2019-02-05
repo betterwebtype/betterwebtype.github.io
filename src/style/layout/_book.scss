@@ -316,7 +316,7 @@
 
   .book-features {
     .feature-label {
-      max-width: 220px;
+      max-width: 250px;
     }
   }
 
@@ -572,5 +572,17 @@
 @media screen and (min-width: 1170px){
   .buy-option {
     @include margin-top(0);
+  }
+}
+
+.author-support {
+  // border: 2px solid $bwt-light;
+  // border-radius: $radius-round;
+  max-width: 550px;
+  padding: 8px;
+
+  em {
+    display: block;
+    margin-bottom: 0;
   }
 }
