@@ -213,13 +213,11 @@ function animateChildrenOnScroll(parent, animation, delay, triggerDelay, trigger
     delay = 0;
   }
   var triggerPoint = $(trigger).offset().top;
-  console.log(triggerPoint);
   var scrollPosition;
   var children = $(parent).children();
 
   $(window).on('scroll', function () {
     scrollPosition = window.pageYOffset + window.innerHeight;
-    console.log(scrollPosition);
 
     if (scrollPosition > triggerPoint) {
       for (i = 0; i < children.length; i++) {
