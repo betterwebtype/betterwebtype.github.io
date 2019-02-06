@@ -576,10 +576,19 @@
 }
 
 .author-support {
-  // border: 2px solid $bwt-light;
-  // border-radius: $radius-round;
-  max-width: 550px;
-  padding: 8px;
+  background: $bwt-extra-light;
+  border-radius: $radius-soft;
+  max-width: 350px;
+  padding: 20px;
+  padding-top: 35px;
+  position: relative;
+  @include margin-top(3);
+
+  img {
+    position: absolute;
+    top: -30px;
+    left: 151px;
+  }
 
   em {
     display: block;
