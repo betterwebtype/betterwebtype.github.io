@@ -40,9 +40,12 @@ $(function(){
 
     // Animate example website image
     animateOnScroll('.lesson-img', 'slide-in-fwd-bottom', 1);
+    
+    // Animate author support
+    animateOnScroll('.author-support', 'fadeIn', 1);
 
     // Animate book features
-    animateChildrenOnScroll('.animate-features', 'fadeIn', 0.5, 0.5);
+    animateChildrenOnScroll('.animate-features', 'fadeIn', 0.5, 0.3);
 
   }
 }); // End of book page stuff
@@ -223,11 +226,13 @@ function animateOnScroll(element, animation, triggerDelay, trigger) {
     trigger = element;
   }
 
-  var triggerPoint = $(trigger).position().top;
+  // var triggerPoint = 0;
+  var triggerPoint = $(trigger).offset().top;
   var scrollPosition;
 
   $(window).on('scroll', function () {
     scrollPosition = window.pageYOffset + window.innerHeight;
+    // console.log(scrollPosition);
     var calculateDelay = triggerDelay + 's';
 
     if (scrollPosition > triggerPoint) {
