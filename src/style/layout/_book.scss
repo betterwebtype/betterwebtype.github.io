@@ -470,7 +470,8 @@
 
 .book-features {
   width: 100%;
-  background: linear-gradient( rgba(28, 16, 32, 0) 0%, $bwt-purple 100%);
+  background: linear-gradient( rgba(28, 16, 32, 0) 0%, $bwt-purple 70%);
+  @include padding-bottom(4);
 
   p {
     font-size: 20px;

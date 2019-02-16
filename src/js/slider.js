@@ -1,101 +1,114 @@
-if ($('#slider').length > 0) { 
-  
-  var sliderLength = $('#slider ul li').length;
+//   document.onkeydown = checkKey;
+
+//   function checkKey(e) {
+//     e = e || window.event;
+//     if (e.keyCode == '37') {
+//       moveRight();
+//     }
+//     else if (e.keyCode == '39') {
+//       moveLeft();
+//     }
+//   };
+
+
+function nextSlide(element, direction, sliderLength, animationSpeed) {
+  var nextSlide;
+  resetCurrentSlide(element);
+
+  if (direction == 'next') {
+    if (currentSlide + 1 == sliderLength) {
+      nextSlide = 0;
+      goToSlide(element, animationSpeed, nextSlide);
+    } else {
+      nextSlide = currentSlide + 1;
+      goToSlide(element, animationSpeed, nextSlide);
+    }
+  } else if (direction == 'previous') {
+    if (currentSlide == 0) {
+      nextSlide = sliderLength - 1;
+      goToSlide(element, animationSpeed, nextSlide);
+    } else {
+      nextSlide = currentSlide - 1;
+      goToSlide(element, animationSpeed, nextSlide);
+    }
+  }
+};
+
+function goToSlide(element, animationSpeed, id) {
+  if (id == null) {
+    var id = event.srcElement.id;
+  }
+  var targetSlide = $(element + ' .slides').children();
+
+  // Fade out children of current slide first
+  animateChildren(element + ' .slides .active .slide-content', 'fadeOut', 0.3);
+
+  // Update pager immediately
+  $(element + ' .pager .active').removeClass();
+  $(element + ' #' + id).addClass('active');
+
+  // Wait [animation time] to remove the fadeOut classes
+  setTimeout(function(){
+    $(element + ' .slides .active .slide-content div').removeClass('fadeOut');
+  }, animationSpeed)
+
+  // Wait [animation time + 1ms] to add fadeIn classes
+  setTimeout(function(){
+    $(element + ' .slides .active').removeClass();
+    // $(element + ' .slides .active .slide-content div').removeClass('fadeOut');
+    
+    $(targetSlide[id]).addClass('active');
+    animateChildren(element + ' .slides .active .slide-content', 'fadeIn', 0.3);
+  }, animationSpeed + 1);
+
+  resetCurrentSlide(element);
+};
+
+function resetCurrentSlide(element) {
+  currentSlide = parseInt($(element + ' .pager li.active').attr("id"));
+};
+
+function constructSliderNav(element, sliderLength) {
+
+  $(element).append('<ul class="pager"></ul>');
+  for (i = 0; i < sliderLength; i++) {
+    if (i == 0) {
+      $(element + ' ul.pager').append('<li id="' + i + '" class="active">' + i + '</li>');
+      resetCurrentSlide(element);
+    } else {
+      $(element + ' ul.pager').append('<li id="' + i + '">' + i + '</li>');
+    }
+  }
+};
+
+function slider(element, animationSpeed) {
+  var sliderLength = $(element + ' ul li').length;
   var currentSlide;
 
-  // Slide animations
-  function slideRight(slide){
-    $('#slide-' + currentSlide).addClass('fadeOutRight');
-    setTimeout(function(){
-      $('#slider .active').removeClass();
-      $('#pager-' + currentSlide).removeClass();
-      $('#slide-' + slide).addClass('animated fadeInLeft active');
-      $('#pager-' + slide).addClass('active');
-    }, 100);
-  };
+  constructSliderNav(element, sliderLength);
 
-  function slideLeft(slide){
-    $('#slide-' + currentSlide).addClass('fadeOutLeft');
-    setTimeout(function(){
-      $('#slider .active').removeClass();
-      $('#pager-' + currentSlide).removeClass();
-      $('#slide-' + slide).addClass('animated fadeInRight active');
-      $('#pager-' + slide).addClass('active');
-    }, 100);
-  };
+  $(element + ' ul.pager li').on('click', function (event) {
+    goToSlide(element, animationSpeed);
+  });
 
-  // Next slide + direction
-  function moveLeft(){
-    currentSlide = $('li.active').data('number');
-    if (currentSlide + 1 > sliderLength){
-      var nextSlide = 1;
-    } else {
-      var nextSlide = currentSlide + 1;
-    }
-    slideLeft(nextSlide);
-  }
+  $(element + ' .prev').on('click', function () {
+    nextSlide(element, 'previous', sliderLength, animationSpeed);
+  });
 
-  function moveRight(){
-    currentSlide = $('li.active').data('number');
-    if (currentSlide - 1 == 0){
-      var nextSlide = sliderLength;
-    } else {
-      var nextSlide = currentSlide - 1;
-    }
-    slideRight(nextSlide);
-  }
-
-  // Go to slide function
-  function goToSlide(slide){
-    currentSlide = $('.active').data('number');
-    if (slide < currentSlide){
-      slideRight(slide);
-    } else if (slide > currentSlide) {
-      slideLeft(slide);
-    }
-  };
-
-  // Event listeners
-  $('#next-slide').on('click', moveLeft);
-  $('#prev-slide').on('click', moveRight);
-
-  document.onkeydown = checkKey;
-
-  function checkKey(e) {
-    e = e || window.event;
-    if (e.keyCode == '37') {
-      moveRight();
-    }
-    else if (e.keyCode == '39') {
-      moveLeft();
-    }
-  };
+  $(element + ' .next').on('click', function () {
+    nextSlide(element, 'next', sliderLength, animationSpeed);
+  });
 
   // Swipe interactions for mobile
-  var myElement = document.getElementById('slider');
+  var myElement = $(element)[0];
+  
   var mc = new Hammer(myElement);
 
   mc.on("swipeleft", function() {
-    moveLeft();
+    nextSlide(element, 'next', sliderLength, animationSpeed);
   });
 
   mc.on("swiperight", function() {
-    moveRight();
+    nextSlide(element, 'previous', sliderLength, animationSpeed);
   });
-
-  $('#pager a').on('click', function(){
-    var slideNumber = $(this).data('slide');
-    goToSlide(slideNumber);
-  });
-
-  // Add slider pagers function
-  $( document ).ready(function() {
-    currentSlide = $('li.active').data('number');
-    for (i = 1; i <= sliderLength; i++) {
-      var pager = '<a href="javascript:void(0)" id="pager-' + i + '" data-slide="' + i + '">a</a>';
-      $('#pager').append(pager);
-    };
-    $('#pager-' + currentSlide).addClass('active');
-  });
-
-}
+};

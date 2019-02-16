@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="https://use.typekit.net/evl6hgo.css">
 </head>
 <link rel="stylesheet" href="assets/combined.min.css">
-<!-- <script src="slider.js"></script> -->
 
 <body class="book-page">
 
@@ -64,14 +63,15 @@
                 A web typography book for web designers & web developers
               </p>
               <p class="book-rating f-acumin align-center-mobile">
-                <picture class="floatLeft rating r-m-10px">
-                  <source srcset="assets/images/rating-4-5@2x.png 2x, assets/images/rating-4-5.png"
-                    media="(max-width: 450px)">
-                  <source srcset="assets/images/rating-4-5@2x.png 2x, assets/images/rating-4-5.png">
-                  <img src="assets/images/rating-4-5.png" alt="4.5 stars">
-                </picture>
-                <strong>4.5</strong> (<a href="#reviews" class="link-reviews">52
-                  reviews</a>)
+                <div class="rating-wrap">
+                  <picture class="floatLeft rating r-m-10px">
+                    <source srcset="assets/images/rating-4-5@2x.png 2x, assets/images/rating-4-5.png"
+                      media="(max-width: 450px)">
+                    <source srcset="assets/images/rating-4-5@2x.png 2x, assets/images/rating-4-5.png">
+                    <img src="assets/images/rating-4-5.png" alt="4.5 stars">
+                  </picture>
+                </div>
+                <strong class="avg-rating f-acumin">4.5</strong> (<a href="#reviews" class="link-reviews f-acumin"><span class="ratings-count">52</span> reviews</a>)
               </p>
               <p class="f-acumin f-s-20px align-center-mobile">From <del>$29.95</del> <strong class="c-mix">$19.95</strong></p>
               <a class="buy-button button alignCenter buyButton align-center-mobile" href="#buy-section">Get your copy</a>
@@ -89,63 +89,108 @@
           </div>
 
           <!-- slider start -->
-          <div class="column col-5 book-slider-flex">
-            <div id="slider" class="content-slider no-scroll">
+          <div class="column col-5 book-slider-flex book-slider">
+            <div id="slider1" class="content-slider no-scroll">
               <div id="close" class="close">Close</div>
               <div id="prev-slide" class="prev">
-                <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity=".3" fill-rule="evenodd" clip-rule="evenodd" d="M0 7.907a.997.997 0 0 1 .293-.715L6.657.828A1 1 0 0 1 8.07 2.243L3.314 7H16a1 1 0 1 1 0 2H3.5l4.571 4.571a1 1 0 1 1-1.414 1.414L.293 8.621A.997.997 0 0 1 0 7.907z"
+                <svg width="31" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity=".3" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0 7.907a.997.997 0 0 1 .293-.715L6.657.828A1 1 0 0 1 8.07 2.243L3.314 7H30a1 1 0 1 1 0 2H3.5l4.571 4.571a1 1 0 1 1-1.414 1.414L.293 8.621A.997.997 0 0 1 0 7.907z"
                     fill="#000" /></svg>
               </div>
               <div id="next-slide" class="next">
-                <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity=".3" fill-rule="evenodd" clip-rule="evenodd" d="M17 7.907a.997.997 0 0 0-.293-.715L10.343.828A1 1 0 1 0 8.93 2.243L13.686 7H1a1 1 0 1 0 0 2h12.5l-4.571 4.571a1 1 0 0 0 1.414 1.414l6.364-6.364A.997.997 0 0 0 17 7.907z"
+                <svg width="31" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity=".3" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M31 7.907a.997.997 0 0 0-.293-.715L24.343.828a1 1 0 1 0-1.414 1.415L27.686 7H1a1 1 0 1 0 0 2h26.5l-4.571 4.571a1 1 0 0 0 1.414 1.414l6.364-6.364A.997.997 0 0 0 31 7.907z"
                     fill="#000" /></svg>
               </div>
-              <ul>
-                <li id="slide-1" class="active animated" data-number="1"><a href="javascript:void(0)" class="slider-image">
-                    <picture>
-                      <source srcset="assets/images/better-web-type-book-cover-paperback-small.jpg 2x, assets/images/better-web-type-book-cover-paperback-small.jpg"
-                        media="(max-width: 450px)">
-                      <source srcset="assets/images/better-web-type-book-cover-paperback.jpg 2x, assets/images/better-web-type-book-cover-paperback-small.jpg">
-                      <img src="assets/images/better-web-type-book-cover-paperback.jpg" alt="Better Web Type book cover">
-                    </picture>
-                  </a></li>
-                <li id="slide-2" class="animated" data-number="2"><a href="javascript:void(0)" class="slider-image">
-                    <picture>
-                      <source srcset="assets/images/better-web-type-book-01-small.jpg 2x, assets/images/better-web-type-book-01-small.jpg"
-                        media="(max-width: 450px)">
-                      <source srcset="assets/images/better-web-type-book-01.jpg 2x, assets/images/better-web-type-book-01.jpg">
-                      <img src="assets/images/better-web-type-book-01.jpg" alt="Better Web Type book inside">
-                    </picture>
-                  </a></li>
-                <li id="slide-3" class="animated" data-number="3"><a href="javascript:void(0)" class="slider-image">
-                    <picture>
-                      <source srcset="assets/images/better-web-type-book-02-small.jpg 2x, assets/images/better-web-type-book-02-small.jpg"
-                        media="(max-width: 450px)">
-                      <source srcset="assets/images/better-web-type-book-02.jpg 2x, assets/images/better-web-type-book-02.jpg">
-                      <img src="assets/images/better-web-type-book-02.jpg" alt="Better Web Type book inside">
-                    </picture>
-                  </a></li>
-                <li id="slide-4" class="animated" data-number="4"><a href="javascript:void(0)" class="slider-image">
-                    <picture>
-                      <source srcset="assets/images/better-web-type-book-03-small.jpg 2x, assets/images/better-web-type-book-03-small.jpg"
-                        media="(max-width: 450px)">
-                      <source srcset="assets/images/better-web-type-book-03.jpg 2x, assets/images/better-web-type-book-03.jpg">
-                      <img src="assets/images/better-web-type-book-03.jpg" alt="Better Web Type book inside">
-                    </picture>
-                  </a></li>
-                <li id="slide-5" class="animated" data-number="5"><a href="javascript:void(0)" class="slider-image">
-                    <picture>
-                      <source srcset="assets/images/better-web-type-book-cover-paperback-back-small.jpg 2x, assets/better-web-type-book-cover-paperback-back-05-small.jpg"
-                        media="(max-width: 450px)">
-                      <source srcset="assets/images/better-web-type-book-cover-paperback-back.jpg 2x, assets/images/better-web-type-book-cover-paperback-back.jpg">
-                      <img src="assets/images/better-web-type-book-cover-paperback-back.jpg" alt="Better Web Type book inside">
-                    </picture>
-                  </a></li>
-                <!-- <li id="slide-6" class="animated" data-number="6"><a href="javascript:void(0)" class="slider-image"><img src="assets/images/better-web-type-book-05.jpg" alt="Impala"></a></li> -->
+              <ul class="slides">
+                <li id="slide-1" class="active animated" data-number="1">
+                  <div class="slide-content">
+                    <div class="animated-fastest">
+                      <a href="javascript:void(0)" class="slider-image">
+                        <picture>
+                          <source srcset="assets/images/better-web-type-book-cover-paperback-small.jpg 2x, assets/images/better-web-type-book-cover-paperback-small.jpg"
+                            media="(max-width: 450px)">
+                          <source srcset="assets/images/better-web-type-book-cover-paperback.jpg 2x, assets/images/better-web-type-book-cover-paperback-small.jpg">
+                          <img src="assets/images/better-web-type-book-cover-paperback.jpg" alt="Better Web Type book cover">
+                        </picture>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li id="slide-2" class="animated" data-number="2">
+                  <div class="slide-content">
+                    <div class="animated-fastest">
+                      <a href="javascript:void(0)" class="slider-image">
+                        <picture>
+                          <source srcset="assets/images/better-web-type-book-01-small.jpg 2x, assets/images/better-web-type-book-01-small.jpg"
+                            media="(max-width: 450px)">
+                          <source srcset="assets/images/better-web-type-book-01.jpg 2x, assets/images/better-web-type-book-01.jpg">
+                          <img src="assets/images/better-web-type-book-01.jpg" alt="Better Web Type book inside">
+                        </picture>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li id="slide-3" class="animated" data-number="3">
+                  <div class="slide-content">
+                    <div class="animated-fastest">
+                      <a href="javascript:void(0)" class="slider-image">
+                        <picture>
+                          <source srcset="assets/images/better-web-type-book-02-small.jpg 2x, assets/images/better-web-type-book-02-small.jpg"
+                            media="(max-width: 450px)">
+                          <source srcset="assets/images/better-web-type-book-02.jpg 2x, assets/images/better-web-type-book-02.jpg">
+                          <img src="assets/images/better-web-type-book-02.jpg" alt="Better Web Type book inside">
+                        </picture>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li id="slide-4" class="animated" data-number="4">
+                  <div class="slide-content">
+                    <div class="animated-fastest">
+                      <a href="javascript:void(0)" class="slider-image">
+                        <picture>
+                          <source srcset="assets/images/better-web-type-book-03-small.jpg 2x, assets/images/better-web-type-book-03-small.jpg"
+                            media="(max-width: 450px)">
+                          <source srcset="assets/images/better-web-type-book-03.jpg 2x, assets/images/better-web-type-book-03.jpg">
+                          <img src="assets/images/better-web-type-book-03.jpg" alt="Better Web Type book inside">
+                        </picture>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li id="slide-5" class="animated" data-number="5">
+                  <div class="slide-content">
+                    <div class="animated-fastest">
+                      <a href="javascript:void(0)" class="slider-image">
+                        <picture>
+                          <source srcset="assets/images/better-web-type-book-04-small.jpg 2x, assets/better-web-type-book-04-small.jpg"
+                            media="(max-width: 450px)">
+                          <source srcset="assets/images/better-web-type-book-04.jpg 2x, assets/images/better-web-type-book-04.jpg">
+                          <img src="assets/images/better-web-type-book-04.jpg" alt="Better Web Type book inside">
+                        </picture>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li id="slide-6" class="animated" data-number="6">
+                  <div class="slide-content">
+                    <div class="animated-fastest">
+                      <a href="javascript:void(0)" class="slider-image">
+                        <picture>
+                          <source
+                            srcset="assets/images/better-web-type-book-05-small.jpg 2x, assets/better-web-type-book-05-small.jpg"
+                            media="(max-width: 450px)">
+                          <source srcset="assets/images/better-web-type-book-05.jpg 2x, assets/images/better-web-type-book-05.jpg">
+                          <img src="assets/images/better-web-type-book-05.jpg" alt="Better Web Type book inside">
+                        </picture>
+                      </a>
+                    </div>
+                  </div>
+                </li>
               </ul>
-              <div id="pager" class="pager"></div>
             </div>
           </div>
           <!-- slider end -->
@@ -202,34 +247,101 @@
     </div>
 
     <!-- Praise from others -->
-    <div class="bg-purple bg-dark f-smoothing t-p-2 bg-clip-bottom-right book-praise">
+    <div class="bg-purple bg-dark f-smoothing bg-clip-bottom-right book-praise">
       <p class="no-bottom-margin floatCenter alignCenter f-acumin">
-        <small class="f-s-14px"><span class="f-s-20px">*</span> included with eBook and Combo pack only</small>
+        <small class="f-s-14px small-print animated o-0"><span class="f-s-20px">*</span> included with eBook and Combo pack only</small>
       </p>
-      <div class="group t-m-5">
-        <div class="column col-5 off-2">
-          <blockquote class="max-width-500px align-center-mobile w-90p">
-            <p class="medium-text f-style-b f-style-n f-acumin gradient-text">
-              Seriously detailed and, more importantly, fodder for any discussion with clients to convince them why the fonts you chose were the right ones for the project.
-            </p>
-            <cite class="uppercase f-acumin-c f-s-24px">
-              —Paul Jarvis
-            </cite>
-          </blockquote>
+      <div class="group t-m-5 content-slider praise-slider" id="slider2">
+        <div id="prev-slide" class="prev">
+          <svg width="31" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity=".3" fill-rule="evenodd" clip-rule="evenodd"
+              d="M0 7.907a.997.997 0 0 1 .293-.715L6.657.828A1 1 0 0 1 8.07 2.243L3.314 7H30a1 1 0 1 1 0 2H3.5l4.571 4.571a1 1 0 1 1-1.414 1.414L.293 8.621A.997.997 0 0 1 0 7.907z"
+              fill="#000" /></svg>
         </div>
-        <div class="column col-4 hide-mobile">
-          <div class="align-center-mobile max-width-300px">
-            <picture>
-              <source srcset="assets/images/paul-jarvis.jpg 2x, assets/images/paul-jarvis.jpg"
-                media="(max-width: 450px)">
-              <source srcset="assets/images/paul-jarvis@2x.jpg 2x, assets/images/paul-jarvis.jpg">
-              <img src="assets/images/paul-jarvis@2x.jpg" alt="Better Web Type book cover">
-            </picture>
-          </div>
+        <div id="next-slide" class="next">
+          <svg width="31" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity=".3" fill-rule="evenodd" clip-rule="evenodd"
+              d="M31 7.907a.997.997 0 0 0-.293-.715L24.343.828a1 1 0 1 0-1.414 1.415L27.686 7H1a1 1 0 1 0 0 2h26.5l-4.571 4.571a1 1 0 0 0 1.414 1.414l6.364-6.364A.997.997 0 0 0 31 7.907z"
+              fill="#000" /></svg>
         </div>
-        <div class="column col-5">
-          <img src="" alt="">
-        </div>
+        <ul class="slides">
+          <!-- Slide 1 -->
+          <li class="active">
+            <div class="slide-content">
+              <div class="column col-5 off-2 animated-faster">
+                <blockquote class="max-width-500px align-center-mobile w-90p">
+                  <p class="medium-text f-style-b f-style-n f-acumin gradient-text">
+                    Seriously detailed and, more importantly, fodder for any discussion with clients to convince them why the fonts you chose were the right ones for the project.
+                  </p>
+                  <cite class="uppercase f-acumin-c f-s-24px no-bottom-margin">
+                    —Paul Jarvis
+                  </cite>
+                  <span class="title f-s-14px">Designer &amp; author of Company of One</span>
+                </blockquote>
+              </div>
+              <div class="column col-4 hide-mobile animated-faster">
+                <div class="align-center-mobile max-width-300px">
+                  <picture>
+                    <source srcset="assets/images/paul-jarvis.jpg 2x, assets/images/paul-jarvis.jpg"
+                      media="(max-width: 450px)">
+                    <source srcset="assets/images/paul-jarvis@2x.jpg 2x, assets/images/paul-jarvis.jpg">
+                    <img src="assets/images/paul-jarvis@2x.jpg" alt="Paul Jarvis">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- Slide 2 -->
+          <li class="">
+            <div class="slide-content">
+              <div class="column col-5 off-2 animated-faster">
+                <blockquote class="max-width-500px align-center-mobile w-90p">
+                  <p class="medium-text f-style-b f-style-n f-acumin gradient-text">
+                    Beautiful typography should never be underestimated, it tells a story, it evokes excitement, and seems so simple to create. It isn’t, but it will be once you have studied this must-read edition.
+                  </p>
+                  <cite class="uppercase f-acumin-c f-s-24px no-bottom-margin">
+                    —Steve Jenkins
+                  </cite>
+                  <span class="title f-s-14px">Editor, Web Designer Magazine</span>
+                </blockquote>
+              </div>
+              <div class="column col-4 hide-mobile animated-faster">
+                <div class="align-center-mobile max-width-300px">
+                  <picture>
+                    <source srcset="assets/images/steve-jenkins.jpg 2x, assets/images/steve-jenkins.jpg" media="(max-width: 450px)">
+                    <source srcset="assets/images/steve-jenkins@2x.jpg 2x, assets/images/steve-jenkins.jpg">
+                    <img src="assets/images/steve-jenkins@2x.jpg" alt="Steve Jenkins">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- Slide 3 -->
+          <li class="">
+            <div class="slide-content">
+              <div class="column col-5 off-2 animated-faster">
+                <blockquote class="max-width-500px align-center-mobile w-90p">
+                  <p class="medium-text f-style-b f-style-n f-acumin gradient-text">
+                    Matej addresses designers and developers equally—but not only has he written an informative book with useful content, it’s also written in a nice and lovely-to-read way.
+                  </p>
+                  <cite class="uppercase f-acumin-c f-s-24px no-bottom-margin">
+                    —Marc Thiele
+                  </cite>
+                  <span class="title f-s-14px">Founder/organiser of beyond tellerrand</span>
+                </blockquote>
+              </div>
+              <div class="column col-4 hide-mobile animated-faster">
+                <div class="align-center-mobile max-width-300px">
+                  <picture>
+                    <source srcset="assets/images/marc-thiele.jpg 2x, assets/images/marc-thiele.jpg" media="(max-width: 450px)">
+                    <source srcset="assets/images/marc-thiele@2x.jpg 2x, assets/images/marc-thiele.jpg">
+                    <img src="assets/images/marc-thiele@2x.jpg" alt="Marc Thiele">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -249,11 +361,11 @@
           </figure>
 
           <h4 class="f-acumin">Digital + Extras</h4>
-          <p class="f-s-16px">PDF & eBook files + 6 printable cheat sheets, source code, live code examples, Sketch and Figma files.</p>
+          <p class="f-s-16px">PDF & eBook files + 6 printable cheat sheets, source code, Sketch and Figma files, and a bonus chapter.</p>
 
           <div class="buy-option-footer">
             <p class="f-acumin f-s-20px"> <del>$29.95</del> <strong class="c-mix">$19.95</strong></p>
-            <a class="buy-button button js-prevent-cart-listener floatCenter buyButton" id="buyButton" href="https://better-web-type.myshopify.com/cart/1215683985432:1?channel=buy_button">Buy
+            <a class="buy-button button js-prevent-cart-listener floatCenter buyButton" id="buyButton" href="https://better-web-type.myshopify.com/cart/19619545907298:1?channel=buy_button">Buy
               now</a>
             <p class="money-back f-acumin floatCenter no-bottom-margin">30-day money back guarantee</p>
           </div>
@@ -275,7 +387,7 @@
           
           <div class="buy-option-footer">
             <p class="f-acumin f-s-20px"> $34.95</p>
-            <a class="buy-button button js-prevent-cart-listener floatCenter buyButton" id="buyButton" href="https://better-web-type.myshopify.com/cart/13302230712418:1?channel=buy_button">Buy
+            <a class="buy-button button js-prevent-cart-listener floatCenter buyButton" id="buyButton" href="https://better-web-type.myshopify.com/cart/18958995652706:1?channel=buy_button">Buy
               now</a>
             <p class="f-acumin floatCenter no-bottom-margin uppercase f-s-10px l-h-30px">Free Shipping Worldwide</p>
           </div>
@@ -297,7 +409,7 @@
           
           <div class="buy-option-footer">
             <p class="f-acumin f-s-20px"> <del>$64.90</del> <strong class="c-mix">$39.95</strong></p>
-            <a class="buy-button button js-prevent-cart-listener floatCenter buyButton alignCenter" id="buyButton" href="https://better-web-type.myshopify.com/cart/13301913059426:1?channel=buy_button">Buy
+            <a class="buy-button button js-prevent-cart-listener floatCenter buyButton alignCenter" id="buyButton" href="https://better-web-type.myshopify.com/cart/19619547775074:1?channel=buy_button">Buy
               now</a>
             <p class="f-acumin floatCenter no-bottom-margin uppercase f-s-10px l-h-30px">Free Shipping Worldwide</p>
           </div>
@@ -625,8 +737,6 @@
           Contents</h2>
         <hr class="alignCenter floatCenter">
         <ul class="toc floatCenter">
-          <li><span class="allsmallcaps">Macro Typography</span>
-            <ul>
               <li>1 Introduction to Web Typography</li>
               <li>2 Anatomy of a Typeface</li>
               <li>3 Choosing Typefaces</li>
@@ -636,57 +746,21 @@
               <li>7 Modular Scale</li>
               <li>8 Page Composition</li>
               <li>9 Responsive Web Typography</li>
-            </ul>
-          </li>
-          <li><span class="allsmallcaps">Micro Typography</span>
-            <ul>
               <li>10 Ligatures</li>
               <li>11 Small Caps and Figures</li>
               <li>12 Punctuation</li>
-              <li>13 Dropcaps</li>
-            </ul>
-          </li>
+              <li>13 Dropcaps (Bonus chapter)</li>
         </ul>
-        <!-- <div class="column content">
-          <h3><span>Chapter 1</span>Introduction to Web Typography</h3>
-          <p>The book starts off by looking at what typography actually is, how famous typographers define it, what are its goals and how does all that apply to the web. This chapter explains why it’s important that everyone involved in a web design process need to learn about web typography—including web developers.</p>
-          <h3><span>Chapter 2</span>Anatomy of a Typeface</h3>
-          <p>To learn how to use typography well, we first need to get to know its main tool—the typeface. This chapter looks at why some typefaces look heavier and bigger than others (despite being set at the same size), what are faux font styles and why they should be avoided, what’s the difference between display and text fonts, web and print fonts and why is x-height such an important typeface feature.</p>
-          <h3><span>Chapter 3</span>Choosing Typefaces</h3>
-          <p>Choosing typefaces based on names is not good enough. Using a typeface for a website because of its popularity is a poor choice, but still far too often. The “Choosing typefaces” chapter introduces a way to properly choose typefaces that complement content well. At this stage, the “example website” is introduced as readers go through the process of choosing a typeface for an example project.</p>
-          <h3><span>Chapter 4</span>Equilateral Triangle of a Perfect Paragraph</h3>
-          <p>Perfect balance between line-height, line length and font size is required for a typographically perfect paragraph. The theory, developed for the Better Web Type course is explained even further and is applied to the example website.</p>
-          <h3><span>Chapter 5</span>Combining Typefaces</h3>
-          <p>Combining typefaces is the hardest and most time-consuming part of typography. It’s the part that is the hardest to master. The ”Combining Typefaces” chapter looks at all the different ways to combine typefaces and backs them with examples. </p>
-          <p>The chapter is wrapped up with a process of finding a perfect match typeface for the example project.</p>
-          <h3><span>Chapter 6</span>Rhythm in Web Typography</h3>
-          <p>Vertical rhythm gained popularity in web design and this chapter looks at it and gives examples of how to do it well in Sketch as well as with Sass. Horizontal rhythm is the part that is commonly ignored and this chapter introduces it and puts it alongside the vertical rhythm as equally important.</p>
-          <h3><span>Chapter 7</span>Modular Scale</h3>
-          <p>Typographic scale has been in use for centuries but the web presents new challenges. Digital revolution made it so easy for anyone to play around with font sizes. But just because we can, doesn’t mean that we should. A range of sizes needs to be established and all the font sizes should only be picked from that range.</p>
-          <p>This chapter shows a simple way of using Modular Scale with Sass and also in the Sketch app. It ends with applying the learned knowledge to the example website.</p>
-          <h3><span>Chapter 8</span>Page Composition</h3>
-          <p>The web is loud but boring. Web typography is still mostly poor but slowly getting better. Many websites admired as websites with good typography rely on a centred, single-column layout. This chapter challenges that. The content should define the canvas, not the other way around. Just because the web is a new but challenging medium, it doesn’t mean that it can’t evolve past the medium that preceded it—the book.</p>
-          <h3><span>Chapter 9</span>Responsive Web Typography</h3>
-          <p>One of the main challenges that the web brings is the responsive web typography. What is the recommended smallest size to use on mobile screens? What about the desktop? How and when should the switch between the two happen? Should I use pixels, <span class="allsmallcaps">EM</span> or <span class="allsmallcaps">REM</span> units? This chapter addresses questions like these.</p>
-          <h3><span>Chapter 10</span>Ligatures</h3>
-          <p>Ligatures are extremely popular among typographers and type geeks but many web designers and web developers don’t even know that they exist. This chapter starts of by looking at the origin of ligatures, explores their role in typography and looks at how they can be used on the web. </p>
-          <h3><span>Chapter 11</span>Small Caps and Figures</h3>
-          <p>Small caps can add another subtle touch towards improving web typography. But only if we do it right. This chapter looks at what are the real and what fake small caps, what is the difference how to properly use them on the web. It then explores different styles of figures—old style figures, lining figures, proportional figures and tabular figures.</p>
-          <h3><span>Chapter 12</span>Punctuation</h3>
-          <p>Believe it or not, punctuation is a part of typography. And pretty much everyone gets it wrong—including you and me. It’s not really our fault, but that doesn’t mean that we shouldn’t learn what is typographically correct and correct our mistakes. This chapter looks at different dashes, quotation marks and spaces.</p>
-          <h3><span>Chapter 13</span>Dropcaps</h3>
-          <p>Dropcaps can be another way to add some style to our typography. There are many ways to use them on the web and this chapter looks at all those and concludes by trying to add the dropcaps to the example website. </p>
-        </div> -->
       </div>
     </section>
 
   </article>
 
   <!-- Your customer chat code -->
-  <div class="fb-customerchat" attribution="setup_tool" page_id="674592659286874"
+  <!-- <div class="fb-customerchat" attribution="setup_tool" page_id="674592659286874"
     greeting_dialog_display="fade" greeting_dialog_delay="5" logged_in_greeting="Hey! How can I help you?"
     logged_out_greeting="Hey! How can I help you?">
-  </div>
+  </div> -->
 
   <!-- Footer -->
   <footer class="alignCenter">
@@ -701,40 +775,12 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="assets/combined.min.js"></script>
-  <script>
-    var wh = $(window).height();
-    var ww = $(window).width();
-
-    $('.slider-image').on('click', function () {
-      if (ww >= 768) {
-        $('#close').fadeIn();
-        $('#slider').addClass('fullscreen');
-        // $('#slider.fullscreen ul').css('height', wh + 'px');
-      }
-    });
-
-    $('#close').on('click', function () {
-      $('#close').fadeOut();
-      $('#slider').removeClass('fullscreen');
-      // $('#slider ul').css('height', 'auto');
-    });
-  </script>
 
   <script type="text/javascript">
     var host = "betterwebtype.com";
     if ((host == window.location.host) && (window.location.protocol != "https:"))
       window.location.protocol = "https";
   </script>
-
-  <!-- Load Facebook SDK for JavaScript -->
-  <!-- <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script> -->
 
 </body>
 
