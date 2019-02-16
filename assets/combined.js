@@ -66,39 +66,43 @@ $(function(){
     slider('#slider2', 800);
 
     // Get avg. rating from Goodreads
-    $(document).ready(function() {
-      var $this = $(this);
-      $.ajax({
-        dataType: "jsonp",
-        type: "GET",
-        url: "https://www.goodreads.com/book/review_counts.json?key=3PvAjWBnUr2cpmwNLPf5jg&isbns=9781999809553",
-        data: $this.serialize(),
-        error: function (data) {
-          // var rating_html = '<picture class="floatLeft rating r-m-10px"><source srcset="assets/images/rating-4-5@2x.png 2x, assets/images/rating-4-5.png" media="(max-width: 450px)"><source srcset="assets/images/rating-4-5@2x.png 2x, assets/images/rating-4-5.png"><img src="assets/images/rating-4-5.png" alt="4.5 stars"></picture>'
-          // $('.rating-wrap').html(rating_html);
-          // $('.avg-rating').html(4.5);
-          // $('.ratings-count').html(55);
-          console.log('error');
-        },
-        success: function (data) {
-          // var avg_rating = Math.round(data[0].average_rating * 10) / 10;
-          // var ratings_count = data[0].ratings_count;
-          // var output_rating;
-          // if (avg_rating >= 4.6) {
-          //   output_rating = '5';
-          // } else if (avg_rating < 4.6 && avg_rating > 4.2 ) {
-          //   output_rating = '4-5';
-          // } else if (avg_rating <= 4.2) {
-          //   output_rating = '4';
-          // }
-          // var rating_html = '<picture class="floatLeft rating r-m-10px"><source srcset="assets/images/rating-' + output_rating + '@2x.png 2x, assets/images/rating-' + output_rating + '.png" media="(max-width: 450px)"><source srcset="assets/images/rating-' + output_rating + '@2x.png 2x, assets/images/rating-' + output_rating + '.png"><img src="assets/images/rating-' + output_rating + '.png" alt="' + avg_rating + ' stars"></picture>'
-          // $('.rating-wrap').html(rating_html);
-          // $('.avg-rating').html(avg_rating);
-          // $('.ratings-count').html(ratings_count);
-          console.log('success');
-        }
-      });
+    $.getJSON("https://www.goodreads.com/book/review_counts.json?key=3PvAjWBnUr2cpmwNLPf5jg&isbns=9781999809553", function( data ) {
+      console.log(data);
     });
+    // $(document).ready(function() {
+    //   var $this = $(this);
+    //   $.ajax({
+    //     dataType: "json",
+    //     // contentType: 'application/json',
+    //     type: "GET",
+    //     url: "https://www.goodreads.com/book/review_counts.json?key=3PvAjWBnUr2cpmwNLPf5jg&isbns=9781999809553",
+    //     data: $this.serialize(),
+    //     error: function (data) {
+    //       var rating_html = '<picture class="floatLeft rating r-m-10px"><source srcset="assets/images/rating-4-5@2x.png 2x, assets/images/rating-4-5.png" media="(max-width: 450px)"><source srcset="assets/images/rating-4-5@2x.png 2x, assets/images/rating-4-5.png"><img src="assets/images/rating-4-5.png" alt="4.5 stars"></picture>'
+    //       $('.rating-wrap').html(rating_html);
+    //       $('.avg-rating').html(4.5);
+    //       $('.ratings-count').html(55);
+    //       console.log('error');
+    //     },
+    //     success: function (data) {
+    //       var avg_rating = Math.round(data[0].average_rating * 10) / 10;
+    //       var ratings_count = data[0].ratings_count;
+    //       var output_rating;
+    //       if (avg_rating >= 4.6) {
+    //         output_rating = '5';
+    //       } else if (avg_rating < 4.6 && avg_rating > 4.2 ) {
+    //         output_rating = '4-5';
+    //       } else if (avg_rating <= 4.2) {
+    //         output_rating = '4';
+    //       }
+    //       var rating_html = '<picture class="floatLeft rating r-m-10px"><source srcset="assets/images/rating-' + output_rating + '@2x.png 2x, assets/images/rating-' + output_rating + '.png" media="(max-width: 450px)"><source srcset="assets/images/rating-' + output_rating + '@2x.png 2x, assets/images/rating-' + output_rating + '.png"><img src="assets/images/rating-' + output_rating + '.png" alt="' + avg_rating + ' stars"></picture>'
+    //       $('.rating-wrap').html(rating_html);
+    //       $('.avg-rating').html(avg_rating);
+    //       $('.ratings-count').html(ratings_count);
+    //       console.log('success');
+    //     }
+    //   });
+    // });
 
     // Slider zoom functionality
     var wh = $(window).height();
