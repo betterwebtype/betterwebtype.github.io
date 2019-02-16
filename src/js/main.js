@@ -42,11 +42,70 @@ $(function(){
     animateOnScroll('.lesson-img', 'slide-in-fwd-bottom', 1);
     
     // Animate author support
-    animateOnScroll('.author-support', 'fadeIn', 1);
+    animateOnScroll('.author-support', 'fadeIn', 0.5);
+
+    // Animate author support
+    animateOnScroll('.small-print', 'fadeIn', 2);
 
     // Animate book features
-    animateChildrenOnScroll('.animate-features', 'fadeIn', 0.5, 0.3);
+    animateChildrenOnScroll('.animate-features', 'fadeInUp', 0.3, 0.5);
 
+    // Create sliders
+    slider('#slider1', 300);
+    slider('#slider2', 800);
+
+    // Get avg. rating from Goodreads
+    $(document).ready(function() {
+      var $this = $(this);
+      $.ajax({
+        dataType: "jsonp",
+        type: "GET",
+        url: "https://www.goodreads.com/book/review_counts.json?key=3PvAjWBnUr2cpmwNLPf5jg&isbns=9781999809553",
+        data: $this.serialize(),
+        error: function (data) {
+          // var rating_html = '<picture class="floatLeft rating r-m-10px"><source srcset="assets/images/rating-4-5@2x.png 2x, assets/images/rating-4-5.png" media="(max-width: 450px)"><source srcset="assets/images/rating-4-5@2x.png 2x, assets/images/rating-4-5.png"><img src="assets/images/rating-4-5.png" alt="4.5 stars"></picture>'
+          // $('.rating-wrap').html(rating_html);
+          // $('.avg-rating').html(4.5);
+          // $('.ratings-count').html(55);
+          console.log('error');
+        },
+        success: function (data) {
+          // var avg_rating = Math.round(data[0].average_rating * 10) / 10;
+          // var ratings_count = data[0].ratings_count;
+          // var output_rating;
+          // if (avg_rating >= 4.6) {
+          //   output_rating = '5';
+          // } else if (avg_rating < 4.6 && avg_rating > 4.2 ) {
+          //   output_rating = '4-5';
+          // } else if (avg_rating <= 4.2) {
+          //   output_rating = '4';
+          // }
+          // var rating_html = '<picture class="floatLeft rating r-m-10px"><source srcset="assets/images/rating-' + output_rating + '@2x.png 2x, assets/images/rating-' + output_rating + '.png" media="(max-width: 450px)"><source srcset="assets/images/rating-' + output_rating + '@2x.png 2x, assets/images/rating-' + output_rating + '.png"><img src="assets/images/rating-' + output_rating + '.png" alt="' + avg_rating + ' stars"></picture>'
+          // $('.rating-wrap').html(rating_html);
+          // $('.avg-rating').html(avg_rating);
+          // $('.ratings-count').html(ratings_count);
+          console.log('success');
+        }
+      });
+    });
+
+    // Slider zoom functionality
+    var wh = $(window).height();
+    var ww = $(window).width();
+
+    $('.slider-image').on('click', function () {
+      if (ww >= 768) {
+        $('#close').fadeIn();
+        $('#slider1').addClass('fullscreen');
+        // $('#slider.fullscreen ul').css('height', wh + 'px');
+      }
+    });
+
+    $('#close').on('click', function () {
+      $('#close').fadeOut();
+      $('#slider1').removeClass('fullscreen');
+      // $('#slider ul').css('height', 'auto');
+    });
   }
 }); // End of book page stuff
 
@@ -204,9 +263,13 @@ function animateChildrenOnScroll(parent, animation, delay, triggerDelay, trigger
   if (delay == null) {
     delay = 0;
   }
-  var triggerPoint = $(trigger).offset().top;
+  var triggerPoint;
   var scrollPosition;
   var children = $(parent).children();
+
+  $(window).on('load', function () {
+    triggerPoint = $(trigger).offset().top;
+  });
 
   $(window).on('scroll', function () {
     scrollPosition = window.pageYOffset + window.innerHeight;
@@ -221,14 +284,28 @@ function animateChildrenOnScroll(parent, animation, delay, triggerDelay, trigger
   });
 }
 
+function animateChildren(parent, animation, delay) {
+  var children = $(parent).children();
+
+  for (i = 0; i < children.length; i++) {
+    var calculateDelay = (i * delay) + 's';
+
+    $(children[i]).css("animation-delay", calculateDelay).addClass(animation);
+  }
+}
+
 function animateOnScroll(element, animation, triggerDelay, trigger) {
   if (trigger == null) {
     trigger = element;
   }
 
   // var triggerPoint = 0;
-  var triggerPoint = $(trigger).offset().top;
+  var triggerPoint;
   var scrollPosition;
+
+  $(window).on('load', function () {
+    triggerPoint = $(trigger).offset().top;
+  });
 
   $(window).on('scroll', function () {
     scrollPosition = window.pageYOffset + window.innerHeight;
