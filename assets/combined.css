@@ -3868,6 +3868,9 @@ section {
   -ms-flex-item-align: stretch;
   align-self: stretch;
 }
+.buy-option.a-b-test {
+  max-width: none;
+}
 .buy-option .buy-button {
   width: 240px;
 }

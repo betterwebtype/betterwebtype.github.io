@@ -91,6 +91,10 @@
   -ms-flex-item-align: stretch;
   align-self: stretch;
 
+  &.a-b-test {
+    max-width: none;
+  }
+
   .buy-button {
     width: 240px;
   }
