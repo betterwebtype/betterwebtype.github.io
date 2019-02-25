@@ -4800,19 +4800,19 @@ a.check-it-out {
   cursor: pointer;
 }
 
-.book-slider {
+.book-slider, .review-slider {
   position: relative;
 }
-.book-slider .prev {
+.book-slider .prev, .review-slider .prev {
   left: 0;
 }
-.book-slider .next {
+.book-slider .next, .review-slider .next {
   right: 0;
 }
-.book-slider .pager {
+.book-slider .pager, .review-slider .pager {
   bottom: 40px;
 }
-.book-slider .pager li {
+.book-slider .pager li, .review-slider .pager li {
   list-style: none;
   background: #D6D6D6;
   border-radius: 100%;
@@ -4821,8 +4821,18 @@ a.check-it-out {
   height: 9px;
   margin: 0 5px;
 }
-.book-slider .pager li.active {
+.book-slider .pager li.active, .review-slider .pager li.active {
   background: #01D7D2;
+}
+
+.review-slider .prev {
+  left: -60px;
+}
+.review-slider .next {
+  right: -50px;
+}
+.review-slider .pager {
+  bottom: 0px;
 }
 
 .praise-slider {
