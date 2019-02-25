@@ -42,6 +42,8 @@ $(function () {
       $('html, body').animate({scrollTop : 0},800);
       return false;
     });
+
+    slider('#slider1', 300);
   } // End of if statement
 }); // End of homepage stuff
 

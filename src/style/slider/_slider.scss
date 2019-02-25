@@ -95,7 +95,7 @@
   }
 }
 
-.book-slider {
+.book-slider, .review-slider {
   position: relative;
 
   .prev {
@@ -122,6 +122,20 @@
     li.active {
       background: #01D7D2;
     }
+  }
+}
+
+.review-slider {
+  .prev {
+    left: -60px;
+  }
+
+  .next {
+    right: -50px;
+  }
+
+  .pager {
+    bottom: 0px;
   }
 }
 
